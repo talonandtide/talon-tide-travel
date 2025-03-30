@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -63,29 +63,33 @@
     @apply px-4 md:px-8 lg:px-12 xl:px-0 mx-auto max-w-7xl;
   }
   
-  /* Custom components */
+  /* Custom components with enhanced styling */
   .section-title {
-    @apply font-serif text-3xl md:text-4xl font-medium text-talon-green mb-6;
+    @apply font-serif text-3xl md:text-4xl font-medium text-talon-green mb-6 tracking-wide leading-tight drop-shadow-sm;
   }
   
   .section-subtitle {
-    @apply font-serif text-xl md:text-2xl text-talon-navy mb-4;
+    @apply font-serif text-xl md:text-2xl text-talon-navy mb-4 tracking-wide;
   }
   
   .btn-primary {
     @apply bg-talon-green hover:bg-talon-navy text-white py-3 px-6 rounded-sm 
-           transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans;
+           transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans
+           shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
   }
   
   .btn-secondary {
     @apply bg-transparent border border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-white 
-           py-3 px-6 rounded-sm transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans;
+           py-3 px-6 rounded-sm transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans
+           shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
   }
   
   .input-field {
-    @apply border border-talon-stone/30 rounded-sm bg-white/80 py-3 px-4 w-full focus:outline-none focus:ring-1 focus:ring-talon-gold;
+    @apply border border-talon-stone/30 rounded-sm bg-white/80 py-3 px-4 w-full 
+           focus:outline-none focus:ring-1 focus:ring-talon-gold shadow-inner;
   }
   
+  /* Enhanced animations */
   .animate-fade {
     @apply opacity-0 translate-y-4 transition-all duration-700;
   }
@@ -105,4 +109,44 @@
   .animate-delay-300 {
     transition-delay: 300ms;
   }
+
+  /* New luxurious text and card styles */
+  .text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-md {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-luxury {
+    @apply bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] backdrop-blur-sm border border-talon-sand/20
+           hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.15)] transition-all duration-500;
+  }
+  
+  .gradient-overlay-bottom {
+    @apply absolute inset-0 bg-gradient-to-t from-talon-navy/60 to-transparent;
+  }
+  
+  .gradient-overlay-side {
+    @apply absolute inset-0 bg-gradient-to-r from-talon-green/70 to-transparent;
+  }
+}
+
+/* New keyframes for luxury effects */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.float-animation {
+  animation: subtle-float 6s ease-in-out infinite;
 }
