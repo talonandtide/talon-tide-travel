@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -65,21 +65,25 @@
   
   /* Custom components with enhanced styling */
   .section-title {
-    @apply font-serif text-3xl md:text-4xl font-medium text-talon-green mb-6 tracking-wide leading-tight drop-shadow-sm;
+    @apply font-serif text-3xl md:text-4xl font-medium text-midnight mb-6 tracking-wide leading-tight drop-shadow-text;
   }
   
   .section-subtitle {
     @apply font-serif text-xl md:text-2xl text-talon-navy mb-4 tracking-wide;
   }
   
+  .text-gradient {
+    @apply bg-gradient-to-br from-talon-gold via-champagne to-talon-sand bg-clip-text text-transparent;
+  }
+  
   .btn-primary {
-    @apply bg-talon-green hover:bg-talon-navy text-white py-3 px-6 rounded-sm 
+    @apply bg-midnight hover:bg-talon-navy text-white py-3 px-6 rounded-sm 
            transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans
-           shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+           shadow-luxury hover:shadow-luxury-hover transform hover:-translate-y-0.5;
   }
   
   .btn-secondary {
-    @apply bg-transparent border border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-white 
+    @apply bg-transparent border border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-midnight
            py-3 px-6 rounded-sm transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans
            shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
   }
@@ -124,16 +128,36 @@
   }
   
   .card-luxury {
-    @apply bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] backdrop-blur-sm border border-talon-sand/20
-           hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.15)] transition-all duration-500;
+    @apply bg-white shadow-luxury backdrop-blur-sm border border-talon-sand/20
+           hover:shadow-luxury-hover transition-all duration-500;
   }
   
   .gradient-overlay-bottom {
-    @apply absolute inset-0 bg-gradient-to-t from-talon-navy/60 to-transparent;
+    @apply absolute inset-0 bg-gradient-to-t from-midnight/60 to-transparent;
   }
   
   .gradient-overlay-side {
     @apply absolute inset-0 bg-gradient-to-r from-talon-green/70 to-transparent;
+  }
+
+  /* Logo styling */
+  .logo-text {
+    @apply font-serif font-medium tracking-wide;
+  }
+
+  /* Brand taglines and hero elements */
+  .hero-title {
+    @apply font-serif text-4xl md:text-5xl lg:text-7xl font-medium leading-tight tracking-wide drop-shadow-text-lg;
+  }
+
+  .hero-subtitle {
+    @apply font-sans text-lg md:text-xl font-light tracking-wide drop-shadow-text;
+  }
+
+  /* Luxury content cards */
+  .content-card {
+    @apply bg-white backdrop-blur-sm shadow-luxury border border-champagne/10 
+           hover:shadow-luxury-hover transition-all duration-500 overflow-hidden;
   }
 }
 
@@ -147,6 +171,19 @@
   }
 }
 
+@keyframes slow-pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .float-animation {
   animation: subtle-float 6s ease-in-out infinite;
+}
+
+.pulse-animation {
+  animation: slow-pulse 4s ease-in-out infinite;
 }
