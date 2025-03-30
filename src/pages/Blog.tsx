@@ -66,7 +66,7 @@ const blogPosts = [
     category: 'Experiences',
     date: 'January 15, 2023',
     image: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-    excerpt: 'What truly makes a wildlife sanctuary ethical? An insider's perspective on the standards that matter.',
+    excerpt: "What truly makes a wildlife sanctuary ethical? An insider's perspective on the standards that matter.",
     author: 'David Russo',
     authorImage: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80',
     readTime: '10 min read',
