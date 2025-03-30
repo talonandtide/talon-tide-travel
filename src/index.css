@@ -1,101 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 44 30% 95%;
+    --foreground: 45 10% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 45 10% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 45 10% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 143 17% 21%;
+    --primary-foreground: 44 30% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 44 24% 86%;
+    --secondary-foreground: 45 10% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 6% 65%;
+    --muted-foreground: 45 5% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 42 45% 55%;
+    --accent-foreground: 45 10% 20%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 44 30% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 15% 85%;
+    --input: 44 24% 86%;
+    --ring: 143 17% 21%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+  
+  .container {
+    @apply px-4 md:px-8 lg:px-12 xl:px-0 mx-auto max-w-7xl;
+  }
+  
+  /* Custom components */
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl font-medium text-talon-green mb-6;
+  }
+  
+  .section-subtitle {
+    @apply font-serif text-xl md:text-2xl text-talon-navy mb-4;
+  }
+  
+  .btn-primary {
+    @apply bg-talon-green hover:bg-talon-navy text-white py-3 px-6 rounded-sm 
+           transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-white 
+           py-3 px-6 rounded-sm transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans;
+  }
+  
+  .input-field {
+    @apply border border-talon-stone/30 rounded-sm bg-white/80 py-3 px-4 w-full focus:outline-none focus:ring-1 focus:ring-talon-gold;
+  }
+  
+  .animate-fade {
+    @apply opacity-0 translate-y-4 transition-all duration-700;
+  }
+  
+  .animate-fade.show {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .animate-delay-100 {
+    transition-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    transition-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    transition-delay: 300ms;
   }
 }
