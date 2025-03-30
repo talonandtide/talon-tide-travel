@@ -3,24 +3,25 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const heroImages = [
-  'https://images.unsplash.com/photo-1469041908917-89bc00316a01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-  'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2673&q=80',
-  'https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80'
+// Replace static images with video sources
+const heroVideos = [
+  'https://player.vimeo.com/external/373500378.sd.mp4?s=ca0a4c09a78a2149364434c86da8d41798c8b0a5&profile_id=164&oauth2_token_id=57447761', // safari sunrise video
+  'https://player.vimeo.com/external/438727472.sd.mp4?s=3e3ffdf7f63be95162832c36236bbe49a3f5bd3f&profile_id=164&oauth2_token_id=57447761', // underwater marine life
+  'https://player.vimeo.com/external/517090081.sd.mp4?s=6a3cf6c0177f2818485bff889b7462ab6cf29856&profile_id=164&oauth2_token_id=57447761' // forest wildlife scene
 ];
 
 const Hero = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
         setIsTransitioning(false);
       }, 500);
-    }, 6000);
+    }, 10000); // Longer interval for videos
 
     return () => clearInterval(interval);
   }, []);
@@ -34,20 +35,26 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Images with Crossfade */}
+      {/* Background Videos with Crossfade */}
       <div className="absolute inset-0 z-0">
-        {heroImages.map((image, index) => (
+        {heroVideos.map((video, index) => (
           <div
             key={index}
-            className={`absolute inset-0 h-full w-full bg-cover bg-center transition-opacity duration-1000 ${
-              currentImageIndex === index 
+            className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
+              currentVideoIndex === index 
                 ? 'opacity-100' 
                 : 'opacity-0'
             }`}
-            style={{
-              backgroundImage: `url('${image}')`,
-            }}
-          />
+          >
+            <video
+              src={video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-talon-midnight/80 via-talon-green/60 to-transparent" />
       </div>

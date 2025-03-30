@@ -5,15 +5,18 @@ import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-talon-ivory">
+    <section id="about-section" className="py-20 bg-talon-ivory">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Column */}
+          {/* Video Column */}
           <div className="order-2 lg:order-1">
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
-                alt="Wildlife conservation expert"
+              <video
+                src="https://player.vimeo.com/external/368278117.sd.mp4?s=28a7a5f976a82484ddddff38233ed78cf4d6fc8f&profile_id=164&oauth2_token_id=57447761" // conservation expert with animals
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="rounded-sm w-full h-auto object-cover animate-fade"
               />
               <div className="absolute -bottom-6 -right-6 bg-talon-gold p-6 rounded-sm animate-fade animate-delay-200">

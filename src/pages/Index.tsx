@@ -10,7 +10,7 @@ import InstagramFeed from '@/components/Home/InstagramFeed';
 
 const Index = () => {
   useEffect(() => {
-    // Intersection Observer to trigger animations when elements come into view
+    // Intersection Observer to trigger animations and video playback when elements come into view
     const observerOptions = {
       root: null,
       rootMargin: '0px',
@@ -20,7 +20,15 @@ const Index = () => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // Add show class for animations
           entry.target.classList.add('show');
+          
+          // Play videos when they come into view
+          const video = entry.target.querySelector('video');
+          if (video && video.paused) {
+            video.play().catch(err => console.log('Auto-play prevented:', err));
+          }
+          
           observer.unobserve(entry.target);
         }
       });

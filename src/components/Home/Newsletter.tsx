@@ -19,14 +19,18 @@ const Newsletter = () => {
   
   return (
     <section className="relative py-32 overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="h-full w-full bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2559&q=80')`,
-          }}
-        >
+        <div className="h-full w-full">
+          <video
+            className="h-full w-full object-cover fixed-bg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src="https://player.vimeo.com/external/476757543.sd.mp4?s=ef8b1c1fa4717b3c7a1c95167feef94df59876ac&profile_id=164&oauth2_token_id=57447761" // serene nature video
+          >
+          </video>
           <div className="absolute inset-0 bg-talon-green/90" />
         </div>
       </div>

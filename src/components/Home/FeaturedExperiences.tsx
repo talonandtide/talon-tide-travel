@@ -15,34 +15,45 @@ const experiences = [
     id: 1,
     title: 'Private Wildlife Sanctuary',
     location: 'South Africa',
-    image: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80',
+    video: 'https://player.vimeo.com/external/517091886.sd.mp4?s=93c627a6cbacf02aefa95a9df9fc094368183b47&profile_id=164&oauth2_token_id=57447761', // lions in the wild
     description: 'Exclusive behind-the-scenes access to conservation projects with private luxury accommodations.',
   },
   {
     id: 2,
     title: 'Marine Conservation Retreat',
     location: 'Maldives',
-    image: 'https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    video: 'https://player.vimeo.com/external/359083460.sd.mp4?s=6c560afd46ad8a6e7ed93fbdf266073b8f628f44&profile_id=164&oauth2_token_id=57447761', // underwater coral scene
     description: 'Dive alongside marine biologists while enjoying the comfort of a five-star eco-resort.',
   },
   {
     id: 3,
     title: 'Rainforest Wildlife Expedition',
     location: 'Costa Rica',
-    image: 'https://images.unsplash.com/photo-1469033363950-eb392a20d59e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    video: 'https://player.vimeo.com/external/460143732.sd.mp4?s=aa89e112bcf1c01c56198802ea22d8dc96a427d6&profile_id=164&oauth2_token_id=57447761', // forest waterfall
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges.',
   },
   {
     id: 4,
     title: 'Arctic Wildlife Expedition',
     location: 'Norway',
-    image: 'https://images.unsplash.com/photo-1461696114087-397271a7aedc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    video: 'https://player.vimeo.com/external/384392236.sd.mp4?s=5291a894a38089b30fb4c980364807cdd93c9c72&profile_id=164&oauth2_token_id=57447761', // snow-covered mountains
     description: 'Observe polar wildlife in their natural habitat while staying in sustainable, luxury accommodations.',
   },
 ];
 
 const FeaturedExperiences = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [isPlaying, setIsPlaying] = useState<{[key: number]: boolean}>({});
+
+  const handleMouseEnter = (id: number) => {
+    setHoveredId(id);
+    setIsPlaying(prev => ({...prev, [id]: true}));
+  };
+
+  const handleMouseLeave = (id: number) => {
+    setHoveredId(null);
+    setIsPlaying(prev => ({...prev, [id]: false}));
+  };
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-talon-sand/20">
@@ -63,16 +74,19 @@ const FeaturedExperiences = () => {
                 key={exp.id} 
                 className="group animate-fade relative overflow-hidden card-luxury"
                 style={{ animationDelay: `${index * 100}ms` }}
-                onMouseEnter={() => setHoveredId(exp.id)}
-                onMouseLeave={() => setHoveredId(null)}
+                onMouseEnter={() => handleMouseEnter(exp.id)}
+                onMouseLeave={() => handleMouseLeave(exp.id)}
               >
                 <div className="relative overflow-hidden h-96">
-                  <img 
-                    src={exp.image} 
-                    alt={exp.title} 
+                  <video 
+                    src={exp.video} 
+                    muted 
+                    loop 
+                    playsInline
                     className={`w-full h-full object-cover transition-transform duration-700 ${
                       hoveredId === exp.id ? 'scale-110' : 'scale-100'
                     }`}
+                    autoPlay={hoveredId === exp.id || isPlaying[exp.id]}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent" />
                   
@@ -105,9 +119,12 @@ const FeaturedExperiences = () => {
                 <CarouselItem key={exp.id} className="md:basis-1/2">
                   <div className="relative overflow-hidden rounded-sm card-luxury">
                     <div className="aspect-[4/5]">
-                      <img 
-                        src={exp.image} 
-                        alt={exp.title} 
+                      <video 
+                        src={exp.video} 
+                        autoPlay
+                        muted 
+                        loop 
+                        playsInline
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent" />
