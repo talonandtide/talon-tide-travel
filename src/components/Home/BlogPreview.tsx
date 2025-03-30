@@ -24,22 +24,22 @@ const blogPosts = [
 
 const BlogPreview = () => {
   return (
-    <section className="py-24 bg-sandbeige/80">
+    <section className="py-20 bg-talon-sand/30">
       <div className="container">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
             <h2 className="section-title animate-fade">Ethical Travel Journal</h2>
-            <p className="max-w-lg text-charcoal/80 animate-fade animate-delay-100">
+            <p className="max-w-lg text-talon-stone animate-fade animate-delay-100">
               Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters.
             </p>
           </div>
-          <Link to="/blog" className="btn-secondary mt-6 md:mt-0 animate-fade animate-delay-200">
+          <Link to="/blog" className="btn-secondary mt-4 md:mt-0 animate-fade animate-delay-200">
             View All Articles
             <ArrowRight size={16} />
           </Link>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {blogPosts.map((post, index) => (
             <Link 
               to={`/blog/${post.id}`} 
@@ -47,28 +47,28 @@ const BlogPreview = () => {
               className="group animate-fade" 
               style={{ animationDelay: `${(index + 3) * 100}ms` }}
             >
-              <div className="content-card h-full shadow-luxury hover:shadow-luxury-hover transition-all duration-500">
-                <div className="relative h-64 overflow-hidden">
+              <div className="bg-white rounded-sm overflow-hidden h-full shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="relative h-56 overflow-hidden">
                   <img 
                     src={post.image} 
                     alt={post.title} 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 left-4 bg-midnight text-white text-xs px-3 py-1 rounded-sm">
+                  <div className="absolute top-4 left-4 bg-talon-navy/80 text-white text-xs px-3 py-1 rounded-sm">
                     {post.category}
                   </div>
                 </div>
-                <div className="p-8">
-                  <p className="text-xs text-charcoal/70 mb-3">{post.date}</p>
-                  <h3 className="font-serif text-xl mb-4 text-midnight group-hover:text-talon-gold transition-colors duration-300">
+                <div className="p-6">
+                  <p className="text-xs text-talon-stone mb-2">{post.date}</p>
+                  <h3 className="font-serif text-xl mb-3 text-talon-green group-hover:text-talon-gold transition-colors duration-300">
                     {post.title}
                   </h3>
-                  <p className="text-charcoal/80 text-sm mb-6">
+                  <p className="text-sm text-talon-navy mb-4">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center text-champagne text-sm group-hover:text-midnight transition-colors duration-300">
+                  <div className="flex items-center text-talon-gold text-sm">
                     Read More
-                    <ArrowRight size={14} className="ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    <ArrowRight size={14} className="ml-1" />
                   </div>
                 </div>
               </div>

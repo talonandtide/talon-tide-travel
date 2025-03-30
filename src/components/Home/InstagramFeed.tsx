@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, ExternalLink } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const instagramPosts = [
   {
@@ -27,43 +27,40 @@ const instagramPosts = [
 
 const InstagramFeed = () => {
   return (
-    <section className="pt-20 pb-12">
+    <section className="pt-16 pb-8">
       <div className="container">
-        <div className="text-center mb-12">
-          <p className="uppercase tracking-wider text-xs text-charcoal/60 mb-3 animate-fade">Follow Us</p>
+        <div className="text-center mb-10">
+          <p className="uppercase tracking-wide text-sm text-talon-stone mb-2 animate-fade">Follow Us</p>
           <a 
             href="https://instagram.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 font-serif text-2xl text-midnight hover:text-champagne transition-colors duration-300 animate-fade animate-delay-100"
+            className="inline-flex items-center gap-2 font-serif text-2xl text-talon-green hover:text-talon-gold transition-colors duration-300 animate-fade animate-delay-100"
           >
             <Instagram size={20} />
             @talonandtide
           </a>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {instagramPosts.map((post, index) => (
             <a 
               key={post.id} 
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group relative overflow-hidden animate-fade content-card"
+              className="group relative overflow-hidden animate-fade"
               style={{ animationDelay: `${(index + 3) * 100}ms` }}
             >
               <img 
                 src={post.image} 
                 alt="Instagram Post" 
-                className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-56 object-cover"
               />
-              <div className="absolute inset-0 bg-midnight/0 hover:bg-midnight/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <div className="text-white flex flex-col items-center gap-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <ExternalLink size={24} className="text-champagne" />
-                  <div className="text-white flex items-center gap-1">
-                    <span className="sr-only">Likes: </span>
-                    {post.likes}
-                  </div>
+              <div className="absolute inset-0 bg-talon-green/40 hover:bg-talon-green/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300">
+                <div className="text-white flex items-center gap-1">
+                  <span className="sr-only">Likes: </span>
+                  {post.likes}
                 </div>
               </div>
             </a>

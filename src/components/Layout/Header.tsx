@@ -27,17 +27,17 @@ const Header = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6", 
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-luxury" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 lg:py-6", 
+        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
       )}
     >
       <div className="container flex justify-between items-center">
         <Link to="/" className="z-50">
           <h1 className={cn(
-            "logo-text text-2xl md:text-3xl transition-all duration-300",
-            scrolled ? "text-midnight" : "text-white"
+            "font-serif text-xl md:text-2xl transition-all duration-300",
+            scrolled ? "text-talon-green" : "text-talon-ivory"
           )}>
-            Talon <span className="text-champagne">&</span> Tide
+            Talon <span className="text-talon-gold">&</span> Tide
           </h1>
         </Link>
         
@@ -50,8 +50,8 @@ const Header = () => {
               target="_blank" 
               rel="noopener noreferrer"
               className={cn(
-                "hover:text-champagne transition-colors duration-300",
-                scrolled ? "text-midnight" : "text-white"
+                "hover:text-talon-gold transition-colors duration-300",
+                scrolled ? "text-talon-green" : "text-white"
               )}
             >
               <Instagram size={18} />
@@ -59,8 +59,8 @@ const Header = () => {
             <Link 
               to="/contact" 
               className={cn(
-                "hover:text-champagne transition-colors duration-300",
-                scrolled ? "text-midnight" : "text-white"
+                "hover:text-talon-gold transition-colors duration-300",
+                scrolled ? "text-talon-green" : "text-white"
               )}
             >
               <Mail size={18} />
@@ -72,7 +72,7 @@ const Header = () => {
         <button 
           className={cn(
             "z-50 lg:hidden",
-            scrolled ? "text-midnight" : "text-white"
+            scrolled ? "text-talon-green" : "text-talon-ivory"
           )} 
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -81,24 +81,24 @@ const Header = () => {
         
         {/* Mobile Nav Panel */}
         <div className={cn(
-          "fixed inset-0 bg-midnight/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 transition-all duration-500 lg:hidden",
+          "fixed inset-0 bg-talon-green/95 backdrop-blur-sm flex flex-col justify-center items-center gap-8 transition-all duration-500 lg:hidden",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         )}>
-          <nav className="flex flex-col items-center gap-6 text-white">
+          <nav className="flex flex-col items-center gap-6 text-talon-ivory">
             <NavLinks mobile />
           </nav>
-          <div className="flex items-center gap-6 text-white">
+          <div className="flex items-center gap-6 text-talon-ivory">
             <a 
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:text-champagne transition-colors duration-300"
+              className="hover:text-talon-gold transition-colors duration-300"
             >
               <Instagram size={20} />
             </a>
             <Link 
               to="/contact" 
-              className="hover:text-champagne transition-colors duration-300"
+              className="hover:text-talon-gold transition-colors duration-300"
             >
               <Mail size={20} />
             </Link>
@@ -127,9 +127,9 @@ const NavLinks = ({ mobile = false, isScrolled = false }) => {
           key={link.path}
           to={link.path}
           className={cn(
-            "font-sans text-sm uppercase tracking-wider transition-colors duration-300 hover:text-champagne relative",
-            mobile ? "text-white py-1" : isScrolled ? "text-midnight" : "text-white",
-            location.pathname === link.path ? "after:absolute after:w-full after:h-[1px] after:bg-champagne after:-bottom-1 after:left-0" : ""
+            "font-sans text-sm uppercase tracking-wide transition-colors duration-300 hover:text-talon-gold relative",
+            mobile ? "text-talon-ivory py-1" : isScrolled ? "text-talon-green" : "text-talon-ivory",
+            location.pathname === link.path ? "after:absolute after:w-full after:h-[1px] after:bg-talon-gold after:-bottom-1 after:left-0" : ""
           )}
         >
           {link.label}

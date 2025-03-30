@@ -18,19 +18,13 @@ const Newsletter = () => {
   };
   
   return (
-    <section className="py-24 bg-midnight text-white relative overflow-hidden">
-      {/* Background pattern element */}
-      <div className="absolute inset-0 z-0 opacity-10">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-champagne to-transparent"></div>
-      </div>
-      
-      <div className="container relative z-10">
+    <section className="py-20 bg-talon-green text-white">
+      <div className="container">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl mb-6 text-white drop-shadow-text animate-fade">
-            Follow the <span className="text-gradient">Journey</span>
+          <h2 className="font-serif text-3xl md:text-4xl mb-6 text-talon-ivory animate-fade">
+            Follow the <span className="text-talon-gold">Journey</span>
           </h2>
-          <p className="text-white/80 text-lg mb-10 animate-fade animate-delay-100">
+          <p className="text-talon-ivory/80 mb-8 animate-fade animate-delay-100">
             Subscribe for exclusive updates, ethical travel insights, and be the first to know when our carefully curated experiences are available for booking.
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 animate-fade animate-delay-200">
@@ -38,17 +32,17 @@ const Newsletter = () => {
               type="email"
               placeholder="Your email address"
               required
-              className="flex-grow bg-white/10 border border-white/20 rounded-sm px-6 py-4 focus:outline-none focus:border-champagne text-white placeholder:text-white/40 shadow-luxury"
+              className="flex-grow bg-talon-navy/30 border border-talon-ivory/20 rounded-sm px-4 py-3 focus:outline-none focus:border-talon-gold text-talon-ivory placeholder:text-talon-ivory/50"
             />
             <button 
               type="submit"
-              className="bg-champagne hover:bg-champagne/80 text-midnight flex items-center justify-center gap-2 px-8 py-4 rounded-sm transition-colors duration-300 uppercase tracking-wide text-sm font-medium shadow-luxury hover:shadow-luxury-hover"
+              className="bg-talon-gold hover:bg-talon-gold/80 text-talon-green flex items-center justify-center gap-2 px-6 py-3 rounded-sm transition-colors duration-300 uppercase tracking-wide text-sm"
             >
               Subscribe
               <ArrowRight size={16} />
             </button>
           </form>
-          <p className="text-xs text-white/50 mt-6 animate-fade animate-delay-300">
+          <p className="text-xs text-talon-ivory/60 mt-4 animate-fade animate-delay-300">
             We respect your privacy and will never share your information.
           </p>
         </div>
