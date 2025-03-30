@@ -51,6 +51,10 @@
     @apply border-border;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
@@ -65,7 +69,7 @@
   
   /* Custom components with enhanced styling */
   .section-title {
-    @apply font-serif text-3xl md:text-4xl font-medium text-talon-green mb-6 tracking-wide leading-tight drop-shadow-sm;
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-talon-green mb-6 tracking-wide leading-tight drop-shadow-sm;
   }
   
   .section-subtitle {
@@ -79,7 +83,7 @@
   }
   
   .btn-secondary {
-    @apply bg-transparent border border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-white 
+    @apply bg-transparent border border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-talon-green 
            py-3 px-6 rounded-sm transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans
            shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
   }
@@ -122,10 +126,18 @@
   .text-shadow-lg {
     text-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
+
+  .drop-shadow-text {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+  
+  .drop-shadow-text-lg {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
   
   .card-luxury {
     @apply bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] backdrop-blur-sm border border-talon-sand/20
-           hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.15)] transition-all duration-500;
+           hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.15)] transition-all duration-500 rounded-sm;
   }
   
   .gradient-overlay-bottom {
@@ -134,6 +146,25 @@
   
   .gradient-overlay-side {
     @apply absolute inset-0 bg-gradient-to-r from-talon-green/70 to-transparent;
+  }
+
+  /* Cinematic parallax effect */
+  .parallax {
+    @apply relative overflow-hidden;
+  }
+  
+  .parallax-bg {
+    @apply absolute inset-0 h-[120%] w-full bg-cover bg-center -top-[10%];
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  /* Video background */
+  .video-bg {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+  
+  .video-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent;
   }
 }
 
@@ -149,4 +180,51 @@
 
 .float-animation {
   animation: subtle-float 6s ease-in-out infinite;
+}
+
+@keyframes fade-in-out {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.breathe-animation {
+  animation: fade-in-out 4s ease-in-out infinite;
+}
+
+/* Cinematic transitions */
+.transition-slide-up {
+  @apply transition-all duration-700 transform translate-y-8 opacity-0;
+}
+
+.transition-slide-up.in-view {
+  @apply translate-y-0 opacity-100;
+}
+
+.transition-scale {
+  @apply transition-all duration-700 transform scale-95 opacity-0;
+}
+
+.transition-scale.in-view {
+  @apply scale-100 opacity-100;
+}
+
+/* Page transitions */
+.page-enter {
+  @apply opacity-0;
+}
+
+.page-enter-active {
+  @apply opacity-100 transition-all duration-500;
+}
+
+.page-exit {
+  @apply opacity-100;
+}
+
+.page-exit-active {
+  @apply opacity-0 transition-all duration-500;
 }
