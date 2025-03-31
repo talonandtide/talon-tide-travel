@@ -39,13 +39,13 @@ const AboutSection = () => {
             <div className="relative video-container">
               <video
                 ref={videoRef}
-                src="https://player.vimeo.com/external/368278117.sd.mp4?s=28a7a5f976a82484ddddff38233ed78cf4d6fc8f&profile_id=164&oauth2_token_id=57447761" // conservation expert with animals
+                src="https://assets.mixkit.co/videos/preview/mixkit-wild-horses-in-the-savanna-23546-large.mp4" 
                 muted
                 loop
                 playsInline
                 className="rounded-sm w-full h-auto object-cover animate-fade"
-                onError={(e) => console.log('About section video error:', e)}
-                onLoadedData={() => console.log('About section video loaded')}
+                onError={(e) => console.error('About section video error:', e)}
+                onLoadedData={() => console.log('About section video loaded successfully')}
               />
               <div className="absolute -bottom-6 -right-6 bg-talon-gold p-6 rounded-sm animate-fade animate-delay-200">
                 <p className="text-sm text-talon-green font-serif italic">

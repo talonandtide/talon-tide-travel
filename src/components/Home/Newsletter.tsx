@@ -46,17 +46,17 @@ const Newsletter = () => {
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0 video-container">
+      <div className="absolute inset-0 z-0">
         <div className="h-full w-full">
           <video
             ref={videoRef}
-            className="h-full w-full object-cover fixed-bg"
+            className="h-full w-full object-cover"
             muted
             loop
             playsInline
-            src="https://player.vimeo.com/external/476757543.sd.mp4?s=ef8b1c1fa4717b3c7a1c95167feef94df59876ac&profile_id=164&oauth2_token_id=57447761" // serene nature video
-            onError={(e) => console.log('Newsletter video error:', e)}
-            onLoadedData={() => console.log('Newsletter video loaded')}
+            src="https://assets.mixkit.co/videos/preview/mixkit-trees-in-a-forest-at-sunset-5098-large.mp4"
+            onError={(e) => console.error('Newsletter video error:', e)}
+            onLoadedData={() => console.log('Newsletter video loaded successfully')}
           >
           </video>
           <div className="absolute inset-0 bg-talon-green/90" />

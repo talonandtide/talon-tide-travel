@@ -15,35 +15,34 @@ const experiences = [
     id: 1,
     title: 'Private Wildlife Sanctuary',
     location: 'South Africa',
-    video: 'https://player.vimeo.com/external/517091886.sd.mp4?s=93c627a6cbacf02aefa95a9df9fc094368183b47&profile_id=164&oauth2_token_id=57447761', // lions in the wild
+    video: 'https://assets.mixkit.co/videos/preview/mixkit-lioness-walking-through-the-wild-710-large.mp4',
     description: 'Exclusive behind-the-scenes access to conservation projects with private luxury accommodations.',
   },
   {
     id: 2,
     title: 'Marine Conservation Retreat',
     location: 'Maldives',
-    video: 'https://player.vimeo.com/external/359083460.sd.mp4?s=6c560afd46ad8a6e7ed93fbdf266073b8f628f44&profile_id=164&oauth2_token_id=57447761', // underwater coral scene
+    video: 'https://assets.mixkit.co/videos/preview/mixkit-clown-fish-in-the-reef-7753-large.mp4',
     description: 'Dive alongside marine biologists while enjoying the comfort of a five-star eco-resort.',
   },
   {
     id: 3,
     title: 'Rainforest Wildlife Expedition',
     location: 'Costa Rica',
-    video: 'https://player.vimeo.com/external/460143732.sd.mp4?s=aa89e112bcf1c01c56198802ea22d8dc96a427d6&profile_id=164&oauth2_token_id=57447761', // forest waterfall
+    video: 'https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-forest-2213-large.mp4',
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges.',
   },
   {
     id: 4,
     title: 'Arctic Wildlife Expedition',
     location: 'Norway',
-    video: 'https://player.vimeo.com/external/384392236.sd.mp4?s=5291a894a38089b30fb4c980364807cdd93c9c72&profile_id=164&oauth2_token_id=57447761', // snow-covered mountains
+    video: 'https://assets.mixkit.co/videos/preview/mixkit-cold-mountain-covered-in-snow-4282-large.mp4',
     description: 'Observe polar wildlife in their natural habitat while staying in sustainable, luxury accommodations.',
   },
 ];
 
 const FeaturedExperiences = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
-  const [isPlaying, setIsPlaying] = useState<{[key: number]: boolean}>({});
   const videoRefs = useRef<{[key: number]: HTMLVideoElement | null}>({});
 
   useEffect(() => {
@@ -52,30 +51,39 @@ const FeaturedExperiences = () => {
       videoRefs.current[exp.id] = null;
     });
 
-    // Attempt to play videos that are visible on load
-    setTimeout(() => {
-      Object.entries(videoRefs.current).forEach(([id, videoEl]) => {
-        if (videoEl && isElementInViewport(videoEl)) {
-          console.log(`Attempting to play experience video ${id} on load`);
-          videoEl.play().catch(err => console.log(`Video ${id} autoplay prevented:`, err));
+    // Set up Intersection Observer for all videos
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    };
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const videoEl = entry.target.querySelector('video');
+          if (videoEl) {
+            console.log('Experience video in view, attempting to play');
+            videoEl.play().catch(err => console.log('Experience video autoplay prevented:', err));
+          }
         }
       });
-    }, 1000);
-  }, []);
+    };
 
-  const isElementInViewport = (el: Element) => {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+    
+    // Observe video containers
+    document.querySelectorAll('.experience-video-container').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const handleMouseEnter = (id: number) => {
     setHoveredId(id);
-    setIsPlaying(prev => ({...prev, [id]: true}));
     
     const videoEl = videoRefs.current[id];
     if (videoEl) {
@@ -86,7 +94,6 @@ const FeaturedExperiences = () => {
 
   const handleMouseLeave = (id: number) => {
     setHoveredId(null);
-    setIsPlaying(prev => ({...prev, [id]: false}));
   };
 
   const setVideoRef = (id: number, element: HTMLVideoElement | null) => {
@@ -110,7 +117,7 @@ const FeaturedExperiences = () => {
             {experiences.map((exp, index) => (
               <div 
                 key={exp.id} 
-                className="group animate-fade relative overflow-hidden card-luxury video-container"
+                className="group animate-fade relative overflow-hidden card-luxury experience-video-container"
                 style={{ animationDelay: `${index * 100}ms` }}
                 onMouseEnter={() => handleMouseEnter(exp.id)}
                 onMouseLeave={() => handleMouseLeave(exp.id)}
@@ -125,9 +132,8 @@ const FeaturedExperiences = () => {
                     className={`w-full h-full object-cover transition-transform duration-700 ${
                       hoveredId === exp.id ? 'scale-110' : 'scale-100'
                     }`}
-                    autoPlay={false}
-                    onError={(e) => console.log(`Video ${exp.id} error:`, e)}
-                    onLoadedData={() => console.log(`Experience video ${exp.id} loaded`)}
+                    onError={(e) => console.error(`Experience video ${exp.id} error:`, e)}
+                    onLoadedData={() => console.log(`Experience video ${exp.id} loaded successfully`)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent" />
                   
@@ -158,7 +164,7 @@ const FeaturedExperiences = () => {
             <CarouselContent>
               {experiences.map((exp, index) => (
                 <CarouselItem key={exp.id} className="md:basis-1/2">
-                  <div className="relative overflow-hidden rounded-sm card-luxury video-container">
+                  <div className="relative overflow-hidden rounded-sm card-luxury experience-video-container">
                     <div className="aspect-[4/5]">
                       <video 
                         ref={el => setVideoRef(exp.id, el)}
@@ -167,8 +173,8 @@ const FeaturedExperiences = () => {
                         loop 
                         playsInline
                         className="w-full h-full object-cover"
-                        onError={(e) => console.log(`Mobile video ${exp.id} error:`, e)}
-                        onLoadedData={() => console.log(`Mobile experience video ${exp.id} loaded`)}
+                        onError={(e) => console.error(`Mobile video ${exp.id} error:`, e)}
+                        onLoadedData={() => console.log(`Mobile experience video ${exp.id} loaded successfully`)}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent" />
                     </div>

@@ -1,30 +1,55 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Replace static images with video sources
+// Use mp4 format videos that work more reliably
 const heroVideos = [
-  'https://player.vimeo.com/external/373500378.sd.mp4?s=ca0a4c09a78a2149364434c86da8d41798c8b0a5&profile_id=164&oauth2_token_id=57447761', // safari sunrise video
-  'https://player.vimeo.com/external/438727472.sd.mp4?s=3e3ffdf7f63be95162832c36236bbe49a3f5bd3f&profile_id=164&oauth2_token_id=57447761', // underwater marine life
-  'https://player.vimeo.com/external/517090081.sd.mp4?s=6a3cf6c0177f2818485bff889b7462ab6cf29856&profile_id=164&oauth2_token_id=57447761' // forest wildlife scene
+  'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-person-putting-food-in-a-shelter-for-43313-large.mp4',
+  'https://assets.mixkit.co/videos/preview/mixkit-marine-turtles-swimming-underwater-1492-large.mp4',
+  'https://assets.mixkit.co/videos/preview/mixkit-white-tiger-lying-down-and-stretching-14539-large.mp4'
 ];
 
 const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const videoRefs = useRef<HTMLVideoElement[]>([]);
+
+  // Initialize videoRefs
+  if (videoRefs.current.length !== heroVideos.length) {
+    videoRefs.current = Array(heroVideos.length).fill(null);
+  }
 
   useEffect(() => {
+    // Create refs for each video
+    videoRefs.current = videoRefs.current.slice(0, heroVideos.length);
+    
+    // Try to play the current video
+    const playCurrentVideo = () => {
+      const currentVideo = videoRefs.current[currentVideoIndex];
+      if (currentVideo) {
+        console.log(`Attempting to play hero video ${currentVideoIndex}`);
+        currentVideo.play().catch(err => {
+          console.error(`Hero video ${currentVideoIndex} play error:`, err);
+        });
+      }
+    };
+
+    // Initial play attempt
+    playCurrentVideo();
+    
+    // Set up rotation interval
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
         setIsTransitioning(false);
+        setTimeout(playCurrentVideo, 100);
       }, 500);
-    }, 10000); // Longer interval for videos
+    }, 10000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentVideoIndex]);
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about-section');
@@ -36,7 +61,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen overflow-hidden">
       {/* Background Videos with Crossfade */}
-      <div className="absolute inset-0 z-0 video-container">
+      <div className="absolute inset-0 z-0">
         {heroVideos.map((video, index) => (
           <div
             key={index}
@@ -47,14 +72,16 @@ const Hero = () => {
             }`}
           >
             <video
+              ref={el => {
+                if (el) videoRefs.current[index] = el;
+              }}
               src={video}
-              autoPlay
               muted
               loop
               playsInline
               className="w-full h-full object-cover"
-              onError={(e) => console.log('Video error:', e)}
-              onLoadedData={() => console.log(`Hero video ${index} loaded`)}
+              onError={(e) => console.error(`Hero video ${index} error:`, e)}
+              onLoadedData={() => console.log(`Hero video ${index} loaded successfully`)}
             />
           </div>
         ))}
