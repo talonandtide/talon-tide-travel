@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen overflow-hidden">
       {/* Background Videos with Crossfade */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 video-container">
         {heroVideos.map((video, index) => (
           <div
             key={index}
@@ -53,6 +53,8 @@ const Hero = () => {
               loop
               playsInline
               className="w-full h-full object-cover"
+              onError={(e) => console.log('Video error:', e)}
+              onLoadedData={() => console.log(`Hero video ${index} loaded`)}
             />
           </div>
         ))}

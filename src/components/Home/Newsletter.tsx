@@ -1,9 +1,35 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Newsletter = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && videoRef.current) {
+          console.log('Newsletter video is in view, attempting to play');
+          videoRef.current.play().catch(err => 
+            console.log('Newsletter video autoplay prevented:', err)
+          );
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -20,15 +46,17 @@ const Newsletter = () => {
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 video-container">
         <div className="h-full w-full">
           <video
+            ref={videoRef}
             className="h-full w-full object-cover fixed-bg"
-            autoPlay
             muted
             loop
             playsInline
             src="https://player.vimeo.com/external/476757543.sd.mp4?s=ef8b1c1fa4717b3c7a1c95167feef94df59876ac&profile_id=164&oauth2_token_id=57447761" // serene nature video
+            onError={(e) => console.log('Newsletter video error:', e)}
+            onLoadedData={() => console.log('Newsletter video loaded')}
           >
           </video>
           <div className="absolute inset-0 bg-talon-green/90" />

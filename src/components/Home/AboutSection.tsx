@@ -1,23 +1,51 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && videoRef.current) {
+          console.log('About section video is in view, attempting to play');
+          videoRef.current.play().catch(err => 
+            console.log('About section video autoplay prevented:', err)
+          );
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section id="about-section" className="py-20 bg-talon-ivory">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Video Column */}
           <div className="order-2 lg:order-1">
-            <div className="relative">
+            <div className="relative video-container">
               <video
+                ref={videoRef}
                 src="https://player.vimeo.com/external/368278117.sd.mp4?s=28a7a5f976a82484ddddff38233ed78cf4d6fc8f&profile_id=164&oauth2_token_id=57447761" // conservation expert with animals
-                autoPlay
                 muted
                 loop
                 playsInline
                 className="rounded-sm w-full h-auto object-cover animate-fade"
+                onError={(e) => console.log('About section video error:', e)}
+                onLoadedData={() => console.log('About section video loaded')}
               />
               <div className="absolute -bottom-6 -right-6 bg-talon-gold p-6 rounded-sm animate-fade animate-delay-200">
                 <p className="text-sm text-talon-green font-serif italic">

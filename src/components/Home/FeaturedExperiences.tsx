@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
@@ -44,15 +44,53 @@ const experiences = [
 const FeaturedExperiences = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState<{[key: number]: boolean}>({});
+  const videoRefs = useRef<{[key: number]: HTMLVideoElement | null}>({});
+
+  useEffect(() => {
+    // Initialize video references
+    experiences.forEach(exp => {
+      videoRefs.current[exp.id] = null;
+    });
+
+    // Attempt to play videos that are visible on load
+    setTimeout(() => {
+      Object.entries(videoRefs.current).forEach(([id, videoEl]) => {
+        if (videoEl && isElementInViewport(videoEl)) {
+          console.log(`Attempting to play experience video ${id} on load`);
+          videoEl.play().catch(err => console.log(`Video ${id} autoplay prevented:`, err));
+        }
+      });
+    }, 1000);
+  }, []);
+
+  const isElementInViewport = (el: Element) => {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
 
   const handleMouseEnter = (id: number) => {
     setHoveredId(id);
     setIsPlaying(prev => ({...prev, [id]: true}));
+    
+    const videoEl = videoRefs.current[id];
+    if (videoEl) {
+      console.log(`Mouse enter experience ${id}, attempting to play video`);
+      videoEl.play().catch(err => console.log(`Experience video ${id} play error:`, err));
+    }
   };
 
   const handleMouseLeave = (id: number) => {
     setHoveredId(null);
     setIsPlaying(prev => ({...prev, [id]: false}));
+  };
+
+  const setVideoRef = (id: number, element: HTMLVideoElement | null) => {
+    videoRefs.current[id] = element;
   };
 
   return (
@@ -72,13 +110,14 @@ const FeaturedExperiences = () => {
             {experiences.map((exp, index) => (
               <div 
                 key={exp.id} 
-                className="group animate-fade relative overflow-hidden card-luxury"
+                className="group animate-fade relative overflow-hidden card-luxury video-container"
                 style={{ animationDelay: `${index * 100}ms` }}
                 onMouseEnter={() => handleMouseEnter(exp.id)}
                 onMouseLeave={() => handleMouseLeave(exp.id)}
               >
                 <div className="relative overflow-hidden h-96">
                   <video 
+                    ref={el => setVideoRef(exp.id, el)}
                     src={exp.video} 
                     muted 
                     loop 
@@ -86,7 +125,9 @@ const FeaturedExperiences = () => {
                     className={`w-full h-full object-cover transition-transform duration-700 ${
                       hoveredId === exp.id ? 'scale-110' : 'scale-100'
                     }`}
-                    autoPlay={hoveredId === exp.id || isPlaying[exp.id]}
+                    autoPlay={false}
+                    onError={(e) => console.log(`Video ${exp.id} error:`, e)}
+                    onLoadedData={() => console.log(`Experience video ${exp.id} loaded`)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent" />
                   
@@ -117,15 +158,17 @@ const FeaturedExperiences = () => {
             <CarouselContent>
               {experiences.map((exp, index) => (
                 <CarouselItem key={exp.id} className="md:basis-1/2">
-                  <div className="relative overflow-hidden rounded-sm card-luxury">
+                  <div className="relative overflow-hidden rounded-sm card-luxury video-container">
                     <div className="aspect-[4/5]">
                       <video 
+                        ref={el => setVideoRef(exp.id, el)}
                         src={exp.video} 
-                        autoPlay
                         muted 
                         loop 
                         playsInline
                         className="w-full h-full object-cover"
+                        onError={(e) => console.log(`Mobile video ${exp.id} error:`, e)}
+                        onLoadedData={() => console.log(`Mobile experience video ${exp.id} loaded`)}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent" />
                     </div>
