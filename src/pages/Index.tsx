@@ -20,7 +20,6 @@ const Index = () => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Add show class for animations
           entry.target.classList.add('show');
           observer.unobserve(entry.target);
         }
@@ -28,15 +27,16 @@ const Index = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
-    
-    // Observe animated elements
     const animatedElements = document.querySelectorAll('.animate-fade');
+    
     animatedElements.forEach((el) => {
       observer.observe(el);
     });
 
     return () => {
-      observer.disconnect();
+      animatedElements.forEach((el) => {
+        observer.unobserve(el);
+      });
     };
   }, []);
 

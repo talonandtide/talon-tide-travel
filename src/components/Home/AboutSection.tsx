@@ -1,51 +1,20 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && videoRef.current) {
-          console.log('About section video is in view, attempting to play');
-          videoRef.current.play().catch(err => 
-            console.log('About section video autoplay prevented:', err)
-          );
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <section id="about-section" className="py-20 bg-talon-ivory">
+    <section className="py-20 bg-talon-ivory">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Video Column */}
+          {/* Image Column */}
           <div className="order-2 lg:order-1">
-            <div className="relative video-container">
-              <video
-                ref={videoRef}
-                src="https://assets.mixkit.co/videos/preview/mixkit-wild-horses-in-the-savanna-23546-large.mp4" 
-                muted
-                loop
-                playsInline
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
+                alt="Wildlife conservation expert"
                 className="rounded-sm w-full h-auto object-cover animate-fade"
-                onError={(e) => console.error('About section video error:', e)}
-                onLoadedData={() => console.log('About section video loaded successfully')}
               />
               <div className="absolute -bottom-6 -right-6 bg-talon-gold p-6 rounded-sm animate-fade animate-delay-200">
                 <p className="text-sm text-talon-green font-serif italic">

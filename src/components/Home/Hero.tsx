@@ -1,55 +1,29 @@
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Use mp4 format videos that work more reliably
-const heroVideos = [
-  'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-person-putting-food-in-a-shelter-for-43313-large.mp4',
-  'https://assets.mixkit.co/videos/preview/mixkit-marine-turtles-swimming-underwater-1492-large.mp4',
-  'https://assets.mixkit.co/videos/preview/mixkit-white-tiger-lying-down-and-stretching-14539-large.mp4'
+const heroImages = [
+  'https://images.unsplash.com/photo-1469041908917-89bc00316a01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+  'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2673&q=80',
+  'https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80'
 ];
 
 const Hero = () => {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const videoRefs = useRef<HTMLVideoElement[]>([]);
-
-  // Initialize videoRefs
-  if (videoRefs.current.length !== heroVideos.length) {
-    videoRefs.current = Array(heroVideos.length).fill(null);
-  }
 
   useEffect(() => {
-    // Create refs for each video
-    videoRefs.current = videoRefs.current.slice(0, heroVideos.length);
-    
-    // Try to play the current video
-    const playCurrentVideo = () => {
-      const currentVideo = videoRefs.current[currentVideoIndex];
-      if (currentVideo) {
-        console.log(`Attempting to play hero video ${currentVideoIndex}`);
-        currentVideo.play().catch(err => {
-          console.error(`Hero video ${currentVideoIndex} play error:`, err);
-        });
-      }
-    };
-
-    // Initial play attempt
-    playCurrentVideo();
-    
-    // Set up rotation interval
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
         setIsTransitioning(false);
-        setTimeout(playCurrentVideo, 100);
       }, 500);
-    }, 10000);
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, [currentVideoIndex]);
+  }, []);
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about-section');
@@ -60,30 +34,20 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Videos with Crossfade */}
+      {/* Background Images with Crossfade */}
       <div className="absolute inset-0 z-0">
-        {heroVideos.map((video, index) => (
+        {heroImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
-              currentVideoIndex === index 
+            className={`absolute inset-0 h-full w-full bg-cover bg-center transition-opacity duration-1000 ${
+              currentImageIndex === index 
                 ? 'opacity-100' 
                 : 'opacity-0'
             }`}
-          >
-            <video
-              ref={el => {
-                if (el) videoRefs.current[index] = el;
-              }}
-              src={video}
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
-              onError={(e) => console.error(`Hero video ${index} error:`, e)}
-              onLoadedData={() => console.log(`Hero video ${index} loaded successfully`)}
-            />
-          </div>
+            style={{
+              backgroundImage: `url('${image}')`,
+            }}
+          />
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-talon-midnight/80 via-talon-green/60 to-transparent" />
       </div>

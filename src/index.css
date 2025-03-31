@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
 
 @tailwind base;
@@ -147,21 +148,7 @@
     @apply absolute inset-0 bg-gradient-to-r from-talon-green/70 to-transparent;
   }
 
-  /* Video backgrounds */
-  .video-bg {
-    @apply absolute inset-0 w-full h-full object-cover z-0;
-  }
-  
-  .video-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent z-1;
-  }
-  
-  .fixed-bg {
-    background-attachment: fixed;
-    object-fit: cover;
-  }
-  
-  /* Parallax effect */
+  /* Cinematic parallax effect */
   .parallax {
     @apply relative overflow-hidden;
   }
@@ -169,6 +156,15 @@
   .parallax-bg {
     @apply absolute inset-0 h-[120%] w-full bg-cover bg-center -top-[10%];
     transform: translateZ(-1px) scale(2);
+  }
+  
+  /* Video background */
+  .video-bg {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+  
+  .video-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent;
   }
 }
 

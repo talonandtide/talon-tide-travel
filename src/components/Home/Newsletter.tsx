@@ -1,35 +1,9 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Newsletter = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && videoRef.current) {
-          console.log('Newsletter video is in view, attempting to play');
-          videoRef.current.play().catch(err => 
-            console.log('Newsletter video autoplay prevented:', err)
-          );
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
-      }
-    };
-  }, []);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -45,20 +19,14 @@ const Newsletter = () => {
   
   return (
     <section className="relative py-32 overflow-hidden">
-      {/* Background Video */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="h-full w-full">
-          <video
-            ref={videoRef}
-            className="h-full w-full object-cover"
-            muted
-            loop
-            playsInline
-            src="https://assets.mixkit.co/videos/preview/mixkit-trees-in-a-forest-at-sunset-5098-large.mp4"
-            onError={(e) => console.error('Newsletter video error:', e)}
-            onLoadedData={() => console.log('Newsletter video loaded successfully')}
-          >
-          </video>
+        <div
+          className="h-full w-full bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2559&q=80')`,
+          }}
+        >
           <div className="absolute inset-0 bg-talon-green/90" />
         </div>
       </div>
