@@ -1,20 +1,53 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
 
 const Newsletter = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // In a real implementation, this would send the email to a server
-    toast.success("Thank you for subscribing!", {
-      description: "You'll receive updates on our latest ethical wildlife experiences."
-    });
+    if (!email) {
+      toast.error("Please enter your email address");
+      return;
+    }
     
-    // Reset the form
-    const form = e.target as HTMLFormElement;
-    form.reset();
+    try {
+      setIsSubmitting(true);
+      
+      // Send email using EmailJS
+      // You'll need to replace these IDs with your own from EmailJS
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID', // replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
+        { 
+          email: email,
+          date: new Date().toLocaleString(),
+        },
+        'YOUR_USER_ID' // replace with your EmailJS user ID
+      );
+      
+      if (result.text === 'OK') {
+        toast.success("Thank you for subscribing!", {
+          description: "You'll receive updates on our latest ethical wildlife experiences."
+        });
+        
+        setEmail('');
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error("Failed to subscribe", { 
+        description: "Please try again later or contact us directly." 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -44,13 +77,16 @@ const Newsletter = () => {
               type="email"
               placeholder="Your email address"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="flex-grow bg-talon-navy/30 border border-talon-ivory/30 rounded-sm px-6 py-4 focus:outline-none focus:border-talon-gold text-talon-ivory placeholder:text-talon-ivory/50 shadow-lg"
             />
             <button 
               type="submit"
-              className="bg-talon-gold hover:bg-talon-gold/80 text-talon-green flex items-center justify-center gap-2 px-8 py-4 rounded-sm transition-colors duration-300 uppercase tracking-wide text-sm font-medium shadow-lg group"
+              disabled={isSubmitting}
+              className="bg-talon-gold hover:bg-talon-gold/80 text-talon-green flex items-center justify-center gap-2 px-8 py-4 rounded-sm transition-colors duration-300 uppercase tracking-wide text-sm font-medium shadow-lg group disabled:opacity-70"
             >
-              Subscribe
+              {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </form>
