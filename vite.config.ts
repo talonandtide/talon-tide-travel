@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: './',
+  base: '/', // ✅ Use absolute path for custom domains!
   build: {
     outDir: 'dist',
   },
