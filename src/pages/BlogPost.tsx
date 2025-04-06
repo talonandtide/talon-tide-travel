@@ -38,7 +38,7 @@ const blogPosts = [
       },
       {
         type: 'quote',
-        text: 'The most meaningful wildlife experiences are those where we adapt to the animals' world—not where they are forced to adapt to ours.',
+        text: "The most meaningful wildlife experiences are those where we adapt to the animals' world—not where they are forced to adapt to ours.",
         author: 'Dr. Jane Goodall'
       },
       {
