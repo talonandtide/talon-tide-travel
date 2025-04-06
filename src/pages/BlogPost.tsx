@@ -1,9 +1,15 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/Layout/Layout';
 import { ArrowLeft, Clock, User } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 // Blog post data (this would normally come from an API or CMS)
 const blogPosts = [
@@ -23,9 +29,21 @@ const blogPosts = [
         text: 'The allure of encountering wildlife in their natural habitats draws millions of travelers each year. Yet, this growing desire for authentic animal experiences comes with profound ethical considerations. As wildlife tourism continues to expand globally, its impact on animal welfare and conservation efforts has come under increasing scrutiny.'
       },
       {
-        type: 'image',
-        src: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-        alt: 'Elephants in sanctuary',
+        type: 'gallery',
+        images: [
+          {
+            src: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+            alt: 'Elephants in sanctuary',
+          },
+          {
+            src: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+            alt: 'Deer in natural habitat',
+          },
+          {
+            src: 'https://images.unsplash.com/photo-1469033363950-eb392a20d59e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+            alt: 'Rainforest wildlife',
+          }
+        ],
         caption: 'Ethical sanctuaries prioritize the wellbeing of animals over tourist experiences'
       },
       {
@@ -212,6 +230,40 @@ const BlogPost = () => {
                           className="w-full h-auto object-cover"
                         />
                       </div>
+                      {block.caption && (
+                        <figcaption className="text-sm text-talon-stone italic mt-3 text-center">
+                          {block.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  );
+                
+                case 'gallery':
+                  return (
+                    <figure key={index} className="my-12 mx-auto">
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {block.images.map((image, i) => (
+                            <CarouselItem key={i}>
+                              <div className="overflow-hidden">
+                                <AspectRatio ratio={16/9} className="bg-talon-navy/10">
+                                  <img 
+                                    src={image.src} 
+                                    alt={image.alt} 
+                                    className="w-full h-full object-cover"
+                                  />
+                                </AspectRatio>
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <div className="flex justify-center gap-2 mt-4">
+                          <CarouselPrevious className="relative left-0 right-0 top-0 translate-y-0 h-9 w-9 
+                            border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-white" />
+                          <CarouselNext className="relative left-0 right-0 top-0 translate-y-0 h-9 w-9 
+                            border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-white" />
+                        </div>
+                      </Carousel>
                       {block.caption && (
                         <figcaption className="text-sm text-talon-stone italic mt-3 text-center">
                           {block.caption}
