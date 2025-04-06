@@ -1,11 +1,8 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { componentTagger } from "lovable-tagger";
-
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/', // ← this is the fix!
+  base: '/',
+  build: {
+    outDir: 'dist', // ensures Vite puts files in the correct place
+  },
   server: {
     host: "::",
     port: 8080,
