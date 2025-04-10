@@ -35,9 +35,9 @@ const Header = () => {
         <Link to="/" className="z-50">
           <h1 className={cn(
             "font-serif text-xl md:text-2xl transition-all duration-300",
-            scrolled ? "text-talon-green" : "text-talon-ivory"
+            scrolled ? "text-talon-green" : "text-talon-green drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
           )}>
-            Talon <span className="text-talon-gold">&</span> Tide
+            Talon <span className="text-talon-gold">&#38;</span> Tide
           </h1>
         </Link>
         
@@ -51,7 +51,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className={cn(
                 "hover:text-talon-gold transition-colors duration-300",
-                scrolled ? "text-talon-green" : "text-white"
+                scrolled ? "text-talon-green" : "text-talon-green drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
               )}
             >
               <Instagram size={18} />
@@ -60,7 +60,7 @@ const Header = () => {
               to="/contact" 
               className={cn(
                 "hover:text-talon-gold transition-colors duration-300",
-                scrolled ? "text-talon-green" : "text-white"
+                scrolled ? "text-talon-green" : "text-talon-green drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
               )}
             >
               <Mail size={18} />
@@ -72,7 +72,7 @@ const Header = () => {
         <button 
           className={cn(
             "z-50 lg:hidden",
-            scrolled ? "text-talon-green" : "text-talon-ivory"
+            scrolled ? "text-talon-green" : "text-talon-green drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
           )} 
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -128,7 +128,7 @@ const NavLinks = ({ mobile = false, isScrolled = false }) => {
           to={link.path}
           className={cn(
             "font-sans text-sm uppercase tracking-wide transition-colors duration-300 hover:text-talon-gold relative",
-            mobile ? "text-talon-ivory py-1" : isScrolled ? "text-talon-green" : "text-talon-ivory",
+            mobile ? "text-talon-ivory py-1" : isScrolled ? "text-talon-green" : "text-talon-green drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]",
             location.pathname === link.path ? "after:absolute after:w-full after:h-[1px] after:bg-talon-gold after:-bottom-1 after:left-0" : ""
           )}
         >
