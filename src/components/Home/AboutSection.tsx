@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { QuoteCard } from '@/components/ui/quote-card';
 
 const AboutSection = () => {
   return (
@@ -16,11 +17,10 @@ const AboutSection = () => {
                 alt="Wildlife conservation expert"
                 className="rounded-sm w-full h-auto object-cover animate-fade"
               />
-              <div className="absolute -bottom-6 -right-6 bg-talon-gold p-6 rounded-sm animate-fade animate-delay-200">
-                <p className="text-sm text-talon-green font-serif italic">
-                  "True luxury is an experience that respects both wildlife and local communities."
-                </p>
-              </div>
+              <QuoteCard 
+                quote="True luxury is an experience that respects both wildlife and local communities."
+                className="absolute -bottom-6 -right-6 !p-4 md:!p-6 !max-w-xs animate-fade animate-delay-200 !rounded-none"
+              />
             </div>
           </div>
           
