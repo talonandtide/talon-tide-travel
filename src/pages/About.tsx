@@ -41,8 +41,8 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80"
-                alt="Lindsay, Founder of Talon & Tide"
+                src="/lovable-uploads/42e1cde9-5c7a-4efa-9536-cce93f56b5ee.png"
+                alt="Lindsay with baboons in their natural habitat"
                 className="w-full h-auto rounded-sm shadow-lg animate-fade"
               />
               <div className="absolute -bottom-8 -left-8 bg-white p-6 shadow-lg rounded-sm max-w-xs animate-fade animate-delay-200">
