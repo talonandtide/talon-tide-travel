@@ -19,7 +19,7 @@ const AboutSection = () => {
               />
               <QuoteCard 
                 quote="True luxury is an experience that respects both wildlife and local communities."
-                className="absolute -bottom-6 -right-6 !p-4 md:!p-6 !max-w-xs animate-fade animate-delay-200 !rounded-none"
+                className="absolute -bottom-6 -right-6 !max-w-xs animate-fade animate-delay-200 !rounded-none !p-6"
               />
             </div>
           </div>
