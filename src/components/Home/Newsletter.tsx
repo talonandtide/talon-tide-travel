@@ -22,14 +22,14 @@ const Newsletter = () => {
       // Send email using EmailJS
       // You'll need to replace these IDs with your own from EmailJS
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID', // replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
+        'contact_service', // replace with your EmailJS service ID
+        'template_lde17cj', // replace with your EmailJS template ID
         { 
           email: email,
           to_email: 'hello@talonandtide.com',
           date: new Date().toLocaleString(),
         },
-        'YOUR_USER_ID' // replace with your EmailJS user ID
+        'kfwhy7VZD5cyq76uF' // replace with your EmailJS user ID
       );
       
       if (result.text === 'OK') {
