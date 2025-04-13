@@ -42,13 +42,14 @@ const Contact = () => {
               <p className="mb-8 text-talon-navy animate-fade animate-delay-100">
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" action="mailto:hello@talonandtide.com" method="post" encType="text/plain">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="animate-fade animate-delay-200">
                     <label htmlFor="firstName" className="block text-talon-navy text-sm mb-2">First Name</label>
                     <input
                       type="text"
                       id="firstName"
+                      name="firstName"
                       required
                       className="input-field"
                       placeholder="Your first name"
@@ -59,6 +60,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="lastName"
+                      name="lastName"
                       required
                       className="input-field"
                       placeholder="Your last name"
@@ -70,6 +72,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     className="input-field"
                     placeholder="Your email address"
@@ -80,6 +83,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
                     required
                     className="input-field"
                     placeholder="What is this regarding?"
@@ -89,6 +93,7 @@ const Contact = () => {
                   <label htmlFor="message" className="block text-talon-navy text-sm mb-2">Message</label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={6}
                     required
                     className="input-field"
@@ -131,7 +136,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-serif text-lg text-talon-green mb-1">Instagram</h3>
                     <a 
-                      href="https://instagram.com" 
+                      href="https://www.instagram.com/talonandtide/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-talon-navy hover:text-talon-gold transition-colors duration-300"

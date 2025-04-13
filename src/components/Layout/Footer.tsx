@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, ArrowRight } from 'lucide-react';
+import { Instagram, ArrowRight, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,14 +18,20 @@ const Footer = () => {
             <p className="text-sm text-talon-ivory/80 mb-6">
               Luxury wildlife experiences curated with ethics and expertise at the forefront.
             </p>
-            <div className="flex items-center mt-auto">
+            <div className="flex items-center mt-auto gap-4">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/talonandtide/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
               >
                 <Instagram size={20} />
+              </a>
+              <a 
+                href="mailto:hello@talonandtide.com" 
+                className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
+              >
+                <Mail size={20} />
               </a>
             </div>
           </div>
@@ -48,7 +54,7 @@ const Footer = () => {
             <p className="text-sm text-talon-ivory/80 mb-4">
               Sign up for exclusive insights into ethical wildlife travel and be the first to know when our curated experiences are available.
             </p>
-            <form className="flex gap-2 mt-4">
+            <form className="flex gap-2 mt-4" action="mailto:hello@talonandtide.com" method="post" encType="text/plain">
               <input 
                 type="email" 
                 placeholder="Your email" 

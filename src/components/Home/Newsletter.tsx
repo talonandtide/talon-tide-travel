@@ -26,6 +26,7 @@ const Newsletter = () => {
         'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
         { 
           email: email,
+          to_email: 'hello@talonandtide.com',
           date: new Date().toLocaleString(),
         },
         'YOUR_USER_ID' // replace with your EmailJS user ID
@@ -43,7 +44,7 @@ const Newsletter = () => {
     } catch (error) {
       console.error('Error sending email:', error);
       toast.error("Failed to subscribe", { 
-        description: "Please try again later or contact us directly." 
+        description: "Please try again later or contact us directly at hello@talonandtide.com." 
       });
     } finally {
       setIsSubmitting(false);
