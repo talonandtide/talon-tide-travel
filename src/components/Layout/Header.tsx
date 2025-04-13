@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Mail } from 'lucide-react';
@@ -41,12 +40,11 @@ const Header = () => {
           </h1>
         </Link>
         
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           <NavLinks isScrolled={scrolled} />
           <div className="flex items-center gap-4">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/talonandtide/" 
               target="_blank" 
               rel="noopener noreferrer"
               className={cn(
@@ -68,7 +66,6 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* Mobile Nav Button */}
         <button 
           className={cn(
             "z-50 lg:hidden",
@@ -79,7 +76,6 @@ const Header = () => {
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         
-        {/* Mobile Nav Panel */}
         <div className={cn(
           "fixed inset-0 bg-talon-green/95 backdrop-blur-sm flex flex-col justify-center items-center gap-8 transition-all duration-500 lg:hidden",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -89,7 +85,7 @@ const Header = () => {
           </nav>
           <div className="flex items-center gap-6 text-talon-ivory">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/talonandtide/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-talon-gold transition-colors duration-300"

@@ -32,7 +32,7 @@ const InstagramFeed = () => {
         <div className="text-center mb-10">
           <p className="uppercase tracking-wide text-sm text-talon-stone mb-2 animate-fade">Follow Us</p>
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/talonandtide/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-flex items-center gap-2 font-serif text-2xl text-talon-green hover:text-talon-gold transition-colors duration-300 animate-fade animate-delay-100"
@@ -46,7 +46,7 @@ const InstagramFeed = () => {
           {instagramPosts.map((post, index) => (
             <a 
               key={post.id} 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/talonandtide/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group relative overflow-hidden animate-fade"
