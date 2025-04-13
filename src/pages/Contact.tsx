@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '@/components/Layout/Layout';
 import { Mail, Instagram, MapPin, ArrowRight } from 'lucide-react';
@@ -247,7 +246,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-serif text-lg text-talon-green mb-1">Based In</h3>
                     <p className="text-talon-navy">
-                      San Francisco, California, USA
+                      Orlando, Florida, USA
                     </p>
                     <p className="text-sm text-talon-stone mt-1">
                       With a global network of wildlife specialists
