@@ -1,9 +1,53 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, ArrowRight, Mail } from 'lucide-react';
+import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!email) {
+      toast.error("Please enter your email address");
+      return;
+    }
+    
+    try {
+      setIsSubmitting(true);
+      
+      const templateParams = {
+        email: email,
+        to_email: 'hello@talonandtide.com',
+        date: new Date().toLocaleString(),
+        form_name: 'Footer Newsletter'
+      };
+      
+      const result = await emailjs.send(
+        'contact_service',
+        'template_lde17cj',
+        templateParams,
+        'kfwhy7VZD5cyq76uF'
+      );
+      
+      if (result.status === 200) {
+        toast.success("Thank you for subscribing!");
+        setEmail('');
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error("Failed to subscribe. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer className="bg-talon-green text-talon-ivory py-16">
       <div className="container">
@@ -54,17 +98,21 @@ const Footer = () => {
             <p className="text-sm text-talon-ivory/80 mb-4">
               Sign up for exclusive insights into ethical wildlife travel and be the first to know when our curated experiences are available.
             </p>
-            <form className="flex gap-2 mt-4" action="mailto:hello@talonandtide.com" method="post" encType="text/plain">
+            <form className="flex gap-2 mt-4" onSubmit={handleSubmit}>
               <input 
                 type="email" 
                 placeholder="Your email" 
                 className="bg-talon-navy/30 text-talon-ivory placeholder:text-talon-ivory/50 border border-talon-ivory/20 px-3 py-2 rounded-sm flex-grow focus:outline-none focus:border-talon-gold"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
               <button 
                 type="submit" 
                 className="bg-talon-gold hover:bg-talon-gold/80 text-talon-green px-4 py-2 rounded-sm transition-colors duration-300 flex items-center"
+                disabled={isSubmitting}
               >
-                <ArrowRight size={16} />
+                {isSubmitting ? '...' : <ArrowRight size={16} />}
               </button>
             </form>
           </div>

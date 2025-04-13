@@ -1,21 +1,57 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@/components/Layout/Layout';
 import { Mail, Instagram, MapPin, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // In a real implementation, this would send the form data to a server
-    toast.success("Message sent successfully!", {
-      description: "We'll be in touch soon. Thank you for your interest in Talon & Tide."
-    });
-    
-    // Reset the form
     const form = e.target as HTMLFormElement;
-    form.reset();
+    
+    try {
+      setIsSubmitting(true);
+      
+      // For the contact form, we send all form fields
+      const formData = new FormData(form);
+      const templateParams = {
+        firstName: formData.get('firstName'),
+        lastName: formData.get('lastName'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message'),
+        to_email: 'hello@talonandtide.com',
+        form_name: 'Contact Form'
+      };
+      
+      const result = await emailjs.send(
+        'contact_service',
+        'template_lde17cj',
+        templateParams,
+        'kfwhy7VZD5cyq76uF'
+      );
+      
+      if (result.status === 200) {
+        toast.success("Message sent successfully!", {
+          description: "We'll be in touch soon. Thank you for your interest in Talon & Tide."
+        });
+        
+        // Reset the form
+        form.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast.error("Failed to send message", { 
+        description: "Please try again later or email us directly at hello@talonandtide.com."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -42,7 +78,7 @@ const Contact = () => {
               <p className="mb-8 text-talon-navy animate-fade animate-delay-100">
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
-              <form onSubmit={handleSubmit} className="space-y-6" action="mailto:hello@talonandtide.com" method="post" encType="text/plain">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="animate-fade animate-delay-200">
                     <label htmlFor="firstName" className="block text-talon-navy text-sm mb-2">First Name</label>
@@ -101,9 +137,13 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <div className="animate-fade animate-delay-700">
-                  <button type="submit" className="btn-primary w-full justify-center">
-                    Send Message
-                    <ArrowRight size={16} />
+                  <button 
+                    type="submit" 
+                    className="btn-primary w-full justify-center"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {!isSubmitting && <ArrowRight size={16} />}
                   </button>
                 </div>
               </form>

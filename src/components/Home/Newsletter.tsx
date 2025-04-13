@@ -19,20 +19,24 @@ const Newsletter = () => {
     try {
       setIsSubmitting(true);
       
-      // Send email using EmailJS
-      // You'll need to replace these IDs with your own from EmailJS
+      // Send email using EmailJS with the correct parameters
+      const templateParams = {
+        email: email,
+        to_email: 'hello@talonandtide.com',
+        date: new Date().toLocaleString(),
+        form_name: 'Newsletter'
+      };
+      
       const result = await emailjs.send(
-        'contact_service', // replace with your EmailJS service ID
-        'template_lde17cj', // replace with your EmailJS template ID
-        { 
-          email: email,
-          to_email: 'hello@talonandtide.com',
-          date: new Date().toLocaleString(),
-        },
-        'kfwhy7VZD5cyq76uF' // replace with your EmailJS user ID
+        'contact_service', // Your EmailJS service ID
+        'template_lde17cj', // Your EmailJS template ID
+        templateParams,
+        'kfwhy7VZD5cyq76uF' // Your EmailJS user ID
       );
       
-      if (result.text === 'OK') {
+      console.log('EmailJS result:', result);
+      
+      if (result.status === 200) {
         toast.success("Thank you for subscribing!", {
           description: "You'll receive updates on our latest ethical wildlife experiences."
         });

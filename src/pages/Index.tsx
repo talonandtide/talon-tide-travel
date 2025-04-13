@@ -7,9 +7,13 @@ import FeaturedExperiences from '@/components/Home/FeaturedExperiences';
 import BlogPreview from '@/components/Home/BlogPreview';
 import Newsletter from '@/components/Home/Newsletter';
 import InstagramFeed from '@/components/Home/InstagramFeed';
+import emailjs from 'emailjs-com';
 
 const Index = () => {
   useEffect(() => {
+    // Initialize EmailJS with user ID
+    emailjs.init('kfwhy7VZD5cyq76uF');
+    
     // Intersection Observer to trigger animations when elements come into view
     const observerOptions = {
       root: null,
