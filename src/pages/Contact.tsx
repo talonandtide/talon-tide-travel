@@ -4,9 +4,20 @@ import Layout from '@/components/Layout/Layout';
 import { Mail, Instagram, MapPin, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
+import { 
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [tripType, setTripType] = useState('');
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,6 +32,8 @@ const Contact = () => {
         firstName: formData.get('firstName'),
         lastName: formData.get('lastName'),
         email: formData.get('email'),
+        tripType: formData.get('tripType'),
+        animal: formData.get('animal'),
         subject: formData.get('subject'),
         message: formData.get('message'),
         to_email: 'hello@talonandtide.com',
@@ -29,7 +42,7 @@ const Contact = () => {
       
       const result = await emailjs.send(
         'contact_service',
-        'template_lde17cj',
+        'template_ih1v52f',
         templateParams,
         'kfwhy7VZD5cyq76uF'
       );
@@ -41,6 +54,7 @@ const Contact = () => {
         
         // Reset the form
         form.reset();
+        setTripType('');
       } else {
         throw new Error('Failed to send message');
       }
@@ -74,69 +88,103 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Form Column */}
             <div>
-              <h2 className="section-title animate-fade">Send Us a Message</h2>
+              <h2 className="section-title animate-fade">Start Your Journey</h2>
               <p className="mb-8 text-talon-navy animate-fade animate-delay-100">
-                Fill out the form below and we'll get back to you as soon as possible.
+                We read every message carefully and respond with the same thoughtfulness we put into every journey we plan.
+                Your inquiry won't go to a ticketing system or auto-responder — just a real human, here to help.
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="animate-fade animate-delay-200">
-                    <label htmlFor="firstName" className="block text-talon-navy text-sm mb-2">First Name</label>
-                    <input
+                    <Label htmlFor="firstName" className="block text-talon-navy text-sm mb-2">Your First Name</Label>
+                    <Input
                       type="text"
                       id="firstName"
                       name="firstName"
                       required
                       className="input-field"
-                      placeholder="Your first name"
+                      placeholder="Jordan"
                     />
                   </div>
                   <div className="animate-fade animate-delay-300">
-                    <label htmlFor="lastName" className="block text-talon-navy text-sm mb-2">Last Name</label>
-                    <input
+                    <Label htmlFor="lastName" className="block text-talon-navy text-sm mb-2">Your Last Name (optional)</Label>
+                    <Input
                       type="text"
                       id="lastName"
                       name="lastName"
-                      required
                       className="input-field"
-                      placeholder="Your last name"
+                      placeholder="Avery"
                     />
                   </div>
                 </div>
+                
                 <div className="animate-fade animate-delay-400">
-                  <label htmlFor="email" className="block text-talon-navy text-sm mb-2">Email</label>
-                  <input
+                  <Label htmlFor="email" className="block text-talon-navy text-sm mb-2">Your Email Address</Label>
+                  <Input
                     type="email"
                     id="email"
                     name="email"
                     required
                     className="input-field"
-                    placeholder="Your email address"
+                    placeholder="you@email.com"
                   />
                 </div>
+                
                 <div className="animate-fade animate-delay-500">
-                  <label htmlFor="subject" className="block text-talon-navy text-sm mb-2">Subject</label>
-                  <input
+                  <Label htmlFor="tripType" className="block text-talon-navy text-sm mb-2">
+                    What kind of experience are you interested in?
+                  </Label>
+                  <Select name="tripType" value={tripType} onValueChange={setTripType}>
+                    <SelectTrigger className="input-field w-full">
+                      <SelectValue placeholder="Select an experience type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="zoo-based">Zoo-based experience</SelectItem>
+                      <SelectItem value="wildlife">Wildlife experience</SelectItem>
+                      <SelectItem value="combo">Zoo + Wildlife Combo</SelectItem>
+                      <SelectItem value="not-sure">Not sure yet</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div className="animate-fade animate-delay-600">
+                  <Label htmlFor="animal" className="block text-talon-navy text-sm mb-2">
+                    Is there a specific animal you'd love to connect with?
+                  </Label>
+                  <Input
+                    type="text"
+                    id="animal"
+                    name="animal"
+                    className="input-field"
+                    placeholder="I've always dreamed of meeting a cheetah!"
+                  />
+                </div>
+                
+                <div className="animate-fade animate-delay-700">
+                  <Label htmlFor="subject" className="block text-talon-navy text-sm mb-2">How can we help?</Label>
+                  <Input
                     type="text"
                     id="subject"
                     name="subject"
                     required
                     className="input-field"
-                    placeholder="What is this regarding?"
+                    placeholder="I'd love help planning a custom itinerary"
                   />
                 </div>
-                <div className="animate-fade animate-delay-600">
-                  <label htmlFor="message" className="block text-talon-navy text-sm mb-2">Message</label>
-                  <textarea
+                
+                <div className="animate-fade animate-delay-800">
+                  <Label htmlFor="message" className="block text-talon-navy text-sm mb-2">Tell us more — we're listening!</Label>
+                  <Textarea
                     id="message"
                     name="message"
                     rows={6}
                     required
                     className="input-field"
-                    placeholder="Your message"
-                  ></textarea>
+                    placeholder="Include your goals, preferred dates, or any other notes."
+                  />
                 </div>
-                <div className="animate-fade animate-delay-700">
+                
+                <div className="animate-fade animate-delay-900">
                   <button 
                     type="submit" 
                     className="btn-primary w-full justify-center"
@@ -147,6 +195,12 @@ const Contact = () => {
                   </button>
                 </div>
               </form>
+              
+              <div className="mt-8 p-5 bg-talon-sand/20 border border-talon-gold/20 rounded-sm text-talon-navy/80 text-sm animate-fade animate-delay-1000">
+                <p>
+                  <strong>A note on our process:</strong> We offer personalized planning for meaningful, animal-focused travel - from once-in-a-lifetime adventures to elevated day trips. A flat planning fee may apply depending on the scope of your request. We'll always confirm details before moving forward.
+                </p>
+              </div>
             </div>
             
             {/* Info Column */}

@@ -28,10 +28,10 @@ const Newsletter = () => {
       };
       
       const result = await emailjs.send(
-        'contact_service', // Your EmailJS service ID
-        'template_lde17cj', // Your EmailJS template ID
+        'contact_service', 
+        'template_lde17cj',
         templateParams,
-        'kfwhy7VZD5cyq76uF' // Your EmailJS user ID
+        'kfwhy7VZD5cyq76uF'
       );
       
       console.log('EmailJS result:', result);
