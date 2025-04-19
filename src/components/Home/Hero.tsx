@@ -3,24 +3,33 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const heroImages = [
-  'https://images.unsplash.com/photo-1469041908917-89bc00316a01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-  'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2673&q=80',
-  'https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80'
+const heroVideos = [
+  {
+    url: 'https://cdn.coverr.co/videos/coverr-elephant-walking-in-the-savannah-2633/1080p.mp4',
+    type: 'video/mp4'
+  },
+  {
+    url: 'https://cdn.coverr.co/videos/coverr-a-blue-whale-swimming-in-deep-ocean-5227/1080p.mp4',
+    type: 'video/mp4'
+  },
+  {
+    url: 'https://cdn.coverr.co/videos/coverr-moose-grazing-in-wild-1268/1080p.mp4',
+    type: 'video/mp4'
+  }
 ];
 
 const Hero = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
         setIsTransitioning(false);
-      }, 500);
-    }, 6000);
+      }, 1000);
+    }, 8000); // Show each video for 8 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -34,20 +43,27 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Images with Crossfade */}
+      {/* Background Videos with Crossfade */}
       <div className="absolute inset-0 z-0">
-        {heroImages.map((image, index) => (
+        {heroVideos.map((video, index) => (
           <div
             key={index}
-            className={`absolute inset-0 h-full w-full bg-cover bg-center transition-opacity duration-1000 ${
-              currentImageIndex === index 
+            className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
+              currentVideoIndex === index 
                 ? 'opacity-100' 
                 : 'opacity-0'
             }`}
-            style={{
-              backgroundImage: `url('${image}')`,
-            }}
-          />
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src={video.url} type={video.type} />
+            </video>
+          </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-talon-midnight/80 via-talon-green/60 to-transparent" />
       </div>
