@@ -1,85 +1,73 @@
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Updated video URLs from more reliable sources
 const heroVideos = [
   {
-    url: 'https://cdn.coverr.co/videos/coverr-elephant-walking-in-the-savannah-2633/1080p.mp4',
+    url: 'https://player.vimeo.com/external/477294131.sd.mp4?s=591d864400f6bf6bbd7775a69c950df6870e3f7a&profile_id=164&oauth2_token_id=57447761',
     type: 'video/mp4'
   },
   {
-    url: 'https://cdn.coverr.co/videos/coverr-a-blue-whale-swimming-in-deep-ocean-5227/1080p.mp4',
+    url: 'https://player.vimeo.com/external/291619888.sd.mp4?s=7f9ee1f8ec1e5376027e4a6d1d05d5738b2fbb29&profile_id=164&oauth2_token_id=57447761',
     type: 'video/mp4'
   },
   {
-    url: 'https://cdn.coverr.co/videos/coverr-moose-grazing-in-wild-1268/1080p.mp4',
+    url: 'https://player.vimeo.com/external/517090025.sd.mp4?s=60f2a93f5e9972759ee65c5b9b187621452a6eb9&profile_id=165&oauth2_token_id=57447761',
     type: 'video/mp4'
   }
 ];
 
-// Fallback images if videos fail to load
+// Updated reliable fallback images
 const fallbackImages = [
-  'https://images.unsplash.com/photo-1469041908917-89bc00316a01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-  'https://images.unsplash.com/photo-1535941339077-2dd1c7963098?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2673&q=80',
-  'https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80'
+  'https://images.unsplash.com/photo-1472396961693-142e6e269027',
+  'https://images.unsplash.com/photo-1518877593221-1f28583780b4',
+  'https://images.unsplash.com/photo-1485833077593-4278bba3f11f'
 ];
 
 const Hero = () => {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [useVideoFallback, setUseVideoFallback] = useState(false);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-  // Initialize video elements
+  // Set up rotation interval
   useEffect(() => {
-    // Preload videos
-    heroVideos.forEach((video, index) => {
-      const videoElement = document.createElement('video');
-      videoElement.src = video.url;
-      videoElement.preload = 'auto';
-      
-      // Handle loading errors
-      videoElement.onerror = () => {
-        console.error(`Error loading video: ${video.url}`);
-        setUseVideoFallback(true);
-      };
+    // Immediately check if videos can be played
+    const testVideoElement = document.createElement('video');
+    testVideoElement.muted = true;
+    testVideoElement.src = heroVideos[0].url;
+    testVideoElement.addEventListener('error', () => {
+      console.log('Video test failed, using fallback images');
+      setUseVideoFallback(true);
     });
+    
+    // Try to play test video
+    const playPromise = testVideoElement.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .catch(error => {
+          console.log('Video autoplay failed:', error);
+          setUseVideoFallback(true);
+        });
+    }
 
-    // Log when component loads
-    console.log('Hero component mounted with videos:', heroVideos);
-  }, []);
-
-  // Rotation effect for videos/images
-  useEffect(() => {
+    // Set up rotation interval
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % heroVideos.length);
+        setCurrentIndex((prev) => (prev + 1) % (useVideoFallback ? fallbackImages.length : heroVideos.length));
         setIsTransitioning(false);
       }, 1000);
-    }, 8000); 
+    }, 8000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [useVideoFallback]);
 
-  // Handle video playback
+  // Log component load
   useEffect(() => {
-    if (!useVideoFallback) {
-      videoRefs.current.forEach((videoRef, index) => {
-        if (videoRef) {
-          if (index === currentVideoIndex) {
-            // Ensure current video is playing
-            videoRef.play().catch(err => {
-              console.error(`Error playing video: ${err.message}`);
-              setUseVideoFallback(true);
-            });
-            console.log(`Playing video at index ${index}`);
-          }
-        }
-      });
-    }
-  }, [currentVideoIndex, useVideoFallback]);
+    console.log('Hero component mounted, using fallback:', useVideoFallback);
+  }, [useVideoFallback]);
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about-section');
@@ -98,9 +86,7 @@ const Hero = () => {
             <div
               key={`fallback-${index}`}
               className={`absolute inset-0 h-full w-full bg-cover bg-center transition-opacity duration-1000 ${
-                currentVideoIndex === index 
-                  ? 'opacity-100' 
-                  : 'opacity-0'
+                currentIndex === index ? 'opacity-100' : 'opacity-0'
               }`}
               style={{ backgroundImage: `url('${image}')` }}
             />
@@ -111,26 +97,26 @@ const Hero = () => {
             <div
               key={`video-${index}`}
               className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
-                currentVideoIndex === index 
-                  ? 'opacity-100' 
-                  : 'opacity-0'
+                currentIndex === index ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <video
-                ref={el => videoRefs.current[index] = el}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
-                onError={() => {
-                  console.error(`Error with video ${index}`);
-                  setUseVideoFallback(true);
-                }}
-              >
-                <source src={video.url} type={video.type} />
-                Your browser does not support the video tag.
-              </video>
+              {currentIndex === index && (
+                <video
+                  key={`video-element-${index}`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onError={() => {
+                    console.error(`Error playing video ${index}`);
+                    setUseVideoFallback(true);
+                  }}
+                >
+                  <source src={video.url} type={video.type} />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
           ))
         )}
