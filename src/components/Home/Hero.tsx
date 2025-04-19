@@ -3,56 +3,72 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Updated video URLs from more reliable sources
+// Updated reliable video sources with WebM and MP4 options
 const heroVideos = [
   {
-    url: 'https://player.vimeo.com/external/477294131.sd.mp4?s=591d864400f6bf6bbd7775a69c950df6870e3f7a&profile_id=164&oauth2_token_id=57447761',
+    url: 'https://cdn.coverr.co/videos/coverr-elephant-walking-in-the-wilderness-2733/1080p.mp4',
     type: 'video/mp4'
   },
   {
-    url: 'https://player.vimeo.com/external/291619888.sd.mp4?s=7f9ee1f8ec1e5376027e4a6d1d05d5738b2fbb29&profile_id=164&oauth2_token_id=57447761',
+    url: 'https://cdn.coverr.co/videos/coverr-aerial-shot-of-a-lake-5061/1080p.mp4',
     type: 'video/mp4'
   },
   {
-    url: 'https://player.vimeo.com/external/517090025.sd.mp4?s=60f2a93f5e9972759ee65c5b9b187621452a6eb9&profile_id=165&oauth2_token_id=57447761',
+    url: 'https://cdn.coverr.co/videos/coverr-wild-horses-running-5364/1080p.mp4',
     type: 'video/mp4'
   }
 ];
 
-// Updated reliable fallback images
+// Reliable fallback images
 const fallbackImages = [
-  'https://images.unsplash.com/photo-1472396961693-142e6e269027',
-  'https://images.unsplash.com/photo-1518877593221-1f28583780b4',
-  'https://images.unsplash.com/photo-1485833077593-4278bba3f11f'
+  'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=1920',
+  'https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1920',
+  'https://images.unsplash.com/photo-1503656142023-618e7d1f435a?q=80&w=1920'
 ];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [useVideoFallback, setUseVideoFallback] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   // Set up rotation interval
   useEffect(() => {
-    // Immediately check if videos can be played
-    const testVideoElement = document.createElement('video');
-    testVideoElement.muted = true;
-    testVideoElement.src = heroVideos[0].url;
-    testVideoElement.addEventListener('error', () => {
-      console.log('Video test failed, using fallback images');
-      setUseVideoFallback(true);
-    });
+    console.log('Hero component mounted, testing video playback...');
     
-    // Try to play test video
-    const playPromise = testVideoElement.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .catch(error => {
-          console.log('Video autoplay failed:', error);
+    // Check if videos can be played
+    const checkVideoPlayback = async () => {
+      try {
+        const testVideo = document.createElement('video');
+        testVideo.muted = true;
+        testVideo.playsInline = true;
+        testVideo.src = heroVideos[0].url;
+        
+        testVideo.addEventListener('error', () => {
+          console.log('Video test failed, switching to fallback images');
           setUseVideoFallback(true);
         });
-    }
-
-    // Set up rotation interval
+        
+        testVideo.addEventListener('loadeddata', () => {
+          console.log('Video test succeeded, can play videos');
+          setVideoLoaded(true);
+        });
+        
+        // Explicitly load the video
+        testVideo.load();
+        await testVideo.play().catch(err => {
+          console.log('Video autoplay failed:', err);
+          setUseVideoFallback(true);
+        });
+      } catch (error) {
+        console.log('Video test exception:', error);
+        setUseVideoFallback(true);
+      }
+    };
+    
+    checkVideoPlayback();
+    
+    // Only start rotation after checking video capability
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -64,9 +80,20 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [useVideoFallback]);
 
-  // Log component load
+  // Log component state changes
   useEffect(() => {
-    console.log('Hero component mounted, using fallback:', useVideoFallback);
+    console.log('Hero state update - Using fallback:', useVideoFallback, 'Current index:', currentIndex);
+  }, [useVideoFallback, currentIndex]);
+
+  // Preload all videos when not using fallback
+  useEffect(() => {
+    if (!useVideoFallback) {
+      heroVideos.forEach((video, index) => {
+        const preloadVideo = new Audio(video.url);
+        preloadVideo.load();
+        console.log(`Preloading video ${index}...`);
+      });
+    }
   }, [useVideoFallback]);
 
   const scrollToAbout = () => {
@@ -88,7 +115,7 @@ const Hero = () => {
               className={`absolute inset-0 h-full w-full bg-cover bg-center transition-opacity duration-1000 ${
                 currentIndex === index ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ backgroundImage: `url('${image}')` }}
+              style={{ backgroundImage: `url('${image}?auto=format&fit=crop&w=1920&q=80')` }}
             />
           ))
         ) : (
@@ -108,8 +135,9 @@ const Hero = () => {
                   loop
                   playsInline
                   className="absolute inset-0 w-full h-full object-cover"
-                  onError={() => {
-                    console.error(`Error playing video ${index}`);
+                  onLoadedData={() => console.log(`Video ${index} loaded successfully`)}
+                  onError={(e) => {
+                    console.error(`Error playing video ${index}:`, e);
                     setUseVideoFallback(true);
                   }}
                 >
