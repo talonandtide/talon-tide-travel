@@ -27,7 +27,7 @@ const signatureJourneys = [
     id: 3,
     title: 'Amazon Rainforest Wildlife Expedition',
     location: 'Brazil',
-    image: 'https://images.unsplash.com/photo-1469033363950-eb392a20d59e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    image: 'https://images.unsplash.com/photo-1534008757030-27299c4371b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80',
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges. Encounter diverse wildlife while supporting local conservation initiatives.',
     duration: '8 days',
     ethicalRating: 5,
@@ -39,7 +39,7 @@ const conservationEncounters = [
     id: 1,
     title: 'San Diego Zoo | Exclusive VIP Experience',
     location: 'San Diego, California',
-    image: 'https://images.unsplash.com/photo-1553425300-8bd56360f8eb?q=80&w=1920',
+    image: 'https://sandiegozoo.app.box.com/s/3bqs3kve2uwh2ijshwqocf0byvwu6arp/file/1502814551398',
     description: 'Embark on a personalized journey through one of the world\'s most renowned zoos. Get up-close encounters with incredible wildlife and exclusive behind-the-scenes access to animal care areas and conservation facilities.',
     duration: '1 day',
     ethicalRating: 5,
@@ -57,7 +57,7 @@ const conservationEncounters = [
     id: 3,
     title: 'Duke Lemur Center | Walking with Lemurs',
     location: 'Durham, North Carolina',
-    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=1920',
+    image: 'https://lemur.duke.edu/wordpress/wp-content/uploads/2020/08/NHE-1.png',
     description: 'Walk alongside free-ranging lemurs in their forested habitat while learning about these fascinating primates from expert guides. A unique opportunity to observe these endangered species up close.',
     duration: '1 day',
     ethicalRating: 5,
@@ -129,10 +129,10 @@ const Experiences = () => {
                     </div>
                   </div>
                   <p className="text-talon-navy text-sm mb-6">{experience.description}</p>
-                  <button className="btn-secondary w-full justify-center">
+                  <Link to="/contact" className="btn-secondary w-full justify-center">
                     Stay Updated
                     <ArrowRight size={16} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -185,10 +185,10 @@ const Experiences = () => {
                     </div>
                   </div>
                   <p className="text-talon-navy text-sm mb-6">{experience.description}</p>
-                  <button className="btn-secondary w-full justify-center">
+                  <Link to="/contact" className="btn-secondary w-full justify-center">
                     Stay Updated
                     <ArrowRight size={16} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
