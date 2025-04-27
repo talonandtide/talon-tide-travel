@@ -71,30 +71,17 @@ const Experiences = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Curated Experiences</h1>
-            <p className="text-lg text-talon-navy/80 mb-8 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              A preview of the exclusive wildlife journeys we're carefully vetting for future offerings.
-            </p>
-            <div className="inline-block border border-talon-green/20 bg-white/80 rounded-sm px-6 py-4 animate-fade-in" style={{ animationDelay: '300ms' }}>
-              <p className="text-talon-navy text-sm">
-                <strong>Coming Soon:</strong> These experiences will be available for booking in the near future. Subscribe to our newsletter for updates.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-talon-sand/20">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-8 animate-fade-in">
-              Where Every Encounter Matters
-            </h1>
             <div className="space-y-6 text-talon-navy/80">
               <p className="text-lg animate-fade-in" style={{ animationDelay: '200ms' }}>
                 Whether it's a once-in-a-lifetime journey across wild landscapes or an intimate behind-the-scenes moment at a conservation center, we curate meaningful experiences that honor both animals and adventure.
               </p>
               <p className="text-lg animate-fade-in" style={{ animationDelay: '300ms' }}>
                 Our experiences reflect a commitment to ethical travel, thoughtful connection, and unforgettable memories — no matter how close or far you go.
+              </p>
+            </div>
+            <div className="mt-12 inline-block border border-talon-green/20 bg-white/80 rounded-sm px-6 py-4 animate-fade-in" style={{ animationDelay: '400ms' }}>
+              <p className="text-talon-navy text-sm">
+                <strong>Coming Soon:</strong> These experiences will be available for booking in the near future. Subscribe to our newsletter for updates.
               </p>
             </div>
           </div>
