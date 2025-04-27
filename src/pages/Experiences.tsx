@@ -7,7 +7,7 @@ import { Separator } from '@/components/ui/separator';
 const signatureJourneys = [
   {
     id: 1,
-    title: 'Private Wildlife Sanctuary',
+    title: 'Private Safari Experience',
     location: 'South Africa',
     image: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80',
     description: 'Exclusive behind-the-scenes access to conservation projects with private luxury accommodations and personalized safari experiences guided by conservation specialists.',
@@ -25,8 +25,8 @@ const signatureJourneys = [
   },
   {
     id: 3,
-    title: 'Rainforest Wildlife Expedition',
-    location: 'Costa Rica',
+    title: 'Amazon Rainforest Wildlife Expedition',
+    location: 'Brazil',
     image: 'https://images.unsplash.com/photo-1469033363950-eb392a20d59e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges. Encounter diverse wildlife while supporting local conservation initiatives.',
     duration: '8 days',
@@ -39,7 +39,7 @@ const conservationEncounters = [
     id: 1,
     title: 'San Diego Zoo | Exclusive VIP Experience',
     location: 'San Diego, California',
-    image: 'https://images.unsplash.com/photo-1503656142023-618e7d1f435a?q=80&w=1920',
+    image: 'https://images.unsplash.com/photo-1553425300-8bd56360f8eb?q=80&w=1920',
     description: 'Embark on a personalized journey through one of the world\'s most renowned zoos. Get up-close encounters with incredible wildlife and exclusive behind-the-scenes access to animal care areas and conservation facilities.',
     duration: '1 day',
     ethicalRating: 5,
@@ -48,7 +48,7 @@ const conservationEncounters = [
     id: 2,
     title: 'Brevard Zoo | Okapi Encounter',
     location: 'Melbourne, Florida',
-    image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1920',
+    image: 'https://images.unsplash.com/photo-1610215037828-94aa67d97502?q=80&w=1920',
     description: 'Meet these extraordinary "forest giraffes" up close and learn about their conservation story. Experience a unique opportunity to interact with these rare creatures while supporting vital conservation efforts.',
     duration: '1 day',
     ethicalRating: 5,
@@ -164,7 +164,7 @@ const Experiences = () => {
               Conservation Encounters & Behind-the-Scenes Tours
             </h2>
             <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
-              From world-renowned zoos to pioneering sanctuaries and conservation centers, these thoughtfully vetted encounters offer meaningful, ethical ways to connect with animals — often with rare behind-the-scenes access few travelers ever experience.
+              From world-renowned zoos to pioneering aquariums and conservation centers, these thoughtfully vetted encounters offer meaningful, ethical ways to connect with animals — often with rare behind-the-scenes access few travelers ever experience.
             </p>
           </div>
 
