@@ -1,10 +1,10 @@
-
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight, MapPin, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Separator } from '@/components/ui/separator';
 
-const experiences = [
+const signatureJourneys = [
   {
     id: 1,
     title: 'Private Wildlife Sanctuary',
@@ -32,31 +32,34 @@ const experiences = [
     duration: '8 days',
     ethicalRating: 5,
   },
+];
+
+const conservationEncounters = [
   {
-    id: 4,
-    title: 'Arctic Wildlife Expedition',
-    location: 'Norway',
-    image: 'https://images.unsplash.com/photo-1461696114087-397271a7aedc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-    description: 'Observe polar wildlife in their natural habitat while staying in sustainable, luxury accommodations. Expert guides ensure respectful wildlife viewing and educational experiences.',
-    duration: '6 days',
+    id: 1,
+    title: 'San Diego Zoo | Exclusive VIP Experience',
+    location: 'San Diego, California',
+    image: 'https://images.unsplash.com/photo-1503656142023-618e7d1f435a?q=80&w=1920',
+    description: 'Embark on a personalized journey through one of the world\'s most renowned zoos. Get up-close encounters with incredible wildlife and exclusive behind-the-scenes access to animal care areas and conservation facilities.',
+    duration: '1 day',
     ethicalRating: 5,
   },
   {
-    id: 5,
-    title: 'African Elephant Sanctuary',
-    location: 'Kenya',
-    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2671&q=80',
-    description: 'Connect with rescued elephants in a sanctuary setting, guided by elephant specialists. Luxury tented camp accommodations provide comfort while maintaining an immersive wilderness experience.',
-    duration: '5 days',
+    id: 2,
+    title: 'Brevard Zoo | Okapi Encounter',
+    location: 'Melbourne, Florida',
+    image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1920',
+    description: 'Meet these extraordinary "forest giraffes" up close and learn about their conservation story. Experience a unique opportunity to interact with these rare creatures while supporting vital conservation efforts.',
+    duration: '1 day',
     ethicalRating: 5,
   },
   {
-    id: 6,
-    title: 'Galapagos Exclusive Voyage',
-    location: 'Ecuador',
-    image: 'https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-    description: 'Cruise the Galapagos Islands on a luxury yacht with an expert naturalist. Experience close encounters with unique wildlife while supporting conservation research.',
-    duration: '12 days',
+    id: 3,
+    title: 'Duke Lemur Center | Walking with Lemurs',
+    location: 'Durham, North Carolina',
+    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=1920',
+    description: 'Walk alongside free-ranging lemurs in their forested habitat while learning about these fascinating primates from expert guides. A unique opportunity to observe these endangered species up close.',
+    duration: '1 day',
     ethicalRating: 5,
   },
 ];
@@ -64,7 +67,6 @@ const experiences = [
 const Experiences = () => {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
@@ -81,11 +83,37 @@ const Experiences = () => {
         </div>
       </section>
 
-      {/* Experiences List */}
+      <section className="py-20 bg-talon-sand/20">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-8 animate-fade-in">
+              Where Every Encounter Matters
+            </h1>
+            <div className="space-y-6 text-talon-navy/80">
+              <p className="text-lg animate-fade-in" style={{ animationDelay: '200ms' }}>
+                Whether it's a once-in-a-lifetime journey across wild landscapes or an intimate behind-the-scenes moment at a conservation center, we curate meaningful experiences that honor both animals and adventure.
+              </p>
+              <p className="text-lg animate-fade-in" style={{ animationDelay: '300ms' }}>
+                Our experiences reflect a commitment to ethical travel, thoughtful connection, and unforgettable memories — no matter how close or far you go.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
+              Signature Wildlife Journeys
+            </h2>
+            <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
+              Discover unforgettable, conservation-centered travel experiences curated with care and rooted in ethical engagement. These multi-day journeys highlight some of the world's most extraordinary animal encounters.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {experiences.map((experience, index) => (
+            {signatureJourneys.map((experience, index) => (
               <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="relative h-64">
                   <img 
@@ -125,7 +153,62 @@ const Experiences = () => {
         </div>
       </section>
 
-      {/* Our Process */}
+      <div className="container">
+        <Separator className="my-4 bg-talon-stone/20" />
+      </div>
+
+      <section className="py-20 bg-talon-sand/10">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
+              Conservation Encounters & Behind-the-Scenes Tours
+            </h2>
+            <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
+              From world-renowned zoos to pioneering sanctuaries and conservation centers, these thoughtfully vetted encounters offer meaningful, ethical ways to connect with animals — often with rare behind-the-scenes access few travelers ever experience.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {conservationEncounters.map((experience, index) => (
+              <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="relative h-64">
+                  <img 
+                    src={experience.image} 
+                    alt={experience.title} 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
+                    <div className="flex items-center gap-1 bg-talon-navy/80 text-white text-xs px-3 py-1 rounded-sm">
+                      <MapPin size={12} />
+                      {experience.location}
+                    </div>
+                    <div className="flex items-center gap-1 bg-talon-green/80 text-white text-xs px-3 py-1 rounded-sm">
+                      {experience.duration}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h2 className="font-serif text-2xl mb-2 text-talon-green">{experience.title}</h2>
+                  <div className="flex items-center gap-1 mb-4">
+                    <div className="text-xs text-talon-gold">Ethical Rating:</div>
+                    <div className="flex">
+                      {[...Array(experience.ethicalRating)].map((_, i) => (
+                        <Star key={i} size={14} fill="#BC9A5F" color="#BC9A5F" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-talon-navy text-sm mb-6">{experience.description}</p>
+                  <button className="btn-secondary w-full justify-center">
+                    Stay Updated
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-talon-green text-talon-ivory">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -168,7 +251,6 @@ const Experiences = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-20 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
