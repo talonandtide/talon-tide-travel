@@ -12,7 +12,7 @@ const blogPosts = [
     date: 'June 15, 2023',
     image: 'https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
     excerpt: 'How to ensure your wildlife encounters contribute positively to conservation efforts and animal welfare.',
-    author: 'Lindsay Parker',
+    author: 'Lindsay Key',
     authorImage: 'https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80',
     readTime: '5 min read',
   },
@@ -23,7 +23,7 @@ const blogPosts = [
     date: 'May 4, 2023',
     image: 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80',
     excerpt: 'Navigating the complex landscape of truly sustainable luxury accommodations in wildlife destinations.',
-    author: 'Lindsay Parker',
+    author: 'Lindsay Key',
     authorImage: 'https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80',
     readTime: '7 min read',
   },
@@ -56,7 +56,7 @@ const blogPosts = [
     date: 'February 28, 2023',
     image: 'https://images.unsplash.com/photo-1469041908917-89bc00316a01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
     excerpt: 'How the travel industry is moving beyond sustainability to actively regenerate ecosystems and communities.',
-    author: 'Lindsay Parker',
+    author: 'Lindsay Key',
     authorImage: 'https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80',
     readTime: '9 min read',
   },
@@ -83,7 +83,7 @@ const Blog = () => {
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-ivory mb-6 animate-fade-in tracking-wide drop-shadow-lg">
-              Ethical Travel Journal
+              Field Notes
             </h1>
             <p className="text-lg text-talon-ivory animate-fade-in drop-shadow-md" style={{ animationDelay: '200ms', letterSpacing: '0.5px' }}>
               Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters.

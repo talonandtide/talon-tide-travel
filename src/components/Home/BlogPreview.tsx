@@ -28,7 +28,7 @@ const BlogPreview = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
-            <h2 className="section-title animate-fade">Ethical Travel Journal</h2>
+            <h2 className="section-title animate-fade">Field Notes</h2>
             <p className="max-w-lg text-talon-stone animate-fade animate-delay-100">
               Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters.
             </p>

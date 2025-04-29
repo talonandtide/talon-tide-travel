@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight, MapPin, Star } from 'lucide-react';
@@ -101,12 +102,12 @@ const Experiences = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {signatureJourneys.map((experience, index) => (
-              <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade group" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="relative h-64">
                   <img 
                     src={experience.image} 
                     alt={experience.title} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
                     <div className="flex items-center gap-1 bg-talon-navy/80 text-white text-xs px-3 py-1 rounded-sm">
@@ -118,8 +119,8 @@ const Experiences = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h2 className="font-serif text-2xl mb-2 text-talon-green">{experience.title}</h2>
+                <div className="p-6 group-hover:bg-talon-sand/10 transition-colors duration-500">
+                  <h2 className="font-serif text-2xl mb-2 text-talon-green group-hover:text-talon-gold transition-colors duration-300">{experience.title}</h2>
                   <div className="flex items-center gap-1 mb-4">
                     <div className="text-xs text-talon-gold">Ethical Rating:</div>
                     <div className="flex">
@@ -129,9 +130,9 @@ const Experiences = () => {
                     </div>
                   </div>
                   <p className="text-talon-navy text-sm mb-6">{experience.description}</p>
-                  <Link to="/contact" className="btn-secondary w-full justify-center">
+                  <Link to="/contact" className="btn-secondary w-full justify-center group-hover:bg-talon-gold/10 transition-colors duration-300">
                     Stay Updated
-                    <ArrowRight size={16} />
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
               </div>
@@ -157,12 +158,12 @@ const Experiences = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {conservationEncounters.map((experience, index) => (
-              <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade group" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="relative h-64">
                   <img 
                     src={experience.image} 
                     alt={experience.title} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
                     <div className="flex items-center gap-1 bg-talon-navy/80 text-white text-xs px-3 py-1 rounded-sm">
@@ -174,8 +175,8 @@ const Experiences = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h2 className="font-serif text-2xl mb-2 text-talon-green">{experience.title}</h2>
+                <div className="p-6 group-hover:bg-talon-sand/10 transition-colors duration-500">
+                  <h2 className="font-serif text-2xl mb-2 text-talon-green group-hover:text-talon-gold transition-colors duration-300">{experience.title}</h2>
                   <div className="flex items-center gap-1 mb-4">
                     <div className="text-xs text-talon-gold">Ethical Rating:</div>
                     <div className="flex">
@@ -185,9 +186,9 @@ const Experiences = () => {
                     </div>
                   </div>
                   <p className="text-talon-navy text-sm mb-6">{experience.description}</p>
-                  <Link to="/contact" className="btn-secondary w-full justify-center">
+                  <Link to="/contact" className="btn-secondary w-full justify-center group-hover:bg-talon-gold/10 transition-colors duration-300">
                     Stay Updated
-                    <ArrowRight size={16} />
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
               </div>
@@ -206,29 +207,29 @@ const Experiences = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-200">
-              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4">1</div>
+            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-200 hover:bg-talon-navy/30 transition-colors duration-300 group">
+              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4 group-hover:scale-110 transition-transform duration-300">1</div>
               <h3 className="font-serif text-xl mb-4 text-talon-gold">Initial Research</h3>
               <p className="text-talon-ivory/80 text-sm">
                 We identify experiences that claim to uphold high ethical standards and offer exceptional wildlife encounters.
               </p>
             </div>
-            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-300">
-              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4">2</div>
+            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-300 hover:bg-talon-navy/30 transition-colors duration-300 group">
+              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4 group-hover:scale-110 transition-transform duration-300">2</div>
               <h3 className="font-serif text-xl mb-4 text-talon-gold">Expert Review</h3>
               <p className="text-talon-ivory/80 text-sm">
                 Our network of wildlife professionals evaluates each experience based on animal welfare, conservation impact, and authenticity.
               </p>
             </div>
-            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-400">
-              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4">3</div>
+            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-400 hover:bg-talon-navy/30 transition-colors duration-300 group">
+              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4 group-hover:scale-110 transition-transform duration-300">3</div>
               <h3 className="font-serif text-xl mb-4 text-talon-gold">Site Visit</h3>
               <p className="text-talon-ivory/80 text-sm">
                 We personally visit and assess each experience, evaluating everything from wildlife interaction protocols to accommodation quality.
               </p>
             </div>
-            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-500">
-              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4">4</div>
+            <div className="bg-talon-navy/20 p-6 rounded-sm animate-fade animate-delay-500 hover:bg-talon-navy/30 transition-colors duration-300 group">
+              <div className="bg-talon-gold h-12 w-12 rounded-full flex items-center justify-center text-talon-green font-serif text-xl mb-4 group-hover:scale-110 transition-transform duration-300">4</div>
               <h3 className="font-serif text-xl mb-4 text-talon-gold">Final Selection</h3>
               <p className="text-talon-ivory/80 text-sm">
                 Only experiences that excel in all categories make it into our curated collection, ensuring they meet both ethical and luxury standards.
@@ -245,9 +246,9 @@ const Experiences = () => {
             <p className="mb-8 text-talon-navy animate-fade animate-delay-100">
               Our curated experiences will be available for booking soon. Subscribe to our newsletter to be the first to know when these extraordinary journeys become available.
             </p>
-            <Link to="/" className="btn-primary animate-fade animate-delay-200">
+            <Link to="/" className="btn-primary animate-fade animate-delay-200 group">
               Follow the Journey
-              <ArrowRight size={16} />
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
         </div>

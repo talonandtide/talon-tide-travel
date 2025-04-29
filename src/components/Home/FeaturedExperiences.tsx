@@ -27,17 +27,17 @@ const experiences = [
   },
   {
     id: 3,
-    title: 'Rainforest Wildlife Expedition',
-    location: 'Costa Rica',
-    image: 'https://images.unsplash.com/photo-1469033363950-eb392a20d59e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    title: 'Amazon Rainforest Wildlife Expedition',
+    location: 'Brazil',
+    image: 'https://media.gadventures.com/media-server/cache/d6/f5/d6f51f81aef674f7f3442d9f9622c718.jpg',
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges.',
   },
   {
     id: 4,
-    title: 'Arctic Wildlife Expedition',
-    location: 'Norway',
-    image: 'https://images.unsplash.com/photo-1461696114087-397271a7aedc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
-    description: 'Observe polar wildlife in their natural habitat while staying in sustainable, luxury accommodations.',
+    title: 'San Diego Zoo | Exclusive VIP Experience',
+    location: 'San Diego, California',
+    image: 'https://zoo.sandiegozoo.org/sites/default/files/styles/hero_with_nav_gradient/public/hero/jaguar_hero_0.png?itok=GS2zQ4x2',
+    description: 'Embark on a personalized journey through one of the world\'s most renowned zoos.',
   },
 ];
 
@@ -108,7 +108,7 @@ const FeaturedExperiences = () => {
                       <img 
                         src={exp.image} 
                         alt={exp.title} 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent" />
                     </div>
