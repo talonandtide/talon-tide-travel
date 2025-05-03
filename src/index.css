@@ -1,230 +1,100 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 44 30% 95%;
-    --foreground: 45 10% 20%;
+/* Add any global styles below */
 
-    --card: 0 0% 100%;
-    --card-foreground: 45 10% 20%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 45 10% 20%;
-
-    --primary: 143 17% 21%;
-    --primary-foreground: 44 30% 95%;
-
-    --secondary: 44 24% 86%;
-    --secondary-foreground: 45 10% 20%;
-
-    --muted: 45 6% 65%;
-    --muted-foreground: 45 5% 40%;
-
-    --accent: 42 45% 55%;
-    --accent-foreground: 45 10% 20%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 44 30% 95%;
-
-    --border: 45 15% 85%;
-    --input: 44 24% 86%;
-    --ring: 143 17% 21%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  * {
-    @apply border-border;
-  }
-
-  html {
-    @apply scroll-smooth;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
-
-  h1, h2, h3, h4 {
-    @apply font-serif;
-  }
-  
+/* Basic components */
+@layer components {
   .container {
-    @apply px-4 md:px-8 lg:px-12 xl:px-0 mx-auto max-w-7xl;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  /* Custom components with enhanced styling */
   .section-title {
-    @apply font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-talon-green mb-6 tracking-wide leading-tight drop-shadow-sm;
-  }
-  
-  .section-subtitle {
-    @apply font-serif text-xl md:text-2xl text-talon-navy mb-4 tracking-wide;
-  }
-  
-  .btn-primary {
-    @apply bg-talon-green hover:bg-talon-navy text-white py-3 px-6 rounded-sm 
-           transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans
-           shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
-  }
-  
-  .btn-secondary {
-    @apply bg-transparent border border-talon-gold text-talon-gold hover:bg-talon-gold hover:text-talon-green 
-           py-3 px-6 rounded-sm transition-all duration-300 inline-flex items-center gap-2 text-sm tracking-wide uppercase font-sans
-           shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
-  }
-  
-  .input-field {
-    @apply border border-talon-stone/30 rounded-sm bg-white/80 py-3 px-4 w-full 
-           focus:outline-none focus:ring-1 focus:ring-talon-gold shadow-inner;
-  }
-  
-  /* Enhanced animations */
-  .animate-fade {
-    @apply opacity-0 translate-y-4 transition-all duration-700;
-  }
-  
-  .animate-fade.show {
-    @apply opacity-100 translate-y-0;
-  }
-  
-  .animate-delay-100 {
-    transition-delay: 100ms;
-  }
-  
-  .animate-delay-200 {
-    transition-delay: 200ms;
-  }
-  
-  .animate-delay-300 {
-    transition-delay: 300ms;
-  }
-
-  /* New luxurious text and card styles */
-  .text-shadow-sm {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .text-shadow-md {
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-  }
-  
-  .text-shadow-lg {
-    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-
-  .drop-shadow-text {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-  }
-  
-  .drop-shadow-text-lg {
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    @apply font-serif text-3xl md:text-4xl text-talon-green mb-6;
   }
   
   .card-luxury {
-    @apply bg-white shadow-[0_10px_30px_-5px_rgba(0,0,0,0.1)] backdrop-blur-sm border border-talon-sand/20
-           hover:shadow-[0_15px_40px_-5px_rgba(0,0,0,0.15)] transition-all duration-500 rounded-sm;
+    @apply border border-talon-stone/20 bg-white shadow-sm rounded-sm hover:shadow-md transition-shadow;
   }
   
-  .gradient-overlay-bottom {
-    @apply absolute inset-0 bg-gradient-to-t from-talon-navy/60 to-transparent;
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-talon-green text-white rounded-sm hover:bg-talon-green/90 transition-all;
   }
   
-  .gradient-overlay-side {
-    @apply absolute inset-0 bg-gradient-to-r from-talon-green/70 to-transparent;
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-talon-gold text-talon-gold rounded-sm hover:bg-talon-gold/10 transition-all;
+  }
+  
+  .drop-shadow-text {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-  /* Cinematic parallax effect */
-  .parallax {
-    @apply relative overflow-hidden;
-  }
-  
-  .parallax-bg {
-    @apply absolute inset-0 h-[120%] w-full bg-cover bg-center -top-[10%];
-    transform: translateZ(-1px) scale(2);
-  }
-  
-  /* Video background */
-  .video-bg {
-    @apply absolute inset-0 w-full h-full object-cover;
-  }
-  
-  .video-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-talon-midnight/80 via-talon-midnight/40 to-transparent;
+  .prose-talon {
+    @apply prose-headings:text-talon-green prose-headings:font-serif prose-p:text-talon-navy prose-a:text-talon-gold prose-a:no-underline hover:prose-a:text-talon-gold/80;
   }
 }
 
-/* New keyframes for luxury effects */
-@keyframes subtle-float {
-  0%, 100% {
+/* Mapbox overrides */
+.mapboxgl-popup-content {
+  @apply px-3 py-2 rounded-sm shadow-md border border-talon-stone/20 text-sm;
+}
+
+.mapboxgl-popup-close-button {
+  @apply text-talon-navy/60 hover:text-talon-navy transition-colors;
+}
+
+.mapboxgl-ctrl-logo {
+  @apply opacity-50;
+}
+
+.mapboxgl-ctrl button.mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon,
+.mapboxgl-ctrl button.mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon,
+.mapboxgl-ctrl button.mapboxgl-ctrl-compass .mapboxgl-ctrl-icon {
+  @apply bg-no-repeat bg-center;
+}
+
+/* Animation classes */
+.animate-fade {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.float-animation {
-  animation: subtle-float 6s ease-in-out infinite;
-}
-
-@keyframes fade-in-out {
-  0%, 100% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-.breathe-animation {
-  animation: fade-in-out 4s ease-in-out infinite;
-}
-
-/* Cinematic transitions */
-.transition-slide-up {
-  @apply transition-all duration-700 transform translate-y-8 opacity-0;
-}
-
-.transition-slide-up.in-view {
-  @apply translate-y-0 opacity-100;
-}
-
-.transition-scale {
-  @apply transition-all duration-700 transform scale-95 opacity-0;
-}
-
-.transition-scale.in-view {
-  @apply scale-100 opacity-100;
-}
-
-/* Page transitions */
-.page-enter {
-  @apply opacity-0;
-}
-
-.page-enter-active {
-  @apply opacity-100 transition-all duration-500;
-}
-
-.page-exit {
-  @apply opacity-100;
-}
-
-.page-exit-active {
-  @apply opacity-0 transition-all duration-500;
 }

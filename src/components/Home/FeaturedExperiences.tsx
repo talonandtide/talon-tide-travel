@@ -17,6 +17,7 @@ const experiences = [
     location: 'South Africa',
     image: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80',
     description: 'Exclusive behind-the-scenes access to conservation projects with private luxury accommodations.',
+    path: "/experiences",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const experiences = [
     location: 'Maldives',
     image: 'https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
     description: 'Dive alongside marine biologists while enjoying the comfort of a five-star eco-resort.',
+    path: "/experiences",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const experiences = [
     location: 'Brazil',
     image: 'https://media.gadventures.com/media-server/cache/d6/f5/d6f51f81aef674f7f3442d9f9622c718.jpg',
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges.',
+    path: "/experiences",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const experiences = [
     location: 'Svalbard, Norway',
     image: 'https://images.unsplash.com/photo-1551946581-f7a62cd2f00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
     description: 'Venture through pristine Arctic landscapes to witness polar bears, walruses, and other remarkable wildlife.',
+    path: "/experiences/arctic-expedition",
   },
 ];
 
@@ -85,7 +89,7 @@ const FeaturedExperiences = () => {
                     <h3 className="text-2xl font-serif text-white mb-2 drop-shadow-text">{exp.title}</h3>
                     <p className="text-talon-ivory/90 text-sm mb-4 opacity-80 drop-shadow-text">{exp.description}</p>
                     <Link 
-                      to="/experiences" 
+                      to={exp.path}
                       className="inline-flex items-center gap-2 text-sm text-talon-gold hover:text-talon-gold/80 transition-colors"
                     >
                       View Details <ArrowRight size={16} />
@@ -122,7 +126,7 @@ const FeaturedExperiences = () => {
                       <h3 className="text-xl font-serif text-white mb-2 drop-shadow-text">{exp.title}</h3>
                       <p className="text-talon-ivory/90 text-xs mb-4 drop-shadow-text">{exp.description}</p>
                       <Link 
-                        to="/experiences" 
+                        to={exp.path} 
                         className="inline-flex items-center gap-2 text-sm text-talon-gold hover:text-talon-gold/80 transition-colors"
                       >
                         View Details <ArrowRight size={16} />

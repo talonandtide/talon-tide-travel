@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight, MapPin, Star } from 'lucide-react';
@@ -13,6 +14,7 @@ const signatureJourneys = [
     description: 'Exclusive behind-the-scenes access to conservation projects with private luxury accommodations and personalized safari experiences guided by conservation specialists.',
     duration: '7 days',
     ethicalRating: 5,
+    path: "/contact",
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const signatureJourneys = [
     description: 'Dive alongside marine biologists while enjoying the comfort of a five-star eco-resort. Participate in reef restoration projects and encounter marine wildlife in their natural habitat.',
     duration: '10 days',
     ethicalRating: 5,
+    path: "/contact",
   },
   {
     id: 3,
@@ -31,6 +34,7 @@ const signatureJourneys = [
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges. Encounter diverse wildlife while supporting local conservation initiatives.',
     duration: '8 days',
     ethicalRating: 5,
+    path: "/contact",
   },
   {
     id: 4,
@@ -40,6 +44,7 @@ const signatureJourneys = [
     description: 'Embark on an unforgettable polar expedition aboard a luxury vessel to witness the majestic polar bears, walruses, and Arctic wildlife in their pristine natural habitat.',
     duration: '12 days',
     ethicalRating: 5,
+    path: "/experiences/arctic-expedition",
   },
 ];
 
@@ -52,6 +57,7 @@ const conservationEncounters = [
     description: 'Embark on a personalized journey through one of the world\'s most renowned zoos. Get up-close encounters with incredible wildlife and exclusive behind-the-scenes access to animal care areas and conservation facilities.',
     duration: '1 day',
     ethicalRating: 5,
+    path: "/contact",
   },
   {
     id: 2,
@@ -61,6 +67,7 @@ const conservationEncounters = [
     description: 'Meet these extraordinary "forest giraffes" up close and learn about their conservation story. Experience a unique opportunity to interact with these rare creatures while supporting vital conservation efforts.',
     duration: '1 day',
     ethicalRating: 5,
+    path: "/contact",
   },
   {
     id: 3,
@@ -70,6 +77,7 @@ const conservationEncounters = [
     description: 'Walk alongside free-ranging lemurs in their forested habitat while learning about these fascinating primates from expert guides. A unique opportunity to observe these endangered species up close.',
     duration: '1 day',
     ethicalRating: 5,
+    path: "/contact",
   },
 ];
 
@@ -111,22 +119,24 @@ const Experiences = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {signatureJourneys.map((experience, index) => (
               <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade group" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="relative h-64">
-                  <img 
-                    src={experience.image} 
-                    alt={experience.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
-                    <div className="flex items-center gap-1 bg-talon-navy/80 text-white text-xs px-3 py-1 rounded-sm">
-                      <MapPin size={12} />
-                      {experience.location}
-                    </div>
-                    <div className="flex items-center gap-1 bg-talon-green/80 text-white text-xs px-3 py-1 rounded-sm">
-                      {experience.duration}
+                <Link to={experience.path} className="block">
+                  <div className="relative h-64">
+                    <img 
+                      src={experience.image} 
+                      alt={experience.title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
+                      <div className="flex items-center gap-1 bg-talon-navy/80 text-white text-xs px-3 py-1 rounded-sm">
+                        <MapPin size={12} />
+                        {experience.location}
+                      </div>
+                      <div className="flex items-center gap-1 bg-talon-green/80 text-white text-xs px-3 py-1 rounded-sm">
+                        {experience.duration}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
                 <div className="p-6 group-hover:bg-talon-sand/10 transition-colors duration-500">
                   <h2 className="font-serif text-2xl mb-2 text-talon-green group-hover:text-talon-gold transition-colors duration-300">{experience.title}</h2>
                   <div className="flex items-center gap-1 mb-4">
@@ -138,8 +148,8 @@ const Experiences = () => {
                     </div>
                   </div>
                   <p className="text-talon-navy text-sm mb-6">{experience.description}</p>
-                  <Link to="/contact" className="btn-secondary w-full justify-center group-hover:bg-talon-gold/10 transition-colors duration-300">
-                    Stay Updated
+                  <Link to={experience.path} className="btn-secondary w-full justify-center group-hover:bg-talon-gold/10 transition-colors duration-300">
+                    {experience.path === "/contact" ? "Stay Updated" : "View Details"}
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>

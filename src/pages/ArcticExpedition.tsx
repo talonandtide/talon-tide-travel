@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight, MapPin, Star, Calendar, Clock, Ship, Anchor, Globe, Compass } from 'lucide-react';
@@ -7,6 +6,8 @@ import { Separator } from '@/components/ui/separator';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ExpeditionMap from '@/components/Map/ExpeditionMap';
 
 const ArcticExpedition = () => {
   const highlights = [
@@ -185,6 +186,63 @@ const ArcticExpedition = () => {
         </div>
       </section>
 
+      {/* Expedition Map Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <h2 className="section-title text-center mb-16 animate-fade">Expedition Map</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <ExpeditionMap className="h-[500px]" />
+            </div>
+            
+            <div className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-talon-green">Arctic Expedition Route</CardTitle>
+                  <CardDescription>Follow the journey through the Norwegian Arctic</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-talon-navy/80 text-sm mb-4">
+                    Our expedition route takes us through the pristine wilderness of Svalbard, navigating through fjords, glaciers, and ice flows in search of remarkable wildlife encounters.
+                  </p>
+                  <p className="text-talon-navy/80 text-sm">
+                    The exact route may vary based on ice conditions, weather, and wildlife sightings to ensure the most meaningful experiences while prioritizing safety and conservation.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-talon-green">Wildlife Viewing</CardTitle>
+                  <CardDescription>Prime locations for Arctic species</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-talon-navy/80">
+                    <li className="flex items-start gap-2">
+                      <span className="text-talon-gold mt-0.5">•</span>
+                      <span>Polar bears hunting among pack ice</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-talon-gold mt-0.5">•</span>
+                      <span>Walrus colonies on remote beaches</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-talon-gold mt-0.5">•</span>
+                      <span>Seabird cliffs with thousands of nesting birds</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-talon-gold mt-0.5">•</span>
+                      <span>Arctic fox and Svalbard reindeer on the tundra</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section className="py-20">
         <div className="container">
@@ -266,29 +324,41 @@ const ArcticExpedition = () => {
         </div>
       </section>
 
-      {/* Itinerary Section */}
+      {/* Itinerary Section with Tabs */}
       <section className="py-20 bg-talon-sand/20">
         <div className="container">
           <h2 className="section-title text-center mb-16 animate-fade">Expedition Itinerary</h2>
+          
           <div className="max-w-4xl mx-auto">
-            {itinerary.map((item, index) => (
-              <div key={item.day} className="relative animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="flex">
-                  <div className="flex-shrink-0 w-24 md:w-40 pt-2">
-                    <div className="font-serif text-talon-gold text-xl">{item.day}</div>
-                  </div>
-                  <div className="flex-grow pb-12">
-                    <div className="bg-white p-6 shadow-sm rounded-sm hover:shadow-md transition-shadow duration-300">
-                      <h3 className="font-serif text-xl text-talon-green mb-4">{item.title}</h3>
-                      <p className="text-talon-navy">{item.description}</p>
+            <Tabs defaultValue="day-by-day" className="mb-8">
+              <TabsList className="grid w-full grid-cols-2 bg-talon-sand/20">
+                <TabsTrigger value="day-by-day" className="data-[state=active]:bg-talon-gold/20">Day by Day</TabsTrigger>
+                <TabsTrigger value="map-view" className="data-[state=active]:bg-talon-gold/20">Map View</TabsTrigger>
+              </TabsList>
+              <TabsContent value="day-by-day" className="pt-6">
+                {itinerary.map((item, index) => (
+                  <div key={item.day} className="relative animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
+                    <div className="flex">
+                      <div className="flex-shrink-0 w-24 md:w-40 pt-2">
+                        <div className="font-serif text-talon-gold text-xl">{item.day}</div>
+                      </div>
+                      <div className="flex-grow pb-12">
+                        <div className="bg-white p-6 shadow-sm rounded-sm hover:shadow-md transition-shadow duration-300">
+                          <h3 className="font-serif text-xl text-talon-green mb-4">{item.title}</h3>
+                          <p className="text-talon-navy">{item.description}</p>
+                        </div>
+                        {index < itinerary.length - 1 && (
+                          <div className="absolute left-12 md:left-20 top-[4.5rem] bottom-0 w-0.5 bg-talon-sand"></div>
+                        )}
+                      </div>
                     </div>
-                    {index < itinerary.length - 1 && (
-                      <div className="absolute left-12 md:left-20 top-[4.5rem] bottom-0 w-0.5 bg-talon-sand"></div>
-                    )}
                   </div>
-                </div>
-              </div>
-            ))}
+                ))}
+              </TabsContent>
+              <TabsContent value="map-view" className="pt-6 h-[600px]">
+                <ExpeditionMap className="h-full" />
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </section>
