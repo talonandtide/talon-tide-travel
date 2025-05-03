@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight, MapPin, Star } from 'lucide-react';
@@ -31,6 +30,15 @@ const signatureJourneys = [
     image: 'https://media.gadventures.com/media-server/cache/d6/f5/d6f51f81aef674f7f3442d9f9622c718.jpg',
     description: 'Trek through pristine rainforest with expert naturalists and retreat to exclusive luxury lodges. Encounter diverse wildlife while supporting local conservation initiatives.',
     duration: '8 days',
+    ethicalRating: 5,
+  },
+  {
+    id: 4,
+    title: 'Arctic Wildlife Expedition',
+    location: 'Svalbard, Norway',
+    image: 'https://images.unsplash.com/photo-1551946581-f7a62cd2f00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    description: 'Embark on an unforgettable polar expedition aboard a luxury vessel to witness the majestic polar bears, walruses, and Arctic wildlife in their pristine natural habitat.',
+    duration: '12 days',
     ethicalRating: 5,
   },
 ];

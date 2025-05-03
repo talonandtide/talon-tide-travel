@@ -34,10 +34,10 @@ const experiences = [
   },
   {
     id: 4,
-    title: 'San Diego Zoo | Exclusive VIP Experience',
-    location: 'San Diego, California',
-    image: 'https://zoo.sandiegozoo.org/sites/default/files/styles/hero_with_nav_gradient/public/hero/jaguar_hero_0.png?itok=GS2zQ4x2',
-    description: 'Embark on a personalized journey through one of the world\'s most renowned zoos.',
+    title: 'Arctic Wildlife Expedition',
+    location: 'Svalbard, Norway',
+    image: 'https://images.unsplash.com/photo-1551946581-f7a62cd2f00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+    description: 'Venture through pristine Arctic landscapes to witness polar bears, walruses, and other remarkable wildlife.',
   },
 ];
 
