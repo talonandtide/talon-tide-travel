@@ -144,8 +144,29 @@ export default {
 			dropShadow: {
 				'text': '0 2px 4px rgba(0, 0, 0, 0.1)',
 				'text-lg': '0 4px 8px rgba(0, 0, 0, 0.12)',
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '65ch',
+						color: 'inherit',
+						a: {
+							color: '#BC9A5F', // talon-gold
+							'&:hover': {
+								color: 'rgba(188, 154, 95, 0.8)', // talon-gold with opacity
+							},
+						},
+						h1: { color: '#2C3E35' }, // talon-green
+						h2: { color: '#2C3E35' }, // talon-green
+						h3: { color: '#2C3E35' }, // talon-green
+						h4: { color: '#2C3E35' }, // talon-green
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require('@tailwindcss/typography'),
+	],
 } satisfies Config;
