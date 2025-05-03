@@ -1,13 +1,13 @@
+
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
-import { ArrowRight, MapPin, Star, Calendar, Clock, Ship, Anchor, Globe, Compass } from 'lucide-react';
+import { ArrowRight, MapPin, Star, Calendar, Clock, Ship, Anchor, Globe, Compass, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ExpeditionMap from '@/components/Map/ExpeditionMap';
 
 const ArcticExpedition = () => {
   const highlights = [
@@ -72,6 +72,41 @@ const ArcticExpedition = () => {
       description: "Historic five-star accommodation in the heart of Norway's capital, featuring elegant rooms, fine dining, and spa facilities.",
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
     }
+  ];
+
+  const includedItems = [
+    "Luxury accommodations in Oslo and onboard",
+    "All onboard meals, excursions, and enrichment activities",
+    "Expert naturalist guides and wildlife spotters",
+    "Zodiac landings, private briefings, and lectures",
+    "Travel planning support from Talon & Tide"
+  ];
+
+  const wildlifeGallery = [
+    {
+      image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
+      title: "Polar Bears on Pack Ice"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1534251364971-d4c3fd2af855?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80",
+      title: "Walrus Colony"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1566160355803-22b1a08dcb2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3088&q=80",
+      title: "Arctic Fox"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1461802722B45477ad9d42fb9d999aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
+      title: "Dramatic Glacier Landscapes"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
+      title: "Humpback Whale"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2659&q=80",
+      title: "Midnight Sun"
+    },
   ];
 
   return (
@@ -163,7 +198,7 @@ const ArcticExpedition = () => {
                 Guided by expert naturalists and wildlife photographers, explore this spectacular wilderness via daily Zodiac excursions that bring you close to glaciers, icebergs, and the diverse wildlife that thrives in this harsh yet beautiful environment. From walruses lounging on ice floes to Arctic foxes patrolling the tundra, each day brings extraordinary wildlife encounters.
               </p>
               <p className="text-lg leading-relaxed text-talon-navy">
-                This expedition has been thoughtfully designed to maximize wildlife viewing while minimizing environmental impact. Our partner operator adheres to strict sustainability guidelines, ensuring these pristine ecosystems remain protected for generations to come.
+                This expedition has been thoughtfully designed to maximize wildlife viewing while minimizing environmental impact. Our partner operator, Abercrombie and Kent, adheres to strict sustainability guidelines, ensuring these pristine ecosystems remain protected for generations to come.
               </p>
             </div>
           </div>
@@ -186,139 +221,24 @@ const ArcticExpedition = () => {
         </div>
       </section>
 
-      {/* Expedition Map Section */}
+      {/* What's Included Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <h2 className="section-title text-center mb-16 animate-fade">Expedition Map</h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <ExpeditionMap className="h-[500px]" />
-            </div>
-            
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-talon-green">Arctic Expedition Route</CardTitle>
-                  <CardDescription>Follow the journey through the Norwegian Arctic</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-talon-navy/80 text-sm mb-4">
-                    Our expedition route takes us through the pristine wilderness of Svalbard, navigating through fjords, glaciers, and ice flows in search of remarkable wildlife encounters.
-                  </p>
-                  <p className="text-talon-navy/80 text-sm">
-                    The exact route may vary based on ice conditions, weather, and wildlife sightings to ensure the most meaningful experiences while prioritizing safety and conservation.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-talon-green">Wildlife Viewing</CardTitle>
-                  <CardDescription>Prime locations for Arctic species</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-talon-navy/80">
-                    <li className="flex items-start gap-2">
-                      <span className="text-talon-gold mt-0.5">•</span>
-                      <span>Polar bears hunting among pack ice</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-talon-gold mt-0.5">•</span>
-                      <span>Walrus colonies on remote beaches</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-talon-gold mt-0.5">•</span>
-                      <span>Seabird cliffs with thousands of nesting birds</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-talon-gold mt-0.5">•</span>
-                      <span>Arctic fox and Svalbard reindeer on the tundra</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-20">
-        <div className="container">
-          <h2 className="section-title text-center mb-16 animate-fade">Arctic Wildlife Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: '100ms' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" 
-                alt="Polar bear on ice" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4">
-                  <p className="text-white font-serif text-lg">Polar Bears on Pack Ice</p>
+          <h2 className="section-title text-center mb-16 animate-fade">What's Included</h2>
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 gap-4">
+              {includedItems.map((item, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start gap-3 p-4 bg-talon-sand/10 rounded-sm animate-fade"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex-shrink-0 bg-talon-green rounded-full p-1">
+                    <Check size={16} className="text-white" />
+                  </div>
+                  <p className="text-talon-navy">{item}</p>
                 </div>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: '200ms' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1534251364971-d4c3fd2af855?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80" 
-                alt="Walruses on shore" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4">
-                  <p className="text-white font-serif text-lg">Walrus Colony</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: '300ms' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1566160355803-22b1a08dcb2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3088&q=80" 
-                alt="Arctic fox" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4">
-                  <p className="text-white font-serif text-lg">Arctic Fox</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: '400ms' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1461802722B45477ad9d42fb9d999aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" 
-                alt="Glacier calving" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4">
-                  <p className="text-white font-serif text-lg">Dramatic Glacier Landscapes</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: '500ms' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1494244318337-48012b83cc9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" 
-                alt="Zodiac excursion" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4">
-                  <p className="text-white font-serif text-lg">Zodiac Excursions</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: '600ms' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2659&q=80" 
-                alt="Midnight sun" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4">
-                  <p className="text-white font-serif text-lg">Midnight Sun</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -331,9 +251,8 @@ const ArcticExpedition = () => {
           
           <div className="max-w-4xl mx-auto">
             <Tabs defaultValue="day-by-day" className="mb-8">
-              <TabsList className="grid w-full grid-cols-2 bg-talon-sand/20">
+              <TabsList className="grid w-full grid-cols-1 bg-talon-sand/20">
                 <TabsTrigger value="day-by-day" className="data-[state=active]:bg-talon-gold/20">Day by Day</TabsTrigger>
-                <TabsTrigger value="map-view" className="data-[state=active]:bg-talon-gold/20">Map View</TabsTrigger>
               </TabsList>
               <TabsContent value="day-by-day" className="pt-6">
                 {itinerary.map((item, index) => (
@@ -354,9 +273,6 @@ const ArcticExpedition = () => {
                     </div>
                   </div>
                 ))}
-              </TabsContent>
-              <TabsContent value="map-view" className="pt-6 h-[600px]">
-                <ExpeditionMap className="h-full" />
               </TabsContent>
             </Tabs>
           </div>
@@ -399,10 +315,10 @@ const ArcticExpedition = () => {
               Our partner operators adhere to strict guidelines established by the Association of Arctic Expedition Cruise Operators (AECO) to ensure minimal environmental impact and maximum educational value.
             </p>
             <div className="animate-fade animate-delay-300">
-              <Link to="/contact" className="btn-secondary bg-talon-navy/20">
+              <a href="https://aeco.no/about-us/this-is-aeco/" target="_blank" rel="noopener noreferrer" className="btn-secondary bg-talon-navy/20">
                 Learn About Our Conservation Partners
                 <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -425,6 +341,29 @@ const ArcticExpedition = () => {
                 Explore More Experiences
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Arctic Wildlife Gallery - Moved to the bottom */}
+      <section className="py-20 bg-talon-sand/10">
+        <div className="container">
+          <h2 className="section-title text-center mb-16 animate-fade">Arctic Wildlife Gallery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {wildlifeGallery.map((item, index) => (
+              <div key={index} className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-4">
+                    <p className="text-white font-serif text-lg">{item.title}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
