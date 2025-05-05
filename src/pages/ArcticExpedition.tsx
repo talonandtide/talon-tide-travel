@@ -82,38 +82,11 @@ const ArcticExpedition = () => {
     "Travel planning support from Talon & Tide"
   ];
 
-  const wildlifeGallery = [
-    {
-      image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
-      title: "Polar Bears on Pack Ice"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1534251364971-d4c3fd2af855?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80",
-      title: "Walrus Colony"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1566160355803-22b1a08dcb2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3088&q=80",
-      title: "Arctic Fox"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1461802722B45477ad9d42fb9d999aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
-      title: "Dramatic Glacier Landscapes"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80",
-      title: "Humpback Whale"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2659&q=80",
-      title: "Midnight Sun"
-    },
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative">
-        <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1551946581-f7a62cd2f00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80)' }}>
+        <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494783367193-149034c05e8f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
           <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/70 to-talon-midnight/90"></div>
         </div>
         <div className="container relative z-10 text-white">
@@ -221,84 +194,72 @@ const ArcticExpedition = () => {
         </div>
       </section>
 
-      {/* What's Included Section */}
-      <section className="py-20 bg-white">
+      {/* Combined Itinerary and What's Included Section */}
+      <section className="py-20 bg-talon-sand/10">
         <div className="container">
-          <h2 className="section-title text-center mb-16 animate-fade">What's Included</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 gap-4">
-              {includedItems.map((item, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start gap-3 p-4 bg-talon-sand/10 rounded-sm animate-fade"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex-shrink-0 bg-talon-green rounded-full p-1">
-                    <Check size={16} className="text-white" />
-                  </div>
-                  <p className="text-talon-navy">{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Itinerary Section with Tabs */}
-      <section className="py-20 bg-talon-sand/20">
-        <div className="container">
-          <h2 className="section-title text-center mb-16 animate-fade">Expedition Itinerary</h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <Tabs defaultValue="day-by-day" className="mb-8">
-              <TabsList className="grid w-full grid-cols-1 bg-talon-sand/20">
-                <TabsTrigger value="day-by-day" className="data-[state=active]:bg-talon-gold/20">Day by Day</TabsTrigger>
-              </TabsList>
-              <TabsContent value="day-by-day" className="pt-6">
-                {itinerary.map((item, index) => (
-                  <div key={item.day} className="relative animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
-                    <div className="flex">
-                      <div className="flex-shrink-0 w-24 md:w-40 pt-2">
-                        <div className="font-serif text-talon-gold text-xl">{item.day}</div>
-                      </div>
-                      <div className="flex-grow pb-12">
-                        <div className="bg-white p-6 shadow-sm rounded-sm hover:shadow-md transition-shadow duration-300">
-                          <h3 className="font-serif text-xl text-talon-green mb-4">{item.title}</h3>
-                          <p className="text-talon-navy">{item.description}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Itinerary Column */}
+            <div>
+              <h2 className="section-title mb-10 animate-fade">Expedition Itinerary</h2>
+              <div className="max-w-xl">
+                <Tabs defaultValue="day-by-day" className="mb-8">
+                  <TabsList className="grid w-full grid-cols-1 bg-talon-sand/20">
+                    <TabsTrigger value="day-by-day" className="data-[state=active]:bg-talon-gold/20">Day by Day</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="day-by-day" className="pt-6">
+                    {itinerary.map((item, index) => (
+                      <div key={item.day} className="relative animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
+                        <div className="flex">
+                          <div className="flex-shrink-0 w-24 pt-2">
+                            <div className="font-serif text-talon-gold text-xl">{item.day}</div>
+                          </div>
+                          <div className="flex-grow pb-12">
+                            <div className="bg-white p-4 shadow-sm rounded-sm hover:shadow-md transition-shadow duration-300">
+                              <h3 className="font-serif text-lg text-talon-green mb-3">{item.title}</h3>
+                              <p className="text-talon-navy text-sm">{item.description}</p>
+                            </div>
+                            {index < itinerary.length - 1 && (
+                              <div className="absolute left-12 top-[4.5rem] bottom-0 w-0.5 bg-talon-sand"></div>
+                            )}
+                          </div>
                         </div>
-                        {index < itinerary.length - 1 && (
-                          <div className="absolute left-12 md:left-20 top-[4.5rem] bottom-0 w-0.5 bg-talon-sand"></div>
-                        )}
                       </div>
-                    </div>
-                  </div>
-                ))}
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-      </section>
+                    ))}
+                  </TabsContent>
+                </Tabs>
+              </div>
+            </div>
 
-      {/* Accommodations */}
-      <section className="py-20">
-        <div className="container">
-          <h2 className="section-title text-center mb-16 animate-fade">Luxury Accommodations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {accommodations.map((accommodation, index) => (
-              <div key={accommodation.name} className="card-luxury animate-fade" style={{ animationDelay: `${index * 200}ms` }}>
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={accommodation.image} 
-                    alt={accommodation.name}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                  />
+            {/* What's Included Column */}
+            <div>
+              <h2 className="section-title mb-10 animate-fade">What's Included</h2>
+              <div className="max-w-xl">
+                <div className="grid grid-cols-1 gap-3 animate-fade animate-delay-100">
+                  {includedItems.map((item, index) => (
+                    <div 
+                      key={index} 
+                      className="flex items-start gap-3 p-4 bg-white rounded-sm shadow-sm"
+                    >
+                      <div className="flex-shrink-0 bg-talon-green rounded-full p-1">
+                        <Check size={16} className="text-white" />
+                      </div>
+                      <p className="text-talon-navy">{item}</p>
+                    </div>
+                  ))}
                 </div>
-                <div className="p-8">
-                  <h3 className="font-serif text-2xl text-talon-green mb-4">{accommodation.name}</h3>
-                  <p className="text-talon-navy">{accommodation.description}</p>
+
+                {/* Accommodations */}
+                <h3 className="font-serif text-2xl text-talon-green mt-12 mb-6 animate-fade animate-delay-200">Luxury Accommodations</h3>
+                <div className="space-y-6 animate-fade animate-delay-300">
+                  {accommodations.map((accommodation) => (
+                    <div key={accommodation.name} className="bg-white p-6 shadow-sm rounded-sm">
+                      <h4 className="font-serif text-xl text-talon-green mb-3">{accommodation.name}</h4>
+                      <p className="text-talon-navy text-sm">{accommodation.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -341,29 +302,6 @@ const ArcticExpedition = () => {
                 Explore More Experiences
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Arctic Wildlife Gallery - Moved to the bottom */}
-      <section className="py-20 bg-talon-sand/10">
-        <div className="container">
-          <h2 className="section-title text-center mb-16 animate-fade">Arctic Wildlife Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {wildlifeGallery.map((item, index) => (
-              <div key={index} className="relative group overflow-hidden h-80 animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-talon-midnight/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4">
-                    <p className="text-white font-serif text-lg">{item.title}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

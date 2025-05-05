@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Mail } from 'lucide-react';
@@ -31,7 +32,7 @@ const Header = () => {
       )}
     >
       <div className="container flex justify-between items-center">
-        <Link to="/" className="z-50">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="z-50">
           <h1 className={cn(
             "font-serif text-xl md:text-2xl transition-all duration-300",
             scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
@@ -56,13 +57,14 @@ const Header = () => {
             </a>
             <Link 
               to="/contact" 
+              onClick={() => window.scrollTo(0, 0)}
               className={cn(
                 "hover:text-talon-gold transition-colors duration-300",
                 scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
               )}
             >
               <Mail size={18} />
-            </Link>
+            </a>
           </div>
         </nav>
 
@@ -94,6 +96,7 @@ const Header = () => {
             </a>
             <Link 
               to="/contact" 
+              onClick={() => window.scrollTo(0, 0)}
               className="hover:text-talon-gold transition-colors duration-300"
             >
               <Mail size={20} />
@@ -122,6 +125,7 @@ const NavLinks = ({ mobile = false, isScrolled = false }) => {
         <Link
           key={link.path}
           to={link.path}
+          onClick={() => window.scrollTo(0, 0)}
           className={cn(
             "font-sans text-sm uppercase tracking-wide transition-colors duration-300 hover:text-talon-gold relative",
             mobile ? "text-talon-ivory py-1" : isScrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]",
