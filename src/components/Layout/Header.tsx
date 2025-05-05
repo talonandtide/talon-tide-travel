@@ -64,7 +64,7 @@ const Header = () => {
               )}
             >
               <Mail size={18} />
-            </a>
+            </Link>
           </div>
         </nav>
 
