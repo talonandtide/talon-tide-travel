@@ -4,10 +4,10 @@ import Layout from '@/components/Layout/Layout';
 import { ArrowRight, MapPin, Star, Calendar, Clock, Ship, Anchor, Globe, Compass, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselDots } from "@/components/ui/carousel";
 
 const ArcticExpedition = () => {
   const highlights = [
@@ -81,12 +81,27 @@ const ArcticExpedition = () => {
     "Zodiac landings, private briefings, and lectures",
     "Travel planning support from Talon & Tide"
   ];
+  
+  const shipImages = [
+    {
+      url: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Arctic Explorer Vessel exterior"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1599640842225-85d111c60e6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80",
+      caption: "Expedition vessel cruising through ice"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+      caption: "Luxury accommodations"
+    }
+  ];
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section with updated glacier image */}
       <section className="pt-32 pb-20 relative">
-        <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1494783367193-149034c05e8f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
+        <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1509529711801-deac231925ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
           <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/70 to-talon-midnight/90"></div>
         </div>
         <div className="container relative z-10 text-white">
@@ -194,7 +209,7 @@ const ArcticExpedition = () => {
         </div>
       </section>
 
-      {/* Combined Itinerary and What's Included Section */}
+      {/* Combined Itinerary and What's Included Section - Reorganized for better visual flow */}
       <section className="py-20 bg-talon-sand/10">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -260,6 +275,40 @@ const ArcticExpedition = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Expedition Ship Gallery */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <h2 className="section-title text-center mb-12 animate-fade">Expedition Ship</h2>
+          <div className="max-w-4xl mx-auto">
+            <Carousel className="relative">
+              <CarouselContent>
+                {shipImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex aspect-[16/9] items-center justify-center p-0">
+                          <img 
+                            src={image.url} 
+                            alt={image.caption} 
+                            className="w-full h-full object-cover rounded-sm"
+                          />
+                        </CardContent>
+                      </Card>
+                      <p className="text-center mt-4 text-talon-navy">{image.caption}</p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2" />
+              <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2" />
+              <div className="mt-4">
+                <CarouselDots />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
