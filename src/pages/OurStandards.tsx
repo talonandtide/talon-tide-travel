@@ -25,10 +25,11 @@ const OurStandards = () => {
               Why Talon & Tide is Different
             </h2>
             <p className="text-lg text-talon-navy leading-relaxed">
-              Talon & Tide represents a new paradigm in wildlife tourism - where former zoological professionals 
-              apply the same rigorous standards used in accredited institutions to curate exceptional travel experiences. 
-              We don't just book trips; we validate missions, assess welfare standards, and ensure every experience 
-              contributes meaningfully to conservation.
+              Talon & Tide represents a new paradigm in wildlife tourism - where professional zoological 
+              expertise meets luxury travel curation. We don't just book trips; we understand the science, 
+              ethics, and passion behind exceptional wildlife experiences, whether in captivity or the wild. 
+              Our background allows us to recognize and celebrate facilities that share our commitment to 
+              wildlife conservation and meaningful guest experiences.
             </p>
           </div>
         </div>
@@ -45,10 +46,11 @@ const OurStandards = () => {
               <div className="flex items-start gap-4">
                 <Award className="text-talon-gold mt-1 flex-shrink-0" size={24} />
                 <div>
-                  <h3 className="font-serif text-xl text-talon-green mb-2">Zoological Background</h3>
+                  <h3 className="font-serif text-xl text-talon-green mb-2">Zoological Expertise</h3>
                   <p className="text-talon-navy">
-                    Founded by a former zookeeper with hands-on experience in animal care, conservation programs, 
-                    and educational initiatives at accredited zoological institutions.
+                    Founded by a former zookeeper with hands-on experience in wildlife management, 
+                    conservation programs, and educational initiatives. This background provides unique 
+                    insight into what makes exceptional wildlife experiences.
                   </p>
                 </div>
               </div>
@@ -57,18 +59,20 @@ const OurStandards = () => {
                 <div>
                   <h3 className="font-serif text-xl text-talon-green mb-2">Expert Network</h3>
                   <p className="text-talon-navy">
-                    Collaborative relationships with conservation biologists, veterinarians, and wildlife specialists 
-                    who provide insights into best practices and facility assessments.
+                    Collaborative relationships with conservation biologists, wildlife veterinarians, 
+                    and field researchers who provide insights into conservation work happening globally, 
+                    both in captive and wild settings.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Shield className="text-talon-gold mt-1 flex-shrink-0" size={24} />
                 <div>
-                  <h3 className="font-serif text-xl text-talon-green mb-2">Industry Standards</h3>
+                  <h3 className="font-serif text-xl text-talon-green mb-2">Professional Understanding</h3>
                   <p className="text-talon-navy">
-                    Application of the same welfare and ethical standards used in AZA-accredited institutions 
-                    to evaluate and select partner facilities worldwide.
+                    Deep understanding of conservation challenges, wildlife behavior, and what distinguishes 
+                    truly impactful experiences from typical tourist attractions - knowledge that guides 
+                    every recommendation we make.
                   </p>
                 </div>
               </div>
@@ -76,33 +80,44 @@ const OurStandards = () => {
             <div className="bg-talon-green/5 p-8 rounded-lg">
               <h3 className="font-serif text-2xl text-talon-green mb-4">Our Mission</h3>
               <p className="text-talon-navy mb-4">
-                To bridge the gap between luxury travel and meaningful conservation impact by connecting 
-                discerning travelers with facilities that share our commitment to animal welfare, 
-                scientific research, and community engagement.
+                To connect discerning travelers with wildlife experiences that inspire, educate, and 
+                contribute meaningfully to conservation - whether encountering animals in professional 
+                care or in their natural habitats.
               </p>
               <p className="text-talon-navy italic">
-                "We believe that exceptional wildlife experiences and exceptional animal care go hand in hand."
+                "We believe that exceptional wildlife experiences come from passionate, knowledgeable 
+                people doing important work with wildlife."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Vetting Process */}
+      {/* Our Approach */}
       <section className="py-16 bg-talon-sand/10">
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="font-serif text-3xl md:text-4xl text-talon-green text-center mb-12">
-            Our Comprehensive Vetting Process
+            Our Collaborative Approach
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <CheckCircle className="text-talon-gold" size={24} />
-                <h3 className="font-serif text-xl text-talon-green">Facility Assessment</h3>
+                <h3 className="font-serif text-xl text-talon-green">Mission Alignment</h3>
               </div>
               <p className="text-talon-navy">
-                Evaluation of animal housing, enrichment programs, veterinary care, and staff qualifications 
-                using professional zoological standards.
+                Understanding each facility's unique conservation mission and how their work contributes 
+                to broader wildlife protection efforts - from breeding programs to habitat restoration.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <CheckCircle className="text-talon-gold" size={24} />
+                <h3 className="font-serif text-xl text-talon-green">Educational Excellence</h3>
+              </div>
+              <p className="text-talon-navy">
+                Recognizing facilities that excel at creating meaningful connections between guests and 
+                wildlife, whether through expert-guided encounters or immersive field experiences.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -111,48 +126,38 @@ const OurStandards = () => {
                 <h3 className="font-serif text-xl text-talon-green">Conservation Impact</h3>
               </div>
               <p className="text-talon-navy">
-                Review of research contributions, field conservation support, and measurable conservation outcomes 
-                that extend beyond the facility.
+                Highlighting facilities whose work extends beyond their boundaries - supporting field 
+                research, habitat protection, and community conservation initiatives.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <CheckCircle className="text-talon-gold" size={24} />
-                <h3 className="font-serif text-xl text-talon-green">Educational Value</h3>
+                <h3 className="font-serif text-xl text-talon-green">Professional Excellence</h3>
               </div>
               <p className="text-talon-navy">
-                Assessment of interpretive programs, staff expertise, and the facility's ability to create 
-                meaningful learning experiences for visitors.
+                Appreciating the expertise and dedication of staff who work daily with wildlife, 
+                understanding the challenges and rewards of conservation work.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <CheckCircle className="text-talon-gold" size={24} />
-                <h3 className="font-serif text-xl text-talon-green">Community Engagement</h3>
+                <h3 className="font-serif text-xl text-talon-green">Guest Experience Quality</h3>
               </div>
               <p className="text-talon-navy">
-                Evaluation of local employment, community benefits, and sustainable tourism practices 
-                that support regional conservation efforts.
+                Evaluating how facilities create transformative experiences that inspire guests to 
+                become conservation advocates long after their visit ends.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <CheckCircle className="text-talon-gold" size={24} />
-                <h3 className="font-serif text-xl text-talon-green">Accreditation Review</h3>
+                <h3 className="font-serif text-xl text-talon-green">Partnership Building</h3>
               </div>
               <p className="text-talon-navy">
-                Verification of relevant accreditations (AZA, EAZA, ZAA) and ongoing compliance with 
-                international welfare and conservation standards.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <CheckCircle className="text-talon-gold" size={24} />
-                <h3 className="font-serif text-xl text-talon-green">Site Verification</h3>
-              </div>
-              <p className="text-talon-navy">
-                Personal site visits by our team to validate facility claims, assess guest experience quality, 
-                and build relationships with conservation partners.
+                Building long-term relationships with facilities to understand their evolving needs 
+                and help connect them with travelers who share their conservation values.
               </p>
             </div>
           </div>
@@ -167,35 +172,35 @@ const OurStandards = () => {
           </h2>
           <div className="bg-talon-green/5 p-8 rounded-lg">
             <p className="text-lg text-talon-navy mb-6 leading-relaxed">
-              When Talon & Tide reaches out to your facility, it represents our belief that your work aligns 
-              with the highest standards of animal welfare and conservation impact. We seek partnerships with 
-              facilities that are leaders in their field - organizations whose missions we are proud to support 
-              and whose stories we want to share with our clients.
+              When Talon & Tide reaches out to your facility, it's because we recognize the important 
+              work you're doing and believe it aligns with what our clients value most: authentic, 
+              educational, and impactful wildlife experiences. We're not evaluators or critics - 
+              we're advocates looking to celebrate and support facilities doing meaningful conservation work.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-serif text-xl text-talon-green mb-3">What This Means for You</h3>
                 <ul className="space-y-2 text-talon-navy">
-                  <li>• Recognition as a conservation leader</li>
-                  <li>• Access to engaged, conservation-minded travelers</li>
-                  <li>• Opportunity to showcase your mission and impact</li>
-                  <li>• Professional evaluation that validates your standards</li>
+                  <li>• Recognition as a conservation leader in your field</li>
+                  <li>• Access to conservation-minded, respectful travelers</li>
+                  <li>• Opportunity to share your mission with engaged audiences</li>
+                  <li>• Support for your educational and conservation goals</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-serif text-xl text-talon-green mb-3">Our Commitment</h3>
                 <ul className="space-y-2 text-talon-navy">
-                  <li>• Respectful, professional interactions</li>
-                  <li>• Understanding of your operational constraints</li>
-                  <li>• Promotion of your conservation message</li>
-                  <li>• Long-term partnership approach</li>
+                  <li>• Respectful, professional collaboration</li>
+                  <li>• Understanding of your operational realities</li>
+                  <li>• Promotion of your conservation story</li>
+                  <li>• Long-term partnership mindset</li>
                 </ul>
               </div>
             </div>
             <div className="mt-8 p-6 bg-white rounded-lg">
               <p className="text-talon-navy italic text-center">
                 "We don't just visit facilities - we champion the work of conservation organizations 
-                that are making a real difference for wildlife and communities worldwide."
+                that are making a real difference for wildlife worldwide."
               </p>
             </div>
           </div>
