@@ -28,8 +28,8 @@ const OurStandards = () => {
               Talon & Tide represents a new paradigm in wildlife tourism - where professional zoological 
               expertise meets luxury travel curation. We don't just book trips; we understand the science, 
               ethics, and passion behind exceptional wildlife experiences, whether in captivity or the wild. 
-              Our background allows us to recognize and celebrate facilities that share our commitment to 
-              wildlife conservation and meaningful guest experiences.
+              Our background allows us to recognize and celebrate experiences that share our commitment to 
+              wildlife conservation and meaningful guest encounters.
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ const OurStandards = () => {
                   <p className="text-talon-navy">
                     Founded by a former zookeeper with hands-on experience in wildlife management, 
                     conservation programs, and educational initiatives. This background provides unique 
-                    insight into what makes exceptional wildlife experiences.
+                    insight into what makes exceptional wildlife experiences across all settings.
                   </p>
                 </div>
               </div>
@@ -60,8 +60,8 @@ const OurStandards = () => {
                   <h3 className="font-serif text-xl text-talon-green mb-2">Expert Network</h3>
                   <p className="text-talon-navy">
                     Collaborative relationships with conservation biologists, wildlife veterinarians, 
-                    and field researchers who provide insights into conservation work happening globally, 
-                    both in captive and wild settings.
+                    field researchers, and expedition leaders who provide insights into conservation work 
+                    happening globally, from remote wilderness to urban conservation centers.
                   </p>
                 </div>
               </div>
@@ -72,7 +72,7 @@ const OurStandards = () => {
                   <p className="text-talon-navy">
                     Deep understanding of conservation challenges, wildlife behavior, and what distinguishes 
                     truly impactful experiences from typical tourist attractions - knowledge that guides 
-                    every recommendation we make.
+                    every recommendation we make, regardless of setting.
                   </p>
                 </div>
               </div>
@@ -81,12 +81,12 @@ const OurStandards = () => {
               <h3 className="font-serif text-2xl text-talon-green mb-4">Our Mission</h3>
               <p className="text-talon-navy mb-4">
                 To connect discerning travelers with wildlife experiences that inspire, educate, and 
-                contribute meaningfully to conservation - whether encountering animals in professional 
-                care or in their natural habitats.
+                contribute meaningfully to conservation - whether encountering animals through dedicated 
+                conservation organizations, on expertly-guided expeditions, or in their pristine natural habitats.
               </p>
               <p className="text-talon-navy italic">
                 "We believe that exceptional wildlife experiences come from passionate, knowledgeable 
-                people doing important work with wildlife."
+                people doing important work with wildlife - wherever that work takes place."
               </p>
             </div>
           </div>
@@ -106,8 +106,9 @@ const OurStandards = () => {
                 <h3 className="font-serif text-xl text-talon-green">Mission Alignment</h3>
               </div>
               <p className="text-talon-navy">
-                Understanding each facility's unique conservation mission and how their work contributes 
-                to broader wildlife protection efforts - from breeding programs to habitat restoration.
+                Understanding each provider's unique conservation mission and how their work contributes 
+                to broader wildlife protection efforts - from breeding programs to habitat preservation 
+                to sustainable expedition practices.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -116,8 +117,9 @@ const OurStandards = () => {
                 <h3 className="font-serif text-xl text-talon-green">Educational Excellence</h3>
               </div>
               <p className="text-talon-navy">
-                Recognizing facilities that excel at creating meaningful connections between guests and 
-                wildlife, whether through expert-guided encounters or immersive field experiences.
+                Recognizing providers that excel at creating meaningful connections between guests and 
+                wildlife, whether through expert-guided encounters, immersive field experiences, or 
+                transformative expedition moments.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -126,8 +128,9 @@ const OurStandards = () => {
                 <h3 className="font-serif text-xl text-talon-green">Conservation Impact</h3>
               </div>
               <p className="text-talon-navy">
-                Highlighting facilities whose work extends beyond their boundaries - supporting field 
-                research, habitat protection, and community conservation initiatives.
+                Highlighting providers whose work extends beyond their immediate operations - supporting 
+                field research, habitat protection, community conservation initiatives, or responsible 
+                wildlife tourism practices.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -136,8 +139,9 @@ const OurStandards = () => {
                 <h3 className="font-serif text-xl text-talon-green">Professional Excellence</h3>
               </div>
               <p className="text-talon-navy">
-                Appreciating the expertise and dedication of staff who work daily with wildlife, 
-                understanding the challenges and rewards of conservation work.
+                Appreciating the expertise and dedication of guides, naturalists, and staff who work 
+                with wildlife daily, understanding the challenges and rewards of creating meaningful 
+                wildlife encounters.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -146,8 +150,9 @@ const OurStandards = () => {
                 <h3 className="font-serif text-xl text-talon-green">Guest Experience Quality</h3>
               </div>
               <p className="text-talon-navy">
-                Evaluating how facilities create transformative experiences that inspire guests to 
-                become conservation advocates long after their visit ends.
+                Evaluating how providers create transformative experiences that inspire guests to 
+                become conservation advocates long after their journey ends, regardless of the setting 
+                or type of encounter.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -156,8 +161,9 @@ const OurStandards = () => {
                 <h3 className="font-serif text-xl text-talon-green">Partnership Building</h3>
               </div>
               <p className="text-talon-navy">
-                Building long-term relationships with facilities to understand their evolving needs 
-                and help connect them with travelers who share their conservation values.
+                Building long-term relationships with experience providers to understand their evolving 
+                approaches and help connect them with travelers who share their conservation values 
+                and passion for wildlife.
               </p>
             </div>
           </div>
@@ -168,14 +174,14 @@ const OurStandards = () => {
       <section className="py-16">
         <div className="container max-w-4xl mx-auto px-4">
           <h2 className="font-serif text-3xl md:text-4xl text-talon-green text-center mb-12">
-            For Conservation Partners
+            For Experience Partners
           </h2>
           <div className="bg-talon-green/5 p-8 rounded-lg">
             <p className="text-lg text-talon-navy mb-6 leading-relaxed">
-              When Talon & Tide reaches out to your facility, it's because we recognize the important 
+              When Talon & Tide reaches out to your organization, it's because we recognize the important 
               work you're doing and believe it aligns with what our clients value most: authentic, 
               educational, and impactful wildlife experiences. We're not evaluators or critics - 
-              we're advocates looking to celebrate and support facilities doing meaningful conservation work.
+              we're advocates looking to celebrate and support providers doing meaningful conservation work.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -199,8 +205,8 @@ const OurStandards = () => {
             </div>
             <div className="mt-8 p-6 bg-white rounded-lg">
               <p className="text-talon-navy italic text-center">
-                "We don't just visit facilities - we champion the work of conservation organizations 
-                that are making a real difference for wildlife worldwide."
+                "We don't just visit or book experiences - we champion the work of conservation-minded 
+                providers that are making a real difference for wildlife worldwide."
               </p>
             </div>
           </div>
@@ -214,7 +220,7 @@ const OurStandards = () => {
             Experience the Difference
           </h2>
           <p className="text-xl mb-8 leading-relaxed">
-            Whether you're a traveler seeking meaningful wildlife experiences or a conservation organization 
+            Whether you're a traveler seeking meaningful wildlife experiences or an experience provider 
             interested in partnership, discover how professional expertise creates exceptional outcomes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
