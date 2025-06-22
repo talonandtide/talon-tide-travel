@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, ArrowRight, Mail } from 'lucide-react';
@@ -87,6 +86,7 @@ const Footer = () => {
               <FooterLink to="/">Home</FooterLink>
               <FooterLink to="/about">About</FooterLink>
               <FooterLink to="/experiences">Experiences</FooterLink>
+              <FooterLink to="/our-standards">Our Standards</FooterLink>
               <FooterLink to="/blog">Journal</FooterLink>
               <FooterLink to="/contact">Contact</FooterLink>
             </nav>

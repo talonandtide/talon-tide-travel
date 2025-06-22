@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +12,7 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ArcticExpedition from "./pages/ArcticExpedition";
+import OurStandards from "./pages/OurStandards";
 
 // ScrollToTop component to handle scrolling to top on route changes
 const ScrollToTop = () => {
@@ -40,6 +40,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/experiences/arctic-expedition" element={<ArcticExpedition />} />
+          <Route path="/our-standards" element={<OurStandards />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />

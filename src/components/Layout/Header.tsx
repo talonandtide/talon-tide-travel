@@ -115,6 +115,7 @@ const NavLinks = ({ mobile = false, isScrolled = false }) => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/experiences', label: 'Experiences' },
+    { path: '/our-standards', label: 'Our Standards' },
     { path: '/blog', label: 'Journal' },
     { path: '/contact', label: 'Contact' }
   ];
