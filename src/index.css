@@ -1,45 +1,242 @@
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Add any global styles below */
+/* Import luxury fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* Basic components */
+/* Safari luxury textures and patterns */
+@layer base {
+  body {
+    background: linear-gradient(135deg, #F9F7F3 0%, #E5DFD3 100%);
+    background-attachment: fixed;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(44, 62, 53, 0.1);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #2C3E35, #BC9A5F);
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #BC9A5F, #CD7F32);
+    background-clip: content-box;
+  }
+}
+
+/* Luxury safari components */
 @layer components {
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   .section-title {
-    @apply font-serif text-3xl md:text-4xl text-talon-green mb-6;
+    @apply font-serif text-3xl md:text-4xl text-talon-green mb-6 relative;
   }
   
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #BC9A5F, transparent);
+  }
+  
+  /* Luxury card with safari aesthetics */
   .card-luxury {
-    @apply border border-talon-stone/20 bg-white shadow-sm rounded-sm hover:shadow-md transition-shadow;
+    @apply relative border border-talon-stone/20 bg-gradient-to-br from-white to-talon-sand/30 shadow-luxury rounded-sm transition-all duration-500;
+    backdrop-filter: blur(10px);
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(188, 154, 95, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(44, 62, 53, 0.05) 0%, transparent 50%);
   }
   
+  .card-luxury:hover {
+    @apply shadow-luxury-hover -translate-y-2;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(188, 154, 95, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(44, 62, 53, 0.08) 0%, transparent 50%);
+  }
+  
+  /* Safari trunk-inspired elements */
+  .trunk-border {
+    position: relative;
+    border: 2px solid #BC9A5F;
+    background: linear-gradient(45deg, #2C3E35, #1A2A40);
+  }
+  
+  .trunk-border::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #CD7F32, #BC9A5F, #CD7F32);
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  /* Brass accent elements */
+  .brass-accent {
+    background: linear-gradient(135deg, #CD7F32 0%, #BC9A5F 50%, #E8DDCB 100%);
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Enhanced buttons */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-talon-green text-white rounded-sm hover:bg-talon-green/90 transition-all;
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-talon-green via-talon-navy to-talon-green text-white rounded-sm font-medium transition-all duration-300 shadow-lg;
+    background-size: 200% 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-primary:hover {
+    @apply shadow-luxury-hover scale-105;
+    background-position: 100% 0;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 border border-talon-gold text-talon-gold rounded-sm hover:bg-talon-gold/10 transition-all;
+    @apply inline-flex items-center gap-2 px-8 py-4 border-2 border-talon-gold text-talon-gold rounded-sm font-medium transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(45deg, transparent 0%, rgba(188, 154, 95, 0.05) 50%, transparent 100%);
   }
   
-  .drop-shadow-text {
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  .btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #BC9A5F, #CD7F32);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
   }
-
+  
+  .btn-secondary:hover {
+    @apply text-white transform scale-105 shadow-lg;
+  }
+  
+  .btn-secondary:hover::before {
+    opacity: 1;
+  }
+  
+  /* Safari texture overlays */
+  .canvas-texture {
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(169, 162, 149, 0.03) 2px, rgba(169, 162, 149, 0.03) 4px);
+  }
+  
+  .linen-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(169, 162, 149, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  .wood-grain {
+    background-image: 
+      linear-gradient(90deg, rgba(44, 62, 53, 0.1) 0%, transparent 20%, rgba(44, 62, 53, 0.05) 40%, transparent 60%, rgba(44, 62, 53, 0.1) 100%);
+    background-size: 40px 100%;
+  }
+  
+  /* Enhanced shadows and depth */
+  .drop-shadow-text {
+    text-shadow: 
+      0px 2px 4px rgba(0, 0, 0, 0.3),
+      0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .drop-shadow-luxury {
+    filter: drop-shadow(0 8px 16px rgba(44, 62, 53, 0.15)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  }
+  
+  /* Interactive elements */
+  .safari-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .safari-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(44, 62, 53, 0.15),
+      0 8px 16px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Ornate dividers */
+  .ornate-divider {
+    position: relative;
+    text-align: center;
+    margin: 3rem 0;
+  }
+  
+  .ornate-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #BC9A5F, transparent);
+  }
+  
+  .ornate-divider::after {
+    content: '◆';
+    background: #F9F7F3;
+    color: #BC9A5F;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Prose styling for content */
   .prose-talon {
-    @apply prose prose-headings:font-serif prose-p:text-talon-navy prose-a:text-talon-gold prose-a:no-underline hover:prose-a:text-talon-gold/80;
+    @apply prose prose-lg prose-headings:font-serif prose-headings:text-talon-green prose-p:text-talon-navy prose-p:leading-relaxed prose-a:text-talon-gold prose-a:no-underline hover:prose-a:text-talon-gold/80;
+  }
+  
+  .prose-talon blockquote {
+    @apply border-l-4 border-talon-gold bg-gradient-to-r from-talon-sand/20 to-transparent pl-6 py-4 italic font-serif text-talon-navy;
   }
 }
 
-/* Mapbox overrides */
+/* Mapbox luxury styling */
 .mapboxgl-popup-content {
-  @apply px-3 py-2 rounded-sm shadow-md border border-talon-stone/20 text-sm;
+  @apply px-4 py-3 rounded-sm shadow-luxury border-2 border-talon-gold/30 text-sm canvas-texture;
+  background: linear-gradient(45deg, #F9F7F3, #E5DFD3);
 }
 
 .mapboxgl-popup-close-button {
@@ -47,55 +244,136 @@
 }
 
 .mapboxgl-ctrl-logo {
-  @apply opacity-50;
+  @apply opacity-30;
 }
 
-.mapboxgl-ctrl button.mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon,
-.mapboxgl-ctrl button.mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon,
-.mapboxgl-ctrl button.mapboxgl-ctrl-compass .mapboxgl-ctrl-icon {
-  @apply bg-no-repeat bg-center;
+.mapboxgl-ctrl button {
+  @apply shadow-md border border-talon-stone/20;
+  background: linear-gradient(45deg, #F9F7F3, #E5DFD3) !important;
 }
 
-/* Animation classes */
+/* Luxury animations */
 .animate-fade {
   opacity: 0;
-  transform: translateY(10px);
-  animation: fade-in 0.6s ease-out forwards;
+  transform: translateY(20px);
+  animation: luxury-fade-in 0.8s ease-out forwards;
 }
 
 .animate-fade-in {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fade-in 0.6s ease-out forwards;
+  opacity: 0;  
+  transform: translateY(20px);
+  animation: luxury-fade-in 0.8s ease-out forwards;
 }
 
-.animate-delay-100 {
-  animation-delay: 100ms;
+.animate-float {
+  animation: luxury-float 8s ease-in-out infinite;
 }
 
-.animate-delay-200 {
-  animation-delay: 200ms;
+.animate-shimmer {
+  background: linear-gradient(45deg, transparent 30%, rgba(188, 154, 95, 0.1) 50%, transparent 70%);
+  background-size: 200% 200%;
+  animation: shimmer 3s ease-in-out infinite;
 }
 
-.animate-delay-300 {
-  animation-delay: 300ms;
-}
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-700 { animation-delay: 700ms; }
+.animate-delay-800 { animation-delay: 800ms; }
 
-.animate-delay-400 {
-  animation-delay: 400ms;
-}
-
-.animate-delay-500 {
-  animation-delay: 500ms;
-}
-
-@keyframes fade-in {
+@keyframes luxury-fade-in {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px) scale(0.95);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
+}
+
+@keyframes luxury-float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-8px) rotate(1deg); 
+  }
+  50% { 
+    transform: translateY(-4px) rotate(0deg); 
+  }
+  75% { 
+    transform: translateY(-12px) rotate(-1deg); 
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Luxury scroll reveal effects */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Safari expedition styling */
+.expedition-card {
+  @apply relative overflow-hidden rounded-sm shadow-luxury;
+  background: linear-gradient(135deg, #2C3E35 0%, #1A2A40 100%);
+  border: 1px solid rgba(188, 154, 95, 0.3);
+}
+
+.expedition-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(188, 154, 95, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(205, 127, 50, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Interactive elements with brass accents */
+.interactive-element {
+  @apply relative cursor-pointer transition-all duration-300;
+  background: linear-gradient(45deg, #F9F7F3, #E5DFD3);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.interactive-element::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #BC9A5F, #CD7F32, #BC9A5F);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.interactive-element:hover::before {
+  opacity: 1;
+}
+
+.interactive-element:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(44, 62, 53, 0.15);
 }

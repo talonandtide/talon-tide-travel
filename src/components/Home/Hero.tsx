@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Compass, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Updated reliable video sources with WebM and MP4 options
@@ -105,10 +105,10 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Media with Crossfade */}
+      {/* Enhanced Background Media with Luxury Overlays */}
       <div className="absolute inset-0 z-0">
         {useVideoFallback ? (
-          // Fallback Images
+          // Fallback Images with luxury treatment
           fallbackImages.map((image, index) => (
             <div
               key={`fallback-${index}`}
@@ -119,7 +119,7 @@ const Hero = () => {
             />
           ))
         ) : (
-          // Videos
+          // Videos with luxury treatment
           heroVideos.map((video, index) => (
             <div
               key={`video-${index}`}
@@ -148,36 +148,99 @@ const Hero = () => {
             </div>
           ))
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-talon-midnight/80 via-talon-green/60 to-transparent" />
+        
+        {/* Luxury Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-luxury" />
+        <div className="absolute inset-0 bg-texture-canvas opacity-20" />
+        
+        {/* Floating Safari Elements */}
+        <div className="absolute top-1/4 left-1/6 w-32 h-32 bg-talon-brass/20 rounded-full blur-3xl animate-luxury-float opacity-60"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-talon-copper/15 rounded-full blur-2xl animate-luxury-float opacity-40" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/2 right-1/6 w-24 h-24 bg-talon-gold/25 rounded-full blur-2xl animate-luxury-float opacity-50" style={{animationDelay: '6s'}}></div>
       </div>
 
-      {/* Content */}
+      {/* Safari Compass Decoration */}
+      <div className="absolute top-8 right-8 z-10 opacity-30">
+        <div className="relative w-16 h-16 animate-luxury-float">
+          <Compass className="w-full h-full text-talon-brass drop-shadow-luxury" style={{animationDelay: '2s'}} />
+          <div className="absolute inset-0 rounded-full border-2 border-talon-gold/30 animate-spin" style={{animationDuration: '20s'}}></div>
+        </div>
+      </div>
+
+      {/* Enhanced Content with Safari Styling */}
       <div className="container relative z-10 h-full flex flex-col justify-center">
-        <div className="max-w-md md:max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl text-talon-ivory font-serif leading-tight mb-6 animate-fade-in drop-shadow-text-lg">
-            Where Wild Meets <span className="text-talon-gold">Refined</span>
-          </h1>
-          <p className="text-talon-ivory text-lg md:text-xl mb-10 max-w-xl font-light animate-fade-in drop-shadow-text tracking-wide" style={{ animationDelay: '200ms' }}>
-            Exclusive, ethical wildlife experiences curated by conservation experts for the discerning traveler.
-          </p>
-          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <Link to="/experiences" className="btn-primary group">
-              Explore Experiences
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        <div className="max-w-md md:max-w-3xl">
+          {/* Ornate Title Treatment */}
+          <div className="relative mb-8">
+            <div className="absolute -top-4 -left-4 w-2 h-2 bg-talon-brass rounded-full animate-brass-glow"></div>
+            <div className="absolute -top-2 -right-2 w-1 h-1 bg-talon-copper rounded-full animate-brass-glow" style={{animationDelay: '1s'}}></div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-8xl text-talon-ivory font-serif leading-tight animate-luxury-fade-in">
+              Where <span className="relative">
+                <span className="text-talon-gold">Wild</span>
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-gold opacity-60 blur-sm"></div>
+              </span> Meets{' '}
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-talon-brass to-talon-copper bg-clip-text text-transparent">
+                  Refined
+                </span>
+                <div className="absolute -inset-2 bg-talon-gold/10 blur-xl rounded-lg"></div>
+              </span>
+            </h1>
+          </div>
+          
+          {/* Enhanced Subtitle */}
+          <div className="relative">
+            <p className="text-talon-champagne text-lg md:text-xl lg:text-2xl mb-12 max-w-2xl font-light animate-luxury-fade-in leading-relaxed tracking-wide canvas-texture backdrop-blur-luxury p-6 rounded-sm border border-talon-brass/20" style={{ animationDelay: '300ms' }}>
+              Exclusive, ethical wildlife experiences curated by conservation experts for the discerning traveler. 
+              <span className="block mt-2 text-talon-brass font-serif italic">
+                Adventures worthy of the finest expedition journals.
+              </span>
+            </p>
+          </div>
+          
+          {/* Enhanced Action Buttons */}
+          <div className="flex flex-wrap gap-6 animate-luxury-fade-in" style={{ animationDelay: '600ms' }}>
+            <Link to="/experiences" className="group relative">
+              <div className="absolute -inset-1 bg-gradient-brass rounded-sm blur opacity-60 group-hover:opacity-100 transition duration-300"></div>
+              <div className="relative btn-primary trunk-border px-10 py-5 text-lg font-medium">
+                <Map className="mr-3" size={20} />
+                Explore Expeditions
+                <ArrowRight size={18} className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+              </div>
             </Link>
-            <Link to="/about" className="btn-secondary group">
-              Our Story
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            
+            <Link to="/about" className="group relative">  
+              <div className="relative btn-secondary interactive-element px-10 py-5 text-lg font-medium">
+                <Compass className="mr-3" size={20} />
+                Our Legacy
+                <ArrowRight size={18} className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+              </div>
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer" onClick={scrollToAbout}>
-        <div className="flex flex-col items-center text-talon-ivory">
-          <span className="text-xs uppercase tracking-widest mb-2 drop-shadow-text">Discover</span>
-          <ChevronDown size={20} className="drop-shadow-text" />
+      {/* Enhanced Scroll Indicator */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 cursor-pointer group" onClick={scrollToAbout}>
+        <div className="flex flex-col items-center text-talon-champagne animate-luxury-fade-in" style={{ animationDelay: '900ms' }}>
+          <div className="mb-4 p-3 rounded-full border border-talon-brass/30 backdrop-blur-luxury group-hover:border-talon-brass/60 transition-all duration-300 group-hover:shadow-brass">
+            <span className="block text-xs uppercase tracking-[0.2em] mb-2 font-serif">Begin Journey</span>
+            <ChevronDown size={24} className="animate-bounce drop-shadow-luxury group-hover:text-talon-brass transition-colors" />
+          </div>
+          <div className="w-0.5 h-8 bg-gradient-to-b from-talon-brass/60 to-transparent"></div>
+        </div>
+      </div>
+
+      {/* Safari Expedition Badge */}
+      <div className="absolute bottom-8 right-8 z-10">
+        <div className="canvas-texture backdrop-blur-luxury p-4 rounded-sm border border-talon-brass/30 animate-luxury-fade-in" style={{ animationDelay: '1200ms' }}>
+          <div className="text-talon-champagne text-xs uppercase tracking-widest font-serif">
+            Est. 2024
+          </div>
+          <div className="text-talon-brass text-sm font-medium">
+            Talon & Tide
+          </div>
         </div>
       </div>
     </section>
