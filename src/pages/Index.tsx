@@ -115,7 +115,7 @@ const Index = () => {
         <div className="container relative z-10 h-full flex flex-col justify-center">
           <div className="max-w-md md:max-w-2xl">
             <h1 className="text-4xl md:text-5xl lg:text-7xl text-talon-ivory font-serif leading-tight mb-6 animate-fade-in drop-shadow-text-lg">
-              Where Wild Meets <span className="font-script text-talon-gold">Refined</span>
+              Where Wild Meets <span className="font-script text-script-xl md:text-script-2xl text-talon-gold">Refined</span>
             </h1>
             <p className="text-talon-ivory text-lg md:text-xl mb-10 max-w-xl font-light animate-fade-in drop-shadow-text tracking-wide" style={{ animationDelay: '200ms' }}>
               Exclusive, ethical wildlife experiences curated by conservation experts for the discerning traveler.
@@ -149,7 +149,7 @@ const Index = () => {
             </div>
             
             <div className="order-1 lg:order-2">
-              <h2 className="font-serif text-4xl text-talon-green mb-6 animate-fade">What We <span className="font-script">Do</span></h2>
+              <h2 className="font-serif text-4xl text-talon-green mb-6 animate-fade">What We <span className="font-script text-script-lg">Do</span></h2>
               <p className="mb-6 animate-fade animate-delay-100 text-talon-navy/90 leading-relaxed">
                 Not all travel experiences are created equal. At Talon & Tide, we specialize in connecting you with animal encounters and conservation travel that are truly extraordinary, and thoroughly vetted by professionals who've spent their lives working in conservation behind the scenes.
               </p>
@@ -169,7 +169,7 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl text-talon-green mb-6 drop-shadow-sm animate-fade">
-              Curated <span className="font-script">Experiences</span>
+              Curated <span className="font-script text-script-lg">Experiences</span>
             </h2>
             <p className="max-w-2xl mx-auto text-talon-navy font-light text-lg animate-fade animate-delay-100">
               Three distinct collections designed for travelers who want more than just a safari.
@@ -245,7 +245,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-1 lg:order-1">
               <h2 className="font-serif text-4xl text-talon-green mb-6 animate-fade">
-                Founded by a zookeeper. Built for travelers who want more than a <span className="font-script">safari</span>.
+                Founded by a zookeeper. Built for travelers who want more than a <span className="font-script text-script-lg">safari</span>.
               </h2>
               <p className="mb-6 animate-fade animate-delay-100 text-talon-navy/90 leading-relaxed">
                 After a decade in exotic animal care, I saw firsthand the difference between a moment that looks good on Instagram, and one that actually <em>does</em> good - to support animals, conservation, and local communities.
@@ -256,7 +256,7 @@ const Index = () => {
               <p className="mb-8 animate-fade animate-delay-300 text-talon-navy/90 leading-relaxed">
                 Talon & Tide is here to show you what's worth doing - and who's doing it right.
               </p>
-              <p className="font-script text-2xl text-talon-gold animate-fade animate-delay-400">
+              <p className="font-script text-script-lg text-talon-gold animate-fade animate-delay-400">
                 Lindsay
               </p>
             </div>
@@ -279,7 +279,7 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl text-talon-green mb-6 animate-fade">
-              How It <span className="font-script">Works</span>
+              How It <span className="font-script text-script-lg">Works</span>
             </h2>
           </div>
 
@@ -325,7 +325,7 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl mb-6 animate-fade">
-              Experience <span className="font-script">Snapshots</span>
+              Experience <span className="font-script text-script-lg">Snapshots</span>
             </h2>
           </div>
 
@@ -373,7 +373,7 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl text-talon-green mb-6 animate-fade">
-              Field Notes From the <span className="font-script">Wild</span>
+              Field Notes From the <span className="font-script text-script-lg">Wild</span>
             </h2>
           </div>
           

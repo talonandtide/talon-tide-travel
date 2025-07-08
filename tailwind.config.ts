@@ -132,6 +132,13 @@ export default {
 				body: ['Lato', 'sans-serif'],
 				script: ['Mrs Saint Delafield', 'cursive'],
 			},
+			fontSize: {
+				'script-sm': ['1.5rem', { lineHeight: '2rem' }],      // 24px
+				'script-base': ['2rem', { lineHeight: '2.5rem' }],    // 32px  
+				'script-lg': ['2.5rem', { lineHeight: '3rem' }],      // 40px
+				'script-xl': ['3rem', { lineHeight: '3.5rem' }],      // 48px
+				'script-2xl': ['3.5rem', { lineHeight: '4rem' }],     // 56px
+			},
 			boxShadow: {
 				'luxury': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',
 				'luxury-hover': '0 15px 40px -5px rgba(0, 0, 0, 0.15)',

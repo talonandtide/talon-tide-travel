@@ -109,7 +109,7 @@ const Experiences = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
-              Signature Wildlife <span className="font-script">Journeys</span>
+              Signature Wildlife <span className="font-script text-script-lg">Journeys</span>
             </h2>
             <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
               Discover unforgettable, conservation-centered travel experiences curated with care and rooted in ethical engagement. These multi-day journeys highlight some of the world's most extraordinary animal encounters.
@@ -167,7 +167,7 @@ const Experiences = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
-              Conservation Encounters & Behind-the-Scenes <span className="font-script">Tours</span>
+              Conservation Encounters & Behind-the-Scenes <span className="font-script text-script-lg">Tours</span>
             </h2>
             <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
               From world-renowned zoos to pioneering aquariums and conservation centers, these thoughtfully vetted encounters offer meaningful, ethical ways to connect with animals — often with rare behind-the-scenes access few travelers ever experience.
@@ -219,7 +219,7 @@ const Experiences = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
-              Insider Wildlife <span className="font-script">Expeditions</span>
+              Insider Wildlife <span className="font-script text-script-lg">Expeditions</span>
             </h2>
             <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
               Join the professionals, not the tourists. Step into the field with real conservationists — from rhino dehorning to leopard collaring, these small group trips offer rare access to wildlife efforts few travelers ever witness. Led by zookeepers, researchers, and rescue teams, these expeditions are curated for travelers who want more than just a safari.
@@ -298,7 +298,7 @@ const Experiences = () => {
       <section className="py-20 bg-talon-green text-talon-ivory">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl mb-6 animate-fade">Our Vetting <span className="font-script">Process</span></h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-6 animate-fade">Our Vetting <span className="font-script text-script-lg">Process</span></h2>
             <p className="text-talon-ivory/80 animate-fade animate-delay-100">
               Every experience featured on Talon & Tide undergoes a thorough evaluation process to ensure it meets our high standards for ethics, animal welfare, conservation impact, and luxury.
             </p>
