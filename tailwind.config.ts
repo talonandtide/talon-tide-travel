@@ -130,6 +130,7 @@ export default {
 				sans: ['Montserrat', 'Lato', 'sans-serif'],
 				display: ['Cormorant Garamond', 'serif'],
 				body: ['Lato', 'sans-serif'],
+				script: ['Mrs Saint Delafield', 'cursive'],
 			},
 			boxShadow: {
 				'luxury': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',

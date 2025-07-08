@@ -109,7 +109,7 @@ const Experiences = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
-              Signature Wildlife Journeys
+              Signature Wildlife <span className="font-script">Journeys</span>
             </h2>
             <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
               Discover unforgettable, conservation-centered travel experiences curated with care and rooted in ethical engagement. These multi-day journeys highlight some of the world's most extraordinary animal encounters.
@@ -167,7 +167,7 @@ const Experiences = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
-              Conservation Encounters & Behind-the-Scenes Tours
+              Conservation Encounters & Behind-the-Scenes <span className="font-script">Tours</span>
             </h2>
             <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
               From world-renowned zoos to pioneering aquariums and conservation centers, these thoughtfully vetted encounters offer meaningful, ethical ways to connect with animals — often with rare behind-the-scenes access few travelers ever experience.
@@ -215,10 +215,90 @@ const Experiences = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-talon-sand/10">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6 animate-fade">
+              Insider Wildlife <span className="font-script">Expeditions</span>
+            </h2>
+            <p className="text-talon-navy/80 text-lg animate-fade animate-delay-100">
+              Join the professionals, not the tourists. Step into the field with real conservationists — from rhino dehorning to leopard collaring, these small group trips offer rare access to wildlife efforts few travelers ever witness. Led by zookeepers, researchers, and rescue teams, these expeditions are curated for travelers who want more than just a safari.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {[
+              {
+                id: 1,
+                title: 'Rhino Conservation Mission',
+                location: 'South Africa',
+                image: 'https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+                description: 'Work alongside veterinarians and researchers in rhino dehorning and monitoring operations.',
+                duration: '6 days',
+                ethicalRating: 5,
+              },
+              {
+                id: 2,
+                title: 'Leopard Collaring Expedition',
+                location: 'Namibia',
+                image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3634&q=80',
+                description: 'Join wildlife researchers in tracking and collaring leopards for conservation data collection.',
+                duration: '8 days',
+                ethicalRating: 5,
+              },
+              {
+                id: 3,
+                title: 'Sea Turtle Research Mission',
+                location: 'Costa Rica',
+                image: 'https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80',
+                description: 'Participate in sea turtle nesting research and beach conservation with marine biologists.',
+                duration: '5 days',
+                ethicalRating: 5,
+              },
+            ].map((experience, index) => (
+              <div key={experience.id} className="bg-white rounded-sm shadow-sm overflow-hidden animate-fade group" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="relative h-64">
+                  <img 
+                    src={experience.image} 
+                    alt={experience.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center">
+                    <div className="flex items-center gap-1 bg-talon-navy/80 text-white text-xs px-3 py-1 rounded-sm">
+                      <MapPin size={12} />
+                      {experience.location}
+                    </div>
+                    <div className="flex items-center gap-1 bg-talon-green/80 text-white text-xs px-3 py-1 rounded-sm">
+                      {experience.duration}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 group-hover:bg-talon-sand/10 transition-colors duration-500">
+                  <h2 className="font-serif text-2xl mb-2 text-talon-green group-hover:text-talon-gold transition-colors duration-300">{experience.title}</h2>
+                  <div className="flex items-center gap-1 mb-4">
+                    <div className="text-xs text-talon-gold">Ethical Rating:</div>
+                    <div className="flex">
+                      {[...Array(experience.ethicalRating)].map((_, i) => (
+                        <Star key={i} size={14} fill="#BC9A5F" color="#BC9A5F" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-talon-navy text-sm mb-6">{experience.description}</p>
+                  <Link to="/contact" className="btn-secondary w-full justify-center group-hover:bg-talon-gold/10 transition-colors duration-300">
+                    Stay Updated
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-talon-green text-talon-ivory">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl mb-6 animate-fade">Our Vetting Process</h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-6 animate-fade">Our Vetting <span className="font-script">Process</span></h2>
             <p className="text-talon-ivory/80 animate-fade animate-delay-100">
               Every experience featured on Talon & Tide undergoes a thorough evaluation process to ensure it meets our high standards for ethics, animal welfare, conservation impact, and luxury.
             </p>
