@@ -228,7 +228,7 @@ const Index = () => {
           </div>
 
           <div className="text-center animate-fade">
-            <p className="text-talon-navy/80 mb-6 text-lg">
+            <p className="text-talon-green mb-6 text-2xl font-serif font-medium text-center">
               Not seeing your dream trip? That's the point. We don't sell packages - we create them.
             </p>
             <Link to="/contact" className="btn-primary group">
