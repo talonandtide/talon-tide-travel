@@ -133,11 +133,11 @@ export default {
 				script: ['Mrs Saint Delafield', 'cursive'],
 			},
 			fontSize: {
-				'script-sm': ['1.5rem', { lineHeight: '2rem' }],      // 24px
-				'script-base': ['2rem', { lineHeight: '2.5rem' }],    // 32px  
-				'script-lg': ['2.5rem', { lineHeight: '3rem' }],      // 40px
-				'script-xl': ['3rem', { lineHeight: '3.5rem' }],      // 48px
-				'script-2xl': ['3.5rem', { lineHeight: '4rem' }],     // 56px
+				'script-sm': ['2rem', { lineHeight: '2.5rem' }],      // 32px
+				'script-base': ['2.75rem', { lineHeight: '3.25rem' }], // 44px  
+				'script-lg': ['3.5rem', { lineHeight: '4rem' }],      // 56px
+				'script-xl': ['4.5rem', { lineHeight: '5rem' }],      // 72px
+				'script-2xl': ['5.5rem', { lineHeight: '6rem' }],     // 88px
 			},
 			boxShadow: {
 				'luxury': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',
