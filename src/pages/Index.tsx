@@ -359,15 +359,8 @@ const Index = () => {
                   {/* Content */}
                   <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16">
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
-                      {/* Avatar and Author Info */}
+                      {/* Author Info */}
                       <div className="lg:col-span-1 text-center lg:text-left">
-                        <div className="inline-block mb-4">
-                          <img 
-                            src={testimonial.avatar} 
-                            alt={testimonial.author}
-                            className="w-20 h-20 rounded-full object-cover border-4 border-talon-gold/50 mx-auto lg:mx-0"
-                          />
-                        </div>
                         <div className="text-sm">
                           <span className="text-talon-gold font-medium block">– {testimonial.author}</span>
                           <span className="text-talon-ivory/80">{testimonial.location}</span>
