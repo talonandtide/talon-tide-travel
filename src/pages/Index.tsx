@@ -13,28 +13,36 @@ const testimonials = [
     title: "Ultra-Luxury Birding Expedition in Papua New Guinea",
     quote: "I never imagined a birding trip could feel like a five-star expedition. We had private helicopters, luxury lodge stays, and exclusive access to species most people only dream of seeing. Talon & Tide made it seamless — this was the most unforgettable travel experience of my life.",
     author: "Nathan M.",
-    location: "Papua New Guinea, 2024"
+    location: "Papua New Guinea, 2024",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
   },
   {
     id: 2,
     title: "VIP Weekend Zoo Escape + Luxury Hotel",
     quote: "I only had a weekend off, but Lindsay turned it into something I never expected. A private behind-the-scenes tour followed by surprise champagne waiting for me at my five-star suite nearby. It felt like I'd been away for a week - I came home refreshed and ready to book a longer trip!",
     author: "Camille D.",
-    location: "Atlanta, 2025"
+    location: "Atlanta, 2025",
+    image: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-4.0.3&auto=format&fit=crop&w=2026&q=80",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
   },
   {
     id: 3,
     title: "Conservation Mission: Leopard Collaring",
     quote: "We weren't just observing, we were part of it. Lindsay placed us with real conservation fieldworkers on a leopard collaring trip, and I'll never forget working with the vet team work up close. I wasn't just seeing them - I was feeling and smelling them too. This was way more than the safari we originally anticipated.",
     author: "Michael R.",
-    location: "Namibia, 2024"
+    location: "Namibia, 2024",
+    image: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
   },
   {
     id: 4,
     title: "Humpback Whale Dive with Nat Geo Photographer",
     quote: "Swimming beside a humpback mother and calf changed me forever. But having a National Geographic photographer coaching our shots? These are the best shots of my life and I couldn't be more satisfied.",
     author: "Sarah L.",
-    location: "Tonga, 2024"
+    location: "Tonga, 2024",
+    image: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
   }
 ];
 
@@ -329,8 +337,8 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative h-96 overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative h-[600px] overflow-hidden rounded-lg">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
@@ -338,14 +346,41 @@ const Index = () => {
                     currentTestimonial === index ? 'opacity-100' : 'opacity-0'
                   }`}
                 >
-                  <div className="text-center h-full flex flex-col justify-center">
-                    <h3 className="font-serif text-2xl mb-6 text-talon-gold">{testimonial.title}</h3>
-                    <blockquote className="text-lg mb-6 leading-relaxed italic px-8">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="text-sm">
-                      <span className="text-talon-gold">– {testimonial.author}</span>
-                      <span className="text-talon-ivory/80 ml-2">{testimonial.location}</span>
+                  {/* Background Image */}
+                  <div className="absolute inset-0">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-talon-green/85" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
+                      {/* Avatar and Author Info */}
+                      <div className="lg:col-span-1 text-center lg:text-left">
+                        <div className="inline-block mb-4">
+                          <img 
+                            src={testimonial.avatar} 
+                            alt={testimonial.author}
+                            className="w-20 h-20 rounded-full object-cover border-4 border-talon-gold/50 mx-auto lg:mx-0"
+                          />
+                        </div>
+                        <div className="text-sm">
+                          <span className="text-talon-gold font-medium block">– {testimonial.author}</span>
+                          <span className="text-talon-ivory/80">{testimonial.location}</span>
+                        </div>
+                      </div>
+                      
+                      {/* Testimonial Content */}
+                      <div className="lg:col-span-3">
+                        <h3 className="font-serif text-xl md:text-2xl mb-4 text-talon-gold">{testimonial.title}</h3>
+                        <blockquote className="text-base md:text-lg leading-relaxed italic text-talon-ivory">
+                          "{testimonial.quote}"
+                        </blockquote>
+                      </div>
                     </div>
                   </div>
                 </div>
