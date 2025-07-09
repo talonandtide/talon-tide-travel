@@ -156,7 +156,7 @@ const Index = () => {
               <p className="mb-6 animate-fade animate-delay-200 text-talon-navy/90 leading-relaxed">
                 Whether you're dreaming of tracking snow leopards in the mountains, diving with leopard seals, or unlocking behind-the-scenes access to top zoos, your journey begins with a question only we know how to answer:
               </p>
-              <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-xl italic">
+              <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic">
                 "Where can I see a ___?"
               </p>
             </div>
