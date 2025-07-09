@@ -229,7 +229,7 @@ const Index = () => {
 
           <div className="text-center animate-fade">
             <p className="text-talon-green mb-6 text-2xl font-serif font-medium text-center">
-              Not seeing your dream trip? That's the point. We don't sell packages - we create them.
+              Not seeing your dream trip? That's the point. We don't sell packages - <span className="font-script text-script-base text-talon-gold italic">we create them.</span>
             </p>
             <Link to="/contact" className="btn-primary group">
               Contact Us
