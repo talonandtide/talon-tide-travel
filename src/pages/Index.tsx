@@ -146,14 +146,14 @@ const Index = () => {
               <p className="mb-6 animate-fade animate-delay-200 text-talon-navy/90 leading-relaxed">
                 Whether you're dreaming of tracking snow leopards in the mountains, diving with leopard seals, or unlocking behind-the-scenes access to top zoos, your journey begins with a question only we know how to answer:
               </p>
-              <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic">
+              <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic text-center">
                 "Where can I see a{' '}
-                <span className="relative inline-block min-w-[200px]">
+                <span className="relative inline-block min-w-[200px] h-[1.2em]">
                   {['golden eagle', 'reindeer', 'manta ray', 'flying fox', 'ibex', 'tiger', 'narwhal', 'pangolin'].map((animal, index) => (
                     <span
                       key={animal}
-                      className={`absolute left-0 top-0 transition-opacity duration-1000 ${
-                        Math.floor(Date.now() / 3000) % 8 === index ? 'opacity-100' : 'opacity-0'
+                      className={`absolute left-0 top-0 w-full transition-opacity duration-500 ${
+                        Math.floor(Date.now() / 2000) % 8 === index ? 'opacity-100' : 'opacity-0'
                       }`}
                     >
                       {animal}
