@@ -148,7 +148,7 @@ const Index = () => {
               </p>
               <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic text-center">
                 "Where can I see a{' '}
-                <span className="inline-block min-w-[200px] relative align-baseline">
+                <span className="inline-block min-w-[200px] relative" style={{ verticalAlign: 'baseline' }}>
                   {['golden eagle', 'reindeer', 'manta ray', 'flying fox', 'ibex', 'tiger', 'narwhal', 'pangolin'].map((animal, index) => (
                     <span
                       key={animal}
