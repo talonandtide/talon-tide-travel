@@ -143,7 +143,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1574068468668-a05a11f871da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80" alt="Wildlife conservation expert" className="rounded-sm w-full h-auto object-cover animate-fade" />
+                <img src="/lovable-uploads/cb726662-17d2-4a79-9eea-bb944badb6d4.png" alt="Underwater stingray encounter with diver" className="rounded-sm w-full h-auto object-cover animate-fade" />
               </div>
             </div>
             
