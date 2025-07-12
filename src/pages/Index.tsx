@@ -148,13 +148,14 @@ const Index = () => {
               </p>
               <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic text-center">
                 "Where can I see a{' '}
-                <span className="relative inline-block min-w-[200px]">
+                <span className="inline-block min-w-[200px] relative align-baseline">
                   {['golden eagle', 'reindeer', 'manta ray', 'flying fox', 'ibex', 'tiger', 'narwhal', 'pangolin'].map((animal, index) => (
                     <span
                       key={animal}
-                      className={`absolute left-0 transition-opacity duration-300 ${
-                        Math.floor(Date.now() / 1200) % 8 === index ? 'opacity-100' : 'opacity-0'
+                      className={`absolute left-0 transition-opacity duration-200 ${
+                        Math.floor(Date.now() / 800) % 8 === index ? 'opacity-100' : 'opacity-0'
                       }`}
+                      style={{ top: '0', lineHeight: 'inherit' }}
                     >
                       {animal}
                     </span>
