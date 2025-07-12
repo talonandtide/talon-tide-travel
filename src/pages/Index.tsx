@@ -91,7 +91,7 @@ const Index = () => {
     // Auto-scroll animals
     const animalInterval = setInterval(() => {
       setCurrentAnimal(prev => (prev + 1) % animals.length);
-    }, 600);
+    }, 800);
 
     return () => {
       animatedElements.forEach(el => {
