@@ -253,7 +253,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-1 lg:order-1">
               <h2 className="font-serif text-4xl text-talon-green mb-6 animate-fade">
-                Founded by a zookeeper. Built for travelers who want more than a <span className="font-script text-script-xl">safari</span>.
+                Built by a zookeeper. For travelers who want to explore, not exploit.
               </h2>
               <p className="mb-6 animate-fade animate-delay-100 text-talon-navy/90 leading-relaxed">
                 After a decade in exotic animal care, I saw firsthand the difference between a moment that looks good on Instagram, and one that actually <em>does</em> good - to support animals, conservation, and local communities.
