@@ -147,7 +147,20 @@ const Index = () => {
                 Whether you're dreaming of tracking snow leopards in the mountains, diving with leopard seals, or unlocking behind-the-scenes access to top zoos, your journey begins with a question only we know how to answer:
               </p>
               <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic">
-                "Where can I see a ___?"
+                "Where can I see a{' '}
+                <span className="relative inline-block min-w-[200px]">
+                  {['golden eagle', 'reindeer', 'manta ray', 'flying fox', 'ibex', 'tiger', 'narwhal', 'pangolin'].map((animal, index) => (
+                    <span
+                      key={animal}
+                      className={`absolute left-0 top-0 transition-opacity duration-1000 ${
+                        Math.floor(Date.now() / 3000) % 8 === index ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    >
+                      {animal}
+                    </span>
+                  ))}
+                </span>
+                ?"
               </p>
             </div>
           </div>
