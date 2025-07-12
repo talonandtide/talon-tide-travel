@@ -57,6 +57,8 @@ const blogPosts = [{
 }];
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentAnimal, setCurrentAnimal] = useState(0);
+  const animals = ['golden eagle', 'reindeer', 'manta ray', 'flying fox', 'ibex', 'tiger', 'narwhal', 'pangolin'];
   useEffect(() => {
     // Initialize EmailJS with user ID
     emailjs.init('kfwhy7VZD5cyq76uF');
@@ -85,13 +87,20 @@ const Index = () => {
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
     }, 6000);
+
+    // Auto-scroll animals
+    const animalInterval = setInterval(() => {
+      setCurrentAnimal(prev => (prev + 1) % animals.length);
+    }, 600);
+
     return () => {
       animatedElements.forEach(el => {
         observer.unobserve(el);
       });
       clearInterval(testimonialInterval);
+      clearInterval(animalInterval);
     };
-  }, []);
+  }, [animals.length]);
   return <Layout>
       {/* Hero Section with updated copy */}
       <section className="relative h-screen overflow-hidden">
@@ -146,20 +155,10 @@ const Index = () => {
               <p className="mb-6 animate-fade animate-delay-200 text-talon-navy/90 leading-relaxed">
                 Whether you're dreaming of tracking snow leopards in the mountains, diving with leopard seals, or unlocking behind-the-scenes access to top zoos, your journey begins with a question only we know how to answer:
               </p>
-              <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic text-center">
+              <p className="mb-8 animate-fade animate-delay-300 text-talon-green font-serif text-4xl italic text-center transition-all duration-300">
                 "Where can I see a{' '}
-                <span className="inline-block min-w-[200px] relative" style={{ verticalAlign: 'baseline' }}>
-                  {['golden eagle', 'reindeer', 'manta ray', 'flying fox', 'ibex', 'tiger', 'narwhal', 'pangolin'].map((animal, index) => (
-                    <span
-                      key={animal}
-                      className={`absolute left-0 transition-opacity duration-200 ${
-                        Math.floor(Date.now() / 800) % 8 === index ? 'opacity-100' : 'opacity-0'
-                      }`}
-                      style={{ top: '0', lineHeight: 'inherit' }}
-                    >
-                      {animal}
-                    </span>
-                  ))}
+                <span className="transition-all duration-300">
+                  {animals[currentAnimal]}
                 </span>
                 ?"
               </p>
