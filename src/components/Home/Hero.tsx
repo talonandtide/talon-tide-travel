@@ -153,7 +153,7 @@ const Hero = () => {
       </div>
 
       {/* Coordinates - Wilderness Style */}
-      <div className="absolute top-32 left-4 md:left-8 z-10 text-talon-ivory/80 text-xs md:text-sm font-mono tracking-wider">
+      <div className="absolute top-32 left-4 md:left-8 z-10 text-white/80 text-xs md:text-sm font-mono tracking-wider">
         <div className="animate-fade-in">37.7749° N, 122.4194° W</div>
       </div>
 
@@ -161,23 +161,23 @@ const Hero = () => {
       <div className="container relative z-10 h-full flex flex-col justify-center">
         <div className="max-w-lg md:max-w-3xl">
           {/* Welcome to text */}
-          <div className="text-talon-ivory/90 text-sm md:text-base tracking-[0.2em] uppercase mb-4 animate-fade-in font-light">
+          <div className="text-white/90 text-sm md:text-base tracking-[0.2em] uppercase mb-4 animate-fade-in font-light">
             Welcome to
           </div>
           
           {/* Main Title - Wilderness Style */}
-          <h1 className="text-5xl md:text-6xl lg:text-8xl text-talon-ivory font-serif leading-[0.85] mb-8 animate-fade-in drop-shadow-text-lg">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl text-white font-serif leading-[0.85] mb-8 animate-fade-in drop-shadow-text-lg">
             Talon & Tide
           </h1>
           
           {/* Subtitle */}
-          <div className="text-talon-ivory text-xl md:text-2xl mb-12 max-w-2xl font-light animate-fade-in drop-shadow-text leading-relaxed" style={{ animationDelay: '200ms' }}>
+          <div className="text-white text-xl md:text-2xl mb-12 max-w-2xl font-light animate-fade-in drop-shadow-text leading-relaxed" style={{ animationDelay: '200ms' }}>
             Experience the world's most extraordinary wildlife through exclusive, conservation-focused expeditions.
           </div>
           
           {/* Single CTA Button - Cleaner like Wilderness */}
           <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <Link to="/experiences" className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 text-talon-ivory border border-white/20 rounded-none hover:bg-white/20 transition-all duration-300 text-lg font-light tracking-wide backdrop-blur-sm">
+            <Link to="/experiences" className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-none hover:bg-white/20 transition-all duration-300 text-lg font-light tracking-wide backdrop-blur-sm">
               Discover our expeditions
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
