@@ -68,14 +68,14 @@ const Hero = () => {
     
     checkVideoPlayback();
     
-    // Only start rotation after checking video capability
+    // Only start rotation after checking video capability  
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % (useVideoFallback ? fallbackImages.length : heroVideos.length));
         setIsTransitioning(false);
       }, 1000);
-    }, 8000);
+    }, 12000); // Slower rotation like Wilderness
 
     return () => clearInterval(interval);
   }, [useVideoFallback]);
@@ -148,26 +148,38 @@ const Hero = () => {
             </div>
           ))
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-talon-midnight/80 via-talon-green/60 to-transparent" />
+        {/* Subtle overlay like Wilderness - darker and more sophisticated */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-black/50" />
+      </div>
+
+      {/* Coordinates - Wilderness Style */}
+      <div className="absolute top-32 left-4 md:left-8 z-10 text-talon-ivory/80 text-xs md:text-sm font-mono tracking-wider">
+        <div className="animate-fade-in">37.7749° N, 122.4194° W</div>
       </div>
 
       {/* Content */}
       <div className="container relative z-10 h-full flex flex-col justify-center">
-        <div className="max-w-md md:max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl text-talon-ivory font-serif leading-tight mb-6 animate-fade-in drop-shadow-text-lg">
-            Where Wild Meets <span className="text-talon-gold">Refined</span>
+        <div className="max-w-lg md:max-w-3xl">
+          {/* Welcome to text */}
+          <div className="text-talon-ivory/90 text-sm md:text-base tracking-[0.2em] uppercase mb-4 animate-fade-in font-light">
+            Welcome to
+          </div>
+          
+          {/* Main Title - Wilderness Style */}
+          <h1 className="text-5xl md:text-6xl lg:text-8xl text-talon-ivory font-serif leading-[0.85] mb-8 animate-fade-in drop-shadow-text-lg">
+            Talon & Tide
           </h1>
-          <p className="text-talon-ivory text-lg md:text-xl mb-10 max-w-xl font-light animate-fade-in drop-shadow-text tracking-wide" style={{ animationDelay: '200ms' }}>
-            Exclusive, ethical wildlife experiences curated by conservation experts for the discerning traveler.
-          </p>
-          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <Link to="/experiences" className="btn-primary group">
-              Explore Experiences
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link to="/about" className="btn-secondary group">
-              Our Story
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          
+          {/* Subtitle */}
+          <div className="text-talon-ivory text-xl md:text-2xl mb-12 max-w-2xl font-light animate-fade-in drop-shadow-text leading-relaxed" style={{ animationDelay: '200ms' }}>
+            Experience the world's most extraordinary wildlife through exclusive, conservation-focused expeditions.
+          </div>
+          
+          {/* Single CTA Button - Cleaner like Wilderness */}
+          <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <Link to="/experiences" className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 text-talon-ivory border border-white/20 rounded-none hover:bg-white/20 transition-all duration-300 text-lg font-light tracking-wide backdrop-blur-sm">
+              Discover our expeditions
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
