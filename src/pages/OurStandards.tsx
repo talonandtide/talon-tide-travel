@@ -6,16 +6,12 @@ import { Shield, Award, Users, CheckCircle } from 'lucide-react';
 const OurStandards = () => {
   return (
     <Layout>
-      {/* Hero Section - Updated to match other pages */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-talon-navy/90 to-talon-green/70 z-0"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
-        <div className="container relative z-10">
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-ivory mb-6 animate-fade-in tracking-wide drop-shadow-lg">
-              Our Standards
-            </h1>
-            <p className="text-lg text-talon-ivory animate-fade-in drop-shadow-md" style={{ animationDelay: '200ms', letterSpacing: '0.5px' }}>
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our Standards</h1>
+            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Where Professional Expertise Meets Ethical Excellence
             </p>
           </div>
@@ -248,32 +244,6 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-br from-talon-green via-talon-navy to-talon-midnight text-talon-ivory">
-        <div className="container max-w-5xl mx-auto px-4 text-center animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl mb-8 drop-shadow-text">
-            Experience the Difference
-          </h2>
-          <p className="text-xl mb-12 leading-relaxed font-light max-w-4xl mx-auto">
-            Whether you're a traveler seeking meaningful wildlife experiences or an experience provider 
-            interested in partnership, discover how professional expertise creates exceptional outcomes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="/experiences" 
-              className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300"
-            >
-              Explore Experiences
-            </a>
-            <a 
-              href="/contact" 
-              className="btn-secondary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
