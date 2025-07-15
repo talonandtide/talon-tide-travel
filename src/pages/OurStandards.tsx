@@ -244,6 +244,33 @@ const OurStandards = () => {
         </div>
       </section>
 
+      {/* Call to Action */}
+      <section className="py-20 bg-talon-sand/30">
+        <div className="container max-w-5xl mx-auto px-4 text-center animate-fade-in">
+          <h2 className="font-serif text-4xl md:text-5xl text-talon-green mb-8">
+            Experience the Difference
+          </h2>
+          <p className="text-xl text-talon-navy/80 mb-12 leading-relaxed font-light max-w-4xl mx-auto">
+            Whether you're a traveler seeking meaningful wildlife experiences or an experience provider 
+            interested in partnership, discover how professional expertise creates exceptional outcomes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a 
+              href="/experiences" 
+              className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300"
+            >
+              Explore Experiences
+            </a>
+            <a 
+              href="/contact" 
+              className="btn-secondary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+
     </Layout>
   );
 };
