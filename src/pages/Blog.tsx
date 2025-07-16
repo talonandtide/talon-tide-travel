@@ -76,16 +76,14 @@ const blogPosts = [
 const Blog = () => {
   return (
     <Layout>
-      {/* Hero Section - Already matches the standard format */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-talon-navy/90 to-talon-green/70 z-0"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1469041908917-89bc00316a01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
-        <div className="container relative z-10">
+      {/* Header */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-ivory mb-6 animate-fade-in tracking-wide drop-shadow-lg">
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">
               Journal
             </h1>
-            <p className="text-lg text-talon-ivory animate-fade-in drop-shadow-md" style={{ animationDelay: '200ms', letterSpacing: '0.5px' }}>
+            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters.
             </p>
           </div>
