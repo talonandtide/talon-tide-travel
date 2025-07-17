@@ -16,6 +16,8 @@ const blogPosts = [
     authorImage: 'https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80',
     readTime: '5 min read',
   },
+  // Placeholder posts - temporarily hidden until content is ready
+  /*
   {
     id: 2,
     title: 'Sustainable Luxury: Beyond Greenwashing',
@@ -71,6 +73,7 @@ const blogPosts = [
     authorImage: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80',
     readTime: '10 min read',
   },
+  */
 ];
 
 const Blog = () => {
@@ -81,7 +84,7 @@ const Blog = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">
-              Journal
+              Field Notes
             </h1>
             <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters.
@@ -132,8 +135,9 @@ const Blog = () => {
           </div>
 
           {/* Blog Grid - Enhanced with refined styling */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.slice(1).map((post, index) => (
+          {blogPosts.length > 1 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.slice(1).map((post, index) => (
               <Link 
                 to={`/blog/${post.id}`} 
                 key={post.id} 
@@ -177,8 +181,9 @@ const Blog = () => {
                   </div>
                 </div>
               </Link>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </Layout>
