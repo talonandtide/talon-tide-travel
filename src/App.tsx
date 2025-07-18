@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ArcticExpedition from "./pages/ArcticExpedition";
 import OurStandards from "./pages/OurStandards";
+import Pricing from "./pages/Pricing";
 
 // ScrollToTop component to handle scrolling to top on route changes
 const ScrollToTop = () => {
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/experiences/arctic-expedition" element={<ArcticExpedition />} />
           <Route path="/our-standards" element={<OurStandards />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
