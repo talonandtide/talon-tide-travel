@@ -84,7 +84,7 @@ const Blog = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">
-              Field Notes
+              Field <span className="font-script text-script-lg text-talon-gold">Notes</span>
             </h1>
             <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters.

@@ -11,7 +11,7 @@ const About = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our Story</h1>
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our <span className="font-script text-script-lg text-talon-gold">Story</span></h1>
             <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Where passion for wildlife conservation meets luxury travel expertise.
             </p>
@@ -24,7 +24,7 @@ const About = () => {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="section-title animate-fade">Meet Lindsay</h2>
+              <h2 className="section-title animate-fade">Meet <span className="font-script text-script-lg text-talon-gold">Lindsay</span></h2>
               <p className="mb-4 animate-fade animate-delay-100">
                 After a decade as a zookeeper working with endangered species, Lindsay witnessed firsthand the disconnect between wildlife tourism and true conservation efforts. Too often, travelers with genuine intentions found themselves supporting attractions that didn't uphold the welfare standards or conservation goals they claimed to champion.
               </p>
@@ -59,7 +59,7 @@ const About = () => {
       <section className="py-20 bg-talon-green text-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl mb-8 text-talon-ivory animate-fade">Our Mission</h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-8 text-talon-ivory animate-fade">Our <span className="font-script text-script-lg text-talon-gold">Mission</span></h2>
             <p className="text-xl text-talon-ivory/90 mb-10 animate-fade animate-delay-100">
               To curate wildlife experiences that uphold the highest standards of both luxury and ethics, ensuring extraordinary encounters that benefit animals, local communities, and travelers alike.
             </p>
@@ -91,7 +91,7 @@ const About = () => {
       <section className="py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="section-title text-center mb-12 animate-fade">Our Expert Network</h2>
+            <h2 className="section-title text-center mb-12 animate-fade">Our Expert <span className="font-script text-script-lg text-talon-gold">Network</span></h2>
             <p className="mb-6 animate-fade animate-delay-100">
               At Talon & Tide, we don't work alone. Every experience we curate is evaluated by a network of wildlife professionals, including:
             </p>

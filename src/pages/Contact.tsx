@@ -73,7 +73,7 @@ const Contact = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Get in Touch</h1>
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Get in <span className="font-script text-script-lg text-talon-gold">Touch</span></h1>
             <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Whether you're interested in our future offerings, press inquiries, or potential collaborations, we'd love to hear from you.
             </p>
@@ -87,7 +87,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Form Column */}
             <div>
-              <h2 className="section-title animate-fade">Start Your Journey</h2>
+              <h2 className="section-title animate-fade">Start Your <span className="font-script text-script-lg text-talon-gold">Journey</span></h2>
               <p className="mb-8 text-talon-navy animate-fade animate-delay-100">
                 We read every message carefully and respond with the same thoughtfulness we put into every journey we plan.
                 Your inquiry won't go to a ticketing system or auto-responder — just a real human, here to help.
@@ -204,7 +204,7 @@ const Contact = () => {
             
             {/* Info Column */}
             <div className="lg:pl-8">
-              <h2 className="section-title animate-fade">Connect With Us</h2>
+              <h2 className="section-title animate-fade">Connect With <span className="font-script text-script-lg text-talon-gold">Us</span></h2>
               <p className="mb-8 text-talon-navy animate-fade animate-delay-100">
                 Follow our journey as we develop our portfolio of ethical wildlife experiences. We're always open to partnerships that align with our mission.
               </p>

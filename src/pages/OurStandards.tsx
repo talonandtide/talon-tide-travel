@@ -10,7 +10,7 @@ const OurStandards = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our Standards</h1>
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our <span className="font-script text-script-lg text-talon-gold">Standards</span></h1>
             <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Where Professional Expertise Meets Ethical Excellence
             </p>
@@ -23,7 +23,7 @@ const OurStandards = () => {
         <div className="container max-w-5xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="section-title">
-              Why Talon & Tide is Different
+              Why Talon & Tide is <span className="font-script text-script-lg text-talon-gold">Different</span>
             </h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
             <p className="text-lg text-talon-navy leading-relaxed font-light max-w-4xl mx-auto">
@@ -41,7 +41,7 @@ const OurStandards = () => {
       <section className="py-20 bg-white">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">Professional Foundation</h2>
+            <h2 className="section-title">Professional <span className="font-script text-script-lg text-talon-gold">Foundation</span></h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
           </div>
           
@@ -98,7 +98,7 @@ const OurStandards = () => {
             
             <div className="bg-gradient-to-br from-talon-green/5 to-talon-navy/5 p-10 rounded-lg shadow-luxury animate-fade-in animate-delay-300">
               <div className="text-center mb-8">
-                <h3 className="font-serif text-3xl text-talon-green mb-6">Our Mission</h3>
+                <h3 className="font-serif text-3xl text-talon-green mb-6">Our <span className="font-script text-script-lg text-talon-gold">Mission</span></h3>
                 <div className="w-16 h-1 bg-talon-gold mx-auto mb-6"></div>
               </div>
               <p className="text-talon-navy mb-6 leading-relaxed text-lg">
@@ -119,7 +119,7 @@ const OurStandards = () => {
       <section className="py-20 bg-talon-sand/20">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">Our Collaborative Approach</h2>
+            <h2 className="section-title">Our Collaborative <span className="font-script text-script-lg text-talon-gold">Approach</span></h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
           </div>
           
@@ -176,7 +176,7 @@ const OurStandards = () => {
       <section className="py-20 bg-white">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">For Experience Partners</h2>
+            <h2 className="section-title">For Experience <span className="font-script text-script-lg text-talon-gold">Partners</span></h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
           </div>
           
@@ -248,7 +248,7 @@ const OurStandards = () => {
       <section className="py-20 bg-talon-sand/30">
         <div className="container max-w-5xl mx-auto px-4 text-center animate-fade-in">
           <h2 className="font-serif text-4xl md:text-5xl text-talon-green mb-8">
-            Experience the Difference
+            Experience the <span className="font-script text-script-lg text-talon-gold">Difference</span>
           </h2>
           <p className="text-xl text-talon-navy/80 mb-12 leading-relaxed font-light max-w-4xl mx-auto">
             Whether you're a traveler seeking meaningful wildlife experiences or an experience provider 
