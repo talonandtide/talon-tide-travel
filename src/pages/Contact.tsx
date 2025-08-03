@@ -17,6 +17,7 @@ import { Label } from "@/components/ui/label";
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [tripType, setTripType] = useState('');
+  const [packageSelection, setPackageSelection] = useState('');
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,6 +33,7 @@ const Contact = () => {
         lastName: formData.get('lastName'),
         email: formData.get('email'),
         tripType: formData.get('tripType'),
+        packageSelection: formData.get('packageSelection'),
         animal: formData.get('animal'),
         subject: formData.get('subject'),
         message: formData.get('message'),
@@ -54,6 +56,7 @@ const Contact = () => {
         // Reset the form
         form.reset();
         setTripType('');
+        setPackageSelection('');
       } else {
         throw new Error('Failed to send message');
       }
@@ -147,6 +150,23 @@ const Contact = () => {
                 </div>
                 
                 <div className="animate-fade animate-delay-600">
+                  <Label htmlFor="packageSelection" className="block text-talon-navy text-sm mb-2">
+                    Which investment package interests you?
+                  </Label>
+                  <Select name="packageSelection" value={packageSelection} onValueChange={setPackageSelection}>
+                    <SelectTrigger className="input-field w-full">
+                      <SelectValue placeholder="Select a package (optional)" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="essential">Essential Explorer - $150</SelectItem>
+                      <SelectItem value="refined">Refined Wanderer - $200</SelectItem>
+                      <SelectItem value="luxury">Luxury Curator - $300</SelectItem>
+                      <SelectItem value="unsure">Not sure yet</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div className="animate-fade animate-delay-700">
                   <Label htmlFor="animal" className="block text-talon-navy text-sm mb-2">
                     Is there a specific animal you'd love to connect with?
                   </Label>
@@ -159,7 +179,7 @@ const Contact = () => {
                   />
                 </div>
                 
-                <div className="animate-fade animate-delay-700">
+                <div className="animate-fade animate-delay-800">
                   <Label htmlFor="subject" className="block text-talon-navy text-sm mb-2">How can we help?</Label>
                   <Input
                     type="text"
@@ -171,7 +191,7 @@ const Contact = () => {
                   />
                 </div>
                 
-                <div className="animate-fade animate-delay-800">
+                <div className="animate-fade animate-delay-900">
                   <Label htmlFor="message" className="block text-talon-navy text-sm mb-2">Tell us more — we're listening!</Label>
                   <Textarea
                     id="message"
@@ -183,7 +203,7 @@ const Contact = () => {
                   />
                 </div>
                 
-                <div className="animate-fade animate-delay-900">
+                <div className="animate-fade animate-delay-1000">
                   <button 
                     type="submit" 
                     className="btn-primary w-full justify-center"
@@ -197,7 +217,7 @@ const Contact = () => {
               
               {/* Pricing Information */}
               <div className="mt-8 space-y-4">
-                <div className="bg-talon-sand/10 rounded-lg p-6 animate-fade animate-delay-1000">
+                <div className="bg-talon-sand/10 rounded-lg p-6 animate-fade animate-delay-1100">
                   <h4 className="font-serif text-lg text-talon-green mb-3">Investment Options</h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                     <div className="text-center p-3 bg-white rounded border border-talon-sand/30">
@@ -220,7 +240,7 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="p-5 bg-talon-sand/20 border border-talon-gold/20 rounded-sm text-talon-navy/80 text-sm animate-fade animate-delay-1100">
+                <div className="p-5 bg-talon-sand/20 border border-talon-gold/20 rounded-sm text-talon-navy/80 text-sm animate-fade animate-delay-1200">
                   <p>
                     <strong>A note on our process:</strong> We offer personalized planning for meaningful, animal-focused travel - from once-in-a-lifetime adventures to elevated day trips. A flat planning fee may apply depending on the scope of your request. We'll always confirm details before moving forward.
                   </p>
