@@ -3,24 +3,24 @@ import React from 'react';
 const TrustedPartners = () => {
   const partners = [
     // Luxury Hotels
-    { name: 'Aman', category: 'luxury' },
-    { name: 'Four Seasons', category: 'luxury' },
-    { name: 'Rosewood', category: 'luxury' },
-    { name: 'Ritz-Carlton', category: 'luxury' },
-    { name: 'Relais & Châteaux', category: 'luxury' },
+    { name: 'Aman', logo: '/api/placeholder/120/60', category: 'luxury' },
+    { name: 'Four Seasons', logo: '/api/placeholder/120/60', category: 'luxury' },
+    { name: 'Rosewood', logo: '/api/placeholder/120/60', category: 'luxury' },
+    { name: 'Ritz-Carlton', logo: '/api/placeholder/120/60', category: 'luxury' },
+    { name: 'Relais & Châteaux', logo: '/api/placeholder/120/60', category: 'luxury' },
     
     // Conservation Organizations
-    { name: 'National Geographic Expeditions', category: 'conservation' },
-    { name: 'WWF Travel', category: 'conservation' },
-    { name: 'Red Panda Network', category: 'conservation' },
-    { name: 'Galápagos Conservancy', category: 'conservation' },
-    { name: 'African Parks', category: 'conservation' },
-    { name: 'Panthera', category: 'conservation' },
+    { name: 'National Geographic', logo: '/api/placeholder/120/60', category: 'conservation' },
+    { name: 'WWF Travel', logo: '/api/placeholder/120/60', category: 'conservation' },
+    { name: 'Red Panda Network', logo: '/api/placeholder/120/60', category: 'conservation' },
+    { name: 'Galápagos Conservancy', logo: '/api/placeholder/120/60', category: 'conservation' },
+    { name: 'African Parks', logo: '/api/placeholder/120/60', category: 'conservation' },
+    { name: 'Panthera', logo: '/api/placeholder/120/60', category: 'conservation' },
     
     // Expedition Companies
-    { name: 'Abercrombie and Kent', category: 'expedition' },
-    { name: 'Quark Expeditions', category: 'expedition' },
-    { name: '&Beyond', category: 'expedition' },
+    { name: 'Abercrombie and Kent', logo: '/api/placeholder/120/60', category: 'expedition' },
+    { name: 'Quark Expeditions', logo: '/api/placeholder/120/60', category: 'expedition' },
+    { name: '&Beyond', logo: '/api/placeholder/120/60', category: 'expedition' },
   ];
 
   // Duplicate the array for seamless infinite scroll
@@ -46,12 +46,14 @@ const TrustedPartners = () => {
             {allPartners.map((partner, index) => (
               <div
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 mx-8 flex items-center justify-center"
+                className="flex-shrink-0 mx-3 flex items-center justify-center"
               >
-                <div className="bg-white/60 backdrop-blur-sm px-6 py-4 rounded-sm shadow-sm border border-talon-sand/30 hover:shadow-md transition-all duration-300 hover:bg-white/80">
-                  <span className="text-talon-navy font-medium whitespace-nowrap text-sm md:text-base">
-                    {partner.name}
-                  </span>
+                <div className="bg-white/70 backdrop-blur-sm px-4 py-3 rounded-sm shadow-sm border border-talon-sand/30 hover:shadow-md transition-all duration-300 hover:bg-white/90 h-16 w-32 flex items-center justify-center">
+                  <img 
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className="max-h-10 max-w-28 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
               </div>
             ))}
