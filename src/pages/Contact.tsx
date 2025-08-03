@@ -3,29 +3,20 @@ import Layout from '@/components/Layout/Layout';
 import { Mail, Instagram, MapPin, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [tripType, setTripType] = useState('');
   const [packageSelection, setPackageSelection] = useState('');
-  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
-    
     try {
       setIsSubmitting(true);
-      
+
       // For the contact form, we send all form fields
       const formData = new FormData(form);
       const templateParams = {
@@ -40,19 +31,12 @@ const Contact = () => {
         to_email: 'hello@talonandtide.com',
         form_name: 'Contact Form'
       };
-      
-      const result = await emailjs.send(
-        'contact_service',
-        'template_ih1v52f',
-        templateParams,
-        'kfwhy7VZD5cyq76uF'
-      );
-      
+      const result = await emailjs.send('contact_service', 'template_ih1v52f', templateParams, 'kfwhy7VZD5cyq76uF');
       if (result.status === 200) {
         toast.success("Message sent successfully!", {
           description: "We'll be in touch soon. Thank you for your interest in Talon & Tide."
         });
-        
+
         // Reset the form
         form.reset();
         setTripType('');
@@ -62,22 +46,22 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      toast.error("Failed to send message", { 
+      toast.error("Failed to send message", {
         description: "Please try again later or email us directly at hello@talonandtide.com."
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-  
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Get in <span className="font-script text-script-lg text-talon-gold">Touch</span></h1>
-            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{
+            animationDelay: '200ms'
+          }}>
               Whether you're interested in our future offerings, press inquiries, or potential collaborations, we'd love to hear from you.
             </p>
           </div>
@@ -91,45 +75,22 @@ const Contact = () => {
             {/* Form Column */}
             <div>
               <h2 className="section-title animate-fade">Start Your <span className="font-script text-script-lg text-talon-gold">Journey</span></h2>
-              <p className="mb-8 text-talon-navy animate-fade animate-delay-100">
-                We read every message carefully and respond with the same thoughtfulness we put into every journey we plan.
-                Your inquiry won't go to a ticketing system or auto-responder — just a real human, here to help.
-              </p>
+              <p className="mb-8 text-talon-navy animate-fade animate-delay-100">We read every message carefully and respond with the same thoughtfulness we put into every journey we plan. </p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="animate-fade animate-delay-200">
                     <Label htmlFor="firstName" className="block text-talon-navy text-sm mb-2">Your First Name</Label>
-                    <Input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="input-field"
-                      placeholder="Jordan"
-                    />
+                    <Input type="text" id="firstName" name="firstName" required className="input-field" placeholder="Jordan" />
                   </div>
                   <div className="animate-fade animate-delay-300">
                     <Label htmlFor="lastName" className="block text-talon-navy text-sm mb-2">Your Last Name (optional)</Label>
-                    <Input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="input-field"
-                      placeholder="Avery"
-                    />
+                    <Input type="text" id="lastName" name="lastName" className="input-field" placeholder="Avery" />
                   </div>
                 </div>
                 
                 <div className="animate-fade animate-delay-400">
                   <Label htmlFor="email" className="block text-talon-navy text-sm mb-2">Your Email Address</Label>
-                  <Input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="input-field"
-                    placeholder="you@email.com"
-                  />
+                  <Input type="email" id="email" name="email" required className="input-field" placeholder="you@email.com" />
                 </div>
                 
                 <div className="animate-fade animate-delay-500">
@@ -170,45 +131,21 @@ const Contact = () => {
                   <Label htmlFor="animal" className="block text-talon-navy text-sm mb-2">
                     Is there a specific animal you'd love to connect with?
                   </Label>
-                  <Input
-                    type="text"
-                    id="animal"
-                    name="animal"
-                    className="input-field"
-                    placeholder="I've always dreamed of meeting a cheetah!"
-                  />
+                  <Input type="text" id="animal" name="animal" className="input-field" placeholder="I've always dreamed of meeting a cheetah!" />
                 </div>
                 
                 <div className="animate-fade animate-delay-800">
                   <Label htmlFor="subject" className="block text-talon-navy text-sm mb-2">How can we help?</Label>
-                  <Input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    className="input-field"
-                    placeholder="I'd love help planning a custom itinerary"
-                  />
+                  <Input type="text" id="subject" name="subject" required className="input-field" placeholder="I'd love help planning a custom itinerary" />
                 </div>
                 
                 <div className="animate-fade animate-delay-900">
                   <Label htmlFor="message" className="block text-talon-navy text-sm mb-2">Tell us more — we're listening!</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    className="input-field"
-                    placeholder="Include your goals, preferred dates, or any other notes."
-                  />
+                  <Textarea id="message" name="message" rows={6} required className="input-field" placeholder="Include your goals, preferred dates, or any other notes." />
                 </div>
                 
                 <div className="animate-fade animate-delay-1000">
-                  <button 
-                    type="submit" 
-                    className="btn-primary w-full justify-center"
-                    disabled={isSubmitting}
-                  >
+                  <button type="submit" className="btn-primary w-full justify-center" disabled={isSubmitting}>
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                     {!isSubmitting && <ArrowRight size={16} />}
                   </button>
@@ -274,12 +211,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-serif text-lg text-talon-green mb-1">Instagram</h3>
-                    <a 
-                      href="https://www.instagram.com/talonandtide/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-talon-navy hover:text-talon-gold transition-colors duration-300"
-                    >
+                    <a href="https://www.instagram.com/talonandtide/" target="_blank" rel="noopener noreferrer" className="text-talon-navy hover:text-talon-gold transition-colors duration-300">
                       @talonandtide
                     </a>
                   </div>
@@ -331,8 +263,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Contact;
