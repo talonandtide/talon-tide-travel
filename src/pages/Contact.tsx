@@ -195,10 +195,36 @@ const Contact = () => {
                 </div>
               </form>
               
-              <div className="mt-8 p-5 bg-talon-sand/20 border border-talon-gold/20 rounded-sm text-talon-navy/80 text-sm animate-fade animate-delay-1000">
-                <p>
-                  <strong>A note on our process:</strong> We offer personalized planning for meaningful, animal-focused travel - from once-in-a-lifetime adventures to elevated day trips. A flat planning fee may apply depending on the scope of your request. We'll always confirm details before moving forward.
-                </p>
+              {/* Pricing Information */}
+              <div className="mt-8 space-y-4">
+                <div className="bg-talon-sand/10 rounded-lg p-6 animate-fade animate-delay-1000">
+                  <h4 className="font-serif text-lg text-talon-green mb-3">Investment Options</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <div className="text-center p-3 bg-white rounded border border-talon-sand/30">
+                      <h5 className="font-medium text-talon-navy mb-1">Essential Explorer</h5>
+                      <span className="text-xl font-bold text-talon-green">$150</span>
+                    </div>
+                    <div className="text-center p-3 bg-talon-gold/5 rounded border border-talon-gold/30 ring-1 ring-talon-gold/20">
+                      <h5 className="font-medium text-talon-navy mb-1">Refined Wanderer</h5>
+                      <span className="text-xl font-bold text-talon-green">$200</span>
+                      <div className="text-xs text-talon-gold font-medium mt-1">Most Popular</div>
+                    </div>
+                    <div className="text-center p-3 bg-white rounded border border-talon-sand/30">
+                      <h5 className="font-medium text-talon-navy mb-1">Luxury Curator</h5>
+                      <span className="text-xl font-bold text-talon-green">$300</span>
+                    </div>
+                  </div>
+                  <div className="text-sm text-talon-navy/80">
+                    <p className="mb-2">Each package includes curated experiences, packing lists, ethical insights, and mobile app delivery.</p>
+                    <a href="#/pricing" className="text-talon-gold hover:text-talon-green transition-colors">View detailed comparison →</a>
+                  </div>
+                </div>
+                
+                <div className="p-5 bg-talon-sand/20 border border-talon-gold/20 rounded-sm text-talon-navy/80 text-sm animate-fade animate-delay-1100">
+                  <p>
+                    <strong>A note on our process:</strong> We offer personalized planning for meaningful, animal-focused travel - from once-in-a-lifetime adventures to elevated day trips. A flat planning fee may apply depending on the scope of your request. We'll always confirm details before moving forward.
+                  </p>
+                </div>
               </div>
             </div>
             

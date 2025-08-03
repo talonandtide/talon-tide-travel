@@ -5,9 +5,9 @@ const Pricing = () => {
   const features = [
     {
       name: "Curated animal experiences",
-      essential: "3-5 experiences",
-      refined: "3-5 experiences",
-      luxury: "3-5 experiences"
+      essential: "3-5 experiences suggested",
+      refined: "3-5 experiences suggested",
+      luxury: "3-5 experiences suggested"
     },
     {
       name: "Destination-specific packing list",
@@ -152,7 +152,7 @@ const Pricing = () => {
                       <span className="text-3xl font-bold text-talon-navy">{tier.price}</span>
                     </div>
                     <p className="text-sm text-talon-navy/70 mb-4">{tier.description}</p>
-                    <button className="btn-primary w-full text-sm">Get Started</button>
+                    <a href="#/contact" className="btn-primary w-full text-sm text-center block">Get Started</a>
                   </div>
                 );
               })}
