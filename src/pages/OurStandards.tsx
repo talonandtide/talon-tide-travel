@@ -12,7 +12,7 @@ const OurStandards = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our <span className="font-script text-script-lg text-talon-gold">Standards</span></h1>
             <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              Where Professional Expertise Meets Ethical Excellence
+              Where professional expertise meets ethical excellence
             </p>
           </div>
         </div>
