@@ -1,18 +1,17 @@
-
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const About = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our <span className="font-script text-script-lg text-talon-gold">Story</span></h1>
-            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{
+            animationDelay: '200ms'
+          }}>
               Where passion for wildlife conservation meets luxury travel expertise.
             </p>
           </div>
@@ -26,10 +25,13 @@ const About = () => {
             <div>
               <h2 className="section-title animate-fade">Meet <span className="font-script text-script-lg text-talon-gold">Lindsay</span></h2>
               <p className="mb-4 animate-fade animate-delay-100">
-                I spent over a decade as a zookeeper at some of the country's top AZA-accredited zoos, caring for everything from lions, tigers, and rhinos to cassowaries and brown bears. My specialties were big cats, African hoofstock, and pachyderms, animals that leave everyone who interacts with them in awe. I led countless private, behind-the-scenes experiences, where I learned what discerning guests truly seek: access, meaning, and the chance to connect with animals in a way that feels rare and unforgettable.
+                After a decade as a zookeeper working with endangered species, Lindsay witnessed firsthand the disconnect between wildlife tourism and true conservation efforts. Too often, travelers with genuine intentions found themselves supporting attractions that didn't uphold the welfare standards or conservation goals they claimed to champion.
               </p>
-              <p className="mb-6 animate-fade animate-delay-200">
-                Still, I always found myself dreaming of the wild—and seeing the animals I worked with in their natural habitats. That dream is what sparked Talon & Tide. I built this company to bridge both worlds: the thoughtfully curated encounters at leading zoos and aquariums, and the extraordinary wildlife tours that bring you face to face with nature on its own terms. Every experience I recommend is carefully vetted for both quality and ethics, so your journey not only inspires wonder but also supports conservation, helping ensure these moments of connection are possible for generations to come.
+              <p className="mb-4 animate-fade animate-delay-200">Still, I always found myself dreaming of the wild, and seeing the animals I worked with in their natural habitats. That dream is what sparked Talon & Tide. I built this company to bridge both worlds: thoughtfully curated encounters at leading zoos and aquariums, and the extraordinary wildlife tours that bring you face to face with nature on its own terms.
+
+Every experience I recommend is carefully vetted for both quality and ethics, so your journey not only inspires wonder but also supports conservation, helping ensure these moments of connection are possible for generations to come.</p>
+              <p className="mb-6 animate-fade animate-delay-300">
+                Her unique professional background provides the expertise needed to evaluate wildlife experiences through both a conservation lens and a luxury hospitality perspective, ensuring every recommended experience meets the highest standards in both realms.
               </p>
               <Link to="/contact" className="btn-primary animate-fade animate-delay-300">
                 Connect With Us
@@ -37,11 +39,7 @@ const About = () => {
               </Link>
             </div>
             <div className="relative">
-              <img
-                src="/lovable-uploads/42e1cde9-5c7a-4efa-9536-cce93f56b5ee.png"
-                alt="Lindsay with baboons in their natural habitat"
-                className="w-full h-auto rounded-sm shadow-lg animate-fade"
-              />
+              <img src="/lovable-uploads/42e1cde9-5c7a-4efa-9536-cce93f56b5ee.png" alt="Lindsay with baboons in their natural habitat" className="w-full h-auto rounded-sm shadow-lg animate-fade" />
               <div className="absolute -bottom-8 -left-8 bg-white p-6 shadow-lg rounded-sm max-w-xs animate-fade animate-delay-200">
                 <blockquote className="font-serif text-talon-green italic text-lg">
                   "True luxury is knowing your extraordinary experience also makes a positive impact."
@@ -172,8 +170,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default About;
