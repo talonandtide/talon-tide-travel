@@ -26,13 +26,10 @@ const About = () => {
             <div>
               <h2 className="section-title animate-fade">Meet <span className="font-script text-script-lg text-talon-gold">Lindsay</span></h2>
               <p className="mb-4 animate-fade animate-delay-100">
-                After a decade as a zookeeper working with endangered species, Lindsay witnessed firsthand the disconnect between wildlife tourism and true conservation efforts. Too often, travelers with genuine intentions found themselves supporting attractions that didn't uphold the welfare standards or conservation goals they claimed to champion.
+                I spent over a decade as a zookeeper at some of the country's top AZA-accredited zoos, caring for everything from lions, tigers, and rhinos to cassowaries and brown bears. My specialties were big cats, African hoofstock, and pachyderms, animals that leave everyone who interacts with them in awe. I led countless private, behind-the-scenes experiences, where I learned what discerning guests truly seek: access, meaning, and the chance to connect with animals in a way that feels rare and unforgettable.
               </p>
-              <p className="mb-4 animate-fade animate-delay-200">
-                Passionate about both luxury travel and wildlife conservation, Lindsay created Talon & Tide to bridge this gap—offering discerning travelers access to wildlife experiences that are not only extraordinary but also ethically sound and conservation-focused.
-              </p>
-              <p className="mb-6 animate-fade animate-delay-300">
-                Her unique professional background provides the expertise needed to evaluate wildlife experiences through both a conservation lens and a luxury hospitality perspective, ensuring every recommended experience meets the highest standards in both realms.
+              <p className="mb-6 animate-fade animate-delay-200">
+                Still, I always found myself dreaming of the wild—and seeing the animals I worked with in their natural habitats. That dream is what sparked Talon & Tide. I built this company to bridge both worlds: the thoughtfully curated encounters at leading zoos and aquariums, and the extraordinary wildlife tours that bring you face to face with nature on its own terms. Every experience I recommend is carefully vetted for both quality and ethics, so your journey not only inspires wonder but also supports conservation, helping ensure these moments of connection are possible for generations to come.
               </p>
               <Link to="/contact" className="btn-primary animate-fade animate-delay-300">
                 Connect With Us
