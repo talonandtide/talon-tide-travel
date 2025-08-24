@@ -29,7 +29,7 @@ const OurStandards = () => {
             <p className="text-lg text-talon-navy leading-relaxed font-light max-w-4xl mx-auto">
               Talon & Tide represents a new paradigm in wildlife tourism - where professional zoological 
               expertise meets luxury travel curation. We don't just book trips; we understand the science, 
-              ethics, and passion behind exceptional wildlife experiences, whether in captivity or the wild. 
+              ethics, and passion behind exceptional wildlife experiences, whether in human care or the wild. 
               Our background allows us to recognize and celebrate experiences that share our commitment to 
               wildlife conservation and meaningful guest encounters.
             </p>
