@@ -3,7 +3,7 @@ import Layout from '@/components/Layout/Layout';
 import Hero from '@/components/Home/Hero';
 import Newsletter from '@/components/Home/Newsletter';
 import InstagramFeed from '@/components/Home/InstagramFeed';
-import TrustedPartners from '@/components/Home/TrustedPartners';
+
 import { ArrowRight, CheckCircle, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
@@ -395,7 +395,6 @@ const Index = () => {
         </div>
       </section>
 
-      <TrustedPartners />
       <Newsletter />
       <InstagramFeed />
     </Layout>;
