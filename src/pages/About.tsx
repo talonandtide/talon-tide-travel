@@ -96,7 +96,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="section-title text-center mb-12 animate-fade">Our Expert <span className="font-script text-script-lg text-talon-gold">Network</span></h2>
             <p className="mb-6 animate-fade animate-delay-100">
-              At Talon & Tide, we don't work alone. Every experience we curate is evaluated by a network of wildlife professionals, including:
+              Our recommendations are shaped by conversations with people who know wildlife, travel, and conservation from the ground up. We draw on the knowledge of:
             </p>
             <ul className="space-y-6 mb-12">
               <li className="flex gap-4 animate-fade animate-delay-200">
@@ -108,7 +108,7 @@ const About = () => {
                 <div>
                   <h3 className="font-serif text-lg text-talon-green mb-1">Conservation Scientists</h3>
                   <p className="text-talon-navy/80">
-                    Who evaluate the conservation impact and sustainability of each wildlife experience.
+                    Whose insights help us understand the real conservation impact behind each experience.
                   </p>
                 </div>
               </li>
@@ -121,7 +121,7 @@ const About = () => {
                 <div>
                   <h3 className="font-serif text-lg text-talon-green mb-1">Veterinarians</h3>
                   <p className="text-talon-navy/80">
-                    Who assess animal welfare standards and healthcare protocols.
+                    Whose expertise informs how we think about animal welfare and care standards.
                   </p>
                 </div>
               </li>
@@ -134,7 +134,7 @@ const About = () => {
                 <div>
                   <h3 className="font-serif text-lg text-talon-green mb-1">Local Guides & Experts</h3>
                   <p className="text-talon-navy/80">
-                    Who ensure experiences accurately represent local culture and provide authentic insights.
+                    Who bring on-the-ground perspective and cultural authenticity to what we recommend.
                   </p>
                 </div>
               </li>
@@ -147,7 +147,7 @@ const About = () => {
                 <div>
                   <h3 className="font-serif text-lg text-talon-green mb-1">Luxury Travel Specialists</h3>
                   <p className="text-talon-navy/80">
-                    Who evaluate accommodations, service standards, and overall guest experience.
+                    Who help us understand what elevated hospitality looks like in remote destinations.
                   </p>
                 </div>
               </li>
