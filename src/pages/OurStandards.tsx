@@ -86,8 +86,8 @@ const OurStandards = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-serif text-2xl md:text-3xl text-talon-ivory mb-4">What We <span className="font-script text-3xl md:text-4xl text-talon-gold">Bring</span> to Every Visit</h2>
             <p className="text-talon-ivory/80 max-w-3xl mx-auto text-lg leading-relaxed">
-              A Talon & Tide editorial visit isn't just a review — it's a professional content partnership. 
-              Here's what every featured operator receives, at no cost.
+              A Talon & Tide editorial visit is part of how we vet experiences — and when an operator meets our standards, 
+              here's what they receive at no cost.
             </p>
           </div>
 
@@ -104,7 +104,7 @@ const OurStandards = () => {
               <Star className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">Editorial Feature & App Listing</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                Every visit results in a full editorial feature — written with professional wildlife knowledge — 
+                Operators who meet our standards receive a full editorial feature — written with professional wildlife knowledge — 
                 plus a dedicated listing on the Talon & Tide platform, seen by conservation-minded travelers actively 
                 looking for experiences like yours.
               </p>
@@ -136,8 +136,8 @@ const OurStandards = () => {
             <h2 className="section-title">Hosted Editorial <span className="font-script text-script-lg text-talon-gold">Visits</span></h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
             <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              Great storytelling starts with being there. Our editorial visits are built on a simple exchange — 
-              you share your experience, and we give it the audience it deserves.
+              Great storytelling starts with being there. Our editorial visits are how we experience your work firsthand — 
+              and for operators who meet our standards, we give that story the audience it deserves.
             </p>
           </div>
 
@@ -150,13 +150,13 @@ const OurStandards = () => {
                   We work with operators of every size — from small rehabilitation centres and community-led tours 
                   to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
                   to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
-                  and in return, we deliver professional editorial coverage, original media, and ongoing promotion 
-                  to an audience of conservation-minded travelers.
+                  and we get to see your work up close as part of our vetting process. For operators who meet our standards, 
+                  that visit becomes the foundation for professional editorial coverage, original media, and ongoing promotion.
                 </p>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
                   There's no fee for editorial visits. This is how responsible travel journalism works — 
                   operators host, and editorial teams deliver honest, expert coverage that drives real interest. 
-                  It's a value exchange that benefits both sides equally, regardless of your marketing budget.
+                  It's a value exchange that benefits both sides, regardless of your marketing budget.
                 </p>
                 <p className="text-talon-navy/70 leading-relaxed text-sm italic">
                   Every feature on Talon & Tide begins with being there. That's what makes our recommendations 
@@ -268,11 +268,11 @@ const OurStandards = () => {
             {[
               {
                 q: "What does a hosted editorial visit involve?",
-                a: "We visit your operation as a guest — experiencing your tours, meeting your team, and seeing your conservation work up close. We capture original photography and video during the visit, then produce a full editorial feature and listing on the Talon & Tide platform. The whole process is collaborative, relaxed, and designed to tell your story authentically."
+                a: "We visit your operation as a guest — experiencing your tours, meeting your team, and seeing your conservation work up close. This is how we vet experiences firsthand. For operators who meet our standards, we produce a full editorial feature, original media, and a dedicated listing on the Talon & Tide platform. The whole process is collaborative, relaxed, and designed to tell your story authentically."
               },
               {
                 q: "Do I need a marketing budget to work with Talon & Tide?",
-                a: "Not at all. Editorial visits and features are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we deliver professional content and promotion. Optional sponsorships exist for operators who want additional visibility, but they're never required."
+                a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver professional content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
               },
               {
                 q: "We're a small non-profit — is this really for us?",
