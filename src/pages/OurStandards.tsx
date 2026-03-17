@@ -150,13 +150,13 @@ const OurStandards = () => {
                   We work with operators of every size — from small rehabilitation centres and community-led tours 
                   to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
                   to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
-                  and in return, we deliver professional editorial coverage, original media, and ongoing promotion 
-                  to an audience of conservation-minded travelers.
+                  and we get to see your work up close as part of our vetting process. For operators who meet our standards, 
+                  that visit becomes the foundation for professional editorial coverage, original media, and ongoing promotion.
                 </p>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
                   There's no fee for editorial visits. This is how responsible travel journalism works — 
                   operators host, and editorial teams deliver honest, expert coverage that drives real interest. 
-                  It's a value exchange that benefits both sides equally, regardless of your marketing budget.
+                  It's a value exchange that benefits both sides, regardless of your marketing budget.
                 </p>
                 <p className="text-talon-navy/70 leading-relaxed text-sm italic">
                   Every feature on Talon & Tide begins with being there. That's what makes our recommendations 
