@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { Link } from 'react-router-dom';
 import { Shield, Award, Users, CheckCircle, ArrowRight, Sparkles, Eye, Heart, Star, Camera, Globe, Megaphone, Handshake } from 'lucide-react';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 
 const OurStandards = () => {
   return (
@@ -252,6 +253,54 @@ const OurStandards = () => {
           <p className="text-center text-sm text-talon-navy/60 mt-8 italic animate-fade-in">
             Sponsorships support visibility — they never influence editorial decisions or vetting outcomes.
           </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-4xl mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="section-title">Common <span className="font-script text-script-lg text-talon-gold">Questions</span></h2>
+            <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-4 animate-fade-in">
+            {[
+              {
+                q: "What does a hosted editorial visit involve?",
+                a: "We visit your operation as a guest — experiencing your tours, meeting your team, and seeing your conservation work up close. We capture original photography and video during the visit, then produce a full editorial feature and listing on the Talon & Tide platform. The whole process is collaborative, relaxed, and designed to tell your story authentically."
+              },
+              {
+                q: "Do I need a marketing budget to work with Talon & Tide?",
+                a: "Not at all. Editorial visits and features are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we deliver professional content and promotion. Optional sponsorships exist for operators who want additional visibility, but they're never required."
+              },
+              {
+                q: "We're a small non-profit — is this really for us?",
+                a: "Absolutely. We work with organisations of every size, from small rehabilitation centres and community-led tours to large safari lodges. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
+              },
+              {
+                q: "What do you need from us during a visit?",
+                a: "Just access to your experience — whether that's a behind-the-scenes tour, a guest spot on a trip, or a VIP walkthrough of your facility. We handle all the content creation. Many operators find the visit is a genuinely enjoyable experience for their team, too."
+              },
+              {
+                q: "How is this different from a paid review or influencer visit?",
+                a: "Talon & Tide is an editorial platform, not an influencer channel. Our founder has a decade of professional wildlife management experience, and every feature is written with that expertise. We don't accept payment for editorial outcomes — our recommendations are based on what we experience firsthand, which is exactly why our users trust them."
+              },
+              {
+                q: "What are sponsorships, and are they separate from editorial visits?",
+                a: "Completely separate. Sponsorships are optional visibility tools — like promoted placement in search results or making your listing accessible to all users. They never influence our editorial decisions. Think of the editorial visit as the foundation, and sponsorships as an optional amplifier."
+              }
+            ].map((item, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="card-luxury px-6 border-none">
+                <AccordionTrigger className="font-serif text-lg text-talon-green hover:no-underline">
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-talon-navy/80 leading-relaxed">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
