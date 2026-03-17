@@ -183,38 +183,69 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* Where We Draw the Line — kept concise */}
+      {/* The Power of Firsthand Storytelling */}
       <section className="py-20 bg-talon-sand/20">
-        <div className="container max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="section-title">Where We Draw the <span className="font-script text-script-lg text-talon-gold">Line</span></h2>
-            <p className="text-talon-navy/60 text-sm mt-2">
-              The clearest proof of our standards is what we refuse to feature.
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="section-title">The Power of <span className="font-script text-script-lg text-talon-gold">Firsthand</span> Storytelling</h2>
+            <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
+            <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
+              Our audience doesn't want polished ads — they want to see the real thing. When we visit your operation, 
+              we capture the story that makes people choose <em>you</em>.
             </p>
           </div>
 
-          <div className="card-luxury p-8 animate-fade-in animate-delay-100">
-            <p className="text-talon-navy/80 mb-4 text-sm">Regardless of any commercial relationship, we do not feature experiences that involve:</p>
-            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-talon-navy/80 text-sm">
-              {[
-                "Direct contact with big cats in commercial settings",
-                "Animals kept in compromised conditions for tourist access",
-                "Forced performances against natural instincts",
-                "Unresolved animal welfare violations",
-                "Commercial harvest or trade of wild animals for tourism",
-                "\"Sanctuaries\" functioning primarily as tourist attractions",
-                "Wild animal feeding or touching outside captive environments",
-                "Captive breeding solely for tourism revenue"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="text-talon-gold mt-0.5 flex-shrink-0">✕</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="text-talon-navy/50 text-xs italic mt-6">
-              This list evolves as conservation science advances. Gray areas are handled with transparent ethics notes — no listing is a blanket endorsement.
-            </p>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center animate-fade-in">
+              <p className="font-serif text-5xl text-talon-gold mb-2">79%</p>
+              <p className="text-talon-navy/80 text-sm leading-relaxed">
+                of consumers say authentic, firsthand content directly influences their purchasing decisions
+              </p>
+            </div>
+            <div className="text-center animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <p className="font-serif text-5xl text-talon-gold mb-2">4.5×</p>
+              <p className="text-talon-navy/80 text-sm leading-relaxed">
+                higher engagement on authentic storytelling content compared to traditional advertising
+              </p>
+            </div>
+            <div className="text-center animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <p className="font-serif text-5xl text-talon-gold mb-2">70%</p>
+              <p className="text-talon-navy/80 text-sm leading-relaxed">
+                of consumers will consider a purchase after seeing real, trusted content about an experience
+              </p>
+            </div>
+          </div>
+
+          <div className="card-luxury p-10 max-w-4xl mx-auto animate-fade-in">
+            <div className="flex items-start gap-4 mb-6">
+              <Camera className="text-talon-gold flex-shrink-0 mt-1" size={28} />
+              <div>
+                <h3 className="font-serif text-2xl text-talon-green mb-3">Invite Us to Experience Your Work</h3>
+                <p className="text-talon-navy/80 leading-relaxed mb-4">
+                  The most powerful thing you can do for your visibility is let us see what you do, up close. 
+                  When we visit, we create original editorial content — photography, video, and written features — 
+                  that tells your conservation story through the lens our audience trusts most.
+                </p>
+                <p className="text-talon-navy/80 leading-relaxed mb-4">
+                  Whether you're a small rehabilitation centre, a community-led tour, or a large-scale conservation programme, 
+                  our editorial process is the same: genuine, professional, and built to showcase the work you're proud of. 
+                  We work with operators of every size and budget to make visits happen.
+                </p>
+                <p className="text-talon-navy/70 leading-relaxed text-sm italic">
+                  Every feature on Talon & Tide begins with being there. That's what makes our recommendations 
+                  worth trusting — and what makes your listing stand out from anything else online.
+                </p>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <Link 
+                to="/contact?subject=invite-visit" 
+                className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+              >
+                Invite Us to Visit
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
