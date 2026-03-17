@@ -136,8 +136,8 @@ const OurStandards = () => {
             <h2 className="section-title">Hosted Editorial <span className="font-script text-script-lg text-talon-gold">Visits</span></h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
             <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              Great storytelling starts with being there. Our editorial visits are built on a simple exchange — 
-              you share your experience, and we give it the audience it deserves.
+              Great storytelling starts with being there. Our editorial visits are how we experience your work firsthand — 
+              and for operators who meet our standards, we give that story the audience it deserves.
             </p>
           </div>
 
