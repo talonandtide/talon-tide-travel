@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, ArrowRight, Mail } from 'lucide-react';
+import { Instagram, ArrowRight, Mail, ExternalLink } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
+
+const APP_URL = 'https://app.talonandtide.com';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -59,7 +61,7 @@ const Footer = () => {
               </h2>
             </Link>
             <p className="text-sm text-talon-ivory/80 mb-6">
-              Luxury wildlife experiences curated with ethics and expertise at the forefront.
+              Ethically vetted wildlife experiences curated by conservation professionals.
             </p>
             <div className="flex items-center mt-auto gap-4">
               <a 
@@ -85,18 +87,37 @@ const Footer = () => {
             <nav className="flex flex-col gap-2">
               <FooterLink to="/">Home</FooterLink>
               <FooterLink to="/about">About</FooterLink>
-              <FooterLink to="/experiences">Experiences</FooterLink>
               <FooterLink to="/our-standards">Our Standards</FooterLink>
+              <FooterLink to="/for-operators">For Operators</FooterLink>
               <FooterLink to="/blog">Journal</FooterLink>
               <FooterLink to="/contact">Contact</FooterLink>
             </nav>
           </div>
+
+          {/* App Links */}
+          <div>
+            <h3 className="font-serif text-lg mb-4 text-talon-gold">The App</h3>
+            <nav className="flex flex-col gap-2">
+              <a href={APP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
+                Explore Experiences <ExternalLink size={12} />
+              </a>
+              <a href={`${APP_URL}/standards`} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
+                Our Vetting Process <ExternalLink size={12} />
+              </a>
+              <a href={`${APP_URL}/pricing`} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
+                Pricing & Plans <ExternalLink size={12} />
+              </a>
+              <a href={`${APP_URL}/signup`} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
+                Create Free Account <ExternalLink size={12} />
+              </a>
+            </nav>
+          </div>
           
           {/* Subscribe */}
-          <div className="lg:col-span-2">
+          <div>
             <h3 className="font-serif text-lg mb-4 text-talon-gold">Follow the Journey</h3>
             <p className="text-sm text-talon-ivory/80 mb-4">
-              Sign up for exclusive insights into ethical wildlife travel and be the first to know when our curated experiences are available.
+              Sign up for exclusive insights into ethical wildlife travel and new experiences.
             </p>
             <form className="flex gap-2 mt-4" onSubmit={handleSubmit}>
               <input 
