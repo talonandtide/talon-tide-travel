@@ -256,17 +256,19 @@ const OurStandards = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
-              href="/experiences" 
+              href="https://app.talonandtide.com/explore" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300"
             >
-              Explore Experiences
+              Explore Experiences on the App
             </a>
-            <a 
-              href="/contact" 
+            <Link 
+              to="/for-operators" 
               className="btn-secondary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300"
             >
-              Contact Us
-            </a>
+              Partner With Us
+            </Link>
           </div>
         </div>
       </section>

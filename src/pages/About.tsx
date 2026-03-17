@@ -153,10 +153,10 @@ const About = () => {
               </li>
             </ul>
             <div className="text-center animate-fade animate-delay-600">
-              <Link to="/experiences" className="btn-secondary">
-                Explore Our Curated Experiences
-                <ArrowRight size={16} />
-              </Link>
+              <a href="https://app.talonandtide.com/explore" target="_blank" rel="noopener noreferrer" className="btn-secondary group">
+                Explore Experiences on the App
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
         </div>
