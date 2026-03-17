@@ -86,8 +86,8 @@ const OurStandards = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-serif text-2xl md:text-3xl text-talon-ivory mb-4">What We <span className="font-script text-3xl md:text-4xl text-talon-gold">Bring</span> to Every Visit</h2>
             <p className="text-talon-ivory/80 max-w-3xl mx-auto text-lg leading-relaxed">
-              A Talon & Tide editorial visit isn't just a review — it's a professional content partnership. 
-              Here's what every featured operator receives, at no cost.
+              A Talon & Tide editorial visit is part of how we vet experiences — and when an operator meets our standards, 
+              here's what they receive at no cost.
             </p>
           </div>
 
