@@ -289,6 +289,10 @@ const OurStandards = () => {
               {
                 q: "What are sponsorships, and are they separate from editorial visits?",
                 a: "Completely separate. Sponsorships are optional visibility tools — like promoted placement in search results or making your listing accessible to all users. They never influence our editorial decisions. Think of the editorial visit as the foundation, and sponsorships as an optional amplifier."
+              },
+              {
+                q: "What happens if an operator doesn't meet your standards after a visit?",
+                a: "It's not a pass or fail — it's a conversation. If something doesn't align with our standards, we'll share honest, constructive feedback privately. Many operators use that insight to strengthen their offering and reconnect with us down the line. Our goal is always to support great conservation work, and sometimes that means helping operators get there rather than simply turning them away."
               }
             ].map((item, i) => (
               <AccordionItem key={i} value={`faq-${i}`} className="card-luxury px-6 border-none">
