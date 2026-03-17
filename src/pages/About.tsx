@@ -29,12 +29,18 @@ const About = () => {
                 I spent over a decade as a zookeeper at some of the country's top AZA-accredited zoos, caring for everything from lions, tigers, and rhinos to cassowaries and brown bears. My specialties were big cats, African hoofstock, and pachyderms, animals that leave everyone who interacts with them in awe. I led countless private, behind-the-scenes experiences, where I learned what discerning guests truly seek: access, meaning, and the chance to connect with animals in a way that feels rare and unforgettable.
               </p>
               <p className="mb-6 animate-fade animate-delay-200">
-                Still, I found myself dreaming of the wild, and seeing the animals I worked with in their natural habitats. That dream is what sparked Talon & Tide. I built this company to bridge both worlds: thoughtfully curated encounters at leading zoos and aquariums, and extraordinary wildlife tours that bring you face to face with nature on its own terms. Every experience I recommend is carefully vetted for both quality and ethics, so your journey not only inspires wonder but also supports conservation, helping ensure these moments of connection are possible for generations to come.
+                Still, I found myself dreaming of the wild, and seeing the animals I worked with in their natural habitats. That dream is what sparked Talon & Tide. I built this platform to connect travelers with the world's most extraordinary wildlife experiences — from behind-the-scenes encounters at leading zoos and aquariums to expeditions that bring you face to face with nature on its own terms. You keep the power to book directly; I make sure every experience you find is worthy of your trust.
               </p>
-              <Link to="/contact" className="btn-primary animate-fade animate-delay-300">
-                Connect With Us
-                <ArrowRight size={16} />
-              </Link>
+              <div className="flex flex-wrap gap-4 animate-fade animate-delay-300">
+                <a href="https://app.talonandtide.com" target="_blank" rel="noopener noreferrer" className="btn-primary group">
+                  Explore the App
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+                <Link to="/contact" className="btn-secondary">
+                  Connect With Us
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
             </div>
             <div className="relative">
               <img
