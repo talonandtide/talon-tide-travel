@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Mail } from 'lucide-react';
+import { Menu, X, Instagram, Mail, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+const APP_URL = 'https://app.talonandtide.com';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,16 +57,15 @@ const Header = () => {
             >
               <Instagram size={18} />
             </a>
-            <Link 
-              to="/contact" 
-              onClick={() => window.scrollTo(0, 0)}
-              className={cn(
-                "hover:text-talon-gold transition-colors duration-300",
-                scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
-              )}
+            <a 
+              href={APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-4 py-2 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              <Mail size={18} />
-            </Link>
+              Explore Experiences
+              <ExternalLink size={14} />
+            </a>
           </div>
         </nav>
 
@@ -85,22 +86,32 @@ const Header = () => {
           <nav className="flex flex-col items-center gap-6 text-talon-ivory">
             <NavLinks mobile />
           </nav>
-          <div className="flex items-center gap-6 text-talon-ivory">
+          <div className="flex flex-col items-center gap-4">
             <a 
-              href="https://www.instagram.com/talonandtide/" 
-              target="_blank" 
+              href={APP_URL}
+              target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-talon-gold transition-colors duration-300"
+              className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-6 py-3 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              <Instagram size={20} />
+              Explore Experiences
+              <ExternalLink size={14} />
             </a>
-            <Link 
-              to="/contact" 
-              onClick={() => window.scrollTo(0, 0)}
-              className="hover:text-talon-gold transition-colors duration-300"
-            >
-              <Mail size={20} />
-            </Link>
+            <div className="flex items-center gap-6 text-talon-ivory">
+              <a 
+                href="https://www.instagram.com/talonandtide/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-talon-gold transition-colors duration-300"
+              >
+                <Instagram size={20} />
+              </a>
+              <a 
+                href="mailto:hello@talonandtide.com"
+                className="hover:text-talon-gold transition-colors duration-300"
+              >
+                <Mail size={20} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -114,9 +125,8 @@ const NavLinks = ({ mobile = false, isScrolled = false }) => {
   const links = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
-    { path: '/experiences', label: 'Experiences' },
     { path: '/our-standards', label: 'Our Standards' },
-    { path: '/pricing', label: 'Investment' },
+    { path: '/for-operators', label: 'For Operators' },
     { path: '/blog', label: 'Journal' },
     { path: '/contact', label: 'Contact' }
   ];
