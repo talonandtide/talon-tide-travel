@@ -46,8 +46,8 @@ const About = () => {
               <img
                 src="/lovable-uploads/42e1cde9-5c7a-4efa-9536-cce93f56b5ee.png"
                 alt="Lindsay with baboons in their natural habitat"
-                className="w-full h-auto rounded-sm shadow-lg animate-fade"
-              />
+                className="w-full h-auto rounded-sm shadow-lg animate-fade" />
+              
               <div className="absolute -bottom-8 -left-8 bg-white p-6 shadow-lg rounded-sm max-w-xs animate-fade animate-delay-200">
                 <blockquote className="font-serif text-talon-green italic text-lg">
                   "True luxury is knowing your extraordinary experience also makes a positive impact."
@@ -163,23 +163,23 @@ const About = () => {
       </section>
 
       {/* Our Affiliations */}
-      <section className="py-20 bg-talon-sand/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-title mb-12 animate-fade">Trusted <span className="font-script text-script-lg text-talon-gold">Partnerships</span></h2>
-            <div className="bg-white/80 p-8 rounded-sm shadow-lg animate-fade animate-delay-100">
-              <p className="text-lg text-talon-navy/90 mb-6 leading-relaxed">
-                Talon & Tide is a proud independent affiliate of WorldVia and Travel Leaders Network, meaning our clients benefit from exclusive access to world-renowned hotels, expedition leaders, and conservation experiences, many of which have been recognized by Forbes, Condé Nast Traveler, and Travel + Leisure.
-              </p>
-              <p className="text-lg text-talon-navy/90 leading-relaxed">
-                Our global network includes over 2,200 suppliers and industry insiders, ensuring VIP treatment, custom-curated itineraries, and unmatched attention to ethical details. Behind the scenes, your journey is supported by a legacy of excellence, so you can explore with confidence, knowing you're in expert hands.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </Layout>);
+
 };
 
 export default About;
