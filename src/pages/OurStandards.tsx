@@ -104,7 +104,7 @@ const OurStandards = () => {
               <Star className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">Editorial Feature & App Listing</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                Every visit results in a full editorial feature — written with professional wildlife knowledge — 
+                Operators who meet our standards receive a full editorial feature — written with professional wildlife knowledge — 
                 plus a dedicated listing on the Talon & Tide platform, seen by conservation-minded travelers actively 
                 looking for experiences like yours.
               </p>
