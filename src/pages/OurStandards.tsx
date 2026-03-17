@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { Link } from 'react-router-dom';
-import { Shield, Award, Users, CheckCircle, ArrowRight, GraduationCap, Sparkles, Eye, Heart, Star, Camera, Globe, Megaphone } from 'lucide-react';
+import { Shield, Award, Users, CheckCircle, ArrowRight, Sparkles, Eye, Heart, Star, Camera, Globe, Megaphone, Handshake } from 'lucide-react';
 
 const OurStandards = () => {
   return (
@@ -37,7 +37,7 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* How We Work With Operators */}
+      {/* How We Discover Operators */}
       <section className="py-20 bg-white">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
@@ -59,12 +59,12 @@ const OurStandards = () => {
               {
                 icon: Camera,
                 title: "We Experience It Firsthand",
-                desc: "Nothing replaces being there. We visit operators to experience the work up close — seeing the animals, meeting the teams, and understanding the story behind the conservation. This is how we know what to champion."
+                desc: "Nothing replaces being there. We visit operators to experience the work up close — seeing the animals, meeting the teams, and understanding the story behind the conservation."
               },
               {
                 icon: Megaphone,
                 title: "We Tell Your Story",
-                desc: "When an experience meets our standards, we promote it across everything we have — social media, our email community, and featured placement on the Talon & Tide platform. Your story reaches the right people."
+                desc: "When an experience meets our standards, we promote it across everything we have — social media, our email community, and featured placement on the Talon & Tide platform."
               }
             ].map((item, index) => (
               <div key={item.title} className="card-luxury p-8 text-center hover:shadow-luxury-hover transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
@@ -79,50 +79,122 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* What Operators Gain */}
+      {/* What We Bring — Hosted Editorial Visits */}
       <section className="py-20 bg-talon-green text-talon-ivory">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-serif text-2xl md:text-3xl text-talon-ivory mb-4">What a Partnership <span className="font-script text-3xl md:text-4xl text-talon-gold">Looks Like</span></h2>
-            <p className="text-talon-ivory/80 max-w-3xl mx-auto text-lg">
-              When you partner with Talon & Tide, you gain a dedicated advocate with the professional credibility 
-              to back you up — and the audience to make it count.
+            <h2 className="font-serif text-2xl md:text-3xl text-talon-ivory mb-4">What We <span className="font-script text-3xl md:text-4xl text-talon-gold">Bring</span> to Every Visit</h2>
+            <p className="text-talon-ivory/80 max-w-3xl mx-auto text-lg leading-relaxed">
+              A Talon & Tide editorial visit isn't just a review — it's a professional content partnership. 
+              Here's what every featured operator receives, at no cost.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in">
-              <Star className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">Professional Recognition</h3>
+              <Camera className="text-talon-gold mb-4" size={28} />
+              <h3 className="font-serif text-xl text-talon-gold mb-3">Original Photography & Video</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                A Talon & Tide feature isn't a paid ad — it's an editorial endorsement from a team with real wildlife expertise. 
-                That distinction matters to the conservation-minded travelers who use our platform.
+                We capture your operation through professional-quality original media — real moments, real animals, 
+                real conservation in action. Content you're welcome to use in your own marketing, too.
               </p>
             </div>
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <Star className="text-talon-gold mb-4" size={28} />
+              <h3 className="font-serif text-xl text-talon-gold mb-3">Editorial Feature & App Listing</h3>
+              <p className="text-talon-ivory/80 leading-relaxed">
+                Every visit results in a full editorial feature — written with professional wildlife knowledge — 
+                plus a dedicated listing on the Talon & Tide platform, seen by conservation-minded travelers actively 
+                looking for experiences like yours.
+              </p>
+            </div>
+            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '200ms' }}>
               <Globe className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">Multi-Channel Promotion</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
                 Featured operators are promoted across our social channels, email community, and the Talon & Tide app — 
-                reaching engaged audiences who are actively looking for ethical wildlife experiences.
-              </p>
-            </div>
-            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <Heart className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">Conservation Storytelling</h3>
-              <p className="text-talon-ivory/80 leading-relaxed">
-                We don't just list you — we tell your story. Your conservation mission, your team's dedication, 
-                and the real impact of your work get the spotlight they deserve.
+                reaching engaged audiences who care about ethical wildlife experiences.
               </p>
             </div>
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '300ms' }}>
-              <Users className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">The Right Visitors</h3>
+              <Heart className="text-talon-gold mb-4" size={28} />
+              <h3 className="font-serif text-xl text-talon-gold mb-3">A Credible Endorsement</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                Our audience isn't looking for the cheapest option — they're looking for the most meaningful one. 
-                Talon & Tide connects you with travelers who respect your work and value what you do.
+                A Talon & Tide feature isn't a paid ad — it's an editorial endorsement from a team with real wildlife expertise. 
+                That distinction matters to the travelers who use our platform.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hosted Editorial Visits — The Exchange */}
+      <section className="py-20 bg-talon-sand/20">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="section-title">Hosted Editorial <span className="font-script text-script-lg text-talon-gold">Visits</span></h2>
+            <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
+            <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
+              Great storytelling starts with being there. Our editorial visits are built on a simple exchange — 
+              you share your experience, and we give it the audience it deserves.
+            </p>
+          </div>
+
+          <div className="card-luxury p-10 max-w-4xl mx-auto animate-fade-in">
+            <div className="flex items-start gap-4 mb-6">
+              <Handshake className="text-talon-gold flex-shrink-0 mt-1" size={28} />
+              <div>
+                <h3 className="font-serif text-2xl text-talon-green mb-3">A Partnership, Not a Transaction</h3>
+                <p className="text-talon-navy/80 leading-relaxed mb-4">
+                  We work with operators of every size — from small rehabilitation centres and community-led tours 
+                  to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
+                  to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
+                  and in return, we deliver professional editorial coverage, original media, and ongoing promotion 
+                  to an audience of conservation-minded travelers.
+                </p>
+                <p className="text-talon-navy/80 leading-relaxed mb-4">
+                  There's no fee for editorial visits. This is how responsible travel journalism works — 
+                  operators host, and editorial teams deliver honest, expert coverage that drives real interest. 
+                  It's a value exchange that benefits both sides equally, regardless of your marketing budget.
+                </p>
+                <p className="text-talon-navy/70 leading-relaxed text-sm italic">
+                  Every feature on Talon & Tide begins with being there. That's what makes our recommendations 
+                  worth trusting — and what makes your listing stand out from anything else online.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
+            <div className="text-center animate-fade-in">
+              <p className="font-serif text-5xl text-talon-gold mb-2">79%</p>
+              <p className="text-talon-navy/80 text-sm leading-relaxed">
+                of consumers say authentic, firsthand content directly influences their purchasing decisions
+              </p>
+            </div>
+            <div className="text-center animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <p className="font-serif text-5xl text-talon-gold mb-2">4.5×</p>
+              <p className="text-talon-navy/80 text-sm leading-relaxed">
+                higher engagement on authentic storytelling content compared to traditional advertising
+              </p>
+            </div>
+            <div className="text-center animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <p className="font-serif text-5xl text-talon-gold mb-2">70%</p>
+              <p className="text-talon-navy/80 text-sm leading-relaxed">
+                of travelers are more likely to book after seeing real, trusted content about an experience
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12 animate-fade-in">
+            <Link 
+              to="/contact?subject=invite-visit" 
+              className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+            >
+              Invite Us to Visit
+              <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
@@ -134,8 +206,8 @@ const OurStandards = () => {
             <h2 className="section-title">Amplify Your <span className="font-script text-script-lg text-talon-gold">Reach</span></h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
             <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              Beyond editorial features, operators can invest in promoted visibility on the platform — 
-              putting your experience in front of even more conservation-minded travelers.
+              Editorial coverage is always free. For operators who want to go further, optional sponsorships 
+              put your experience in front of even more conservation-minded travelers.
             </p>
           </div>
 
@@ -144,7 +216,7 @@ const OurStandards = () => {
               <Sparkles className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-2xl text-talon-green mb-4">Promoted Listings</h3>
               <p className="text-talon-navy/80 leading-relaxed mb-4">
-                Sponsor your listing for premium placement across the platform — featured positioning in search results, 
+                Boost your visibility with premium placement across the platform — featured positioning in search results, 
                 category collections, and homepage highlights. All sponsored content is clearly labeled, maintaining the 
                 trust our users expect.
               </p>
@@ -183,73 +255,6 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* The Power of Firsthand Storytelling */}
-      <section className="py-20 bg-talon-sand/20">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">The Power of <span className="font-script text-script-lg text-talon-gold">Firsthand</span> Storytelling</h2>
-            <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
-            <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              Our audience doesn't want polished ads — they want to see the real thing. When we visit your operation, 
-              we capture the story that makes people choose <em>you</em>.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center animate-fade-in">
-              <p className="font-serif text-5xl text-talon-gold mb-2">79%</p>
-              <p className="text-talon-navy/80 text-sm leading-relaxed">
-                of consumers say authentic, firsthand content directly influences their purchasing decisions
-              </p>
-            </div>
-            <div className="text-center animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <p className="font-serif text-5xl text-talon-gold mb-2">4.5×</p>
-              <p className="text-talon-navy/80 text-sm leading-relaxed">
-                higher engagement on authentic storytelling content compared to traditional advertising
-              </p>
-            </div>
-            <div className="text-center animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <p className="font-serif text-5xl text-talon-gold mb-2">70%</p>
-              <p className="text-talon-navy/80 text-sm leading-relaxed">
-                of consumers will consider a purchase after seeing real, trusted content about an experience
-              </p>
-            </div>
-          </div>
-
-          <div className="card-luxury p-10 max-w-4xl mx-auto animate-fade-in">
-            <div className="flex items-start gap-4 mb-6">
-              <Camera className="text-talon-gold flex-shrink-0 mt-1" size={28} />
-              <div>
-                <h3 className="font-serif text-2xl text-talon-green mb-3">Invite Us to Experience Your Work</h3>
-                <p className="text-talon-navy/80 leading-relaxed mb-4">
-                  The most powerful thing you can do for your visibility is let us see what you do, up close. 
-                  When we visit, we create original editorial content — photography, video, and written features — 
-                  that tells your conservation story through the lens our audience trusts most.
-                </p>
-                <p className="text-talon-navy/80 leading-relaxed mb-4">
-                  Whether you're a small rehabilitation centre, a community-led tour, or a large-scale conservation programme, 
-                  our editorial process is the same: genuine, professional, and built to showcase the work you're proud of. 
-                  We work with operators of every size and budget to make visits happen.
-                </p>
-                <p className="text-talon-navy/70 leading-relaxed text-sm italic">
-                  Every feature on Talon & Tide begins with being there. That's what makes our recommendations 
-                  worth trusting — and what makes your listing stand out from anything else online.
-                </p>
-              </div>
-            </div>
-            <div className="text-center mt-8">
-              <Link 
-                to="/contact?subject=invite-visit" 
-                className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
-              >
-                Invite Us to Visit
-                <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container max-w-4xl mx-auto px-4 text-center animate-fade-in">
@@ -257,15 +262,15 @@ const OurStandards = () => {
             Ready to <span className="font-script text-script-lg text-talon-gold">Partner?</span>
           </h2>
           <p className="text-xl text-talon-navy/80 mb-10 leading-relaxed font-light max-w-3xl mx-auto">
-            If you're running a wildlife experience you're proud of, we'd love to see it for ourselves. 
-            Reach out and let's start the conversation.
+            Whether you're a small non-profit, a community-led tour, or a world-class safari lodge — 
+            if you're doing meaningful conservation work, we'd love to see it for ourselves.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link 
-              to="/for-operators" 
+              to="/contact?subject=invite-visit" 
               className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
-              Learn About Partnerships
+              Invite Us to Visit
               <ArrowRight size={18} />
             </Link>
             <Link 
