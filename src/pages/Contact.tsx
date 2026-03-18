@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout/Layout';
-import { Mail, Instagram, MapPin, ArrowRight, ExternalLink } from 'lucide-react';
+import { Mail, Instagram, MapPin, ArrowRight, ExternalLink, Camera } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
