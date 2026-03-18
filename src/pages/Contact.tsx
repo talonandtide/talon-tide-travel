@@ -124,7 +124,7 @@ const Contact = () => {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="operator-submission">Submit my experience for review</SelectItem>
-                      <SelectItem value="hosted-trips">Hosted trip partnership</SelectItem>
+                      <SelectItem value="hosted-trips">Hosted visit inquiry</SelectItem>
                       <SelectItem value="sponsorship">Sponsorship inquiry</SelectItem>
                       <SelectItem value="photographer-collaboration">Photography collaboration</SelectItem>
                       <SelectItem value="report-concern">Report a concern about a listing</SelectItem>
