@@ -91,7 +91,7 @@ const Index = () => {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-            { icon: Shield, title: "Professionally Vetted", desc: "Every experience is personally evaluated by wildlife professionals with zoological expertise -  never based on public reviews or marketing claims." },
+            { icon: Shield, title: "Professionally Vetted", desc: "Every experience is personally evaluated by wildlife professionals in animal care, conservation, research, and veterinary fields -  never based on public reviews or marketing claims." },
             { icon: Eye, title: "Beyond the Brochure", desc: "We know the difference between genuine conservation and a good marketing team. Every listing is evaluated for real animal welfare impact." },
             { icon: Heart, title: "Conservation First", desc: "Only experiences that genuinely benefit wildlife, habitats, and the communities who protect them make it onto the platform." }].
             map((item) =>
@@ -252,7 +252,7 @@ const Index = () => {
             { number: "1", title: "Browse", description: "Explore vetted wildlife experiences by species, destination, or type on the Talon & Tide app." },
             { number: "2", title: "Discover", description: "Read expert insights, ethics notes, and conservation context for every experience." },
             { number: "3", title: "Save & Compare", description: "Build lists, follow species, and save your favorites. Upgrade for full access to booking details." },
-            { number: "4", title: "Book Direct", description: "Connect directly with operators. No middleman fees -  just confidence that your choice is ethical." }].
+            { number: "4", title: "Book Direct", description: "Connect directly with operators with confidence that your choice is ethical." }].
             map((step, index) =>
             <div key={index} className="text-center animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="bg-talon-green text-talon-ivory h-16 w-16 rounded-full flex items-center justify-center text-2xl font-serif mb-6 mx-auto">
