@@ -215,7 +215,7 @@ const OurStandards = () => {
             },
             {
               q: "How is this different from a paid review or influencer visit?",
-              a: "Talon & Tide is an editorial platform, not an influencer channel. Our founder has a decade of professional wildlife management experience, and every feature is written with that expertise. We don't accept payment for editorial outcomes — our recommendations are based on what we experience firsthand, which is exactly why our users trust them."
+              a: "Talon & Tide is an editorial platform, not an influencer channel. Our founder has a decade of wildlife management experience, and every feature is written with that background. We don't accept payment for editorial outcomes — our recommendations are based on what we experience firsthand, which is exactly why our users trust them."
             },
             {
               q: "What are sponsorships, and are they separate from editorial visits?",
