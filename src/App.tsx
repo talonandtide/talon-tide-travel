@@ -22,8 +22,8 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
 
     // Send pageview to Google Analytics for client-side navigation
-    if (typeof window.gtag === 'function') {
-      window.gtag('config', 'G-75PNJBYC00', {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('config', 'G-75PNJBYC00', {
         page_path: pathname,
       });
     }
