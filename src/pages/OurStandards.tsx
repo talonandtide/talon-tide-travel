@@ -241,29 +241,27 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-4xl mx-auto px-4 text-center animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl text-talon-green mb-6">
+      {/* Cross-link to For Operators */}
+      <section className="py-16 bg-talon-sand/20">
+        <div className="container max-w-3xl mx-auto px-4 text-center animate-fade-in">
+          <h2 className="font-serif text-3xl text-talon-green mb-4">
             Ready to <span className="font-script text-script-lg text-talon-gold">Partner?</span>
           </h2>
-          <p className="text-xl text-talon-navy/80 mb-10 leading-relaxed font-light max-w-3xl mx-auto">
-            Whether you're a small non-profit, zoo, or a world-class safari lodge — if you're doing meaningful conservation work, we'd love to see it for ourselves.
-          
+          <p className="text-talon-navy/80 mb-8 leading-relaxed">
+            Learn about partnership options, sponsorships, and how to get your experience listed on the platform.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact?subject=invite-visit"
-              className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2">
-              
-              Invite Us to Visit
+              to="/for-operators"
+              className="btn-primary px-8 py-4 text-lg font-medium inline-flex items-center gap-2">
+              For Operators
               <ArrowRight size={18} />
             </Link>
             <Link
-              to="/contact?subject=operator-submission"
-              className="btn-secondary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300">
-              
-              Ask a Question
+              to="/contact?subject=invite-visit"
+              className="btn-secondary px-8 py-4 text-lg font-medium inline-flex items-center gap-2">
+              Invite Us to Visit
+              <ArrowRight size={18} />
             </Link>
           </div>
         </div>
