@@ -90,7 +90,7 @@ const OurStandards = () => {
                   to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
                   to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
                   and we get to see your work up close as part of our vetting process. For operators who meet our standards, 
-                  that visit becomes the foundation for professional editorial coverage, original media, and ongoing promotion.
+                  that visit becomes the foundation for editorial coverage, original media, and ongoing promotion.
                 </p>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
                   There's no fee for editorial visits. This is how responsible travel journalism works — 
