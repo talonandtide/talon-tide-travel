@@ -272,11 +272,11 @@ const OurStandards = () => {
             },
             {
               q: "Do I need a marketing budget to work with Talon & Tide?",
-              a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
+              a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver professional content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
             },
             {
               q: "We're a small non-profit — is this really for us?",
-              a: "Absolutely! We work with organisations of every size, from small rehabilitation centers and zoo tours to large safari lodges and five-star resorts. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
+              a: "Absolutely. We work with organisations of every size, from small rehabilitation centres and community-led tours to large safari lodges. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
             },
             {
               q: "What do you need from us during a visit?",
@@ -315,8 +315,8 @@ const OurStandards = () => {
             Ready to <span className="font-script text-script-lg text-talon-gold">Partner?</span>
           </h2>
           <p className="text-xl text-talon-navy/80 mb-10 leading-relaxed font-light max-w-3xl mx-auto">
-            Whether you're a small non-profit, a community-led tour, or a world-class safari lodge — 
-            if you're doing meaningful conservation work, we'd love to see it for ourselves.
+            Whether you're a small non-profit, zoo, or a world-class safari lodge — if you're doing meaningful conservation work, we'd love to see it for ourselves.
+          
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
