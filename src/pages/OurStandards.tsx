@@ -94,7 +94,7 @@ const OurStandards = () => {
                 </p>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
                   There's no fee for editorial visits. This is how responsible travel journalism works — 
-                  operators host, and editorial teams deliver honest, expert coverage that drives real interest. 
+                  operators host, and editorial teams deliver honest coverage that drives real interest. 
                   It's a value exchange that benefits both sides, regardless of your marketing budget.
                 </p>
                 <p className="text-talon-navy/70 leading-relaxed text-sm italic">
