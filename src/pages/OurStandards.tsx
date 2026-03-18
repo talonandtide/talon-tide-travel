@@ -31,7 +31,7 @@ const OurStandards = () => {
               How we find, experience, and champion the world's best wildlife operators.
             </p>
             <p className="text-talon-ivory/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
-              Talon & Tide was founded by a former zookeeper with a decade of hands-on wildlife management experience.
+              Talon & Tide was founded by a former zookeeper with a decade of hands-on wildlife management experience and a certificate in Hospitality and Tourism Management.
               We're not a review site -  we're a platform built to recognize and amplify the operators doing 
               genuinely meaningful conservation work. When we feature your experience, it carries the weight of 
               professional understanding, not just a star rating.
