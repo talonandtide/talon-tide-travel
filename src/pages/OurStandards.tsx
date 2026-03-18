@@ -148,14 +148,14 @@ const OurStandards = () => {
                 <h3 className="font-serif text-2xl text-talon-green mb-3">A Partnership, Not a Transaction</h3>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
                   We work with operators of every size — from small rehabilitation centres and community-led tours 
-                  to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
-                  to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
-                  and we get to see your work up close as part of our vetting process. For operators who meet our standards, 
-                  that visit becomes the foundation for professional editorial coverage, original media, and ongoing promotion.
+                  to large-scale lodges and conservation programmes. A hosted editorial visit simply means we come 
+                  and experience your operation as a guest. We want to see what your visitors see — that's how we 
+                  ensure what we publish is an honest reflection of the real experience. For operators who meet our 
+                  standards, that visit becomes the foundation for editorial coverage, original content, and ongoing promotion.
                 </p>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
                   There's no fee for editorial visits. This is how responsible travel journalism works — 
-                  operators host, and editorial teams deliver honest, expert coverage that drives real interest. 
+                  operators host, and we deliver honest, expert coverage that drives real interest. 
                   It's a value exchange that benefits both sides, regardless of your marketing budget.
                 </p>
                 <p className="text-talon-navy/70 leading-relaxed text-sm italic">
