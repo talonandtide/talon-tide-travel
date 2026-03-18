@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight, Globe, Users, Handshake, CheckCircle, Shield, ExternalLink, Send, AlertTriangle, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '@/hooks/usePageMeta';
 
 const APP_URL = 'https://app.talonandtide.com';
 
