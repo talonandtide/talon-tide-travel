@@ -60,7 +60,7 @@ const OurStandards = () => {
               {
                 icon: Camera,
                 title: "We Experience It Firsthand",
-                desc: "Nothing replaces being there. We visit operators to experience the work up close — seeing the animals, meeting the teams, and understanding the story behind the conservation."
+                desc: "Nothing replaces being there. We arrive as a guest, experience the operation as naturally as possible, and see what your visitors see — that's how we make sure our coverage honestly reflects the real thing."
               },
               {
                 icon: Megaphone,
