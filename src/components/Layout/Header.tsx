@@ -27,20 +27,25 @@ const Header = () => {
   }, [location]);
 
   return (
-    <header 
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 lg:py-6", 
-        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
-      )}
-    >
+    <>
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-talon-gold focus:text-talon-green focus:px-4 focus:py-2 focus:rounded-sm focus:text-sm focus:font-medium">
+        Skip to main content
+      </a>
+      <header 
+        role="banner"
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 lg:py-6", 
+          scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        )}
+      >
       <div className="container flex justify-between items-center">
-        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="z-50">
-          <h1 className={cn(
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="z-50" aria-label="Talon & Tide - Home">
+          <span className={cn(
             "font-serif text-xl md:text-2xl transition-all duration-300",
             scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
           )}>
             Talon <span className="text-talon-gold">&#38;</span> Tide
-          </h1>
+          </span>
         </Link>
         
         <nav className="hidden lg:flex items-center gap-8">
