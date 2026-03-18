@@ -28,7 +28,7 @@ const AboutSection = () => {
           <div className="order-1 lg:order-2">
             <h2 className="section-title animate-fade">Our Journey</h2>
             <p className="mb-6 animate-fade animate-delay-100">
-              Founded by Lindsay, a former zookeeper with a decade of experience, Talon & Tide bridges the gap between luxury travel and ethical wildlife tourism. Our mission is to curate extraordinary animal encounters that uphold the highest standards of conservation and guest experience.
+              Founded by Lindsay, a former zookeeper with a decade of experience and a certificate in Hospitality and Tourism Management, Talon & Tide bridges the gap between luxury travel and ethical wildlife tourism. Our mission is to curate extraordinary animal encounters that uphold the highest standards of conservation and guest experience.
             </p>
             <p className="mb-8 animate-fade animate-delay-200">
               Drawing on a global network of wildlife professionals, each experience we endorse has been thoroughly vetted to ensure it contributes positively to conservation efforts and respects the natural behaviors and needs of the animals.
