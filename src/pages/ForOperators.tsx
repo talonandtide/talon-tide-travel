@@ -9,48 +9,42 @@ const ForOperators = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-24 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">
               For <span className="font-script text-script-lg text-talon-gold">Operators</span>
             </h1>
-            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg text-talon-navy/80 mb-6 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Whether you run a small rehabilitation centre or a world-class safari lodge — if you're doing meaningful conservation work, we want to help more travelers find you.
+            </p>
+            <p className="text-talon-navy/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
+              Talon & Tide isn't a booking engine or a review aggregator. We're a curated platform where every listing is editorially vetted by wildlife specialists. When we reach out, it's because we recognize the important work you're doing.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why Talon & Tide */}
-      <section className="py-20 bg-talon-ivory">
+      {/* Why Partner With Us — Compact Grid */}
+      <section className="py-16 bg-talon-ivory">
         <div className="container max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6">
-              Why Partner With <span className="font-script text-script-lg text-talon-gold">Us?</span>
-            </h2>
-            <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              Talon & Tide isn't a booking engine or a review aggregator. We're a curated platform where every listing is editorially vetted by wildlife professionals. When we reach out, it's because we recognize the important work you're doing.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Users, title: "Conservation-Minded Travelers", desc: "Reach travelers who seek meaningful wildlife encounters and value ethics over the cheapest price." },
               { icon: Shield, title: "Editorial Integrity", desc: "Operators cannot pay to be listed or to receive favorable reviews. Sponsorships buy visibility, never editorial influence." },
               { icon: BarChart3, title: "Targeted Visibility", desc: "Your experience is seen by travelers actively searching for vetted, ethical wildlife encounters — not mass tourists." },
               { icon: Globe, title: "Global Reach", desc: "We feature experiences across safaris, marine expeditions, zoo encounters, and conservation field missions worldwide." },
               { icon: Handshake, title: "Long-Term Partnership", desc: "We build ongoing relationships with operators — supporting your conservation story and connecting you with aligned travelers." },
-              { icon: CheckCircle, title: "Professional Vetting", desc: "Founded by a former AZA zookeeper. Every evaluation draws on real wildlife management experience." },
+              { icon: CheckCircle, title: "Real Wildlife Experience", desc: "Founded by a former AZA zookeeper. Every evaluation draws on real wildlife management experience." },
             ].map((item, index) => (
-              <div key={item.title} className="card-luxury p-8 hover:shadow-luxury-hover transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 80}ms` }}>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-2 bg-talon-gold/10 rounded-full">
-                    <item.icon className="text-talon-gold" size={24} />
-                  </div>
-                  <h3 className="font-serif text-xl text-talon-green">{item.title}</h3>
+              <div key={item.title} className="flex items-start gap-4 p-6 animate-fade-in" style={{ animationDelay: `${index * 80}ms` }}>
+                <div className="p-2 bg-talon-gold/10 rounded-full flex-shrink-0">
+                  <item.icon className="text-talon-gold" size={20} />
                 </div>
-                <p className="text-talon-navy/80 leading-relaxed text-sm">{item.desc}</p>
+                <div>
+                  <h3 className="font-serif text-lg text-talon-green mb-1">{item.title}</h3>
+                  <p className="text-talon-navy/80 leading-relaxed text-sm">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
