@@ -57,7 +57,7 @@ const blogPosts = [
       },
       {
         type: 'quote',
-        text: "The most meaningful wildlife experiences are those where we adapt to the animals' world—not where they are forced to adapt to ours.",
+        text: "The most meaningful wildlife experiences are those where we adapt to the animals' world - not where they are forced to adapt to ours.",
         author: 'Dr. Jane Goodall'
       },
       {
@@ -90,7 +90,7 @@ const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'These practices often indicate that animal welfare has been compromised for commercial gain—a fundamental violation of ethical tourism principles.'
+        text: 'These practices often indicate that animal welfare has been compromised for commercial gain - a fundamental violation of ethical tourism principles.'
       },
       {
         type: 'heading',
@@ -102,7 +102,7 @@ const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'At Talon & Tide, we meticulously vet each wildlife experience in our portfolio against stringent ethical criteria. We believe that extraordinary animal encounters and ethical practices are not mutually exclusive—in fact, the most memorable experiences often arise when animals are respected in their natural state.'
+        text: 'At Talon & Tide, we meticulously vet each wildlife experience in our portfolio against stringent ethical criteria. We believe that extraordinary animal encounters and ethical practices are not mutually exclusive - in fact, the most memorable experiences often arise when animals are respected in their natural state.'
       },
       {
         type: 'image',
@@ -112,7 +112,7 @@ const blogPosts = [
       },
       {
         type: 'paragraph',
-        text: 'By making informed choices about wildlife tourism, travelers become powerful advocates for conservation and animal welfare. Your decisions as a traveler directly influence the trajectory of wildlife tourism—a responsibility we believe is as profound as it is empowering.'
+        text: 'By making informed choices about wildlife tourism, travelers become powerful advocates for conservation and animal welfare. Your decisions as a traveler directly influence the trajectory of wildlife tourism - a responsibility we believe is as profound as it is empowering.'
       }
     ]
   },
@@ -278,7 +278,7 @@ const BlogPost = () => {
                     <blockquote key={index} className="border-l-4 border-talon-gold pl-6 py-1 my-8">
                       <p className="text-talon-navy/90 italic text-lg mb-2">{block.text}</p>
                       {block.author && (
-                        <cite className="text-talon-stone text-sm not-italic">— {block.author}</cite>
+                        <cite className="text-talon-stone text-sm not-italic"> -  {block.author}</cite>
                       )}
                     </blockquote>
                   );

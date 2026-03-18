@@ -60,7 +60,7 @@ const Index = () => {
               ?
             </h1>
             <p className="text-talon-ivory text-lg md:text-xl mb-10 max-w-xl font-light animate-fade-in drop-shadow-text tracking-wide" style={{ animationDelay: '200ms' }}>
-              The world's first platform for ethically vetted wildlife experiences — every operation personally evaluated by experienced wildlife professionals.
+              The world's first platform for ethically vetted wildlife experiences -  every operation personally evaluated by experienced wildlife professionals.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '400ms' }}>
               <a 
@@ -86,7 +86,7 @@ const Index = () => {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Shield, title: "Professionally Vetted", desc: "Every experience is personally evaluated by wildlife professionals with zoological expertise — never based on public reviews or marketing claims." },
+              { icon: Shield, title: "Professionally Vetted", desc: "Every experience is personally evaluated by wildlife professionals with zoological expertise -  never based on public reviews or marketing claims." },
               { icon: Eye, title: "Beyond the Brochure", desc: "We know the difference between genuine conservation and a good marketing team. Every listing is evaluated for real animal welfare impact." },
               { icon: Heart, title: "Conservation First", desc: "Only experiences that genuinely benefit wildlife, habitats, and the communities who protect them make it onto the platform." },
             ].map((item) => (
@@ -124,7 +124,7 @@ const Index = () => {
                 Talon & Tide is the only platform where every wildlife experience is vetted by professionals who've spent their careers working in conservation. No sponsored reviews. No guesswork. Just expert-curated encounters you can trust.
               </p>
               <p className="mb-8 animate-fade animate-delay-200 text-talon-navy/90 leading-relaxed">
-                Browse vetted safaris, zoo encounters, marine expeditions, and conservation missions — then book directly with the operators. We put the power back in your hands.
+                Browse vetted safaris, zoo encounters, marine expeditions, and conservation missions -  then book directly with the operators. We put the power back in your hands.
               </p>
               <a 
                 href={APP_URL} 
@@ -156,7 +156,7 @@ const Index = () => {
             {[
               {
                 title: "Signature Wildlife Journeys",
-                description: "Elevated, immersive itineraries in wild habitats. From tracking snow leopards to diving with whale sharks — vetted for ethics and unforgettable moments.",
+                description: "Elevated, immersive itineraries in wild habitats. From tracking snow leopards to diving with whale sharks -  vetted for ethics and unforgettable moments.",
                 image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1920&auto=format&fit=crop",
               },
               {
@@ -166,7 +166,7 @@ const Index = () => {
               },
               {
                 title: "Conservation Expeditions",
-                description: "Step into the field with real conservationists — from rhino dehorning to leopard collaring. These small group trips offer rare access few travelers ever witness.",
+                description: "Step into the field with real conservationists -  from rhino dehorning to leopard collaring. These small group trips offer rare access few travelers ever witness.",
                 image: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80",
               }
             ].map((category, index) => (
@@ -208,13 +208,13 @@ const Index = () => {
                 Built by a Zookeeper
               </h2>
               <p className="mb-6 animate-fade animate-delay-100 text-talon-navy/90 leading-relaxed">
-                After a decade in exotic animal care at top AZA-accredited facilities, founder Lindsay saw firsthand the difference between a moment that looks good on Instagram and one that actually <em>does</em> good — for animals, conservation, and local communities.
+                After a decade in exotic animal care at top AZA-accredited facilities, founder Lindsay saw firsthand the difference between a moment that looks good on Instagram and one that actually <em>does</em> good -  for animals, conservation, and local communities.
               </p>
               <p className="mb-6 animate-fade animate-delay-200 text-talon-navy/90 leading-relaxed">
-                Wildlife tourism is never going away — and it shouldn't. But not all encounters are created equal, and online reviews can't tell you the difference. That's why Lindsay built Talon & Tide.
+                Wildlife tourism is never going away -  and it shouldn't. But not all encounters are created equal, and online reviews can't tell you the difference. That's why Lindsay built Talon & Tide.
               </p>
               <blockquote className="border-l-4 border-talon-gold pl-6 italic text-talon-navy/80 text-lg mb-8 animate-fade animate-delay-300">
-                "The most incredible wildlife moments don't require a single compromise — not for the animals, not for the communities, and not for you."
+                "The most incredible wildlife moments don't require a single compromise -  not for the animals, not for the communities, and not for you."
               </blockquote>
               <Link to="/about" className="btn-secondary animate-fade animate-delay-400 group">
                 Read Our Full Story
@@ -247,7 +247,7 @@ const Index = () => {
               { number: "1", title: "Browse", description: "Explore vetted wildlife experiences by species, destination, or type on the Talon & Tide app." },
               { number: "2", title: "Discover", description: "Read expert insights, ethics notes, and conservation context for every experience." },
               { number: "3", title: "Save & Compare", description: "Build lists, follow species, and save your favorites. Upgrade for full access to booking details." },
-              { number: "4", title: "Book Direct", description: "Connect directly with operators. No middleman fees — just confidence that your choice is ethical." },
+              { number: "4", title: "Book Direct", description: "Connect directly with operators. No middleman fees -  just confidence that your choice is ethical." },
             ].map((step, index) => (
               <div key={index} className="text-center animate-fade" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="bg-talon-green text-talon-ivory h-16 w-16 rounded-full flex items-center justify-center text-2xl font-serif mb-6 mx-auto">
@@ -281,12 +281,12 @@ const Index = () => {
               Are You a Wildlife <span className="font-script text-script-lg text-talon-gold">Operator?</span>
             </h2>
             <p className="text-talon-ivory/80 text-lg mb-12 animate-fade animate-delay-100 max-w-2xl mx-auto">
-              From small rehabilitation centres to world-class safari lodges — if you're doing meaningful conservation work, 
+              From small rehabilitation centres to world-class safari lodges -  if you're doing meaningful conservation work, 
               we'd love to see it for ourselves. Our hosted editorial visits are how great operators get discovered.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {[
-                { icon: Globe, title: "Get Featured", desc: "We visit, experience your work firsthand, and create original editorial content — all at no cost to you." },
+                { icon: Globe, title: "Get Featured", desc: "We visit, experience your work firsthand, and create original editorial content -  all at no cost to you." },
                 { icon: Users, title: "Reach the Right Travelers", desc: "Your listing reaches conservation-minded travelers actively looking for ethical wildlife experiences." },
                 { icon: Handshake, title: "Optional Sponsorships", desc: "Boost visibility with promoted placement. Sponsorships never influence our editorial standards." },
               ].map((item) => (
@@ -319,7 +319,7 @@ const Index = () => {
               Choose Your <span className="font-script text-script-lg text-talon-gold">Path</span>
             </h2>
             <p className="max-w-2xl mx-auto text-talon-navy/80 text-lg animate-fade animate-delay-100">
-              From free browsing to full Conservationist access — the app has a plan for every explorer.
+              From free browsing to full Conservationist access -  the app has a plan for every explorer.
             </p>
           </div>
 
@@ -327,7 +327,7 @@ const Index = () => {
             {[
               { tier: "Visitor", price: "Free", desc: "Browse experiences, read ethics notes, and discover what's out there.", features: ["Browse all experiences", "Read ethics notes", "View categories"] },
               { tier: "Naturalist", price: "Free", desc: "Create an account to save favorites, follow species, and build lists.", features: ["Everything in Visitor", "Save to lists", "Follow species", "Species search"] },
-              { tier: "Conservationist", price: "From $4.99/mo", desc: "Full access — booking details, expert guides, priority support.", features: ["Everything in Naturalist", "Full booking details", "Supplier info & links", "Conservation field guides"] },
+              { tier: "Conservationist", price: "From $4.99/mo", desc: "Full access -  booking details, expert guides, priority support.", features: ["Everything in Naturalist", "Full booking details", "Supplier info & links", "Conservation field guides"] },
             ].map((plan, index) => (
               <div key={plan.tier} className={`card-luxury p-8 text-center animate-fade ${index === 2 ? 'ring-2 ring-talon-gold' : ''}`} style={{ animationDelay: `${index * 100}ms` }}>
                 {index === 2 && (
