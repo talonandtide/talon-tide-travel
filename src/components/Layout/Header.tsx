@@ -55,6 +55,7 @@ const Header = () => {
               href="https://www.instagram.com/talonandtide/" 
               target="_blank" 
               rel="noopener noreferrer"
+              aria-label="Follow Talon & Tide on Instagram"
               className={cn(
                 "hover:text-talon-gold transition-colors duration-300",
                 scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
