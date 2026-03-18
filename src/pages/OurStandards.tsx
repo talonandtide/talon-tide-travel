@@ -80,55 +80,6 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* What We Bring — Hosted Editorial Visits */}
-      <section className="py-20 bg-talon-green text-talon-ivory">
-        <div className="container max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-serif text-2xl md:text-3xl text-talon-ivory mb-4">What We <span className="font-script text-3xl md:text-4xl text-talon-gold">Bring</span> to Every Visit</h2>
-            <p className="text-talon-ivory/80 max-w-3xl mx-auto text-lg leading-relaxed">
-              A Talon & Tide editorial visit is part of how we vet experiences — and when an operator meets our standards, 
-              here's what they receive at no cost.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in">
-              <Camera className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">Original Photography & Video</h3>
-              <p className="text-talon-ivory/80 leading-relaxed">
-                We capture your operation through professional-quality original media — real moments, real animals, 
-                real conservation in action. Content you're welcome to use in your own marketing, too.
-              </p>
-            </div>
-            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <Star className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">Editorial Feature & App Listing</h3>
-              <p className="text-talon-ivory/80 leading-relaxed">
-                Operators who meet our standards receive a full editorial feature — written with professional wildlife knowledge — 
-                plus a dedicated listing on the Talon & Tide platform, seen by conservation-minded travelers actively 
-                looking for experiences like yours.
-              </p>
-            </div>
-            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <Globe className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">Multi-Channel Promotion</h3>
-              <p className="text-talon-ivory/80 leading-relaxed">
-                Featured operators are promoted across our social channels, email community, and the Talon & Tide app — 
-                reaching engaged audiences who care about ethical wildlife experiences.
-              </p>
-            </div>
-            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '300ms' }}>
-              <Heart className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">A Credible Endorsement</h3>
-              <p className="text-talon-ivory/80 leading-relaxed">
-                A Talon & Tide feature isn't a paid ad — it's an editorial endorsement from a team with real wildlife expertise. 
-                That distinction matters to the travelers who use our platform.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Hosted Editorial Visits — The Exchange */}
       <section className="py-20 bg-talon-sand/20">
         <div className="container max-w-6xl mx-auto px-4">
@@ -192,10 +143,58 @@ const OurStandards = () => {
             <Link
               to="/contact?subject=invite-visit"
               className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2">
-              
               Invite Us to Visit
               <ArrowRight size={18} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Bring */}
+      <section className="py-20 bg-talon-green text-talon-ivory">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="font-serif text-2xl md:text-3xl text-talon-ivory mb-4">What We <span className="font-script text-3xl md:text-4xl text-talon-gold">Bring</span> to Every Visit</h2>
+            <p className="text-talon-ivory/80 max-w-3xl mx-auto text-lg leading-relaxed">
+              A Talon & Tide editorial visit is part of how we vet experiences — and when an operator meets our standards, 
+              here's what they receive at no cost.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in">
+              <Camera className="text-talon-gold mb-4" size={28} />
+              <h3 className="font-serif text-xl text-talon-gold mb-3">Original Photography & Video</h3>
+              <p className="text-talon-ivory/80 leading-relaxed">
+                We capture your operation through professional-quality original media — real moments, real animals, 
+                real conservation in action. Content you're welcome to use in your own marketing, too.
+              </p>
+            </div>
+            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <Star className="text-talon-gold mb-4" size={28} />
+              <h3 className="font-serif text-xl text-talon-gold mb-3">Editorial Feature & App Listing</h3>
+              <p className="text-talon-ivory/80 leading-relaxed">
+                Operators who meet our standards receive a full editorial feature — written with professional wildlife knowledge — 
+                plus a dedicated listing on the Talon & Tide platform, seen by conservation-minded travelers actively 
+                looking for experiences like yours.
+              </p>
+            </div>
+            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <Globe className="text-talon-gold mb-4" size={28} />
+              <h3 className="font-serif text-xl text-talon-gold mb-3">Multi-Channel Promotion</h3>
+              <p className="text-talon-ivory/80 leading-relaxed">
+                Featured operators are promoted across our social channels, email community, and the Talon & Tide app — 
+                reaching engaged audiences who care about ethical wildlife experiences.
+              </p>
+            </div>
+            <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '300ms' }}>
+              <Heart className="text-talon-gold mb-4" size={28} />
+              <h3 className="font-serif text-xl text-talon-gold mb-3">A Credible Endorsement</h3>
+              <p className="text-talon-ivory/80 leading-relaxed">
+                A Talon & Tide feature isn't a paid ad — it's an editorial endorsement from a team with real wildlife expertise. 
+                That distinction matters to the travelers who use our platform.
+              </p>
+            </div>
           </div>
         </div>
       </section>
