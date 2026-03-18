@@ -94,22 +94,30 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* App Links */}
+          {/* For Travelers */}
           <div>
-            <h3 className="font-serif text-lg mb-4 text-talon-gold">The App</h3>
+            <h3 className="font-serif text-lg mb-4 text-talon-gold">For Travelers</h3>
             <nav className="flex flex-col gap-2">
               <a href={APP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
                 Explore Experiences <ExternalLink size={12} />
               </a>
-              <a href={`${APP_URL}/standards`} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
-                Our Vetting Process <ExternalLink size={12} />
+              <a href={`${APP_URL}/signup`} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
+                Create Free Account <ExternalLink size={12} />
               </a>
               <a href={`${APP_URL}/pricing`} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
                 Pricing & Plans <ExternalLink size={12} />
               </a>
-              <a href={`${APP_URL}/signup`} target="_blank" rel="noopener noreferrer" className="text-sm text-talon-ivory/80 hover:text-talon-gold transition-colors duration-300 flex items-center gap-1">
-                Create Free Account <ExternalLink size={12} />
-              </a>
+            </nav>
+          </div>
+
+          {/* For Operators */}
+          <div>
+            <h3 className="font-serif text-lg mb-4 text-talon-gold">For Operators</h3>
+            <nav className="flex flex-col gap-2">
+              <FooterLink to="/for-operators">Partner With Us</FooterLink>
+              <FooterLink to="/our-standards">Our Standards</FooterLink>
+              <FooterLink to="/contact?subject=invite-visit">Invite Us to Visit</FooterLink>
+              <FooterLink to="/contact?subject=sponsorship">Sponsorship Inquiry</FooterLink>
             </nav>
           </div>
           
