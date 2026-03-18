@@ -26,7 +26,7 @@ const OurStandards = () => {
             </p>
             <p className="text-talon-ivory/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
               Talon & Tide was founded by a former zookeeper with a decade of hands-on wildlife management experience.
-              We're not a review site — we're a platform built to recognize and amplify the operators doing 
+              We're not a review site  -  we're a platform built to recognize and amplify the operators doing 
               genuinely meaningful conservation work. When we feature your experience, it carries the weight of 
               professional understanding, not just a star rating.
             </p>
@@ -51,17 +51,17 @@ const OurStandards = () => {
             {
               icon: Eye,
               title: "We Research",
-              desc: "We identify operators doing exceptional conservation work — through our network, word of mouth, or operators reaching out directly. If you're doing great work, we want to hear about it."
+              desc: "We identify operators doing exceptional conservation work  -  through our network, word of mouth, or operators reaching out directly. If you're doing great work, we want to hear about it."
             },
             {
               icon: Camera,
               title: "We Experience It Firsthand",
-              desc: "Nothing replaces being there. We visit operators to experience the work up close — seeing the animals, meeting the teams, and understanding the story behind the conservation."
+              desc: "Nothing replaces being there. We visit operators to experience the work up close  -  seeing the animals, meeting the teams, and understanding the story behind the conservation."
             },
             {
               icon: Megaphone,
               title: "We Tell Your Story",
-              desc: "When an experience meets our standards, we promote it across everything we have — social media, our email community, and featured placement on the Talon & Tide platform."
+              desc: "When an experience meets our standards, we promote it across everything we have  -  social media, our email community, and featured placement on the Talon & Tide platform."
             }].
             map((item, index) =>
             <div key={item.title} className="card-luxury p-8 text-center hover:shadow-luxury-hover transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
@@ -76,14 +76,14 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* Hosted Editorial Visits — The Exchange */}
+      {/* Hosted Editorial Visits  -  The Exchange */}
       <section className="py-20 bg-talon-sand/20">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="section-title">Hosted Editorial <span className="font-script text-script-lg text-talon-gold">Visits</span></h2>
             <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
             <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              Great storytelling starts with being there. Our editorial visits are how we experience your work firsthand — 
+              Great storytelling starts with being there. Our editorial visits are how we experience your work firsthand  -  
               and for operators who meet our standards, we give that story the audience it deserves.
             </p>
           </div>
@@ -94,20 +94,20 @@ const OurStandards = () => {
               <div>
                 <h3 className="font-serif text-2xl text-talon-green mb-3">A Partnership, Not a Transaction</h3>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
-                  We work with operators of every size — from small rehabilitation centres and community-led tours 
+                  We work with operators of every size  -  from small rehabilitation centres and community-led tours 
                   to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
                   to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
                   and we get to see your work up close as part of our vetting process. For operators who meet our standards, 
                   that visit becomes the foundation for editorial coverage, original media, and ongoing promotion.
                 </p>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
-                  There's no fee for editorial visits. This is how responsible travel journalism works — 
+                  There's no fee for editorial visits. This is how responsible travel journalism works  -  
                   operators host, and editorial teams deliver honest coverage that drives real interest. 
                   It's a value exchange that benefits both sides, regardless of your marketing budget.
                 </p>
                 <p className="text-talon-navy/70 leading-relaxed text-sm italic">
                   Every feature on Talon & Tide begins with being there. That's what makes our recommendations 
-                  worth trusting — and what makes your listing stand out from anything else online.
+                  worth trusting  -  and what makes your listing stand out from anything else online.
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ const OurStandards = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-serif text-2xl md:text-3xl text-talon-ivory mb-4">What We <span className="font-script text-3xl md:text-4xl text-talon-gold">Bring</span> to Every Visit</h2>
             <p className="text-talon-ivory/80 max-w-3xl mx-auto text-lg leading-relaxed">
-              A Talon & Tide editorial visit is part of how we vet experiences — and when an operator meets our standards, 
+              A Talon & Tide editorial visit is part of how we vet experiences  -  and when an operator meets our standards, 
               here's what they receive at no cost.
             </p>
           </div>
@@ -162,7 +162,7 @@ const OurStandards = () => {
               <Camera className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">Original Media</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                We capture your operation through original photography and video — real moments, real animals, 
+                We capture your operation through original photography and video  -  real moments, real animals, 
                 real conservation in action. Content you're welcome to use in your own marketing, too.
               </p>
             </div>
@@ -178,7 +178,7 @@ const OurStandards = () => {
               <Globe className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">Multi-Channel Promotion</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                Featured operators are promoted across our social channels, email community, and the Talon & Tide app — 
+                Featured operators are promoted across our social channels, email community, and the Talon & Tide app  -  
                 reaching engaged audiences who care about ethical wildlife experiences.
               </p>
             </div>
@@ -186,7 +186,7 @@ const OurStandards = () => {
               <Heart className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">A Credible Endorsement</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                A Talon & Tide feature isn't a paid ad — it's an editorial endorsement from a team with real wildlife expertise. 
+                A Talon & Tide feature isn't a paid ad  -  it's an editorial endorsement from a team with real wildlife expertise. 
                 That distinction matters to the travelers who use our platform.
               </p>
             </div>
@@ -217,31 +217,31 @@ const OurStandards = () => {
             {[
             {
               q: "What does a hosted editorial visit involve?",
-              a: "We visit your operation as a guest — experiencing your tours, meeting your team, and seeing your conservation work up close. This is how we vet experiences firsthand. For operators who meet our standards, we produce a full editorial feature, original media, and a dedicated listing on the Talon & Tide platform. The whole process is collaborative, relaxed, and designed to tell your story authentically."
+              a: "We visit your operation as a guest  -  experiencing your tours, meeting your team, and seeing your conservation work up close. This is how we vet experiences firsthand. For operators who meet our standards, we produce a full editorial feature, original media, and a dedicated listing on the Talon & Tide platform. The whole process is collaborative, relaxed, and designed to tell your story authentically."
             },
             {
               q: "Do I need a marketing budget to work with Talon & Tide?",
-              a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
+              a: "Not at all. Editorial visits are provided at no cost  -  they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
             },
             {
-              q: "We're a small non-profit — is this really for us?",
+              q: "We're a small non-profit  -  is this really for us?",
               a: "Absolutely. We work with organisations of every size, from small rehabilitation centres and community-led tours to large safari lodges. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
             },
             {
               q: "What do you need from us during a visit?",
-              a: "Just access to your experience — whether that's a behind-the-scenes tour, a guest spot on a trip, or a VIP walkthrough of your facility. We handle all the content creation. Many operators find the visit is a genuinely enjoyable experience for their team, too."
+              a: "Just access to your experience  -  whether that's a behind-the-scenes tour, a guest spot on a trip, or a VIP walkthrough of your facility. We handle all the content creation. Many operators find the visit is a genuinely enjoyable experience for their team, too."
             },
             {
               q: "How is this different from a paid review or influencer visit?",
-              a: "Talon & Tide is an editorial platform, not an influencer channel. Our founder has a decade of wildlife management experience, and every feature is written with that background. We don't accept payment for editorial outcomes — our recommendations are based on what we experience firsthand, which is exactly why our users trust them."
+              a: "Talon & Tide is an editorial platform, not an influencer channel. Our founder has a decade of wildlife management experience, and every feature is written with that background. We don't accept payment for editorial outcomes  -  our recommendations are based on what we experience firsthand, which is exactly why our users trust them."
             },
             {
               q: "What are sponsorships, and are they separate from editorial visits?",
-              a: "Completely separate. Sponsorships are optional visibility tools — like promoted placement in search results or making your listing accessible to all users. They never influence our editorial decisions. Think of the editorial visit as the foundation, and sponsorships as an optional amplifier."
+              a: "Completely separate. Sponsorships are optional visibility tools  -  like promoted placement in search results or making your listing accessible to all users. They never influence our editorial decisions. Think of the editorial visit as the foundation, and sponsorships as an optional amplifier."
             },
             {
               q: "What happens if an operator doesn't meet your standards after a visit?",
-              a: "It's not a pass or fail — it's a conversation. If something doesn't align with our standards, we'll share honest, constructive feedback privately. Many operators use that insight to strengthen their offering and reconnect with us down the line. Our goal is always to support great conservation work, and sometimes that means helping operators get there rather than simply turning them away."
+              a: "It's not a pass or fail  -  it's a conversation. If something doesn't align with our standards, we'll share honest, constructive feedback privately. Many operators use that insight to strengthen their offering and reconnect with us down the line. Our goal is always to support great conservation work, and sometimes that means helping operators get there rather than simply turning them away."
             }].
             map((item, i) =>
             <AccordionItem key={i} value={`faq-${i}`} className="card-luxury px-6 border-none">
