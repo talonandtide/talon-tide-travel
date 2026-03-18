@@ -86,7 +86,7 @@ const Footer = () => {
           {/* Navigation */}
           <div>
             <h3 className="font-serif text-lg mb-4 text-talon-gold">Navigation</h3>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
               <FooterLink to="/">Home</FooterLink>
               <FooterLink to="/about">About</FooterLink>
               <FooterLink to="/our-standards">Our Standards</FooterLink>
