@@ -143,6 +143,9 @@ const Footer = () => {
           <p className="text-xs text-talon-ivory/60">
             &copy; {new Date().getFullYear()} Talon & Tide. All rights reserved.
           </p>
+          <p className="text-xs text-talon-ivory/60">
+            Wildlife photographer? <Link to="/contact?subject=photographer-collaboration" className="text-talon-gold hover:text-talon-ivory transition-colors">We'd love to collaborate.</Link>
+          </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-talon-ivory/60 hover:text-talon-gold">Privacy Policy</a>
             <a href="#" className="text-xs text-talon-ivory/60 hover:text-talon-gold">Terms of Service</a>
