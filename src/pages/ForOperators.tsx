@@ -7,6 +7,11 @@ import usePageMeta from '@/hooks/usePageMeta';
 const APP_URL = 'https://app.talonandtide.com';
 
 const ForOperators = () => {
+  usePageMeta({
+    title: 'For Operators',
+    description: 'Partner with Talon & Tide. Get your wildlife experience listed, invite us for a hosted editorial visit, or explore sponsorship options.'
+  });
+
   return (
     <Layout>
       {/* Hero */}

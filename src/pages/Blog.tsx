@@ -78,6 +78,11 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  usePageMeta({
+    title: 'Field Notes',
+    description: 'Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters from the Talon & Tide editorial team.'
+  });
+
   return (
     <Layout>
       {/* Header */}

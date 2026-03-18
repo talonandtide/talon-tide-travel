@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import usePageMeta from '@/hooks/usePageMeta';
 
 const About = () => {
+  usePageMeta({
+    title: 'Our Story',
+    description: 'Founded by a former zookeeper with a decade of hands-on experience, Talon & Tide bridges the gap between luxury travel and ethical wildlife tourism.'
+  });
+
   return (
     <Layout>
       {/* Hero Section */}

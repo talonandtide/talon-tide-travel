@@ -7,6 +7,11 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/
 import usePageMeta from '@/hooks/usePageMeta';
 
 const OurStandards = () => {
+  usePageMeta({
+    title: 'Our Standards',
+    description: 'How Talon & Tide finds, experiences, and champions the world\'s best wildlife operators through firsthand editorial visits and professional vetting.'
+  });
+
   return (
     <Layout>
       {/* Hero Section */}

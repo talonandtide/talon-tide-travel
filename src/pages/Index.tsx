@@ -12,6 +12,10 @@ const APP_URL = 'https://app.talonandtide.com';
 const animals = ['golden eagle', 'reindeer', 'manta ray', 'flying fox', 'ibex', 'tiger', 'narwhal', 'pangolin', 'snow leopard', 'humpback whale'];
 
 const Index = () => {
+  usePageMeta({
+    title: 'Talon & Tide',
+    description: 'The world\'s first platform for ethically vetted wildlife experiences. Every safari, zoo encounter, and conservation expedition is personally evaluated by wildlife professionals.'
+  });
   const [currentAnimal, setCurrentAnimal] = useState(0);
 
   useEffect(() => {
