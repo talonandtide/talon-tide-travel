@@ -9,16 +9,24 @@ const ForOperators = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-24 bg-talon-sand/30">
-        <div className="container">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?q=80&w=1920&auto=format&fit=crop" 
+            alt="Giraffe silhouettes against a dramatic African sunset" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/70 via-talon-midnight/50 to-talon-midnight/70" />
+        </div>
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-ivory mb-6 animate-fade-in">
               For <span className="font-script text-script-lg text-talon-gold">Operators</span>
             </h1>
-            <p className="text-lg text-talon-navy/80 mb-6 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg text-talon-ivory/80 mb-6 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Whether you run a small rehabilitation centre or a world-class safari lodge — if you're doing meaningful conservation work, we want to help more travelers find you.
             </p>
-            <p className="text-talon-navy/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <p className="text-talon-ivory/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
               Talon & Tide isn't a booking engine or a review aggregator. We're a curated platform where every listing is editorially vetted by wildlife specialists. When we reach out, it's because we recognize the important work you're doing.
             </p>
           </div>
