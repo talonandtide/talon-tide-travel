@@ -205,7 +205,8 @@ const OurStandards = () => {
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
         <img 
           src="https://images.unsplash.com/photo-1535338454528-1b22a21e1ffa?q=80&w=1920&auto=format&fit=crop" 
-          alt="Sea turtle gliding through crystal clear water" 
+          alt="Sea turtle gliding through crystal clear water"
+                loading="lazy" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/20 via-transparent to-talon-midnight/20" />

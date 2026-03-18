@@ -76,7 +76,8 @@ const About = () => {
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
         <img 
           src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=1920&auto=format&fit=crop" 
-          alt="Wild horses running across a misty plain" 
+          alt="Wild horses running across a misty plain"
+                loading="lazy" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/10 via-transparent to-talon-midnight/10" />

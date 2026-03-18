@@ -145,7 +145,8 @@ const ForOperators = () => {
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
         <img 
           src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1920&auto=format&fit=crop" 
-          alt="Tiger walking through lush forest" 
+          alt="Tiger walking through lush forest"
+                loading="lazy" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/20 via-transparent to-talon-midnight/20" />
