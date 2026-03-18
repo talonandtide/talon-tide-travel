@@ -41,7 +41,7 @@ const ForOperators = () => {
               { icon: BarChart3, title: "Targeted Visibility", desc: "Your experience is seen by travelers actively searching for vetted, ethical wildlife encounters — not mass tourists." },
               { icon: Globe, title: "Global Reach", desc: "We feature experiences across safaris, marine expeditions, zoo encounters, and conservation field missions worldwide." },
               { icon: Handshake, title: "Long-Term Partnership", desc: "We build ongoing relationships with operators — supporting your conservation story and connecting you with aligned travelers." },
-              { icon: CheckCircle, title: "Professional Vetting", desc: "Founded by a former AZA zookeeper. Every evaluation draws on professional wildlife management expertise." },
+              { icon: CheckCircle, title: "Professional Vetting", desc: "Founded by a former AZA zookeeper. Every evaluation draws on real wildlife management experience." },
             ].map((item, index) => (
               <div key={item.title} className="card-luxury p-8 hover:shadow-luxury-hover transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 80}ms` }}>
                 <div className="flex items-center gap-4 mb-4">
