@@ -118,6 +118,7 @@ const Contact = () => {
                       <SelectItem value="operator-submission">Submit my experience for review</SelectItem>
                       <SelectItem value="hosted-trips">Hosted trip partnership</SelectItem>
                       <SelectItem value="sponsorship">Sponsorship inquiry</SelectItem>
+                      <SelectItem value="photographer-collaboration">Photography collaboration</SelectItem>
                       <SelectItem value="report-concern">Report a concern about a listing</SelectItem>
                       <SelectItem value="press">Press & media</SelectItem>
                       <SelectItem value="general">General inquiry</SelectItem>
