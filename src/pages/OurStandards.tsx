@@ -330,7 +330,7 @@ const OurStandards = () => {
               to="/contact?subject=operator-submission"
               className="btn-secondary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300">
               
-              Get in Touch
+              Ask a Question
             </Link>
           </div>
         </div>
