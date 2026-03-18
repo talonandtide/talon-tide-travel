@@ -162,9 +162,8 @@ const OurStandards = () => {
               <Star className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">Editorial Feature & App Listing</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                Operators who meet our standards receive a full editorial feature — written with professional wildlife knowledge — 
-                plus a dedicated listing on the Talon & Tide platform, seen by conservation-minded travelers actively 
-                looking for experiences like yours.
+                Operators who meet our standards receive an editorial feature and a dedicated listing on the Talon & Tide platform, 
+                seen by conservation-minded travelers actively looking for experiences like yours.
               </p>
             </div>
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '200ms' }}>
