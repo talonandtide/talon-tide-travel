@@ -90,11 +90,11 @@ const OurStandards = () => {
                   to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
                   to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
                   and we get to see your work up close as part of our vetting process. For operators who meet our standards, 
-                  that visit becomes the foundation for professional editorial coverage, original media, and ongoing promotion.
+                  that visit becomes the foundation for editorial coverage, original media, and ongoing promotion.
                 </p>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
                   There's no fee for editorial visits. This is how responsible travel journalism works — 
-                  operators host, and editorial teams deliver honest, expert coverage that drives real interest. 
+                  operators host, and editorial teams deliver honest coverage that drives real interest. 
                   It's a value exchange that benefits both sides, regardless of your marketing budget.
                 </p>
                 <p className="text-talon-navy/70 leading-relaxed text-sm italic">
@@ -152,9 +152,9 @@ const OurStandards = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in">
               <Camera className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">Original Photography & Video</h3>
+              <h3 className="font-serif text-xl text-talon-gold mb-3">Original Media</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                We capture your operation through professional-quality original media — real moments, real animals, 
+                We capture your operation through original photography and video — real moments, real animals, 
                 real conservation in action. Content you're welcome to use in your own marketing, too.
               </p>
             </div>
@@ -162,9 +162,8 @@ const OurStandards = () => {
               <Star className="text-talon-gold mb-4" size={28} />
               <h3 className="font-serif text-xl text-talon-gold mb-3">Editorial Feature & App Listing</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                Operators who meet our standards receive a full editorial feature — written with professional wildlife knowledge — 
-                plus a dedicated listing on the Talon & Tide platform, seen by conservation-minded travelers actively 
-                looking for experiences like yours.
+                Operators who meet our standards receive an editorial feature and a dedicated listing on the Talon & Tide platform, 
+                seen by conservation-minded travelers actively looking for experiences like yours.
               </p>
             </div>
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '200ms' }}>
