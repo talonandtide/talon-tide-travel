@@ -268,7 +268,7 @@ const OurStandards = () => {
             {[
               {
                 q: "What does a hosted editorial visit involve?",
-                a: "We visit your operation as a guest — experiencing your tours, meeting your team, and seeing your conservation work up close. This is how we vet experiences firsthand. For operators who meet our standards, we produce a full editorial feature, original media, and a dedicated listing on the Talon & Tide platform. The whole process is collaborative, relaxed, and designed to tell your story authentically."
+                a: "We arrive and experience your operation as close to a regular guest as possible — that way, what we publish genuinely reflects what your visitors can expect. We capture content naturally as we go, and for operators who meet our standards, that visit becomes a full editorial feature, original content, and a dedicated listing on the Talon & Tide platform. The whole process is easy, relaxed, and designed to tell your story authentically."
               },
               {
                 q: "Do I need a marketing budget to work with Talon & Tide?",
