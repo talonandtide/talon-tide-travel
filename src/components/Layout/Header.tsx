@@ -91,7 +91,7 @@ const Header = () => {
           "fixed inset-0 bg-talon-green/95 backdrop-blur-sm flex flex-col justify-center items-center gap-8 transition-all duration-500 lg:hidden",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         )}>
-          <nav className="flex flex-col items-center gap-6 text-talon-ivory">
+          <nav className="flex flex-col items-center gap-6 text-talon-ivory" aria-label="Mobile navigation">
             <NavLinks mobile />
           </nav>
           <div className="flex flex-col items-center gap-4">
