@@ -16,7 +16,7 @@ const ForOperators = () => {
               For <span className="font-script text-script-lg text-talon-gold">Operators</span>
             </h1>
             <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              Partner with the platform built to connect ethical wildlife operators with travelers who value conservation over convenience.
+              Whether you run a small rehabilitation centre or a world-class safari lodge — if you're doing meaningful conservation work, we want to help more travelers find you.
             </p>
           </div>
         </div>
