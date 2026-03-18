@@ -9,26 +9,14 @@ const OurStandards = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-24 bg-talon-sand/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our <span className="font-script text-script-lg text-talon-gold">Standards</span></h1>
-            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg text-talon-navy/80 mb-8 animate-fade-in" style={{ animationDelay: '200ms' }}>
               How we find, experience, and champion the world's best wildlife operators.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why We're Different */}
-      <section className="py-20 bg-talon-ivory">
-        <div className="container max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">
-              Why Talon & Tide is <span className="font-script text-script-lg text-talon-gold">Different</span>
-            </h2>
-            <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
-            <p className="text-lg text-talon-navy leading-relaxed font-light max-w-4xl mx-auto">
+            <p className="text-talon-navy/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
               Talon & Tide was founded by a former zookeeper with a decade of hands-on wildlife management experience.
               We're not a review site — we're a platform built to recognize and amplify the operators doing 
               genuinely meaningful conservation work. When we feature your experience, it carries the weight of 
