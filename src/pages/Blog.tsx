@@ -80,13 +80,21 @@ const Blog = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
-        <div className="container">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?q=80&w=1920&auto=format&fit=crop" 
+            alt="Flock of flamingos in golden light" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/70 via-talon-midnight/50 to-talon-midnight/70" />
+        </div>
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-ivory mb-6 animate-fade-in">
               Field <span className="font-script text-script-lg text-talon-gold">Notes</span>
             </h1>
-            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-lg text-talon-ivory/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters.
             </p>
           </div>
