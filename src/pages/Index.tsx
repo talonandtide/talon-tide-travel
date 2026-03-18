@@ -125,11 +125,11 @@ const Index = () => {
               <h2 className="font-serif text-4xl text-talon-green mb-6 animate-fade">
                 The Platform for <span className="font-script text-script-lg text-talon-gold">Ethical Wildlife Travel</span>
               </h2>
-              <p className="mb-6 animate-fade animate-delay-100 text-talon-navy/90 leading-relaxed">
-                Talon & Tide is the only platform where every wildlife experience is vetted by professionals who've spent their careers working in conservation. No sponsored reviews. No guesswork. Just expert-curated encounters you can trust.
+              <p className="mb-6 animate-fade animate-delay-100 text-talon-navy/90 leading-relaxed">Talon & Tide is the only platform where every wildlife experience is vetted by professionals who've spent their careers working in conservation. 
+
               </p>
-              <p className="mb-8 animate-fade animate-delay-200 text-talon-navy/90 leading-relaxed">
-                Browse vetted safaris, zoo encounters, marine expeditions, and conservation missions -  then book directly with the operators. We put the power back in your hands.
+              <p className="mb-8 animate-fade animate-delay-200 text-talon-navy/90 leading-relaxed">Browse vetted safari operators, zoo encounters, marine expeditions, and conservation missions - then book directly with the operators. We put the power back in your hands.
+
               </p>
               <a
                 href={APP_URL}
