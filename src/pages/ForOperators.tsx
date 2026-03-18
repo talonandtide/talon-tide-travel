@@ -75,7 +75,7 @@ const ForOperators = () => {
                 Submit your wildlife experience for editorial review. Our vetting process is entirely editorial — no payment is required or accepted to be considered for listing.
               </p>
               <ul className="space-y-2 mb-8">
-                {["Free to submit", "Editorial review by wildlife professionals", "Transparent ethics notes on every listing", "Direct booking links to your site"].map(item => (
+                {["Free to submit", "Editorial review by wildlife specialists", "Transparent ethics notes on every listing", "Direct booking links to your site"].map(item => (
                   <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
                     <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
                     {item}
