@@ -276,7 +276,7 @@ const OurStandards = () => {
             },
             {
               q: "We're a small non-profit — is this really for us?",
-              a: "Absolutely. We work with organisations of every size, from small rehabilitation centres and community-led tours to large safari lodges. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
+              a: "Absolutely! We work with organisations of every size, from small rehabilitation centers and zoo tours to large safari lodges and five-star resorts. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
             },
             {
               q: "What do you need from us during a visit?",
