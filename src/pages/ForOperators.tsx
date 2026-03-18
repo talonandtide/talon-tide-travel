@@ -141,7 +141,7 @@ const ForOperators = () => {
           </h2>
           <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed mb-8">
             Every listing on Talon & Tide starts with a hosted editorial visit — we experience your work firsthand, 
-            create professional content, and tell your story to conservation-minded travelers. No fees, no crews, 
+            create original content, and tell your story to conservation-minded travelers. No fees, no crews, 
             just a relaxed guest experience that becomes the foundation for everything we publish.
           </p>
           <div className="grid md:grid-cols-2 gap-8 mb-10">
