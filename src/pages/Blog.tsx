@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '@/components/Layout/Layout';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '@/hooks/usePageMeta';
 
 const blogPosts = [
   {
@@ -77,6 +78,11 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  usePageMeta({
+    title: 'Field Notes',
+    description: 'Insights, guides, and stories exploring the intersection of luxury and ethical wildlife encounters from the Talon & Tide editorial team.'
+  });
+
   return (
     <Layout>
       {/* Header */}

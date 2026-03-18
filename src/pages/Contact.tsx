@@ -8,10 +8,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useLocation } from 'react-router-dom';
+import usePageMeta from '@/hooks/usePageMeta';
 
 const APP_URL = 'https://app.talonandtide.com';
 
 const Contact = () => {
+  usePageMeta({
+    title: 'Contact',
+    description: 'Get in touch with Talon & Tide for operator partnerships, hosted visit inquiries, sponsorships, press inquiries, or general questions.'
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [subject, setSubject] = useState('');
   const location = useLocation();

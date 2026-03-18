@@ -77,18 +77,22 @@ const Newsletter = () => {
           <p className="text-talon-ivory/90 text-lg mb-12 leading-relaxed animate-fade animate-delay-100">
             Subscribe for exclusive updates, ethical travel insights, and be the first to know when our carefully curated experiences are available for booking.
           </p>
-          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 animate-fade animate-delay-200">
+          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 animate-fade animate-delay-200" aria-label="Newsletter signup">
+            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
             <input
+              id="newsletter-email"
               type="email"
               placeholder="Your email address"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              aria-label="Email address for newsletter"
               className="flex-grow bg-talon-navy/30 border border-talon-ivory/30 rounded-sm px-6 py-4 focus:outline-none focus:border-talon-gold text-talon-ivory placeholder:text-talon-ivory/50 shadow-lg"
             />
             <button 
               type="submit"
               disabled={isSubmitting}
+              aria-label="Subscribe to newsletter"
               className="bg-talon-gold hover:bg-talon-gold/80 text-talon-green flex items-center justify-center gap-2 px-8 py-4 rounded-sm transition-colors duration-300 uppercase tracking-wide text-sm font-medium shadow-lg group disabled:opacity-70"
             >
               {isSubmitting ? 'Subscribing...' : 'Subscribe'}

@@ -6,21 +6,25 @@ const instagramPosts = [
   {
     id: 1,
     image: 'https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2054&q=80',
+    alt: 'Orangutan in natural rainforest habitat',
     likes: 324,
   },
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1510534318579-6cac80f6d702?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80',
+    alt: 'Sea lion resting on rocky coastline',
     likes: 156,
   },
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1484494789010-20fc1a011197?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80',
+    alt: 'Red panda perched on a tree branch',
     likes: 289,
   },
   {
     id: 4,
     image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2559&q=80',
+    alt: 'Lion gazing across the African savanna at sunset',
     likes: 412,
   },
 ];
@@ -54,7 +58,8 @@ const InstagramFeed = () => {
             >
               <img 
                 src={post.image} 
-                alt="Instagram Post" 
+                alt={post.alt}
+                loading="lazy"
                 className="w-full h-56 object-cover"
               />
               <div className="absolute inset-0 bg-talon-green/40 hover:bg-talon-green/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300">

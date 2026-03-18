@@ -4,8 +4,14 @@ import Layout from '@/components/Layout/Layout';
 import { Link } from 'react-router-dom';
 import { Shield, Award, Users, CheckCircle, ArrowRight, Sparkles, Eye, Heart, Star, Camera, Globe, Megaphone, Handshake } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import usePageMeta from '@/hooks/usePageMeta';
 
 const OurStandards = () => {
+  usePageMeta({
+    title: 'Our Standards',
+    description: 'How Talon & Tide finds, experiences, and champions the world\'s best wildlife operators through firsthand editorial visits and professional vetting.'
+  });
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -199,7 +205,8 @@ const OurStandards = () => {
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
         <img 
           src="https://images.unsplash.com/photo-1535338454528-1b22a21e1ffa?q=80&w=1920&auto=format&fit=crop" 
-          alt="Sea turtle gliding through crystal clear water" 
+          alt="Sea turtle gliding through crystal clear water"
+                loading="lazy" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/20 via-transparent to-talon-midnight/20" />

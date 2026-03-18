@@ -50,7 +50,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-talon-green text-talon-ivory py-16">
+    <footer className="bg-talon-green text-talon-ivory py-16" role="contentinfo">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Column */}
@@ -68,12 +68,14 @@ const Footer = () => {
                 href="https://www.instagram.com/talonandtide/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Follow Talon & Tide on Instagram"
                 className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
               >
                 <Instagram size={20} />
               </a>
               <a 
                 href="mailto:hello@talonandtide.com" 
+                aria-label="Email Talon & Tide"
                 className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
               >
                 <Mail size={20} />
@@ -84,7 +86,7 @@ const Footer = () => {
           {/* Navigation */}
           <div>
             <h3 className="font-serif text-lg mb-4 text-talon-gold">Navigation</h3>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
               <FooterLink to="/">Home</FooterLink>
               <FooterLink to="/about">About</FooterLink>
               <FooterLink to="/our-standards">Our Standards</FooterLink>
@@ -128,18 +130,22 @@ const Footer = () => {
               Sign up for exclusive insights into ethical wildlife travel and new experiences.
             </p>
             <form className="flex gap-2 mt-4" onSubmit={handleSubmit}>
+              <label htmlFor="footer-email" className="sr-only">Email address</label>
               <input 
+                id="footer-email"
                 type="email" 
                 placeholder="Your email" 
                 className="bg-talon-navy/30 text-talon-ivory placeholder:text-talon-ivory/50 border border-talon-ivory/20 px-3 py-2 rounded-sm flex-grow focus:outline-none focus:border-talon-gold"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                aria-label="Email address for newsletter"
               />
               <button 
                 type="submit" 
                 className="bg-talon-gold hover:bg-talon-gold/80 text-talon-green px-4 py-2 rounded-sm transition-colors duration-300 flex items-center"
                 disabled={isSubmitting}
+                aria-label="Subscribe to newsletter"
               >
                 {isSubmitting ? '...' : <ArrowRight size={16} />}
               </button>
