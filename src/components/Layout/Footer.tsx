@@ -68,12 +68,14 @@ const Footer = () => {
                 href="https://www.instagram.com/talonandtide/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Follow Talon & Tide on Instagram"
                 className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
               >
                 <Instagram size={20} />
               </a>
               <a 
                 href="mailto:hello@talonandtide.com" 
+                aria-label="Email Talon & Tide"
                 className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
               >
                 <Mail size={20} />
