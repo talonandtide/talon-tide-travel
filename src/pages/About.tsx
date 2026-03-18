@@ -152,8 +152,8 @@ const About = () => {
                 </div>
               </li>
             </ul>
-            <div className="text-center animate-fade animate-delay-600">
-              <a href="https://app.talonandtide.com/explore" target="_blank" rel="noopener noreferrer" className="btn-secondary group">
+            <div className="flex flex-wrap gap-4 justify-center animate-fade animate-delay-600">
+              <a href="https://app.talonandtide.com/explore" target="_blank" rel="noopener noreferrer" className="btn-primary group">
                 Explore Experiences on the App
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
@@ -162,22 +162,38 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Affiliations */}
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+      {/* Dual CTA */}
+      <section className="py-20 bg-talon-sand/30">
+        <div className="container max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="card-luxury p-10 text-center">
+              <h3 className="font-serif text-2xl text-talon-green mb-4">For Travelers</h3>
+              <p className="text-talon-navy/80 leading-relaxed mb-6">
+                Browse vetted wildlife experiences and book directly with operators you can trust.
+              </p>
+              <a 
+                href="https://app.talonandtide.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary group"
+              >
+                Explore the App
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            <div className="card-luxury p-10 text-center">
+              <h3 className="font-serif text-2xl text-talon-green mb-4">For Operators</h3>
+              <p className="text-talon-navy/80 leading-relaxed mb-6">
+                Get your conservation work in front of travelers who value ethics. No fees to be listed.
+              </p>
+              <Link to="/for-operators" className="btn-secondary group">
+                Partner With Us
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>);
 
 };

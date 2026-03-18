@@ -281,13 +281,14 @@ const Index = () => {
               Are You a Wildlife <span className="font-script text-script-lg text-talon-gold">Operator?</span>
             </h2>
             <p className="text-talon-ivory/80 text-lg mb-12 animate-fade animate-delay-100 max-w-2xl mx-auto">
-              Talon & Tide connects ethically-minded travelers with operators doing meaningful conservation work. Get featured, host trips, or explore sponsorship opportunities.
+              From small rehabilitation centres to world-class safari lodges — if you're doing meaningful conservation work, 
+              we'd love to see it for ourselves. Our hosted editorial visits are how great operators get discovered.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {[
-                { icon: Globe, title: "Get Listed", desc: "Submit your experience for editorial review and reach travelers who value ethics over price." },
-                { icon: Users, title: "Hosted Trips", desc: "Partner with us to offer exclusive small-group conservation expeditions through the platform." },
-                { icon: Handshake, title: "Sponsorships", desc: "Increase visibility with promoted placement. Sponsorships never influence our editorial standards." },
+                { icon: Globe, title: "Get Featured", desc: "We visit, experience your work firsthand, and create professional editorial content — all at no cost to you." },
+                { icon: Users, title: "Reach the Right Travelers", desc: "Your listing reaches conservation-minded travelers actively looking for ethical wildlife experiences." },
+                { icon: Handshake, title: "Optional Sponsorships", desc: "Boost visibility with promoted placement. Sponsorships never influence our editorial standards." },
               ].map((item) => (
                 <div key={item.title} className="bg-talon-navy/20 p-8 rounded-sm animate-fade">
                   <item.icon className="text-talon-gold mb-4" size={32} />
@@ -296,10 +297,16 @@ const Index = () => {
                 </div>
               ))}
             </div>
-            <Link to="/for-operators" className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-8 py-4 rounded-sm text-lg font-medium transition-colors duration-300 inline-flex items-center gap-2">
-              Learn More
-              <ArrowRight size={18} />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/for-operators" className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-8 py-4 rounded-sm text-lg font-medium transition-colors duration-300 inline-flex items-center gap-2">
+                Partner With Us
+                <ArrowRight size={18} />
+              </Link>
+              <Link to="/our-standards" className="border border-talon-ivory/30 hover:bg-talon-ivory/10 text-talon-ivory px-8 py-4 rounded-sm text-lg font-medium transition-colors duration-300 inline-flex items-center gap-2">
+                Our Standards
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

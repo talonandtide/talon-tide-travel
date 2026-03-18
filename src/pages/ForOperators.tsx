@@ -133,18 +133,25 @@ const ForOperators = () => {
         </div>
       </section>
 
-      {/* What Listing Means */}
+      {/* Hosted Editorial Visits Teaser */}
       <section className="py-20 bg-talon-sand/20">
-        <div className="container max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="container max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6">
+            How We <span className="font-script text-script-lg text-talon-gold">Vet</span> Experiences
+          </h2>
+          <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed mb-8">
+            Every listing on Talon & Tide starts with a hosted editorial visit — we experience your work firsthand, 
+            create professional content, and tell your story to conservation-minded travelers. No fees, no crews, 
+            just a relaxed guest experience that becomes the foundation for everything we publish.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
             <div className="card-luxury p-8">
               <h3 className="font-serif text-2xl text-talon-green mb-6">What Listing Means for You</h3>
-              <ul className="space-y-3 text-talon-navy">
+              <ul className="space-y-3 text-talon-navy text-left">
                 {[
                   "Recognition as a conservation leader in your field",
                   "Access to conservation-minded, respectful travelers",
-                  "Opportunity to share your mission with engaged audiences",
-                  "Support for your educational and conservation goals",
+                  "Professional editorial content you can use too",
                   "Direct booking links — we never take a cut",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
@@ -157,13 +164,12 @@ const ForOperators = () => {
 
             <div className="card-luxury p-8">
               <h3 className="font-serif text-2xl text-talon-green mb-6">Our Commitment to You</h3>
-              <ul className="space-y-3 text-talon-navy">
+              <ul className="space-y-3 text-talon-navy text-left">
                 {[
-                  "Respectful, professional collaboration",
-                  "Understanding of your operational realities",
-                  "Promotion of your conservation story",
-                  "Long-term partnership mindset",
+                  "Respectful, low-impact visits — no production setups",
                   "Transparent editorial process — no hidden criteria",
+                  "Promotion across our platform and channels",
+                  "Long-term partnership mindset",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle size={20} className="text-talon-gold mt-1 flex-shrink-0" />
@@ -173,6 +179,10 @@ const ForOperators = () => {
               </ul>
             </div>
           </div>
+          <Link to="/our-standards" className="btn-secondary group">
+            Read About Our Standards & Process
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </section>
 
