@@ -130,18 +130,22 @@ const Footer = () => {
               Sign up for exclusive insights into ethical wildlife travel and new experiences.
             </p>
             <form className="flex gap-2 mt-4" onSubmit={handleSubmit}>
+              <label htmlFor="footer-email" className="sr-only">Email address</label>
               <input 
+                id="footer-email"
                 type="email" 
                 placeholder="Your email" 
                 className="bg-talon-navy/30 text-talon-ivory placeholder:text-talon-ivory/50 border border-talon-ivory/20 px-3 py-2 rounded-sm flex-grow focus:outline-none focus:border-talon-gold"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                aria-label="Email address for newsletter"
               />
               <button 
                 type="submit" 
                 className="bg-talon-gold hover:bg-talon-gold/80 text-talon-green px-4 py-2 rounded-sm transition-colors duration-300 flex items-center"
                 disabled={isSubmitting}
+                aria-label="Subscribe to newsletter"
               >
                 {isSubmitting ? '...' : <ArrowRight size={16} />}
               </button>
