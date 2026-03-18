@@ -157,7 +157,7 @@ const Index = () => {
               {
                 title: "Signature Wildlife Journeys",
                 description: "Elevated, immersive itineraries in wild habitats. From tracking snow leopards to diving with whale sharks — vetted for ethics and unforgettable moments.",
-                image: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1976&q=80",
+                image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1920&auto=format&fit=crop",
               },
               {
                 title: "Zoo & Aquarium Encounters",
