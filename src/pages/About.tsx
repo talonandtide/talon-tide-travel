@@ -8,11 +8,19 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-talon-sand/30">
-        <div className="container">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1920&auto=format&fit=crop" 
+            alt="Elephants walking at golden hour" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/70 via-talon-midnight/50 to-talon-midnight/70" />
+        </div>
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl text-talon-green mb-6 animate-fade-in">Our <span className="font-script text-script-lg text-talon-gold">Story</span></h1>
-            <p className="text-lg text-talon-navy/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <h1 className="font-serif text-4xl md:text-5xl text-talon-ivory mb-6 animate-fade-in">Our <span className="font-script text-script-lg text-talon-gold">Story</span></h1>
+            <p className="text-lg text-talon-ivory/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
               Where passion for wildlife conservation meets luxury travel expertise.
             </p>
           </div>

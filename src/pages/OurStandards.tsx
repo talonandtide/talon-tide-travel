@@ -195,6 +195,16 @@ const OurStandards = () => {
       </section>
 
 
+      {/* Cinematic Image Break */}
+      <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1535338454528-1b22a21e1ffa?q=80&w=1920&auto=format&fit=crop" 
+          alt="Sea turtle gliding through crystal clear water" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-talon-midnight/20 via-transparent to-talon-midnight/20" />
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="container max-w-4xl mx-auto px-4">
