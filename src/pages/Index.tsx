@@ -91,7 +91,7 @@ const Index = () => {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-            { icon: Shield, title: "Professionally Vetted", desc: "Every experience is personally evaluated by wildlife professionals with zoological expertise -  never based on public reviews or marketing claims." },
+            { icon: Shield, title: "Professionally Vetted", desc: "Every experience is personally evaluated by wildlife professionals in animal care, conservation, research, and veterinary fields -  never based on public reviews or marketing claims." },
             { icon: Eye, title: "Beyond the Brochure", desc: "We know the difference between genuine conservation and a good marketing team. Every listing is evaluated for real animal welfare impact." },
             { icon: Heart, title: "Conservation First", desc: "Only experiences that genuinely benefit wildlife, habitats, and the communities who protect them make it onto the platform." }].
             map((item) =>
