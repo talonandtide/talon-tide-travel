@@ -187,8 +187,6 @@ const OurStandards = () => {
       </section>
 
 
-
-
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="container max-w-4xl mx-auto px-4">
