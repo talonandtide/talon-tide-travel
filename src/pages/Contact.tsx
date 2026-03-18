@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout/Layout';
-import { Mail, Instagram, MapPin, ArrowRight, ExternalLink } from 'lucide-react';
+import { Mail, Instagram, MapPin, ArrowRight, ExternalLink, Camera } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -118,6 +118,7 @@ const Contact = () => {
                       <SelectItem value="operator-submission">Submit my experience for review</SelectItem>
                       <SelectItem value="hosted-trips">Hosted trip partnership</SelectItem>
                       <SelectItem value="sponsorship">Sponsorship inquiry</SelectItem>
+                      <SelectItem value="photographer-collaboration">Photography collaboration</SelectItem>
                       <SelectItem value="report-concern">Report a concern about a listing</SelectItem>
                       <SelectItem value="press">Press & media</SelectItem>
                       <SelectItem value="general">General inquiry</SelectItem>
@@ -198,6 +199,29 @@ const Contact = () => {
                   Explore the App
                   <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
                 </a>
+              </div>
+
+              {/* Photographer Callout */}
+              <div className="border border-talon-green/20 rounded-sm p-6 bg-talon-sand/20 mt-6 animate-fade animate-delay-700">
+                <div className="flex items-start gap-3">
+                  <Camera size={20} className="text-talon-gold mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-serif text-lg text-talon-green mb-2">Wildlife Photographer?</h3>
+                    <p className="text-talon-navy/80 text-sm mb-3">
+                      We collaborate with photographers for editorial visits and features. Get in touch if you'd like to work with us.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSubject('photographer-collaboration');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="text-sm text-talon-gold hover:text-talon-green transition-colors font-medium inline-flex items-center gap-1"
+                    >
+                      Send us a message <ArrowRight size={14} />
+                    </button>
+                  </div>
+                </div>
               </div>
 
               {/* Inquiries */}

@@ -129,32 +129,6 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* Photographer Collaboration */}
-      <section className="py-20 bg-talon-sand/20">
-        <div className="container max-w-5xl mx-auto px-4">
-          <div className="card-luxury p-10 flex flex-col md:flex-row items-start gap-8 animate-fade-in">
-            <div className="p-4 bg-talon-gold/10 rounded-full inline-flex flex-shrink-0">
-              <Camera className="text-talon-gold" size={32} />
-            </div>
-            <div>
-              <h3 className="font-serif text-2xl text-talon-green mb-3">Are You a Wildlife Photographer?</h3>
-              <p className="text-talon-navy/80 leading-relaxed mb-4">
-                We're always looking to collaborate with talented wildlife and conservation photographers. 
-                Whether you'd like to contribute imagery to a feature, join us on an editorial visit, or 
-                simply connect with a platform that values authentic wildlife storytelling — we'd love to hear from you.
-              </p>
-              <Link
-                to="/contact?subject=photographer-collaboration"
-                className="btn-primary px-6 py-3 text-sm font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
-              >
-                Get in Touch
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Hosted Editorial Visits — The Exchange */}
       <section className="py-20 bg-talon-sand/20">
         <div className="container max-w-6xl mx-auto px-4">
