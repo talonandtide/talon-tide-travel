@@ -186,61 +186,8 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* Sponsorship / Promoted Content */}
-      <section className="py-20 bg-talon-ivory">
-        <div className="container max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">Amplify Your <span className="font-script text-script-lg text-talon-gold">Reach</span></h2>
-            <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
-            <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              For operators who want to go further, optional sponsorships put your experience in front of even more conservation-minded travelers.
-            
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card-luxury p-8 hover:shadow-luxury-hover transition-all duration-300 animate-fade-in">
-              <Sparkles className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-2xl text-talon-green mb-4">Promoted Listings</h3>
-              <p className="text-talon-navy/80 leading-relaxed mb-4">
-                Boost your visibility with premium placement across the platform — featured positioning in search results, 
-                category collections, and homepage highlights. All sponsored content is clearly labeled, maintaining the 
-                trust our users expect.
-              </p>
-              <ul className="space-y-2">
-                {["Priority placement in search and categories", "Featured in curated collections and newsletters", "Social media spotlights to our engaged community"].map((item) =>
-                <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
-                    <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                )}
-              </ul>
-            </div>
 
-            <div className="card-luxury p-8 hover:shadow-luxury-hover transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <Award className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-2xl text-talon-green mb-4">Open Access Sponsorship</h3>
-              <p className="text-talon-navy/80 leading-relaxed mb-4">
-                Make your full listing available to all Talon & Tide users — not just subscribers. 
-                Open access sponsorships give your experience maximum exposure while supporting the platform 
-                that's championing your work.
-              </p>
-              <ul className="space-y-2">
-                {["Full listing visible to all platform visitors", "Maximum reach across the entire user base", "Direct support for the platform promoting your mission"].map((item) =>
-                <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
-                    <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                )}
-              </ul>
-            </div>
-          </div>
-
-          <p className="text-center text-sm text-talon-navy/60 mt-8 italic animate-fade-in">
-            Sponsorships support visibility — they never influence editorial decisions or vetting outcomes.
-          </p>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="py-20 bg-white">
