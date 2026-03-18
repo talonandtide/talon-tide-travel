@@ -286,7 +286,7 @@ const Index = () => {
               Are You a Wildlife <span className="font-script text-script-lg text-talon-gold">Operator?</span>
             </h2>
             <p className="text-talon-ivory/80 text-lg mb-12 animate-fade animate-delay-100 max-w-2xl mx-auto">
-              From small rehabilitation centres to world-class safari lodges -  if you're doing meaningful conservation work, 
+              From small rehabilitation centers to world-class safari lodges -  if you're doing meaningful conservation work, 
               we'd love to see it for ourselves. Our hosted editorial visits are how great operators get discovered.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
