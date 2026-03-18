@@ -203,7 +203,7 @@ const OurStandards = () => {
             },
             {
               q: "Do I need a marketing budget to work with Talon & Tide?",
-              a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver professional content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
+              a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
             },
             {
               q: "We're a small non-profit — is this really for us?",
