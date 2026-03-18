@@ -24,7 +24,7 @@ const ForOperators = () => {
               For <span className="font-script text-script-lg text-talon-gold">Operators</span>
             </h1>
             <p className="text-lg text-talon-ivory/80 mb-6 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              Whether you run a small rehabilitation centre or a world-class safari lodge  -  if you're doing meaningful conservation work, we want to help more travelers find you.
+              Whether you run a small rehabilitation centre or a world-class safari lodge -  if you're doing meaningful conservation work, we want to help more travelers find you.
             </p>
             <p className="text-talon-ivory/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
               Talon & Tide isn't a booking engine or a review aggregator. We're a curated platform where every listing is editorially vetted by wildlife specialists. When we reach out, it's because we recognize the important work you're doing.
@@ -33,16 +33,16 @@ const ForOperators = () => {
         </div>
       </section>
 
-      {/* Why Partner With Us  -  Compact Grid */}
+      {/* Why Partner With Us -  Compact Grid */}
       <section className="py-16 bg-talon-ivory">
         <div className="container max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Users, title: "Conservation-Minded Travelers", desc: "Reach travelers who seek meaningful wildlife encounters and value ethics over the cheapest price." },
               { icon: Shield, title: "Editorial Integrity", desc: "Operators cannot pay to be listed or to receive favorable reviews. Sponsorships buy visibility, never editorial influence." },
-              { icon: BarChart3, title: "Targeted Visibility", desc: "Your experience is seen by travelers actively searching for vetted, ethical wildlife encounters  -  not mass tourists." },
+              { icon: BarChart3, title: "Targeted Visibility", desc: "Your experience is seen by travelers actively searching for vetted, ethical wildlife encounters -  not mass tourists." },
               { icon: Globe, title: "Global Reach", desc: "We feature experiences across safaris, marine expeditions, zoo encounters, and conservation field missions worldwide." },
-              { icon: Handshake, title: "Long-Term Partnership", desc: "We build ongoing relationships with operators  -  supporting your conservation story and connecting you with aligned travelers." },
+              { icon: Handshake, title: "Long-Term Partnership", desc: "We build ongoing relationships with operators -  supporting your conservation story and connecting you with aligned travelers." },
               { icon: CheckCircle, title: "Real Wildlife Experience", desc: "Founded by a former AZA zookeeper. Every evaluation draws on real wildlife management experience." },
             ].map((item, index) => (
               <div key={item.title} className="flex items-start gap-4 p-6 animate-fade-in" style={{ animationDelay: `${index * 80}ms` }}>
@@ -74,7 +74,7 @@ const ForOperators = () => {
               <Globe className="text-talon-gold mb-6" size={36} />
               <h3 className="font-serif text-2xl text-talon-green mb-4">Get Listed</h3>
               <p className="text-talon-navy/80 leading-relaxed mb-6">
-                Submit your wildlife experience for editorial review. Our vetting process is entirely editorial  -  no payment is required or accepted to be considered for listing.
+                Submit your wildlife experience for editorial review. Our vetting process is entirely editorial -  no payment is required or accepted to be considered for listing.
               </p>
               <ul className="space-y-2 mb-8">
                 {["Free to submit", "Editorial review by wildlife specialists", "Transparent ethics notes on every listing", "Direct booking links to your site"].map(item => (
@@ -95,10 +95,10 @@ const ForOperators = () => {
               <Users className="text-talon-gold mb-6" size={36} />
               <h3 className="font-serif text-2xl text-talon-green mb-4">Hosted Visits</h3>
               <p className="text-talon-navy/80 leading-relaxed mb-6">
-                Invite us to experience your operation firsthand. We visit as a guest  -  low-impact, no crews  -  and use that visit to create editorial content and evaluate your experience for the platform.
+                Invite us to experience your operation firsthand. We visit as a guest -  low-impact, no crews -  and use that visit to create editorial content and evaluate your experience for the platform.
               </p>
               <ul className="space-y-2 mb-8">
-                {["No cost to host  -  a simple value exchange", "We visit as a guest, not a production team", "Original media you're welcome to use", "Foundation for your editorial feature"].map(item => (
+                {["No cost to host -  a simple value exchange", "We visit as a guest, not a production team", "Original media you're welcome to use", "Foundation for your editorial feature"].map(item => (
                   <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
                     <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
                     {item}
@@ -116,7 +116,7 @@ const ForOperators = () => {
               <Handshake className="text-talon-gold mb-6" size={36} />
               <h3 className="font-serif text-2xl text-talon-green mb-4">Sponsorships</h3>
               <p className="text-talon-navy/80 leading-relaxed mb-6">
-                Increase your visibility on the platform with promoted placement. Sponsorships help keep Talon & Tide running  -  but they only buy visibility, never editorial influence.
+                Increase your visibility on the platform with promoted placement. Sponsorships help keep Talon & Tide running -  but they only buy visibility, never editorial influence.
               </p>
               <ul className="space-y-2 mb-8">
                 {["Promoted experience placement", "Featured in category collections", "Newsletter and social inclusion", "All sponsored content clearly labeled"].map(item => (

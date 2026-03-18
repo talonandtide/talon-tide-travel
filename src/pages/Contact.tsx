@@ -78,7 +78,7 @@ const Contact = () => {
               Get in <span className="font-script text-script-lg text-talon-gold">Touch</span>
             </h1>
             <p className="text-lg text-talon-ivory/80 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              Whether you're an operator interested in partnership, press, or have a general inquiry  -  we'd love to hear from you.
+              Whether you're an operator interested in partnership, press, or have a general inquiry -  we'd love to hear from you.
             </p>
           </div>
         </div>
