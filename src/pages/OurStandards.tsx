@@ -280,7 +280,7 @@ const OurStandards = () => {
               },
               {
                 q: "What do you need from us during a visit?",
-                a: "Just access to your experience — whether that's a behind-the-scenes tour, a guest spot on a trip, or a VIP walkthrough of your facility. We handle all the content creation. Many operators find the visit is a genuinely enjoyable experience for their team, too."
+                a: "Just a spot on your experience — however that looks for you. We want to see what a regular guest would see, so there's nothing extra to organise on your end. If you'd like to show us something beyond the standard experience, we're always happy to see more. We handle the content side of things, and most operators find the visit is a genuinely enjoyable experience for their team, too."
               },
               {
                 q: "How is this different from a paid review or influencer visit?",
