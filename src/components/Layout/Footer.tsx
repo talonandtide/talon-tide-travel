@@ -50,7 +50,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-talon-green text-talon-ivory py-16">
+    <footer className="bg-talon-green text-talon-ivory py-16" role="contentinfo">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Column */}
