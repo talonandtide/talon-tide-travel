@@ -94,10 +94,10 @@ const OurStandards = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in">
               <Camera className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-xl text-talon-gold mb-3">Original Photography & Video</h3>
+              <h3 className="font-serif text-xl text-talon-gold mb-3">Original Content & Storytelling</h3>
               <p className="text-talon-ivory/80 leading-relaxed">
-                We capture your operation through professional-quality original media — real moments, real animals, 
-                real conservation in action. Content you're welcome to use in your own marketing, too.
+                We document the experience as we go — no crew, no production setup, just authentic moments 
+                captured naturally during the visit. Content you're welcome to use in your own marketing, too.
               </p>
             </div>
             <div className="bg-talon-navy/20 p-8 rounded-sm animate-fade-in" style={{ animationDelay: '100ms' }}>
