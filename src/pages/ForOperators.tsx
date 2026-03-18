@@ -41,7 +41,7 @@ const ForOperators = () => {
               { icon: BarChart3, title: "Targeted Visibility", desc: "Your experience is seen by travelers actively searching for vetted, ethical wildlife encounters — not mass tourists." },
               { icon: Globe, title: "Global Reach", desc: "We feature experiences across safaris, marine expeditions, zoo encounters, and conservation field missions worldwide." },
               { icon: Handshake, title: "Long-Term Partnership", desc: "We build ongoing relationships with operators — supporting your conservation story and connecting you with aligned travelers." },
-              { icon: CheckCircle, title: "Professional Vetting", desc: "Founded by a former AZA zookeeper. Every evaluation draws on professional wildlife management expertise." },
+              { icon: CheckCircle, title: "Professional Vetting", desc: "Founded by a former AZA zookeeper. Every evaluation draws on real wildlife management experience." },
             ].map((item, index) => (
               <div key={item.title} className="card-luxury p-8 hover:shadow-luxury-hover transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 80}ms` }}>
                 <div className="flex items-center gap-4 mb-4">
@@ -75,7 +75,7 @@ const ForOperators = () => {
                 Submit your wildlife experience for editorial review. Our vetting process is entirely editorial — no payment is required or accepted to be considered for listing.
               </p>
               <ul className="space-y-2 mb-8">
-                {["Free to submit", "Editorial review by wildlife professionals", "Transparent ethics notes on every listing", "Direct booking links to your site"].map(item => (
+                {["Free to submit", "Editorial review by wildlife specialists", "Transparent ethics notes on every listing", "Direct booking links to your site"].map(item => (
                   <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
                     <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
                     {item}
@@ -88,23 +88,23 @@ const ForOperators = () => {
               </Link>
             </div>
 
-            {/* Hosted Trips */}
+            {/* Hosted Visits */}
             <div className="bg-gradient-to-br from-talon-green/5 to-talon-navy/5 p-10 rounded-lg shadow-luxury">
               <Users className="text-talon-gold mb-6" size={36} />
-              <h3 className="font-serif text-2xl text-talon-green mb-4">Hosted Trips</h3>
+              <h3 className="font-serif text-2xl text-talon-green mb-4">Hosted Visits</h3>
               <p className="text-talon-navy/80 leading-relaxed mb-6">
-                Co-create exclusive small-group conservation expeditions promoted through the Talon & Tide platform. From rhino dehorning to marine research missions.
+                Invite us to experience your operation firsthand. We visit as a guest — low-impact, no crews — and use that visit to create editorial content and evaluate your experience for the platform.
               </p>
               <ul className="space-y-2 mb-8">
-                {["Co-branded expedition itineraries", "Marketing to our engaged traveler base", "Professional trip curation support", "Conservation-focused traveler matching"].map(item => (
+                {["No cost to host — a simple value exchange", "We visit as a guest, not a production team", "Original media you're welcome to use", "Foundation for your editorial feature"].map(item => (
                   <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
                     <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link to="/contact?subject=hosted-trips" className="btn-primary w-full justify-center">
-                Discuss a Trip
+              <Link to="/contact?subject=invite-visit" className="btn-primary w-full justify-center">
+                Invite Us to Visit
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -141,7 +141,7 @@ const ForOperators = () => {
           </h2>
           <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed mb-8">
             Every listing on Talon & Tide starts with a hosted editorial visit — we experience your work firsthand, 
-            create professional content, and tell your story to conservation-minded travelers. No fees, no crews, 
+            create original content, and tell your story to conservation-minded travelers. No fees, no crews, 
             just a relaxed guest experience that becomes the foundation for everything we publish.
           </p>
           <div className="grid md:grid-cols-2 gap-8 mb-10">
@@ -151,7 +151,7 @@ const ForOperators = () => {
                 {[
                   "Recognition as a conservation leader in your field",
                   "Access to conservation-minded, respectful travelers",
-                  "Professional editorial content you can use too",
+                  "Original media content you can use too",
                   "Direct booking links — we never take a cut",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">

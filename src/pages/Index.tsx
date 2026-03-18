@@ -286,7 +286,7 @@ const Index = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {[
-                { icon: Globe, title: "Get Featured", desc: "We visit, experience your work firsthand, and create professional editorial content — all at no cost to you." },
+                { icon: Globe, title: "Get Featured", desc: "We visit, experience your work firsthand, and create original editorial content — all at no cost to you." },
                 { icon: Users, title: "Reach the Right Travelers", desc: "Your listing reaches conservation-minded travelers actively looking for ethical wildlife experiences." },
                 { icon: Handshake, title: "Optional Sponsorships", desc: "Boost visibility with promoted placement. Sponsorships never influence our editorial standards." },
               ].map((item) => (
