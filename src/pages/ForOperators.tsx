@@ -151,7 +151,7 @@ const ForOperators = () => {
                 {[
                   "Recognition as a conservation leader in your field",
                   "Access to conservation-minded, respectful travelers",
-                  "Professional editorial content you can use too",
+                  "Original media content you can use too",
                   "Direct booking links — we never take a cut",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
