@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useLocation } from 'react-router-dom';
+import usePageMeta from '@/hooks/usePageMeta';
 
 const APP_URL = 'https://app.talonandtide.com';
 
