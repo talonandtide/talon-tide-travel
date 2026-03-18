@@ -4,6 +4,7 @@ import Layout from '@/components/Layout/Layout';
 import { Link } from 'react-router-dom';
 import { Shield, Award, Users, CheckCircle, ArrowRight, Sparkles, Eye, Heart, Star, Camera, Globe, Megaphone, Handshake } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import usePageMeta from '@/hooks/usePageMeta';
 
 const OurStandards = () => {
   return (
