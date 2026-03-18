@@ -186,61 +186,6 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* Sponsorship / Promoted Content */}
-      <section className="py-20 bg-talon-ivory">
-        <div className="container max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">Amplify Your <span className="font-script text-script-lg text-talon-gold">Reach</span></h2>
-            <div className="w-24 h-1 bg-talon-gold mx-auto mb-8"></div>
-            <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed">
-              For operators who want to go further, optional sponsorships put your experience in front of even more conservation-minded travelers.
-            
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card-luxury p-8 hover:shadow-luxury-hover transition-all duration-300 animate-fade-in">
-              <Sparkles className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-2xl text-talon-green mb-4">Promoted Listings</h3>
-              <p className="text-talon-navy/80 leading-relaxed mb-4">
-                Boost your visibility with premium placement across the platform — featured positioning in search results, 
-                category collections, and homepage highlights. All sponsored content is clearly labeled, maintaining the 
-                trust our users expect.
-              </p>
-              <ul className="space-y-2">
-                {["Priority placement in search and categories", "Featured in curated collections and newsletters", "Social media spotlights to our engaged community"].map((item) =>
-                <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
-                    <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                )}
-              </ul>
-            </div>
-
-            <div className="card-luxury p-8 hover:shadow-luxury-hover transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <Award className="text-talon-gold mb-4" size={28} />
-              <h3 className="font-serif text-2xl text-talon-green mb-4">Open Access Sponsorship</h3>
-              <p className="text-talon-navy/80 leading-relaxed mb-4">
-                Make your full listing available to all Talon & Tide users — not just subscribers. 
-                Open access sponsorships give your experience maximum exposure while supporting the platform 
-                that's championing your work.
-              </p>
-              <ul className="space-y-2">
-                {["Full listing visible to all platform visitors", "Maximum reach across the entire user base", "Direct support for the platform promoting your mission"].map((item) =>
-                <li key={item} className="flex items-start gap-2 text-sm text-talon-navy/80">
-                    <CheckCircle size={16} className="text-talon-gold mt-0.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                )}
-              </ul>
-            </div>
-          </div>
-
-          <p className="text-center text-sm text-talon-navy/60 mt-8 italic animate-fade-in">
-            Sponsorships support visibility — they never influence editorial decisions or vetting outcomes.
-          </p>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="py-20 bg-white">
@@ -258,7 +203,7 @@ const OurStandards = () => {
             },
             {
               q: "Do I need a marketing budget to work with Talon & Tide?",
-              a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver professional content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
+              a: "Not at all. Editorial visits are provided at no cost — they're built on a value exchange, not a fee. You share your experience, and we assess it firsthand. If your operation meets our standards, we deliver content and promotion as part of the feature. Optional sponsorships exist for operators who want additional visibility, but they're never required."
             },
             {
               q: "We're a small non-profit — is this really for us?",
@@ -270,7 +215,7 @@ const OurStandards = () => {
             },
             {
               q: "How is this different from a paid review or influencer visit?",
-              a: "Talon & Tide is an editorial platform, not an influencer channel. Our founder has a decade of professional wildlife management experience, and every feature is written with that expertise. We don't accept payment for editorial outcomes — our recommendations are based on what we experience firsthand, which is exactly why our users trust them."
+              a: "Talon & Tide is an editorial platform, not an influencer channel. Our founder has a decade of wildlife management experience, and every feature is written with that background. We don't accept payment for editorial outcomes — our recommendations are based on what we experience firsthand, which is exactly why our users trust them."
             },
             {
               q: "What are sponsorships, and are they separate from editorial visits?",
@@ -294,29 +239,27 @@ const OurStandards = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-4xl mx-auto px-4 text-center animate-fade-in">
-          <h2 className="font-serif text-4xl md:text-5xl text-talon-green mb-6">
+      {/* Cross-link to For Operators */}
+      <section className="py-16 bg-talon-sand/20">
+        <div className="container max-w-3xl mx-auto px-4 text-center animate-fade-in">
+          <h2 className="font-serif text-3xl text-talon-green mb-4">
             Ready to <span className="font-script text-script-lg text-talon-gold">Partner?</span>
           </h2>
-          <p className="text-xl text-talon-navy/80 mb-10 leading-relaxed font-light max-w-3xl mx-auto">
-            Whether you're a small non-profit, zoo, or a world-class safari lodge — if you're doing meaningful conservation work, we'd love to see it for ourselves.
-          
+          <p className="text-talon-navy/80 mb-8 leading-relaxed">
+            Learn about partnership options, sponsorships, and how to get your experience listed on the platform.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact?subject=invite-visit"
-              className="btn-primary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300 inline-flex items-center gap-2">
-              
-              Invite Us to Visit
+              to="/for-operators"
+              className="btn-primary px-8 py-4 text-lg font-medium inline-flex items-center gap-2">
+              For Operators
               <ArrowRight size={18} />
             </Link>
             <Link
-              to="/contact?subject=operator-submission"
-              className="btn-secondary px-8 py-4 text-lg font-medium hover:scale-105 transition-all duration-300">
-              
-              Ask a Question
+              to="/contact?subject=invite-visit"
+              className="btn-secondary px-8 py-4 text-lg font-medium inline-flex items-center gap-2">
+              Invite Us to Visit
+              <ArrowRight size={18} />
             </Link>
           </div>
         </div>

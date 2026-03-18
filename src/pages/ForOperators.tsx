@@ -127,54 +127,14 @@ const ForOperators = () => {
         </div>
       </section>
 
-      {/* Hosted Editorial Visits Teaser */}
-      <section className="py-20 bg-talon-sand/20">
-        <div className="container max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-talon-green mb-6">
-            How We <span className="font-script text-script-lg text-talon-gold">Vet</span> Experiences
-          </h2>
-          <p className="text-lg text-talon-navy/80 max-w-3xl mx-auto leading-relaxed mb-8">
-            Every listing on Talon & Tide starts with a hosted editorial visit — we experience your work firsthand, 
-            create original content, and tell your story to conservation-minded travelers. No fees, no crews, 
-            just a relaxed guest experience that becomes the foundation for everything we publish.
+      {/* Cross-link to Standards */}
+      <section className="py-16 bg-talon-sand/20">
+        <div className="container max-w-3xl mx-auto text-center">
+          <p className="text-talon-navy/80 text-lg mb-6 leading-relaxed">
+            Want to understand how we vet experiences and what a hosted visit looks like?
           </p>
-          <div className="grid md:grid-cols-2 gap-8 mb-10">
-            <div className="card-luxury p-8">
-              <h3 className="font-serif text-2xl text-talon-green mb-6">What Listing Means for You</h3>
-              <ul className="space-y-3 text-talon-navy text-left">
-                {[
-                  "Recognition as a conservation leader in your field",
-                  "Access to conservation-minded, respectful travelers",
-                  "Original media content you can use too",
-                  "Direct booking links — we never take a cut",
-                ].map(item => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-talon-gold mt-1 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="card-luxury p-8">
-              <h3 className="font-serif text-2xl text-talon-green mb-6">Our Commitment to You</h3>
-              <ul className="space-y-3 text-talon-navy text-left">
-                {[
-                  "Respectful, low-impact visits — no production setups",
-                  "Transparent editorial process — no hidden criteria",
-                  "Promotion across our platform and channels",
-                  "Long-term partnership mindset",
-                ].map(item => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-talon-gold mt-1 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
           <Link to="/our-standards" className="btn-secondary group">
-            Read About Our Standards & Process
+            Read Our Standards & Process
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
