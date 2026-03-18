@@ -14,11 +14,19 @@ import OurStandards from "./pages/OurStandards";
 import ForOperators from "./pages/ForOperators";
 
 // ScrollToTop component to handle scrolling to top on route changes
+// Also sends a pageview to Google Analytics on each route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Send pageview to Google Analytics for client-side navigation
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('config', 'G-75PNJBYC00', {
+        page_path: pathname,
+      });
+    }
   }, [pathname]);
 
   return null;
