@@ -5,6 +5,7 @@ import InstagramFeed from '@/components/Home/InstagramFeed';
 import { ArrowRight, Shield, Eye, Heart, Users, Handshake, Globe, ExternalLink, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import usePageMeta from '@/hooks/usePageMeta';
 
 const APP_URL = 'https://app.talonandtide.com';
 
