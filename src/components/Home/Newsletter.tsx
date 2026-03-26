@@ -47,8 +47,14 @@ const Newsletter = () => {
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      toast.error("Failed to subscribe", { 
-        description: "Please try again later or contact us directly at hello@talonandtide.com." 
+      const mailtoLink = `mailto:hello@talonandtide.com?subject=${encodeURIComponent('Newsletter Subscription')}&body=${encodeURIComponent(`Please add me to the newsletter.\n\nEmail: ${email}`)}`;
+      toast.error("Something went wrong with your subscription.", { 
+        description: "Click below to send via email instead.",
+        action: {
+          label: "Open Email",
+          onClick: () => window.open(mailtoLink, '_blank'),
+        },
+        duration: 15000,
       });
     } finally {
       setIsSubmitting(false);
