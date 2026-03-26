@@ -57,8 +57,17 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      toast.error("Failed to send message", {
-        description: "Please try again later or email us directly at hello@talonandtide.com."
+      const formData = new FormData(form);
+      const subjectText = formData.get('subject') || 'General Inquiry';
+      const bodyText = `Name: ${formData.get('firstName')} ${formData.get('lastName') || ''}\nEmail: ${formData.get('email')}\nOrganization: ${formData.get('organization') || 'N/A'}\n\n${formData.get('message')}`;
+      const mailtoLink = `mailto:hello@talonandtide.com?subject=${encodeURIComponent(String(subjectText))}&body=${encodeURIComponent(bodyText)}`;
+      toast.error("Something went wrong sending your message.", {
+        description: "Click below to send via email instead.",
+        action: {
+          label: "Open Email",
+          onClick: () => window.open(mailtoLink, '_blank'),
+        },
+        duration: 15000,
       });
     } finally {
       setIsSubmitting(false);
