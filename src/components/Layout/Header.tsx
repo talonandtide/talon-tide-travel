@@ -70,8 +70,8 @@ const Header = () => {
             </a>
             <a
               href={SIGNIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className={cn(
                 "font-sans text-sm uppercase tracking-wide transition-colors duration-300 hover:text-talon-gold",
                 scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
@@ -81,12 +81,12 @@ const Header = () => {
             </a>
             <a 
               href={SIGNUP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-4 py-2 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
               Sign Up
-              <ExternalLink size={14} />
+              {!sameTab && <ExternalLink size={14} />}
             </a>
           </div>
         </nav>
