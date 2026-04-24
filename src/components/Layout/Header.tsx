@@ -88,6 +88,53 @@ const Header = () => {
               Sign Up
               {!sameTab && <ExternalLink size={14} />}
             </a>
+            <button
+              onClick={() => setShowSettings(!showSettings)}
+              className={cn(
+                "p-1.5 rounded-sm transition-colors duration-300",
+                scrolled ? "text-talon-green hover:bg-talon-green/10" : "text-talon-ivory hover:bg-talon-ivory/10"
+              )}
+              aria-label="Navigation settings"
+              aria-expanded={showSettings}
+            >
+              <Settings2 size={16} />
+            </button>
+            {showSettings && (
+              <div className={cn(
+                "absolute right-0 top-full mt-2 w-56 rounded-sm shadow-lg p-3 z-50",
+                scrolled ? "bg-white border border-talon-sand" : "bg-talon-green/95 backdrop-blur-sm border border-talon-ivory/20"
+              )}>
+                <label className={cn(
+                  "flex items-center justify-between cursor-pointer text-sm",
+                  scrolled ? "text-talon-green" : "text-talon-ivory"
+                )}>
+                  <span>Open auth in same tab</span>
+                  <button
+                    onClick={toggle}
+                    className={cn(
+                      "relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300",
+                      sameTab 
+                        ? "bg-talon-gold" 
+                        : scrolled ? "bg-talon-sand" : "bg-talon-ivory/30"
+                    )}
+                    aria-pressed={sameTab}
+                  >
+                    <span
+                      className={cn(
+                        "inline-block h-3.5 w-3.5 transform rounded-full bg-white transition-transform duration-300",
+                        sameTab ? "translate-x-5" : "translate-x-1"
+                      )}
+                    />
+                  </button>
+                </label>
+                <p className={cn(
+                  "text-xs mt-2 opacity-70",
+                  scrolled ? "text-talon-green" : "text-talon-ivory"
+                )}>
+                  {sameTab ? "Sign In/Up will open in the current tab" : "Sign In/Up will open in a new tab"}
+                </p>
+              </div>
+            )}
           </div>
         </nav>
 
