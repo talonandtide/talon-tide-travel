@@ -12,7 +12,9 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
   const location = useLocation();
+  const { sameTab, toggle } = useAuthTabPreference();
 
   useEffect(() => {
     const handleScroll = () => {
