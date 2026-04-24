@@ -116,10 +116,13 @@ const Header = () => {
               <Settings2 size={16} />
             </button>
             {showSettings && (
-              <div className={cn(
-                "absolute right-0 top-full mt-2 w-56 rounded-sm shadow-lg p-3 z-50",
-                scrolled ? "bg-white border border-talon-sand" : "bg-talon-green/95 backdrop-blur-sm border border-talon-ivory/20"
-              )}>
+              <div 
+                data-settings-dropdown
+                className={cn(
+                  "absolute right-0 top-full mt-2 w-56 rounded-sm shadow-lg p-3 z-50",
+                  scrolled ? "bg-white border border-talon-sand" : "bg-talon-green/95 backdrop-blur-sm border border-talon-ivory/20"
+                )}
+              >
                 <label className={cn(
                   "flex items-center justify-between cursor-pointer text-sm",
                   scrolled ? "text-talon-green" : "text-talon-ivory"
