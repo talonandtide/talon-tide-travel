@@ -113,20 +113,20 @@ const Header = () => {
           <div className="flex flex-col items-center gap-4">
             <a
               href={SIGNIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className="font-sans text-sm uppercase tracking-wide text-talon-ivory hover:text-talon-gold transition-colors duration-300"
             >
               Sign In
             </a>
             <a 
               href={SIGNUP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-6 py-3 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
               Sign Up
-              <ExternalLink size={14} />
+              {!sameTab && <ExternalLink size={14} />}
             </a>
             <div className="flex items-center gap-6 text-talon-ivory">
               <a 
