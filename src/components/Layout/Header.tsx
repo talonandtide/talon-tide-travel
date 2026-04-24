@@ -5,6 +5,8 @@ import { Menu, X, Instagram, Mail, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const APP_URL = 'https://app.talonandtide.com';
+const SIGNIN_URL = `${APP_URL}/signin`;
+const SIGNUP_URL = `${APP_URL}/signup`;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,13 +65,24 @@ const Header = () => {
             >
               <Instagram size={18} />
             </a>
+            <a
+              href={SIGNIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "font-sans text-sm uppercase tracking-wide transition-colors duration-300 hover:text-talon-gold",
+                scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
+              )}
+            >
+              Sign In
+            </a>
             <a 
-              href={APP_URL}
+              href={SIGNUP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-4 py-2 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              Explore Experiences
+              Sign Up
               <ExternalLink size={14} />
             </a>
           </div>
@@ -95,13 +108,21 @@ const Header = () => {
             <NavLinks mobile />
           </nav>
           <div className="flex flex-col items-center gap-4">
+            <a
+              href={SIGNIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-sm uppercase tracking-wide text-talon-ivory hover:text-talon-gold transition-colors duration-300"
+            >
+              Sign In
+            </a>
             <a 
-              href={APP_URL}
+              href={SIGNUP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-6 py-3 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              Explore Experiences
+              Sign Up
               <ExternalLink size={14} />
             </a>
             <div className="flex items-center gap-6 text-talon-ivory">
