@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Mail, ExternalLink } from 'lucide-react';
+import { Menu, X, Instagram, Mail, ExternalLink, Settings2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useAuthTabPreference } from '@/hooks/useAuthTabPreference';
 
 const APP_URL = 'https://app.talonandtide.com';
 const SIGNIN_URL = `${APP_URL}/signin`;
@@ -11,7 +12,9 @@ const SIGNUP_URL = `${APP_URL}/signup`;
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
   const location = useLocation();
+  const { sameTab, toggle } = useAuthTabPreference();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +29,23 @@ const Header = () => {
 
   useEffect(() => {
     setIsOpen(false);
+    setShowSettings(false);
   }, [location]);
+
+  // Close settings dropdown when clicking outside
+  useEffect(() => {
+    if (!showSettings) return;
+    
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('[data-settings-dropdown]')) {
+        setShowSettings(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showSettings]);
 
   return (
     <>
@@ -67,8 +86,8 @@ const Header = () => {
             </a>
             <a
               href={SIGNIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className={cn(
                 "font-sans text-sm uppercase tracking-wide transition-colors duration-300 hover:text-talon-gold",
                 scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
@@ -78,13 +97,63 @@ const Header = () => {
             </a>
             <a 
               href={SIGNUP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-4 py-2 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
               Sign Up
-              <ExternalLink size={14} />
+              {!sameTab && <ExternalLink size={14} />}
             </a>
+            <button
+              onClick={() => setShowSettings(!showSettings)}
+              className={cn(
+                "p-1.5 rounded-sm transition-colors duration-300",
+                scrolled ? "text-talon-green hover:bg-talon-green/10" : "text-talon-ivory hover:bg-talon-ivory/10"
+              )}
+              aria-label="Navigation settings"
+              aria-expanded={showSettings}
+            >
+              <Settings2 size={16} />
+            </button>
+            {showSettings && (
+              <div 
+                data-settings-dropdown
+                className={cn(
+                  "absolute right-0 top-full mt-2 w-56 rounded-sm shadow-lg p-3 z-50",
+                  scrolled ? "bg-white border border-talon-sand" : "bg-talon-green/95 backdrop-blur-sm border border-talon-ivory/20"
+                )}
+              >
+                <label className={cn(
+                  "flex items-center justify-between cursor-pointer text-sm",
+                  scrolled ? "text-talon-green" : "text-talon-ivory"
+                )}>
+                  <span>Open auth in same tab</span>
+                  <button
+                    onClick={toggle}
+                    className={cn(
+                      "relative inline-flex h-5 w-9 items-center rounded-full transition-colors duration-300",
+                      sameTab 
+                        ? "bg-talon-gold" 
+                        : scrolled ? "bg-talon-sand" : "bg-talon-ivory/30"
+                    )}
+                    aria-pressed={sameTab}
+                  >
+                    <span
+                      className={cn(
+                        "inline-block h-3.5 w-3.5 transform rounded-full bg-white transition-transform duration-300",
+                        sameTab ? "translate-x-5" : "translate-x-1"
+                      )}
+                    />
+                  </button>
+                </label>
+                <p className={cn(
+                  "text-xs mt-2 opacity-70",
+                  scrolled ? "text-talon-green" : "text-talon-ivory"
+                )}>
+                  {sameTab ? "Sign In/Up will open in the current tab" : "Sign In/Up will open in a new tab"}
+                </p>
+              </div>
+            )}
           </div>
         </nav>
 
@@ -110,20 +179,20 @@ const Header = () => {
           <div className="flex flex-col items-center gap-4">
             <a
               href={SIGNIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className="font-sans text-sm uppercase tracking-wide text-talon-ivory hover:text-talon-gold transition-colors duration-300"
             >
               Sign In
             </a>
             <a 
               href={SIGNUP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={sameTab ? undefined : '_blank'}
+              rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-6 py-3 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
               Sign Up
-              <ExternalLink size={14} />
+              {!sameTab && <ExternalLink size={14} />}
             </a>
             <div className="flex items-center gap-6 text-talon-ivory">
               <a 
