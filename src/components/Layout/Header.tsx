@@ -29,7 +29,23 @@ const Header = () => {
 
   useEffect(() => {
     setIsOpen(false);
+    setShowSettings(false);
   }, [location]);
+
+  // Close settings dropdown when clicking outside
+  useEffect(() => {
+    if (!showSettings) return;
+    
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('[data-settings-dropdown]')) {
+        setShowSettings(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showSettings]);
 
   return (
     <>
