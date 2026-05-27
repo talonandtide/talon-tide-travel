@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Mail, ExternalLink, Settings2 } from 'lucide-react';
+import { Menu, X, Mail, ExternalLink, Settings2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuthTabPreference } from '@/hooks/useAuthTabPreference';
 
@@ -72,18 +72,6 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
           <NavLinks isScrolled={scrolled} />
           <div className="flex items-center gap-4">
-            <a 
-              href="https://www.instagram.com/talonandtide/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Follow Talon & Tide on Instagram"
-              className={cn(
-                "hover:text-talon-gold transition-colors duration-300",
-                scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
-              )}
-            >
-              <Instagram size={18} />
-            </a>
             <a
               href={SIGNIN_URL}
               target={sameTab ? undefined : '_blank'}
@@ -101,9 +89,10 @@ const Header = () => {
               rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-4 py-2 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              Sign Up
+              Join Free
               {!sameTab && <ExternalLink size={14} />}
             </a>
+
             <button
               onClick={() => setShowSettings(!showSettings)}
               className={cn(
@@ -191,27 +180,19 @@ const Header = () => {
               rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-6 py-3 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              Sign Up
+              Join Free
               {!sameTab && <ExternalLink size={14} />}
             </a>
-            <div className="flex items-center gap-6 text-talon-ivory">
-              <a 
-                href="https://www.instagram.com/talonandtide/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-talon-gold transition-colors duration-300"
-              >
-                <Instagram size={20} />
-              </a>
-              <a 
-                href="mailto:hello@talonandtide.com"
-                className="hover:text-talon-gold transition-colors duration-300"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
+            <a 
+              href="mailto:hello@talonandtide.com"
+              className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
+              aria-label="Email Talon & Tide"
+            >
+              <Mail size={20} />
+            </a>
           </div>
         </div>
+
       </div>
       </header>
     </>
