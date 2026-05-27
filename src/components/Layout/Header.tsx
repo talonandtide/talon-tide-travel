@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Mail, ExternalLink, Settings2 } from 'lucide-react';
+import { Menu, X, Mail, ExternalLink, Settings2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuthTabPreference } from '@/hooks/useAuthTabPreference';
 
