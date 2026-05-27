@@ -191,27 +191,19 @@ const Header = () => {
               rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-6 py-3 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              Sign Up
+              Join Free
               {!sameTab && <ExternalLink size={14} />}
             </a>
-            <div className="flex items-center gap-6 text-talon-ivory">
-              <a 
-                href="https://www.instagram.com/talonandtide/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-talon-gold transition-colors duration-300"
-              >
-                <Instagram size={20} />
-              </a>
-              <a 
-                href="mailto:hello@talonandtide.com"
-                className="hover:text-talon-gold transition-colors duration-300"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
+            <a 
+              href="mailto:hello@talonandtide.com"
+              className="text-talon-ivory hover:text-talon-gold transition-colors duration-300"
+              aria-label="Email Talon & Tide"
+            >
+              <Mail size={20} />
+            </a>
           </div>
         </div>
+
       </div>
       </header>
     </>
