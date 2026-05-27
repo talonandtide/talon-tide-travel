@@ -72,18 +72,6 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
           <NavLinks isScrolled={scrolled} />
           <div className="flex items-center gap-4">
-            <a 
-              href="https://www.instagram.com/talonandtide/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Follow Talon & Tide on Instagram"
-              className={cn(
-                "hover:text-talon-gold transition-colors duration-300",
-                scrolled ? "text-talon-green" : "text-talon-ivory drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
-              )}
-            >
-              <Instagram size={18} />
-            </a>
             <a
               href={SIGNIN_URL}
               target={sameTab ? undefined : '_blank'}
@@ -101,9 +89,10 @@ const Header = () => {
               rel={sameTab ? undefined : 'noopener noreferrer'}
               className="bg-talon-gold hover:bg-talon-gold/90 text-talon-green px-4 py-2 rounded-sm text-sm font-medium transition-colors duration-300 flex items-center gap-2"
             >
-              Sign Up
+              Join Free
               {!sameTab && <ExternalLink size={14} />}
             </a>
+
             <button
               onClick={() => setShowSettings(!showSettings)}
               className={cn(
