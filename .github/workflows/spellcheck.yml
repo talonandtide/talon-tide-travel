@@ -1,0 +1,14 @@
+name: Spellcheck (US English)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  british-spellings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Flag British-English spellings
+        run: bash scripts/check-british-spellings.sh
