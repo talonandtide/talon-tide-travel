@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import Layout from '@/components/Layout/Layout';
 import { ArrowLeft, Clock, User } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import usePageMeta from '@/hooks/usePageMeta';
 import {
   Carousel,
   CarouselContent,
@@ -139,6 +140,11 @@ const BlogPost = () => {
   
   // Find the current post
   const post = blogPosts.find((post) => post.id === postId);
+
+  usePageMeta({
+    title: post?.title ?? 'Journal',
+    description: post?.excerpt ?? 'Articles on ethical wildlife tourism, conservation, and travel from Talon & Tide.',
+  });
   
   if (!post) {
     return (
