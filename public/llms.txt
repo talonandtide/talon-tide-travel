@@ -1,0 +1,18 @@
+# Talon & Tide
+
+> The world's first platform for ethically vetted wildlife experiences. Every safari, zoo encounter, and conservation expedition is personally evaluated by wildlife professionals in animal care, conservation, research, and veterinary fields.
+
+Talon & Tide is a curated aggregator of ethical wildlife experiences. We do not take bookings — travelers connect directly with vetted operators. Founded by a former zookeeper with over a decade of hands-on experience in AZA-accredited zoos and a certificate in Hospitality and Tourism Management.
+
+## Pages
+
+- [Home](/): Ethically vetted wildlife experiences, hosted visits, and conservation travel.
+- [Our Story](/#/about): The founder, mission, and expert network behind Talon & Tide.
+- [Our Standards](/#/our-standards): How experiences are vetted — discovery process, hosted visits, and welfare criteria.
+- [For Operators](/#/for-operators): Partnership types, benefits, and how to get listed.
+- [Journal](/#/blog): Articles on ethical wildlife tourism, conservation, and travel.
+- [Contact](/#/contact): Reach the team or submit a listing.
+
+## Optional
+
+- [Talon & Tide App](https://app.talonandtide.com): The PWA where travelers browse and connect with vetted operators.

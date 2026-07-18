@@ -126,8 +126,8 @@ const Blog = () => {
                     />
                     <span className="text-sm text-talon-green font-medium">{blogPosts[0].author}</span>
                   </div>
-                  <Link to={`/blog/${blogPosts[0].id}`} className="text-talon-gold flex items-center gap-1 text-sm tracking-wide hover:underline font-medium group">
-                    Read more
+                  <Link to={`/blog/${blogPosts[0].id}`} aria-label={`Read the full article: ${blogPosts[0].title}`} className="text-talon-gold flex items-center gap-1 text-sm tracking-wide hover:underline font-medium group">
+                    Read the full article
                     <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </div>
@@ -155,6 +155,7 @@ const Blog = () => {
               <Link 
                 to={`/blog/${post.id}`} 
                 key={post.id} 
+                aria-label={`Read the full article: ${post.title}`}
                 className="group animate-fade" 
                 style={{ animationDelay: `${(index + 2) * 100}ms` }}
               >
@@ -188,7 +189,8 @@ const Blog = () => {
                         <span className="text-xs text-talon-green font-medium">{post.author}</span>
                       </div>
                       <div className="flex items-center text-talon-gold text-sm tracking-wide font-medium group-hover:translate-x-0.5 transition-transform duration-300">
-                        Read More
+                        <span className="sr-only">Read the full article: {post.title}</span>
+                        <span aria-hidden="true">Read article</span>
                         <ArrowRight size={14} className="ml-1 transition-transform duration-300 group-hover:translate-x-1" />
                       </div>
                     </div>
