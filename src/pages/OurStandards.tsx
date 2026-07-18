@@ -100,8 +100,8 @@ const OurStandards = () => {
               <div>
                 <h3 className="font-serif text-2xl text-talon-green mb-3">A Partnership, Not a Transaction</h3>
                 <p className="text-talon-navy/80 leading-relaxed mb-4">
-                  We work with operators of every size -  from small rehabilitation centres and community-led tours 
-                  to large-scale lodges and conservation programmes. A hosted editorial visit means you provide access 
+                  We work with operators of every size -  from small rehabilitation centers and community-led tours 
+                  to large-scale lodges and conservation programs. A hosted editorial visit means you provide access 
                   to your experience (a behind-the-scenes tour, a VIP guest experience, or a seat on your next trip), 
                   and we get to see your work up close as part of our vetting process. For operators who meet our standards, 
                   that visit becomes the foundation for editorial coverage, original media, and ongoing promotion.
@@ -232,7 +232,7 @@ const OurStandards = () => {
             },
             {
               q: "We're a small non-profit -  is this really for us?",
-              a: "Absolutely. We work with organisations of every size, from small rehabilitation centres and community-led tours to large safari lodges. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
+              a: "Absolutely. We work with organizations of every size, from small rehabilitation centers and community-led tours to large safari lodges. Some of the most compelling stories come from the smallest operations. If you're doing meaningful conservation work, we want to help more people find you."
             },
             {
               q: "What do you need from us during a visit?",

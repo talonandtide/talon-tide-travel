@@ -30,7 +30,7 @@ const ForOperators = () => {
               For <span className="font-script text-script-lg text-talon-gold">Operators</span>
             </h1>
             <p className="text-lg text-talon-ivory/80 mb-6 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              Whether you run a small rehabilitation centre or a world-class safari lodge -  if you're doing meaningful conservation work, we want to help more travelers find you.
+              Whether you run a small rehabilitation center or a world-class safari lodge -  if you're doing meaningful conservation work, we want to help more travelers find you.
             </p>
             <p className="text-talon-ivory/70 leading-relaxed font-light animate-fade-in" style={{ animationDelay: '400ms' }}>
               Talon & Tide isn't a booking engine or a review aggregator. We're a curated platform where every listing is editorially vetted by wildlife specialists. When we reach out, it's because we recognize the important work you're doing.
