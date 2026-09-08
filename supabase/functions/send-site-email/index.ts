@@ -7,7 +7,7 @@ const GATEWAY_URL = 'https://connector-gateway.lovable.dev/brevo'
 const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY')
 const BREVO_CONNECTION_KEY = Deno.env.get('BREVO_API_KEY')
 
-async function addBrevoNewsletterSubscriber(email: string): Promise<void> {
+async function addBrevoNewsletterSubscriber(email: string, firstName = ''): Promise<void> {
   if (!LOVABLE_API_KEY || !BREVO_CONNECTION_KEY) {
     console.warn('Brevo credentials missing; skipping newsletter list sync')
     return
@@ -24,6 +24,7 @@ async function addBrevoNewsletterSubscriber(email: string): Promise<void> {
       email,
       listIds: [BREVO_NEWSLETTER_LIST_ID],
       updateEnabled: true,
+      ...(firstName ? { attributes: { FIRSTNAME: firstName } } : {}),
     }),
   })
 
