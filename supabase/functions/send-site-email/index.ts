@@ -1,6 +1,38 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
 import { sendTemplateEmail } from '../_shared/transactional-email-templates/send-email.ts'
 
+const BREVO_NEWSLETTER_LIST_ID = 7
+
+const GATEWAY_URL = 'https://connector-gateway.lovable.dev/brevo'
+const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY')
+const BREVO_CONNECTION_KEY = Deno.env.get('BREVO_API_KEY')
+
+async function addBrevoNewsletterSubscriber(email: string): Promise<void> {
+  if (!LOVABLE_API_KEY || !BREVO_CONNECTION_KEY) {
+    console.warn('Brevo credentials missing; skipping newsletter list sync')
+    return
+  }
+
+  const response = await fetch(`${GATEWAY_URL}/contacts`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${LOVABLE_API_KEY}`,
+      'X-Connection-Api-Key': BREVO_CONNECTION_KEY,
+    },
+    body: JSON.stringify({
+      email,
+      listIds: [BREVO_NEWSLETTER_LIST_ID],
+      updateEnabled: true,
+    }),
+  })
+
+  if (!response.ok) {
+    const body = await response.text()
+    throw new Error(`Brevo contact sync failed [${response.status}]: ${body}`)
+  }
+}
+
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), {
     status,
@@ -77,6 +109,14 @@ Deno.serve(async (req) => {
     }
 
     if (kind === 'newsletter') {
+      let brevoSynced = false
+      try {
+        await addBrevoNewsletterSubscriber(email)
+        brevoSynced = true
+      } catch (error) {
+        console.error('Brevo newsletter sync failed:', error)
+      }
+
       const result = await sendTemplateEmail('newsletter-signup', 'hello@talonandtide.com', {
         templateData: {
           email,
@@ -88,7 +128,7 @@ Deno.serve(async (req) => {
           .slice(0, 10)}`,
         replyTo: email,
       })
-      return json({ ok: true, sent: result.sent })
+      return json({ ok: true, sent: result.sent, brevoSynced })
     }
 
     return json({ error: 'Unknown request type' }, 400)
