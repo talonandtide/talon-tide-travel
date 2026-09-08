@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
-import emailjs from 'emailjs-com';
+import { sendSiteEmail } from '@/lib/sendSiteEmail';
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
@@ -18,33 +18,19 @@ const Newsletter = () => {
     
     try {
       setIsSubmitting(true);
-      
-      // Send email using EmailJS with the correct parameters
-      const templateParams = {
-        email: email,
-        to_email: 'hello@talonandtide.com',
-        date: new Date().toLocaleString(),
-        form_name: 'Newsletter'
-      };
-      
-      const result = await emailjs.send(
-        'contact_service', 
-        'template_lde17cj',
-        templateParams,
-        'kfwhy7VZD5cyq76uF'
-      );
-      
-      console.log('EmailJS result:', result);
-      
-      if (result.status === 200) {
-        toast.success("Thank you for subscribing!", {
-          description: "You'll receive updates on our latest ethical wildlife experiences."
-        });
-        
-        setEmail('');
-      } else {
-        throw new Error('Failed to send email');
-      }
+
+      await sendSiteEmail({
+        kind: 'newsletter',
+        email,
+        source: 'Homepage newsletter',
+      });
+
+      toast.success("Thank you for subscribing!", {
+        description: "You'll receive updates on our latest ethical wildlife experiences."
+      });
+
+      setEmail('');
+
     } catch (error) {
       console.error('Error sending email:', error);
       const mailtoLink = `mailto:hello@talonandtide.com?subject=${encodeURIComponent('Newsletter Subscription')}&body=${encodeURIComponent(`Please add me to the newsletter.\n\nEmail: ${email}`)}`;

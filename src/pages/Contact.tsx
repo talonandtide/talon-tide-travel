@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout/Layout';
 import { Mail, Instagram, MapPin, ArrowRight, ExternalLink, Camera } from 'lucide-react';
 import { toast } from 'sonner';
-import emailjs from 'emailjs-com';
+import { sendSiteEmail } from '@/lib/sendSiteEmail';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -35,26 +35,21 @@ const Contact = () => {
     try {
       setIsSubmitting(true);
       const formData = new FormData(form);
-      const templateParams = {
-        firstName: formData.get('firstName'),
-        lastName: formData.get('lastName'),
-        email: formData.get('email'),
-        organization: formData.get('organization'),
-        subject: formData.get('subject'),
-        message: formData.get('message'),
-        to_email: 'hello@talonandtide.com',
-        form_name: 'Contact Form'
-      };
-      const result = await emailjs.send('contact_service', 'template_ih1v52f', templateParams, 'kfwhy7VZD5cyq76uF');
-      if (result.status === 200) {
-        toast.success("Message sent successfully!", {
-          description: "We'll be in touch soon. Thank you for your interest in Talon & Tide."
-        });
-        form.reset();
-        setSubject('');
-      } else {
-        throw new Error('Failed to send message');
-      }
+      await sendSiteEmail({
+        kind: 'contact',
+        firstName: String(formData.get('firstName') || ''),
+        lastName: String(formData.get('lastName') || ''),
+        email: String(formData.get('email') || ''),
+        organization: String(formData.get('organization') || ''),
+        subject: String(formData.get('subject') || 'General Inquiry'),
+        message: String(formData.get('message') || ''),
+      });
+      toast.success("Message sent successfully!", {
+        description: "We'll be in touch soon. Thank you for your interest in Talon & Tide."
+      });
+      form.reset();
+      setSubject('');
+
     } catch (error) {
       console.error('Error sending message:', error);
       const formData = new FormData(form);

@@ -4,7 +4,7 @@ import Newsletter from '@/components/Home/Newsletter';
 import InstagramFeed from '@/components/Home/InstagramFeed';
 import { ArrowRight, Shield, Eye, Heart, Users, Handshake, Globe, ExternalLink, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import emailjs from 'emailjs-com';
+
 import usePageMeta from '@/hooks/usePageMeta';
 
 const APP_URL = 'https://app.talonandtide.com';
@@ -19,7 +19,7 @@ const Index = () => {
   const [currentAnimal, setCurrentAnimal] = useState(0);
 
   useEffect(() => {
-    emailjs.init('kfwhy7VZD5cyq76uF');
+
 
     const animalInterval = setInterval(() => {
       setCurrentAnimal((prev) => (prev + 1) % animals.length);
