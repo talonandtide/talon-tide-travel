@@ -109,6 +109,14 @@ Deno.serve(async (req) => {
     }
 
     if (kind === 'newsletter') {
+      let brevoSynced = false
+      try {
+        await addBrevoNewsletterSubscriber(email)
+        brevoSynced = true
+      } catch (error) {
+        console.error('Brevo newsletter sync failed:', error)
+      }
+
       const result = await sendTemplateEmail('newsletter-signup', 'hello@talonandtide.com', {
         templateData: {
           email,
@@ -120,7 +128,7 @@ Deno.serve(async (req) => {
           .slice(0, 10)}`,
         replyTo: email,
       })
-      return json({ ok: true, sent: result.sent })
+      return json({ ok: true, sent: result.sent, brevoSynced })
     }
 
     return json({ error: 'Unknown request type' }, 400)
