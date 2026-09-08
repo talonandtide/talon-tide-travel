@@ -106,7 +106,16 @@ Deno.serve(async (req) => {
         idempotencyKey: `contact-inquiry-${submissionId}`,
         replyTo: email,
       })
-      return json({ ok: true, sent: result.sent })
+
+      let brevoSynced = false
+      try {
+        await addBrevoNewsletterSubscriber(email, firstName)
+        brevoSynced = true
+      } catch (error) {
+        console.error('Brevo contact sync failed:', error)
+      }
+
+      return json({ ok: true, sent: result.sent, brevoSynced })
     }
 
     if (kind === 'newsletter') {
