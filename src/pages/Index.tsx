@@ -19,7 +19,7 @@ const Index = () => {
   const [currentAnimal, setCurrentAnimal] = useState(0);
 
   useEffect(() => {
-    emailjs.init('kfwhy7VZD5cyq76uF');
+
 
     const animalInterval = setInterval(() => {
       setCurrentAnimal((prev) => (prev + 1) % animals.length);
