@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, ArrowRight, Mail, ExternalLink } from 'lucide-react';
 import { toast } from 'sonner';
-import emailjs from 'emailjs-com';
+import { sendSiteEmail } from '@/lib/sendSiteEmail';
 
 const APP_URL = 'https://app.talonandtide.com';
 
@@ -20,27 +20,16 @@ const Footer = () => {
     
     try {
       setIsSubmitting(true);
-      
-      const templateParams = {
-        email: email,
-        to_email: 'hello@talonandtide.com',
-        date: new Date().toLocaleString(),
-        form_name: 'Footer Newsletter'
-      };
-      
-      const result = await emailjs.send(
-        'contact_service',
-        'template_lde17cj',
-        templateParams,
-        'kfwhy7VZD5cyq76uF'
-      );
-      
-      if (result.status === 200) {
-        toast.success("Thank you for subscribing!");
-        setEmail('');
-      } else {
-        throw new Error('Failed to send email');
-      }
+
+      await sendSiteEmail({
+        kind: 'newsletter',
+        email,
+        source: 'Footer newsletter',
+      });
+
+      toast.success("Thank you for subscribing!");
+      setEmail('');
+
     } catch (error) {
       console.error('Error sending email:', error);
       toast.error("Failed to subscribe. Please try again later.");
